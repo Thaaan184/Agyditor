@@ -13,7 +13,7 @@
 - Keep all project workspaces, tool installations, intermediate renders, Chromium caches, and audio analyses on drive `D:` (`d:/Files/Project Iseng/AGY Video Editor`). Do not dump heavy temporary files on `C:`.
 - Default draft renders to `1920x1080` (or `1080x1920` vertical) at `30fps` (or `60fps` for gaming/montage finals). Do not default to 4K60 multi-sample shutter blur unless the user explicitly asks for an overnight heavy final render.
 - Run `faster-whisper` with `int8` or `float16` quantization on CUDA (GTX 1650 4GB VRAM) or CPU fallback to prevent VRAM out-of-memory errors.
-- Ensure `d:\Files\Project Iseng\AGY Video Editor\bin` is prepended to `PATH` before invoking `npx hyperframes` or `onetake` scripts so `ffmpeg.exe` and `ffprobe.exe` resolve reliably.
+- Ensure `d:\Files\Project Iseng\AGY Video Editor\bin` is prepended to `PATH` AND `HYPERFRAMES_FFMPEG_PATH` / `HYPERFRAMES_FFPROBE_PATH` point to `d:\Files\Project Iseng\AGY Video Editor\bin\ffmpeg.exe` and `ffprobe.exe` before invoking `npx hyperframes` or `onetake` scripts so FFmpeg resolves cleanly (HyperFrames ignores project-internal `PATH` entries by design).
 
 ## 3. Strict Separation of Video Canvas vs. Web App UI (`antislop` Video Guardrail)
 - NEVER render web navigation bars (`<header>`, `<nav>`, clickable tab buttons, "Pause/Play" buttons, or footer chrome) inside a video composition or WeftCut Motif frame. A video frame is a camera viewport, not a web page shell.

@@ -9,6 +9,8 @@ ROOT = Path(__file__).resolve().parent.parent
 def _env_with_bin() -> dict[str, str]:
     env = os.environ.copy()
     env["PATH"] = f"{ROOT / 'bin'};{env.get('PATH', '')}"
+    env["HYPERFRAMES_FFMPEG_PATH"] = str(ROOT / "bin" / "ffmpeg.exe")
+    env["HYPERFRAMES_FFPROBE_PATH"] = str(ROOT / "bin" / "ffprobe.exe")
     return env
 
 
@@ -68,6 +70,24 @@ def test_hyperframes_official_cli_and_skills():
     )
     assert res.returncode == 0, f"npx hyperframes --version failed: {res.stderr}"
     assert res.stdout.strip() != ""
+
+    import json
+    doc = subprocess.run(
+        "npx hyperframes doctor --json",
+        shell=True,
+        capture_output=True,
+        text=True,
+        env=_env_with_bin(),
+        check=False,
+    )
+    assert doc.returncode == 0, f"hyperframes doctor failed: {doc.stderr}"
+    payload = json.loads(doc.stdout[doc.stdout.find("{") :])
+    checks = {c["name"]: c for c in payload["checks"]}
+    assert checks["FFmpeg"]["ok"] is True, checks["FFmpeg"]
+    assert checks["FFprobe"]["ok"] is True, checks["FFprobe"]
+    assert checks["Chrome"]["ok"] is True, checks["Chrome"]
+    assert payload["_meta"]["skillsOutdated"] == 0
+    assert payload["_meta"]["skillsMissing"] == 0
 
 
 def test_weftcut_and_custom_skills_present():
