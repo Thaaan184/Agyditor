@@ -7,3 +7,6 @@ node_modules/
 *.tmp.wav
 projects/*/frames_tmp/
 bin/ffmpeg-extract/
+bin/*.exe
+bin/*.zip
+

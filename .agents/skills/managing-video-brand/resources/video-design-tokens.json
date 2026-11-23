@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "studio_name": "AGY Local Video Studio",
+    "default_resolution": [1920, 1080],
+    "vertical_resolution": [1080, 1920],
+    "default_fps": 30,
+    "montage_fps": 60
+  },
+  "palettes": {
+    "editorial_dark": {
+      "surface_primary": "#0B0F17",
+      "surface_elevated": "#131B2E",
+      "text_primary": "#F8FAFC",
+      "text_muted": "#94A3B8",
+      "accent_primary": "#0EA5E9",
+      "border_subtle": "#1E293B"
+    },
+    "editorial_light": {
+      "surface_primary": "#F8FAFC",
+      "surface_elevated": "#FFFFFF",
+      "text_primary": "#0F172A",
+      "text_muted": "#475569",
+      "accent_primary": "#0284C7",
+      "border_subtle": "#E2E8F0"
+    },
+    "gaming_comedic": {
+      "subtitle_normal": "#FFFFFF",
+      "subtitle_emphasis": "#FACC15",
+      "subtitle_scream": "#EF4444",
+      "subtitle_whisper": "#93C5FD",
+      "stroke_color": "#09090B"
+    }
+  },
+  "typography": {
+    "display_sans": ["Plus Jakarta Sans", "Segoe UI", "Inter", "sans-serif"],
+    "technical_mono": ["JetBrains Mono", "Consolas", "monospace"]
+  },
+  "motion_curves": {
+    "snap_enter": "cubic-bezier(0.16, 1, 0.3, 1)",
+    "carry_morph": "cubic-bezier(0.65, 0, 0.35, 1)",
+    "spring_damping": 0.78,
+    "spring_stiffness": 180.0
+  }
+}
