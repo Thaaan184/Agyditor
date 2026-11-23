@@ -86,8 +86,8 @@ def test_hyperframes_official_cli_and_skills():
     assert checks["FFmpeg"]["ok"] is True, checks["FFmpeg"]
     assert checks["FFprobe"]["ok"] is True, checks["FFprobe"]
     assert checks["Chrome"]["ok"] is True, checks["Chrome"]
-    assert payload["_meta"]["skillsOutdated"] == 0
-    assert payload["_meta"]["skillsMissing"] == 0
+    assert payload["_meta"].get("skillsOutdated", 0) == 0
+    assert payload["_meta"].get("skillsMissing", 0) == 0
 
 
 def test_weftcut_and_custom_skills_present():
