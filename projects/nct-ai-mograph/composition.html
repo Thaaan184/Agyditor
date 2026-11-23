@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PT Nalar Cerdas Teknologi (NCT.ai) | Enterprise Voice AI &amp; SIP Trunk Architecture</title>
+  <style>
+    :root {
+      --bg-primary: #0F172A;
+      --bg-elevated: #1E293B;
+      --text-primary: #F8FAFC;
+      --text-muted: #94A3B8;
+      --accent-sky: #38BDF8;
+      --accent-green: #10B981;
+      --border-slate: #334155;
+      --font-sans: "Inter", "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", "Consolas", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      position: relative;
+      user-select: none;
+    }
+
+    a[href], button {
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    a[href]:focus-visible, button:focus-visible {
+      outline: 3px solid var(--accent-sky);
+      outline-offset: 3px;
+    }
+
+    #telemetry-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1920px;
+      height: 1080px;
+      z-index: 1;
+    }
+
+    header.hud-header {
+      position: absolute;
+      top: 44px;
+      left: 72px;
+      right: 72px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-slate);
+      padding-bottom: 16px;
+      z-index: 10;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .brand-mark h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+
+    .brand-mark span.brand-domain {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--accent-sky);
+      font-weight: 600;
+    }
+
+    nav.hud-nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-btn {
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+      border: 1px solid var(--border-slate);
+      border-radius: 6px;
+      padding: 10px 16px;
+      min-height: 44px;
+      font-family: var(--font-mono);
+      font-size: 14px;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .nav-btn:hover {
+      background: #334155;
+      border-color: var(--accent-sky);
+    }
+
+    .nav-btn:active {
+      transform: translateY(1px);
+    }
+
+    .nav-btn[aria-current="step"] {
+      border-color: var(--accent-sky);
+      color: var(--accent-sky);
+    }
+
+    .timecode-readout {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--text-muted);
+      min-width: 170px;
+      text-align: right;
+    }
+
+    main#stage {
+      position: absolute;
+      top: 128px;
+      left: 72px;
+      right: 72px;
+      bottom: 108px;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .beat-layer {
+      position: absolute;
+      inset: 0;
+      will-change: transform, opacity;
+    }
+
+    .beat-kicker {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--accent-sky);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .beat-headline {
+      font-size: 54px;
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      max-width: 1120px;
+    }
+
+    .beat-subcopy {
+      margin-top: 18px;
+      font-size: 24px;
+      line-height: 1.45;
+      color: var(--text-muted);
+      max-width: 880px;
+    }
+
+    .metric-big {
+      font-family: var(--font-mono);
+      font-size: 76px;
+      font-weight: 800;
+      color: var(--accent-sky);
+      letter-spacing: -0.03em;
+    }
+
+    .carrier-grid {
+      position: absolute;
+      right: 40px;
+      top: 150px;
+      width: 680px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .carrier-row {
+      background: rgba(30, 41, 59, 0.92);
+      border: 1px solid var(--border-slate);
+      border-radius: 8px;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .carrier-row.primary-carrier {
+      border-color: var(--accent-sky);
+      padding: 30px 32px;
+    }
+
+    .carrier-name {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .carrier-meta {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .carrier-latency {
+      font-family: var(--font-mono);
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--accent-green);
+    }
+
+    .crm-wallboard {
+      position: absolute;
+      left: 420px;
+      top: 150px;
+      right: 20px;
+      height: 560px;
+      background: rgba(30, 41, 59, 0.95);
+      border: 2px solid var(--accent-sky);
+      border-radius: 12px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 32px;
+    }
+
+    .crm-stat-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid var(--border-slate);
+      padding-right: 32px;
+    }
+
+    .crm-module-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .crm-module-item {
+      background: var(--bg-primary);
+      border: 1px solid var(--border-slate);
+      border-radius: 6px;
+      padding: 18px 22px;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .crm-module-item span.mod-tag {
+      font-family: var(--font-mono);
+      font-size: 15px;
+      color: var(--accent-sky);
+    }
+
+    .lockup-card {
+      position: absolute;
+      left: 220px;
+      right: 220px;
+      top: 130px;
+      height: 560px;
+      background: rgba(30, 41, 59, 0.96);
+      border: 2px solid var(--accent-sky);
+      border-radius: 14px;
+      padding: 64px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      pointer-events: auto;
+    }
+
+    .cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-slate);
+      padding-top: 32px;
+    }
+
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-sky);
+      color: #0F172A;
+      font-weight: 700;
+      font-size: 22px;
+      padding: 18px 36px;
+      min-height: 56px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .cta-link:hover {
+      background: #7DD3FC;
+    }
+
+    footer.hud-footer {
+      position: absolute;
+      bottom: 36px;
+      left: 72px;
+      right: 72px;
+      height: 48px;
+      border-top: 1px solid var(--border-slate);
+      padding-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 15px;
+      color: var(--text-muted);
+      z-index: 10;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .beat-layer {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="telemetry-canvas" width="1920" height="1080"></canvas>
+
+  <header class="hud-header">
+    <div class="brand-mark">
+      <h1>PT Nalar Cerdas Teknologi</h1>
+      <span class="brand-domain">pt-nct.ai // ID: NCT-SYS-2026</span>
+    </div>
+    <nav class="hud-nav" aria-label="Kontrol babak telemetri">
+      <button type="button" class="nav-btn" id="btn-beat-1" onclick="window.__seek(1.5)">01. HAD &lt;0.8s</button>
+      <button type="button" class="nav-btn" id="btn-beat-2" onclick="window.__seek(4.5)">02. SIP Trunk BGP</button>
+      <button type="button" class="nav-btn" id="btn-beat-3" onclick="window.__seek(7.8)">03. 11-Module CRM</button>
+      <button type="button" class="nav-btn" id="btn-beat-4" onclick="window.__seek(10.8)">04. Arsitektur NCT</button>
+      <button type="button" class="nav-btn" id="toggle-play" aria-label="Jeda atau putar simulasi">Jeda Simulasi</button>
+    </nav>
+    <div class="timecode-readout" id="timecode-label">TC 00:00:00:00</div>
+  </header>
+
+  <main id="stage">
+    <!-- BEAT 1: Human Answer Detection (0.0s to 3.0s) -->
+    <section class="beat-layer" id="beat-1" aria-label="Deteksi Jawaban Manusia">
+      <div class="beat-kicker">01 // VOICE AI BLAST AUTO-DIALER &amp; HUMAN ANSWER DETECTION</div>
+      <h2 class="beat-headline">Pangkas waktu tunggu panggilan dari 22 detik menjadi &lt;0.8s.</h2>
+      <p class="beat-subcopy">
+        Panggilan keluar konvensional membuang sekitar 22 detik pada nada dering dan kotak suara operator.
+        Mesin Human Answer Detection (HAD) PT NCT menyaring voicemail dalam kurang dari 0.8s.
+      </p>
+    </section>
+
+    <!-- BEAT 2: Direct Carrier Peering (3.0s to 6.2s) -->
+    <section class="beat-layer" id="beat-2" aria-label="Interkoneksi Langsung Operator Tier-1">
+      <div class="beat-kicker">02 // JKT-IX DIRECT DARK FIBER &amp; DYNAMIC BGP AUTO-FAILOVER</div>
+      <h2 class="beat-headline">Interkoneksi SIP Trunk langsung ke 3 operator Tier-1 Indonesia.</h2>
+      <p class="beat-subcopy">
+        Tanpa perantara agregator. Codec suara G.711u dan Opus HD dienkripsi penuh lewat TLS 1.3 dan SRTP
+        dari Tier-4 Data Center Jakarta.
+      </p>
+      <div class="carrier-grid" id="carrier-cards">
+        <div class="carrier-row primary-carrier" id="c-telkomsel">
+          <div>
+            <div class="carrier-name">Telkomsel Direct Route</div>
+            <div class="carrier-meta">JKT-IX Dark Fiber // SLA 99.99% Target</div>
+          </div>
+          <div class="carrier-latency">21ms</div>
+        </div>
+        <div class="carrier-row" id="c-xl">
+          <div>
+            <div class="carrier-name">XL Axiata Interconnect</div>
+            <div class="carrier-meta">Direct Carrier Gateway // Opus HD</div>
+          </div>
+          <div class="carrier-latency">24ms</div>
+        </div>
+        <div class="carrier-row" id="c-indosat">
+          <div>
+            <div class="carrier-name">Indosat Ooredoo Peering</div>
+            <div class="carrier-meta">Dynamic BGP Hot Standby // TLS 1.3</div>
+          </div>
+          <div class="carrier-latency">26ms</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEAT 3: Unified 11-Module CRM (6.2s to 9.4s) -->
+    <section class="beat-layer" id="beat-3" aria-label="Sistem Telemarketing CRM Terpadu">
+      <div class="beat-kicker">03 // EXECUTIVE TELEMARKETING CRM &amp; WEBRTC CLOUD SOFTPHONE</div>
+      <h2 class="beat-headline">Ribuan kanal paralel langsung masuk ke 11 modul CRM eksekutif.</h2>
+      <div class="crm-wallboard" id="crm-board">
+        <div class="crm-stat-block">
+          <div>
+            <div class="beat-kicker">ACTIVE CONCURRENT CHANNELS</div>
+            <div class="metric-big" id="channel-counter">1,240 / 2,000</div>
+            <p class="beat-subcopy" style="font-size:20px;margin-top:10px;">
+              Agen langsung terhubung ke suara manusia asli melalui WebRTC Softphone di browser tanpa instalasi aplikasi tambahan.
+            </p>
+          </div>
+          <div style="display:flex;gap:40px;border-top:1px solid #334155;padding-top:24px;">
+            <div>
+              <div class="beat-kicker" style="color:#10B981;">VOICEMAIL FILTERED</div>
+              <div style="font-family:var(--font-mono);font-size:38px;font-weight:700;" id="filtered-counter">482 Calls</div>
+            </div>
+            <div>
+              <div class="beat-kicker">AUDIT RECORDING</div>
+              <div style="font-family:var(--font-mono);font-size:38px;font-weight:700;">TLS 1.3 / SRTP</div>
+            </div>
+          </div>
+        </div>
+        <div class="crm-module-list">
+          <div class="crm-module-item">
+            <span>11 Modul AICRM &amp; Rotasi Antrean</span>
+            <span class="mod-tag">ACTIVE</span>
+          </div>
+          <div class="crm-module-item">
+            <span>WebRTC Cloud Softphone</span>
+            <span class="mod-tag">NO INSTALL</span>
+          </div>
+          <div class="crm-module-item">
+            <span>Speech-to-Text Call Disposition</span>
+            <span class="mod-tag">AUTO QC</span>
+          </div>
+          <div class="crm-module-item">
+            <span>WhatsApp Official AI Bot &amp; ESC POS</span>
+            <span class="mod-tag">OMNICHANNEL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEAT 4: Brand Lockup & Specific CTA (9.4s to 12.0s) -->
+    <section class="beat-layer" id="beat-4" aria-label="Profil dan Kontak PT Nalar Cerdas Teknologi">
+      <div class="lockup-card" id="lockup-box">
+        <div>
+          <div class="beat-kicker">04 // ENTERPRISE VOICE AI &amp; TELECOM INTEGRATOR // EST. 2024</div>
+          <h2 class="beat-headline" style="font-size:62px;">PT Nalar Cerdas Teknologi</h2>
+          <p class="beat-subcopy" style="max-width:1100px;font-size:26px;color:#F8FAFC;margin-top:20px;">
+            Infrastruktur Voice AI Auto-Dialer (&lt;0.8s HAD), interkoneksi SIP Trunk langsung (Telkomsel 21ms, XL Axiata 24ms, Indosat 26ms), dan 11 modul CRM telemarketing terpadu.
+          </p>
+        </div>
+        <div class="cta-row">
+          <div style="font-family:var(--font-mono);font-size:19px;color:#94A3B8;line-height:1.6;">
+            <div>Jakarta Barat, DKI Jakarta // sales@nct.co.id // info@nct.co.id</div>
+            <div>Instagram: @nalarcerdasteknologi // LinkedIn: PT NCT (nct-ai)</div>
+          </div>
+          <a class="cta-link" href="https://pt-nct.ai/contact">Jadwalkan Konsultasi Arsitektur di pt-nct.ai/contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hud-footer">
+    <div>PT NALAR CERDAS TEKNOLOGI // VOICE AI AUTO-DIALER • CARRIER SIP TRUNK • EXECUTIVE CRM</div>
+    <div id="carry-status">CONTINUOUS TAKE CARRY: ACTIVE</div>
+  </footer>
+
+  <script>
+    function clamp(v, lo, hi) {
+      return Math.max(lo, Math.min(hi, v));
+    }
+
+    function progress(t, t0, t1) {
+      return clamp((t - t0) / Math.max(0.0001, t1 - t0), 0, 1);
+    }
+
+    function easeOutCubic(x) {
+      return 1 - Math.pow(1 - x, 3);
+    }
+
+    function easeInOutCubic(x) {
+      return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+    }
+
+    function springOut(x) {
+      const c4 = (2 * Math.PI) / 3;
+      return x === 0 ? 0 : x === 1 ? 1 : Math.pow(2, -9 * x) * Math.sin((x * 8 - 0.75) * c4) + 1;
+    }
+
+    const canvas = document.getElementById('telemetry-canvas');
+    const ctx = canvas.getContext('2d');
+
+    window.__seek = function(t) {
+      t = clamp(t, 0, 12.0);
+      const fps = 30;
+      const totalFrame = Math.round(t * fps);
+      const sec = Math.floor(t);
+      const ff = totalFrame % fps;
+      document.getElementById('timecode-label').textContent =
+        'TC 00:00:' + String(sec).padStart(2, '0') + ':' + String(ff).padStart(2, '0');
+
+      const activeBeat = t < 3.0 ? 1 : t < 6.2 ? 2 : t < 9.4 ? 3 : 4;
+      for (let i = 1; i <= 4; i++) {
+        const btn = document.getElementById('btn-beat-' + i);
+        if (btn) {
+          if (i === activeBeat) btn.setAttribute('aria-current', 'step');
+          else btn.removeAttribute('aria-current');
+        }
+      }
+
+      // Update DOM beat layers with continuous physical carry offsets
+      const b1 = document.getElementById('beat-1');
+      const b2 = document.getElementById('beat-2');
+      const b3 = document.getElementById('beat-3');
+      const b4 = document.getElementById('beat-4');
+
+      // Beat 1 visibility (0.0 -> 3.3s)
+      const p1In = easeOutCubic(progress(t, 0.0, 0.6));
+      const p1Out = easeInOutCubic(progress(t, 2.7, 3.3));
+      b1.style.opacity = String(p1In * (1 - p1Out));
+      b1.style.transform = 'translate3d(' + (-p1Out * 180) + 'px, ' + ((1 - p1In) * 28) + 'px, 0)';
+
+      // Beat 2 visibility (2.8 -> 6.5s)
+      const p2In = easeOutCubic(progress(t, 2.8, 3.5));
+      const p2Out = easeInOutCubic(progress(t, 5.9, 6.5));
+      b2.style.opacity = String(p2In * (1 - p2Out));
+      b2.style.transform = 'translate3d(' + ((1 - p2In) * 140 - p2Out * 160) + 'px, 0, 0)';
+
+      // Stagger carrier cards inside Beat 2
+      const c1 = springOut(progress(t, 3.1, 3.8));
+      const c2 = springOut(progress(t, 3.3, 4.0));
+      const c3 = springOut(progress(t, 3.5, 4.2));
+      document.getElementById('c-telkomsel').style.transform = 'translate3d(' + ((1 - c1) * 120) + 'px, 0, 0)';
+      document.getElementById('c-xl').style.transform = 'translate3d(' + ((1 - c2) * 120) + 'px, 0, 0)';
+      document.getElementById('c-indosat').style.transform = 'translate3d(' + ((1 - c3) * 120) + 'px, 0, 0)';
+
+      // Beat 3 visibility (6.0 -> 9.7s)
+      const p3In = easeOutCubic(progress(t, 6.0, 6.7));
+      const p3Out = easeInOutCubic(progress(t, 9.1, 9.7));
+      b3.style.opacity = String(p3In * (1 - p3Out));
+      b3.style.transform = 'translate3d(' + ((1 - p3In) * 120) + 'px, ' + (p3Out * -60) + 'px, 0) scale(' + (1 - p3Out * 0.06) + ')';
+
+      // Dynamic counter interpolation in Beat 3
+      const countP = easeOutCubic(progress(t, 6.3, 7.6));
+      const chVal = Math.round(240 + countP * 1000);
+      const fltVal = Math.round(82 + countP * 400);
+      document.getElementById('channel-counter').textContent = chVal.toLocaleString('en-US') + ' / 2,000';
+      document.getElementById('filtered-counter').textContent = fltVal + ' Calls';
+
+      // Beat 4 visibility (9.2 -> 12.0s)
+      const p4In = springOut(progress(t, 9.2, 10.1));
+      b4.style.opacity = String(clamp(progress(t, 9.2, 9.7), 0, 1));
+      b4.style.transform = 'scale(' + (0.88 + 0.12 * p4In) + ')';
+
+      // Draw continuous telemetry spine on canvas (survives across every beat boundary!)
+      ctx.clearRect(0, 0, 1920, 1080);
+
+      // Subtle architectural horizon axis
+      ctx.strokeStyle = 'rgba(51, 65, 85, 0.45)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(72, 620);
+      ctx.lineTo(1848, 620);
+      ctx.stroke();
+
+      // Beat 1 -> Beat 2 -> Beat 3 -> Beat 4 continuous anchor bar / hub
+      const compressP = easeInOutCubic(progress(t, 0.7, 2.3));
+      const carryToHubP = easeInOutCubic(progress(t, 2.7, 3.4));
+      const carryToCrmP = easeInOutCubic(progress(t, 5.9, 6.6));
+      const carryToLockupP = easeInOutCubic(progress(t, 9.1, 9.8));
+
+      // Anchor X, Y, Width, Height morph continuously across all 4 beats
+      const baseBarX = 72 + carryToHubP * 88 - carryToCrmP * 40;
+      const baseBarY = 560 - carryToHubP * 30 - carryToCrmP * 20;
+      const baseBarW = 1380 - compressP * 1160;
+      const baseBarH = 110 + carryToHubP * 30 + carryToCrmP * 320;
+
+      let barX = baseBarX * (1 - carryToLockupP) + 292 * carryToLockupP;
+      let barY = baseBarY * (1 - carryToLockupP) + 258 * carryToLockupP;
+      let barW = baseBarW * (1 - carryToLockupP) + 1336 * carryToLockupP;
+      let barH = baseBarH * (1 - carryToLockupP) + 560 * carryToLockupP;
+
+      // Draw legacy 22.0s ghost bar during Beat 1 compression
+      if (t < 3.2) {
+        const ghostAlpha = (1 - carryToHubP) * 0.35;
+        ctx.fillStyle = 'rgba(100, 116, 139, ' + ghostAlpha + ')';
+        ctx.strokeStyle = 'rgba(148, 163, 184, ' + ghostAlpha + ')';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.roundRect(72, 560, 1380, 110, 10);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = 'rgba(248, 250, 252, ' + (1 - compressP * 0.85) * (1 - carryToHubP) + ')';
+        ctx.font = '700 26px "JetBrains Mono", Consolas, monospace';
+        ctx.fillText('KONVENSIONAL: ~22.0s NADA DERING & VOICEMAIL', 840, 624);
+      }
+
+      // Draw the surviving HAD Core Hub / Spine Frame
+      const coreAlpha = 1 - carryToLockupP * 0.92;
+      ctx.fillStyle = 'rgba(14, 165, 233, ' + (0.16 * coreAlpha) + ')';
+      ctx.strokeStyle = 'rgba(56, 189, 248, ' + coreAlpha + ')';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.roundRect(barX, barY, barW, barH, 14);
+      ctx.fill();
+      ctx.stroke();
+
+      // Acoustic waveform inside the core hub during Beat 1 & Beat 2 & Beat 3
+      if (t < 9.5) {
+        const waveAlpha = 1 - carryToLockupP;
+        ctx.strokeStyle = 'rgba(56, 189, 248, ' + waveAlpha + ')';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        const waveSamples = 36;
+        for (let i = 0; i <= waveSamples; i++) {
+          const u = i / waveSamples;
+          const wx = barX + 20 + u * (Math.min(barW, 240) - 40);
+          const amp = Math.sin(u * Math.PI) * (24 + 14 * Math.sin(t * 14 + i * 0.7));
+          const wy = barY + barH * 0.5 + amp;
+          if (i === 0) ctx.moveTo(wx, wy);
+          else ctx.lineTo(wx, wy);
+        }
+        ctx.stroke();
+
+        // Readout label on the surviving HAD core node
+        const readoutSec = (22.0 - compressP * 21.2).toFixed(1);
+        ctx.fillStyle = '#F8FAFC';
+        ctx.font = '800 34px "JetBrains Mono", Consolas, monospace';
+        ctx.fillText(compressP > 0.9 ? 'HAD <0.8s' : readoutSec + 's', barX + 24, barY + 46);
+        ctx.fillStyle = '#10B981';
+        ctx.font = '600 16px "JetBrains Mono", Consolas, monospace';
+        ctx.fillText('HUMAN VOICE VERIFIED', barX + 24, barY + barH - 20);
+      }
+
+      // Beat 2 & Beat 3: Draw 3 physical BGP fiber conduits branching from the HAD Hub
+      if (t > 2.8 && t < 9.5) {
+        const branchIn = easeOutCubic(progress(t, 2.9, 3.8));
+        const branchAlpha = branchIn * (1 - carryToLockupP);
+        const startX = barX + Math.min(barW, 220);
+        const startY = barY + barH * 0.5;
+        const targetsY = [365, 535, 705];
+        const endX = t < 6.2 ? 1140 : 492;
+
+        targetsY.forEach((ty, idx) => {
+          ctx.strokeStyle = idx === 0
+            ? 'rgba(56, 189, 248, ' + branchAlpha + ')'
+            : 'rgba(16, 185, 129, ' + (branchAlpha * 0.85) + ')';
+          ctx.lineWidth = idx === 0 ? 4 : 2.5;
+          ctx.beginPath();
+          ctx.moveTo(startX, startY);
+          const cp1x = startX + (endX - startX) * 0.45 * branchIn;
+          const cp2x = startX + (endX - startX) * 0.55 * branchIn;
+          const curEndX = startX + (endX - startX) * branchIn;
+          const curEndY = startY + (ty - startY) * branchIn;
+          ctx.bezierCurveTo(cp1x, startY, cp2x, curEndY, curEndX, curEndY);
+          ctx.stroke();
+
+          // Moving telemetry packet dot along each fiber trunk
+          const packetU = ((t * 1.4 + idx * 0.31) % 1.0) * branchIn;
+          const px = startX + (curEndX - startX) * packetU;
+          const py = startY + (curEndY - startY) * easeInOutCubic(packetU);
+          ctx.fillStyle = '#F8FAFC';
+          ctx.beginPath();
+          ctx.arc(px, py, 6, 0, Math.PI * 2);
+          ctx.fill();
+        });
+      }
+    };
+
+    // Interactive browser preview loop
+    let playing = false;
+    let animId = null;
+    let startWall = 0;
+    const toggleBtn = document.getElementById('toggle-play');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        playing = !playing;
+        toggleBtn.textContent = playing ? 'Jeda Simulasi' : 'Putar Simulasi';
+        if (playing) {
+          startWall = performance.now();
+          const tick = (now) => {
+            if (!playing) return;
+            const elapsed = ((now - startWall) / 1000) % 12.0;
+            window.__seek(elapsed);
+            animId = requestAnimationFrame(tick);
+          };
+          animId = requestAnimationFrame(tick);
+        } else if (animId) {
+          cancelAnimationFrame(animId);
+        }
+      });
+    }
+
+    window.__seek(0);
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<fcpxml version="1.9">
+  <resources>
+    <format id="r1" name="FFVideoFormat1080p30" frameDuration="1/30s" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)" />
+    <asset id="r2" name="nct_ai_mograph_1080p" start="0s" duration="90/30s" hasVideo="1" hasAudio="1" format="r1">
+      <media-rep kind="original-media" src="file:///D:/Files/Project%20Iseng/AGY%20Video%20Editor/projects/nct-ai-mograph/output/nct_ai_mograph_1080p.mp4" />
+    </asset>
+    <asset id="r3" name="sub_thud" start="0s" duration="10/30s" hasVideo="0" hasAudio="1" format="r1">
+      <media-rep kind="original-media" src="file:///D:/Files/Project%20Iseng/AGY%20Video%20Editor/projects/nct-ai-mograph/sfx/sub_thud.wav" />
+    </asset>
+    <asset id="r4" name="data_lock" start="0s" duration="5/30s" hasVideo="0" hasAudio="1" format="r1">
+      <media-rep kind="original-media" src="file:///D:/Files/Project%20Iseng/AGY%20Video%20Editor/projects/nct-ai-mograph/sfx/data_lock.wav" />
+    </asset>
+    <asset id="r5" name="camera_whoosh" start="0s" duration="13/30s" hasVideo="0" hasAudio="1" format="r1">
+      <media-rep kind="original-media" src="file:///D:/Files/Project%20Iseng/AGY%20Video%20Editor/projects/nct-ai-mograph/sfx/camera_whoosh.wav" />
+    </asset>
+    <asset id="r6" name="punch_stinger" start="0s" duration="14/30s" hasVideo="0" hasAudio="1" format="r1">
+      <media-rep kind="original-media" src="file:///D:/Files/Project%20Iseng/AGY%20Video%20Editor/projects/nct-ai-mograph/sfx/punch_stinger.wav" />
+    </asset>
+    <asset id="r7" name="nct_ai_master_audio" start="0s" duration="360/30s" hasVideo="0" hasAudio="1" format="r1">
+      <media-rep kind="original-media" src="file:///D:/Files/Project%20Iseng/AGY%20Video%20Editor/projects/nct-ai-mograph/output/nct_ai_master_audio.wav" />
+    </asset>
+  </resources>
+  <library>
+    <event name="NCT_AI_Enterprise_Mograph_Event">
+      <project name="NCT_AI_Enterprise_Mograph">
+        <sequence format="r1" duration="360/30s" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+          <spine>
+            <asset-clip name="NCT_Beat1_HAD_Compression" ref="r2" offset="0/30s" start="0s" duration="90/30s" format="r1">
+              <asset-clip name="SFX_Sub_Thud_Intro" ref="r3" lane="-1" offset="3/30s" start="0s" duration="10/30s" role="effects" />
+              <asset-clip name="SFX_HAD_Lock" ref="r4" lane="-1" offset="64/30s" start="0s" duration="5/30s" role="effects">
+                <adjust-volume amount="1.0dB" />
+              </asset-clip>
+              <asset-clip name="SFX_BGP_Whoosh" ref="r5" lane="-1" offset="90/30s" start="0s" duration="13/30s" role="effects" />
+              <asset-clip name="SFX_CRM_Thud" ref="r3" lane="-1" offset="186/30s" start="0s" duration="10/30s" role="effects">
+                <adjust-volume amount="0.5dB" />
+              </asset-clip>
+              <asset-clip name="SFX_Lockup_Stinger" ref="r6" lane="-1" offset="282/30s" start="0s" duration="14/30s" role="effects">
+                <adjust-volume amount="1.0dB" />
+              </asset-clip>
+              <asset-clip name="Master_Editorial_Mix" ref="r7" lane="-2" offset="0/30s" start="0s" duration="360/30s" role="effects" />
+            </asset-clip>
+            <asset-clip name="NCT_Beat2_Carrier_BGP_Matrix" ref="r2" offset="90/30s" start="0s" duration="96/30s" format="r1" />
+            <asset-clip name="NCT_Beat3_CRM_Wallboard_Zoom" ref="r2" offset="186/30s" start="0s" duration="96/30s" format="r1">
+              <adjust-transform scale="1.15 1.15" />
+            </asset-clip>
+            <asset-clip name="NCT_Beat4_Architecture_Lockup" ref="r2" offset="282/30s" start="0s" duration="78/30s" format="r1" />
+          </spine>
+        </sequence>
+      </project>
+    </event>
+  </library>
+</fcpxml>
