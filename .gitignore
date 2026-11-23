@@ -1,12 +1,10 @@
-.superpowers/
 __pycache__/
 *.pyc
 .pytest_cache/
 node_modules/
-*.tmp.mp4
-*.tmp.wav
+tools/
 projects/*/frames_tmp/
-bin/ffmpeg-extract/
 bin/*.exe
 bin/*.zip
-
+*.tmp.mp4
+*.tmp.wav

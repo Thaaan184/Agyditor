@@ -1,19 +1,21 @@
 ---
 name: editing-gaming-clips
 description: >-
-  Executes audio-first gaming and narrative video editing (Faide montage, Windah comedic timing, MILYHYA cut-and-play).
-  Performs local audio peak/silence/beat detection, interactive Cut-Sheet approval, SFX/BGM ducking,
-  and exports editable DaVinci Resolve Free timelines (.fcpxml + .srt) or direct MP4s.
+  Executes audio-first gaming and narrative video editing (Faide montage, Windah comedic timing, MILYHYA cut-and-play)
+  directly on a live WeftCut NLE timeline via MCP, paired with local faster-whisper transcription, librosa beat analysis,
+  role-based SFX/BGM ducking, and programmable WeftCut Motifs.
 ---
 
-# Editing Gaming Clips & Editorial Timelines
+# Editing Gaming Clips & Narrative Videos (WeftCut MCP + Local Audio)
 
 ## When to use this skill
 - When editing raw gameplay, stream VODs, or narrative talking-head footage with tight cut-and-play pacing.
-- When building multi-track DaVinci Resolve Free timelines (`.fcpxml` + `.srt`) with separate Gameplay (`V1`), Punch-in Zoom (`V2`), Mograph (`V3`), Voice (`A1`), SFX (`A2`), and ducked BGM (`A3`).
+- When syncing montage cuts to music beats (Faide style) or placing comedic SFX and music cut-outs (Windah / MILYHYA style) in WeftCut.
 
 ## Workflow Checklist
-- [ ] **Step 1: Synthesize or Verify Local SFX Catalog** - Use `studio_core.audio_engine.synthesize_sfx_catalog()` to ensure clean, room-matched WAV transients exist in `sfx/`.
-- [ ] **Step 2: Audio & Transcript Recon** - Detect vocal peaks, dead-air intervals, and BGM beat timestamps.
-- [ ] **Step 3: Audio Mixing & Punchline Silence** - Use `studio_core.audio_engine.mix_editorial_audio()` to enforce hard BGM silence (`0.0` amplitude) during `punchline_windows` and `-18 dB` ducking under active dialogue.
-- [ ] **Step 4: Build Resolve Editorial Timeline** - Call `studio_core.fcpxml_builder.build_fcpxml_timeline()` and `export_srt()` to produce non-destructive `.fcpxml` and `.srt` files ready for `File -> Import -> Timeline` in DaVinci Resolve Free.
+- [ ] **Step 1: Connect & Inspect WeftCut Timeline** - Verify WeftCut MCP via `weftcut_status` (or launch via `launch_weftcut`) and inspect active media/layers with `read_project`.
+- [ ] **Step 2: Audio & Transcript Recon** - Extract clip audio (`extract_clip_audio` or `bin/ffmpeg.exe`), run `faster-whisper` (`int8` / `float16` on GTX 1650) for word-level timestamps, run `detect_pauses` for dead air, and use `librosa` to map music beat/onset timestamps for montages.
+- [ ] **Step 3: Interactive Cut-Sheet & Tacks Review** - Present candidate highlight cuts, dead-air cuts, and punchline SFX moments using WeftCut `create_tacks` (or a chat cut-sheet) before executing destructive edits.
+- [ ] **Step 4: Cut-and-Play & Role Audio Mixing** - Execute `remove_pauses`, `split_layer`, `trim_layer`, and `shift_layers`. Enforce BGM hard-cuts (`set_keyframe` on volume or split/mute music role) `0.15s` to `0.5s` before comedic punchlines, and place dry SFX hits on the SFX role track.
+- [ ] **Step 5: Visual Cleanliness & Dynamic Motifs** - Apply `115%` to `130%` snap-zooms via `set_keyframe` on reaction beats, add animated word-level captions (`apply_subtitles`) or custom HTML/CSS/SVG Motifs (`motif.define`) with zero web-page chrome.
+- [ ] **Step 6: Verify & Export** - Audit the timeline diff in WeftCut Agent View (`Changes` / `Tacks`), preview frames with `compare_frames`, and export H.264/HEVC MP4 when approved.
