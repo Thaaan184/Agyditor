@@ -40,15 +40,15 @@ KILLFEED_DOUBLE_RECT = (988, 94, 1354, 148)
 KILLFEED_DEST_X = 126
 KILLFEED_DEST_Y = 248
 
-# Exact verified source window for "anjing" profanity censor
-CENSOR_SRC_SPAN = (54.45, 54.82)
+# Exact verified source window for "anjing" profanity censor (50ms voice-band verified)
+CENSOR_SRC_SPAN = (55.04, 55.58)
 
 # Raw piecewise time segments covering exact 45.00s..75.00s source footage
 _RAW_SEGMENTS: list[dict[str, Any]] = [
     {"id": "b01_hook", "beat_id": "b01_hook", "src0": 45.00, "src1": 47.40, "speed": 1.00, "is_freeze": False},
     {"id": "b02_mid_chaos", "beat_id": "b02_mid_chaos", "src0": 47.40, "src1": 51.00, "speed": 1.45, "is_freeze": False},
-    {"id": "b03_comms_bleep", "beat_id": "b03_comms_bleep", "src0": 51.00, "src1": 55.20, "speed": 1.00, "is_freeze": False},
-    {"id": "b04a_pre", "beat_id": "b04_kill1_sova", "src0": 55.20, "src1": 57.02, "speed": 1.00, "is_freeze": False},
+    {"id": "b03_comms_bleep", "beat_id": "b03_comms_bleep", "src0": 51.00, "src1": 55.65, "speed": 1.00, "is_freeze": False},
+    {"id": "b04a_pre", "beat_id": "b04_kill1_sova", "src0": 55.65, "src1": 57.02, "speed": 1.00, "is_freeze": False},
     {"id": "b04b_hitstop", "beat_id": "b04_kill1_sova", "src0": 57.02, "src1": 57.32, "speed": 0.45, "is_freeze": False},
     {"id": "b04c_recover", "beat_id": "b04_kill1_sova", "src0": 57.32, "src1": 58.10, "speed": 1.00, "is_freeze": False},
     {"id": "b05a_glide", "beat_id": "b05_nice_comms", "src0": 58.10, "src1": 59.90, "speed": 1.25, "is_freeze": False},
@@ -208,7 +208,7 @@ SUBTITLE_CUES: list[dict[str, Any]] = [
     },
     {
         "id": "sub_mana_backup",
-        "t0": round(map_src_to_out(51.80), 3),
+        "t0": round(map_src_to_out(53.45), 3),
         "t1": round(CENSOR_OUT_T0 - 0.03, 3),
         "text": "To, mana backup-nya To,",
         "style": "normal",
@@ -218,7 +218,7 @@ SUBTITLE_CUES: list[dict[str, Any]] = [
     {
         "id": "sub_censor_bleep",
         "t0": round(CENSOR_OUT_T0 - 0.02, 3),
-        "t1": round(CENSOR_OUT_T1 + 0.22, 3),
+        "t1": round(CENSOR_OUT_T1 + 0.16, 3),
         "text": "an***g!",
         "style": "scream",
         "anim": "censor_shake",
@@ -226,7 +226,7 @@ SUBTITLE_CUES: list[dict[str, Any]] = [
     },
     {
         "id": "sub_sova_ult",
-        "t0": round(map_src_to_out(55.35), 3),
+        "t0": round(map_src_to_out(55.92), 3),
         "t1": round(KILL1_OUT_T - 0.05, 3),
         "text": "I AM THE HUNTER!",
         "style": "sova_alert",

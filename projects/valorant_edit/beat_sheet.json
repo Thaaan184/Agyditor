@@ -11,8 +11,8 @@
   "silence_pockets": [
     {
       "id": "pocket_bleep_censor",
-      "t0": 8.303,
-      "t1": 8.743,
+      "t0": 8.903,
+      "t1": 9.483,
       "fade_ms": 18.0,
       "duck_music_db": -52.0,
       "duck_ambience_db": -16.0,
@@ -61,7 +61,7 @@
     {
       "id": "b03_comms_bleep",
       "t_start": 4.883,
-      "t_end": 9.083,
+      "t_end": 9.533,
       "shot_type": "a_roll",
       "visual_subject": "Harbor holding ADS toward Mid Nest while teammate demands backup and curses on Discord",
       "narrative_purpose": "Build comedic mabar panic and land the first BGM cut-out censor bleep right before Sova ultimates.",
@@ -75,7 +75,7 @@
     },
     {
       "id": "b04_kill1_sova",
-      "t_start": 9.083,
+      "t_start": 9.533,
       "t_end": 12.35,
       "shot_type": "visual_proof",
       "visual_subject": "Blue Sova Hunter's Fury laser erupting past Harbor left cheek as 51m ADS Vandal bullet headshots Sage in Mid Nest",
@@ -208,19 +208,19 @@
     },
     {
       "id": "cue_censor_bleep",
-      "t_s": 8.333,
+      "t_s": 8.923,
       "bus": "foley",
       "palette": "gaming-montage",
       "emotional_realism_note": "Comedic-Hype Hybrid uses a crisp dry CC0 UI blip to censor profanity cleanly without raw sine beeps.",
       "visual_cause": "Red shaking an***g subtitle slamming in on snap-zoom during teammate curse.",
-      "gain_db": -6.5,
+      "gain_db": -6.0,
       "layers": [
         {
           "asset": "se/ui-blip__kenney-digital-pepsound1",
           "spectrum_role": "mid_body",
           "hp_hz": 550.0,
           "lp_hz": 5200.0,
-          "max_dur_s": 0.34
+          "max_dur_s": 0.48
         }
       ]
     },
