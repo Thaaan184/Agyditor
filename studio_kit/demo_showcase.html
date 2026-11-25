@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<title>AGY Studio Baseline Showcase</title>
+<style>
+  @font-face {
+    font-family: "Inter Tight";
+    src: url("./fonts/InterTight-Latin.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Inter Tight";
+    src: url("./fonts/InterTight-Italic.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Inter";
+    src: url("./fonts/Inter.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Instrument Serif";
+    src: url("./fonts/InstrumentSerif.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Oswald";
+    src: url("./fonts/Oswald-Latin.woff2") format("woff2");
+    font-weight: 200 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "JetBrains Mono";
+    src: url("./fonts/JetBrainsMono-Latin.woff2") format("woff2");
+    font-weight: 100 800;
+    font-style: normal;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    background: #0B0F17;
+    color: #F8FAFC;
+    font-family: "Inter Tight", "Inter", sans-serif;
+  }
+
+  .canvas {
+    position: relative;
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    background: #0B0F17;
+  }
+
+  /* Coherent ambient lit dark stage (bokeh + warm/cool depth, zero flat black box) */
+  .stage-light {
+    position: absolute;
+    inset: -120px;
+    pointer-events: none;
+    background:
+      radial-gradient(46% 36% at 50% 42%, rgba(14, 165, 233, 0.16), transparent 72%),
+      radial-gradient(52% 40% at 18% 76%, rgba(56, 189, 248, 0.08), transparent 70%),
+      radial-gradient(44% 38% at 84% 24%, rgba(250, 204, 21, 0.05), transparent 72%);
+    will-change: transform, opacity;
+  }
+  .vignette {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(75% 72% at 50% 48%, transparent 52%, rgba(3, 6, 14, 0.72) 100%);
+  }
+
+  /* Subtle continuous coordinate rule (persists and morphs across beat cuts) */
+  .carry-line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: rgba(148, 163, 184, 0.24);
+    transform-origin: center center;
+    pointer-events: none;
+  }
+
+  .scene {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    padding: 240px 88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    will-change: transform, opacity, filter, clip-path;
+  }
+
+  /* Beat 1: 3D Spatial Z-Planes */
+  .plane-3d {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    white-space: nowrap;
+    transform-origin: center center;
+    will-change: transform, opacity, filter;
+  }
+  .b1-lead {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 300;
+    font-size: 42px;
+    letter-spacing: 0.28em;
+    color: #94A3B8;
+  }
+  .b1-hero {
+    display: flex;
+    align-items: baseline;
+    gap: 22px;
+    font-size-adjust: from-font;
+  }
+  @supports not (font-size-adjust: from-font) {
+    .b1-hero { line-height: 1.04; }
+  }
+  .b1-hero-sans {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 800;
+    font-size: 118px;
+    letter-spacing: -0.04em;
+    line-height: 0.94;
+    color: #F8FAFC;
+    text-shadow: 0 24px 52px rgba(0, 0, 0, 0.58);
+  }
+  .b1-hero-serif {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 132px;
+    letter-spacing: -0.015em;
+    line-height: 0.94;
+    color: #0EA5E9;
+    text-shadow: 0 24px 52px rgba(14, 165, 233, 0.24);
+  }
+  .b1-mono {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.16em;
+    color: #94A3B8;
+  }
+
+  /* Beat 2: Apple Follower Reveal */
+  .b2-kicker {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500;
+    font-size: 21px;
+    letter-spacing: 0.22em;
+    color: #0EA5E9;
+    margin-bottom: 30px;
+  }
+  .b2-lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .b2-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.28em;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 800;
+    font-size: 96px;
+    letter-spacing: -0.04em;
+    line-height: 0.96;
+  }
+  .b2-word {
+    display: inline-flex;
+    white-space: pre;
+  }
+  .b2-char {
+    display: inline-block;
+    will-change: transform, opacity, filter;
+  }
+  .b2-sub {
+    margin-top: 34px;
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-size: 48px;
+    color: #CBD5E1;
+    letter-spacing: -0.01em;
+  }
+
+  /* Beat 3: Rolling Cylinder Slot */
+  .b3-kicker {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.24em;
+    color: #94A3B8;
+    margin-bottom: 28px;
+  }
+  .b3-reel-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 152px;
+    padding: 0 26px;
+    border-top: 1px solid rgba(148, 163, 184, 0.24);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+  }
+  .b3-col-win {
+    position: relative;
+    height: 152px;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+  }
+  .b3-col-strip {
+    display: flex;
+    flex-direction: column;
+    will-change: transform, filter;
+  }
+  .b3-cell {
+    height: 152px;
+    line-height: 152px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 132px;
+    letter-spacing: 0.01em;
+    text-shadow: 0 14px 30px rgba(0, 0, 0, 0.56);
+  }
+  .b3-caption {
+    margin-top: 30px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    color: #94A3B8;
+    letter-spacing: 0.04em;
+  }
+
+  /* Beat 4: Ghost Echo 20% Close */
+  .b4-stage {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .b4-phrase {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 800;
+    font-size: 110px;
+    letter-spacing: -0.04em;
+    line-height: 0.96;
+    text-shadow: 0 18px 42px rgba(0, 0, 0, 0.56);
+    will-change: transform, opacity, filter;
+  }
+  .b4-accent {
+    color: #0EA5E9;
+    font-style: italic;
+  }
+  .b4-mark {
+    margin-top: 26px;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.24em;
+    color: #94A3B8;
+    will-change: opacity, transform;
+  }
+
+  /* Transition Wipe Blade (Foreground Occlusion + Smooth Mask Carrier) */
+  .wipe-blade {
+    position: absolute;
+    top: -10%;
+    bottom: -10%;
+    width: 240px;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(11, 15, 23, 0) 0%, #0EA5E9 46%, #0B0F17 72%, rgba(11, 15, 23, 0) 100%);
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  .svg-defs {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+</style>
+<script src="./motion_primitives.js"></script>
+</head>
+<body>
+<svg class="svg-defs" aria-hidden="true">
+  <defs id="reel-blur-defs"></defs>
+</svg>
+<div class="canvas" id="canvas">
+  <div class="stage-light" id="stage-light"></div>
+  <div class="vignette"></div>
+  <div class="carry-line" id="carry-line"></div>
+
+  <!-- Beat 1: 0.00s - 2.65s -->
+  <section class="scene" id="scene1">
+    <div class="plane-3d b1-lead" id="b1-lead">DESIGNED FOR</div>
+    <div class="plane-3d b1-hero" id="b1-hero">
+      <span class="b1-hero-sans">SHARP</span>
+      <span class="b1-hero-serif">timing</span>
+    </div>
+    <div class="plane-3d b1-mono" id="b1-mono">3D PLANES / LENS DOF</div>
+  </section>
+
+  <!-- Beat 2: 2.35s - 4.82s -->
+  <section class="scene" id="scene2">
+    <div class="b2-kicker" id="b2-kicker">02 / FOLLOWER STAGGER</div>
+    <div class="b2-lines" id="b2-lines"></div>
+    <div class="b2-sub" id="b2-sub">zero bounce, optical resolve</div>
+  </section>
+
+  <!-- Beat 3: 4.55s - 6.72s -->
+  <section class="scene" id="scene3">
+    <div class="b3-kicker" id="b3-kicker">03 / CYLINDER SHUTTER BLUR</div>
+    <div class="b3-reel-box" id="b3-reel"></div>
+    <div class="b3-caption" id="b3-caption">180 TO 360 DEG DIRECTIONAL SMEAR</div>
+  </section>
+
+  <!-- Beat 4: 6.55s - 8.50s -->
+  <section class="scene" id="scene4">
+    <div class="b4-stage" id="b4-stage">
+      <div class="b4-phrase" id="b4-p1-ghost"><span>RAW</span><span>STYLE</span></div>
+      <div class="b4-phrase" id="b4-p1-main"><span>RAW</span><span>STYLE</span></div>
+      <div class="b4-phrase" id="b4-p2-ghost"><span>PURE</span><span class="b4-accent">MOTION</span></div>
+      <div class="b4-phrase" id="b4-p2-main"><span>PURE</span><span class="b4-accent">MOTION</span></div>
+    </div>
+    <div class="b4-mark" id="b4-mark">AGY STUDIO KIT / OPTION A</div>
+  </section>
+
+  <div class="wipe-blade" id="wipe-blade"></div>
+</div>
+
+<script>
+(function () {
+  var DUR = 8.5;
+  var FPS = 60;
+  window.__meta = { dur: DUR, fps: FPS };
+
+  var b2Chars = [];
+  var b3Cols = [];
+
+  function initDOM() {
+    // Build Beat 2 per-character spans (Apple Follower)
+    var b2Container = document.getElementById("b2-lines");
+    var rows = [
+      [{ t: "EVERY", a: false }, { t: "LETTER", a: false }],
+      [{ t: "MOVES", a: false }, { t: "CLEAN", a: true }]
+    ];
+    for (var r = 0; r < rows.length; r++) {
+      var rowEl = document.createElement("div");
+      rowEl.className = "b2-row";
+      for (var w = 0; w < rows[r].length; w++) {
+        var wordObj = rows[r][w];
+        var wordEl = document.createElement("span");
+        wordEl.className = "b2-word";
+        if (wordObj.a) wordEl.style.color = "#0EA5E9";
+        for (var c = 0; c < wordObj.t.length; c++) {
+          var chEl = document.createElement("span");
+          chEl.className = "b2-char";
+          chEl.textContent = wordObj.t[c];
+          wordEl.appendChild(chEl);
+          b2Chars.push(chEl);
+        }
+        rowEl.appendChild(wordEl);
+      }
+      b2Container.appendChild(rowEl);
+    }
+
+    // Build Beat 3 vertical cylinder slot reel columns ("MOTION" + "FX")
+    var reelEl = document.getElementById("b3-reel");
+    var defs = document.getElementById("reel-blur-defs");
+    var WHEEL = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    var mainStr = "MOTION";
+    var accentStr = "FX";
+    var full = mainStr + accentStr;
+    var steps = 6;
+
+    for (var i = 0; i < full.length; i++) {
+      var target = full[i];
+      var fid = "reel-blur-" + i;
+      var filt = document.createElementNS("http://www.w3.org/2000/svg", "filter");
+      filt.setAttribute("id", fid);
+      filt.setAttribute("x", "-15%");
+      filt.setAttribute("y", "-45%");
+      filt.setAttribute("width", "130%");
+      filt.setAttribute("height", "190%");
+      var gb = document.createElementNS("http://www.w3.org/2000/svg", "feGaussianBlur");
+      gb.setAttribute("stdDeviation", "0 0");
+      filt.appendChild(gb);
+      defs.appendChild(filt);
+
+      var win = document.createElement("div");
+      win.className = "b3-col-win";
+      win.style.minWidth = target === "I" ? "50px" : "80px";
+
+      var strip = document.createElement("div");
+      strip.className = "b3-col-strip";
+      strip.style.color = i >= mainStr.length ? "#FACC15" : "#F8FAFC";
+
+      for (var s = 0; s <= steps; s++) {
+        var cell = document.createElement("div");
+        cell.className = "b3-cell";
+        if (s === steps) {
+          cell.textContent = target;
+        } else {
+          var base = WHEEL.indexOf(target);
+          cell.textContent = WHEEL[(base + (steps - s) * (i % 2 === 0 ? 3 : 5)) % WHEEL.length];
+        }
+        strip.appendChild(cell);
+      }
+      win.appendChild(strip);
+      reelEl.appendChild(win);
+      b3Cols.push({ strip: strip, blurNode: gb, filterId: fid, steps: steps });
+    }
+  }
+
+  function place3D(el, camZ, wordZ, focalZ, yOffsetPx, alpha) {
+    var st = AGYMotion.spatial3DCameraWord(camZ, wordZ, {
+      focalZ: focalZ,
+      dofRange: 380,
+      maxDofBlurPx: 10.5,
+      baseFocalDist: 920
+    });
+    var op = Math.max(0, Math.min(1, st.opacity * alpha));
+    el.style.opacity = op.toFixed(4);
+    el.style.transform =
+      "translate3d(-50%,-50%,0) translate3d(0," +
+      (yOffsetPx * st.perspectiveScale).toFixed(2) +
+      "px,0) scale(" +
+      st.perspectiveScale.toFixed(4) + ")";
+    el.style.filter = st.dofBlurPx > 0.08 ? "blur(" + st.dofBlurPx.toFixed(2) + "px)" : "none";
+  }
+
+  function applyGhost(el, st, alphaMult) {
+    var op = Math.max(0, Math.min(1, st.opacity * alphaMult));
+    el.style.opacity = op.toFixed(4);
+    el.style.transform = "translate3d(" + st.translateX.toFixed(2) + "px,0,0) scale(" + st.scale.toFixed(4) + ")";
+    el.style.filter = st.blurPx > 0.05 ? "blur(" + st.blurPx.toFixed(2) + "px)" : "none";
+  }
+
+  window.__seek = function (t) {
+    // Subtle breathing ambient background
+    var lightEl = document.getElementById("stage-light");
+    var lx = Math.sin(t * 0.65) * 44;
+    var ly = Math.cos(t * 0.45) * 36;
+    lightEl.style.transform = "translate3d(" + lx.toFixed(2) + "px," + ly.toFixed(2) + "px,0)";
+
+    // Morphing anchor line carrying across beats
+    var line = document.getElementById("carry-line");
+    var tWipe1 = AGYMotion.smoothMaskReveal(t, 2.22, { durationS: 0.44, maxBlurPx: 14 });
+    var tSplit2 = AGYMotion.angledSplitZoom(t, 4.55, { durationS: 0.25, skewOffsetPct: 16 });
+    var tCut3 = AGYMotion.cutoutFrameHoldSlide(t, 6.52, { durationS: 0.22, fromXPx: 1080, maxBlurPx: 20 });
+
+    if (t < 2.45) {
+      var uRule = AGYMotion.CURVES.appleOut(AGYMotion.clamp01(t / 0.45));
+      line.style.width = (220 * uRule).toFixed(1) + "px";
+      line.style.height = "1px";
+      line.style.transform = "translate3d(-50%, 260px, 0)";
+      line.style.opacity = AGYMotion.smoothstep(0, 0.3, t).toFixed(3);
+    } else if (t < 4.7) {
+      var u2 = AGYMotion.CURVES.fusionEase85(AGYMotion.invLerp(2.35, 2.75, t));
+      line.style.width = AGYMotion.lerp(220, 620, u2).toFixed(1) + "px";
+      line.style.height = "1px";
+      line.style.transform = "translate3d(-50%, " + AGYMotion.lerp(260, -250, u2).toFixed(1) + "px, 0)";
+      line.style.opacity = "0.65";
+    } else {
+      var u3 = AGYMotion.CURVES.appleOut(AGYMotion.invLerp(4.65, 5.15, t));
+      line.style.width = AGYMotion.lerp(620, 140, u3).toFixed(1) + "px";
+      line.style.height = "1px";
+      line.style.transform = "translate3d(-50%, " + AGYMotion.lerp(-250, 290, u3).toFixed(1) + "px, 0)";
+      line.style.opacity = (0.45 * (1 - AGYMotion.smoothstep(8.1, 8.5, t))).toFixed(3);
+    }
+
+    // Scene 1: 0.00 -> 2.66
+    var s1 = document.getElementById("scene1");
+    if (t <= 2.68) {
+      s1.style.display = "flex";
+      var uIn1 = AGYMotion.CURVES.appleOut(AGYMotion.clamp01(t / 0.48));
+      var uPush1 = AGYMotion.CURVES.fusionEase85(AGYMotion.clamp01((t - 1.1) / 1.05));
+      var camZ = AGYMotion.lerp(-600, -90, uIn1) + AGYMotion.lerp(0, 320, uPush1);
+      var focalZ = AGYMotion.lerp(240, -10, uIn1) + AGYMotion.lerp(0, -140, uPush1);
+
+      place3D(document.getElementById("b1-lead"), camZ, 240, focalZ, -155, AGYMotion.smoothstep(0.0, 0.24, t));
+      place3D(document.getElementById("b1-hero"), camZ, 0, focalZ, -10, AGYMotion.smoothstep(0.10, 0.36, t));
+      place3D(document.getElementById("b1-mono"), camZ, -240, focalZ, 148, AGYMotion.smoothstep(0.28, 0.62, t));
+
+      s1.style.transform = "scale(" + tWipe1.outgoingScale.toFixed(4) + ")";
+      var maskLeft = Math.max(0, Math.min(100, tWipe1.maskEdgePct));
+      s1.style.clipPath = t > 2.22 ? "inset(0 0 0 " + maskLeft.toFixed(2) + "%)" : "none";
+      s1.style.opacity = t > 2.22 ? (1 - tWipe1.u * 0.45).toFixed(3) : "1";
+    } else {
+      s1.style.display = "none";
+    }
+
+    // Smooth Wipe Ribbon (2.22 -> 2.66)
+    var blade = document.getElementById("wipe-blade");
+    if (tWipe1.active) {
+      var bx = AGYMotion.lerp(-180, 1140, tWipe1.eased);
+      blade.style.opacity = (Math.sin(tWipe1.u * Math.PI) * 0.9).toFixed(3);
+      blade.style.transform = "translate3d(" + bx.toFixed(1) + "px,0,0) skewX(-12deg)";
+      blade.style.filter = "blur(" + (tWipe1.edgeBlurPx * 0.65).toFixed(1) + "px)";
+    } else {
+      blade.style.opacity = "0";
+    }
+
+    // Scene 2: 2.22 -> 4.82 (Apple Follower + Angled Split out)
+    var s2 = document.getElementById("scene2");
+    if (t >= 2.20 && t <= 4.84) {
+      s2.style.display = "flex";
+      var rev2 = t < 2.66 ? tWipe1.maskEdgePct : 100;
+      if (t >= 4.55) {
+        var topPct = Math.max(0, Math.min(100, tSplit2.eased * 116));
+        var botPct = Math.max(0, Math.min(100, tSplit2.eased * 116 - 16));
+        s2.style.clipPath = "polygon(" + topPct.toFixed(2) + "% 0%, 100% 0%, 100% 100%, " + botPct.toFixed(2) + "% 100%)";
+        s2.style.transform = "scale(" + tSplit2.outgoingScale.toFixed(4) + ")";
+        s2.style.filter = tSplit2.featherBlurPx > 0.1 ? "blur(" + (tSplit2.featherBlurPx * 0.4).toFixed(1) + "px)" : "none";
+      } else {
+        s2.style.clipPath = t < 2.66 ? "inset(0 " + Math.max(0, 100 - rev2).toFixed(2) + "% 0 0)" : "none";
+        s2.style.transform = "scale(" + tWipe1.incomingScale.toFixed(4) + ")";
+        s2.style.filter = "none";
+      }
+
+      var k2 = AGYMotion.kinetic20Move("tracking-expand", t, 2.38, { durationS: 0.42, targetTrackingEm: 0.22 });
+      var kicker2 = document.getElementById("b2-kicker");
+      kicker2.style.opacity = k2.opacity.toFixed(4);
+      kicker2.style.letterSpacing = k2.letterSpacingEm.toFixed(4) + "em";
+
+      for (var c = 0; c < b2Chars.length; c++) {
+        var cs = AGYMotion.appleFollowerChar(t, 2.46, c, {
+          staggerS: 0.028,
+          durationS: 0.34,
+          riseEm: -0.3,
+          startBlurPx: 6,
+          maxShadowAlpha: 0.56,
+          startScale: 0.95
+        });
+        var ce = b2Chars[c];
+        ce.style.opacity = cs.opacity.toFixed(4);
+        ce.style.transform = "translate3d(0," + cs.translateYEm.toFixed(4) + "em,0) scale(" + cs.scale.toFixed(4) + ")";
+        ce.style.filter = cs.blurPx > 0.05 ? "blur(" + cs.blurPx.toFixed(2) + "px)" : "none";
+        ce.style.textShadow = "0 14px 28px rgba(0, 0, 0, " + cs.shadowAlpha.toFixed(3) + ")";
+      }
+
+      var sub2 = AGYMotion.appleFollowerChar(t, 3.05, 0, { staggerS: 0, durationS: 0.44, riseEm: -0.22, startBlurPx: 5 });
+      var sub2El = document.getElementById("b2-sub");
+      sub2El.style.opacity = sub2.opacity.toFixed(4);
+      sub2El.style.transform = "translate3d(0," + sub2.translateYEm.toFixed(4) + "em,0)";
+      sub2El.style.filter = sub2.blurPx > 0.05 ? "blur(" + sub2.blurPx.toFixed(2) + "px)" : "none";
+    } else {
+      s2.style.display = "none";
+    }
+
+    // Scene 3: 4.55 -> 6.76 (Rolling Cylinder Slot + Cutout Frame Hold Slide Out)
+    var s3 = document.getElementById("scene3");
+    if (t >= 4.55 && t <= 6.76) {
+      s3.style.display = "flex";
+      if (t < 4.80) {
+        s3.style.clipPath = tSplit2.clipPolygon;
+        s3.style.transform = "scale(" + tSplit2.incomingScale.toFixed(4) + ")";
+        s3.style.filter = "none";
+      } else if (t >= 6.52) {
+        var slideOutX = tCut3.translateXPx - 1080;
+        s3.style.clipPath = "none";
+        s3.style.transform = "translate3d(" + slideOutX.toFixed(1) + "px,0,0)";
+        s3.style.filter = tCut3.motionBlurXPx > 0.2 ? "blur(" + (tCut3.motionBlurXPx * 0.35).toFixed(1) + "px)" : "none";
+      } else {
+        s3.style.clipPath = "none";
+        s3.style.transform = "none";
+        s3.style.filter = "none";
+      }
+
+      var k3 = AGYMotion.kinetic20Move("blur-focus", t, 4.54, { durationS: 0.38 });
+      document.getElementById("b3-kicker").style.opacity = k3.opacity.toFixed(4);
+      document.getElementById("b3-caption").style.opacity = AGYMotion.smoothstep(5.15, 5.55, t).toFixed(4);
+
+      for (var i = 0; i < b3Cols.length; i++) {
+        var col = b3Cols[i];
+        var rs = AGYMotion.rollingSlotColumn(t, 4.52, i, {
+          steps: col.steps,
+          cellHeightPx: 152,
+          colStaggerS: 0.042,
+          durationS: 0.78,
+          maxBlurPx: 15
+        });
+        col.strip.style.transform = "translate3d(0," + rs.offsetYPx.toFixed(2) + "px,0)";
+        col.blurNode.setAttribute("stdDeviation", "0 " + rs.blurYPx.toFixed(2));
+        col.strip.style.filter = rs.blurYPx > 0.12 ? "url(#" + col.filterId + ")" : "none";
+        col.strip.style.opacity = Math.max(t >= 4.55 ? 0.92 : 0, rs.opacity).toFixed(4);
+      }
+    } else {
+      s3.style.display = "none";
+    }
+
+    // Scene 4: 6.52 -> 8.50 (Cutout Slide-In + Ghost Echo 20% Close)
+    var s4 = document.getElementById("scene4");
+    if (t >= 6.52) {
+      s4.style.display = "flex";
+      s4.style.transform = t < 6.76 ? "translate3d(" + tCut3.translateXPx.toFixed(1) + "px,0,0)" : "none";
+      s4.style.filter = t < 6.76 && tCut3.motionBlurXPx > 0.2 ? "blur(" + (tCut3.motionBlurXPx * 0.35).toFixed(1) + "px)" : "none";
+
+      var p1Ghost = document.getElementById("b4-p1-ghost");
+      var p1Main = document.getElementById("b4-p1-main");
+      var p2Ghost = document.getElementById("b4-p2-ghost");
+      var p2Main = document.getElementById("b4-p2-main");
+      var markEl = document.getElementById("b4-mark");
+
+      var swapT = 7.30;
+      var holdFade = 1 - AGYMotion.smoothstep(8.22, 8.50, t);
+
+      if (t < swapT) {
+        var ge1 = AGYMotion.ghostEchoPair(t, 6.58, {
+          durationS: 0.42,
+          slideDistancePx: -54,
+          echoOpacity: 0.20
+        });
+        applyGhost(p1Ghost, ge1.ghost, holdFade);
+        applyGhost(p1Main, ge1.incoming, holdFade);
+        p2Ghost.style.opacity = "0";
+        p2Main.style.opacity = "0";
+        markEl.style.opacity = "0";
+      } else {
+        var ge2 = AGYMotion.ghostEchoPair(t, swapT, {
+          durationS: 0.56,
+          slideDistancePx: 92,
+          echoOpacity: 0.24,
+          ghostScaleMax: 1.38,
+          ghostDriftPx: -54,
+          ghostBlurMax: 14
+        });
+        applyGhost(p1Main, ge2.ghost, holdFade);
+        p1Ghost.style.opacity = "0";
+
+        var p2Echo = {
+          opacity: ge2.ghost.opacity * 0.9,
+          scale: ge2.incoming.scale * 1.12,
+          translateX: ge2.incoming.translateX + 26,
+          blurPx: ge2.incoming.blurPx + 7
+        };
+        applyGhost(p2Ghost, p2Echo, holdFade);
+        applyGhost(p2Main, ge2.incoming, holdFade);
+        markEl.style.opacity = (AGYMotion.smoothstep(7.55, 7.90, t) * holdFade).toFixed(4);
+      }
+    } else {
+      s4.style.display = "none";
+    }
+  };
+
+  async function boot() {
+    initDOM();
+    await document.fonts.load('800 118px "Inter Tight"');
+    await document.fonts.load('300 42px "Inter Tight"');
+    await document.fonts.load('italic 800 110px "Inter Tight"');
+    await document.fonts.load('400 26px "Inter"');
+    await document.fonts.load('italic 400 132px "Instrument Serif"');
+    await document.fonts.load('700 132px "Oswald"');
+    await document.fonts.load('500 22px "JetBrains Mono"');
+    window.__seek(0);
+    window.__ready = true;
+  }
+
+  boot();
+}());
+</script>
+</body>
+</html>

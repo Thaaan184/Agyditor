@@ -14,3 +14,10 @@
 - **Dials:** `ENERGY 3 / RHYTHM 3 / MOTION 2`
 - **Visual Rules:** Hard cuts on speech completion. 115% to 130% instant snap-zoom on facecam or subject reaction. Word-level subtitles positioned in lower safe zone with color shifts strictly tied to vocal pitch/volume peaks.
 - **Audio Rules:** Mandatory BGM hard-cut (`0.0` amplitude) `0.15s` to `0.5s` before comedic punchline or awkward silence, followed by a single dry stinger SFX.
+
+## 4. Calibrated Text, Subtitle & Transition Baseline
+- **Never Ship Unstyled System Fonts:** All profiles MUST load bundled `.woff2` or `.ttf` faces from `studio_kit/fonts/` via explicit `@font-face` rules and call `await document.fonts.load(...)`. Unbundled `Segoe UI` fallbacks are rejected.
+- **Profile-to-Primitive Routing (`studio_kit/motion_primitives.js` & `studio_kit/motifs/`):**
+  - `mograph-pro`: Combine `kinetic-3d-spatial` (Mixed-Voice `Inter Tight` + italic `Instrument Serif` + DoF blur) with `rolling-cylinder-slot`, `smoothMaskReveal`, and `180-360` deg shutter motion blur.
+  - `talking-head-reel`: Prefer `apple-follower-reveal` (`2-frame` per-glyph stagger + blur resolve) and `ghost-echo-kinetic` (`0.20` residual echo trail) over uniform block fades; use `object-separation` only for `1s-3s` hook behind-subject cutouts on CPU.
+  - `gaming-comedic` & `gaming-montage`: Keep frame clean with ultra-brief 1-2 punch words tied to `faster-whisper` / `librosa` spikes (`ghost-echo-kinetic`, `rolling-cylinder-slot`, or `cutoutFrameHoldSlide` 5-8 frame overlap) instead of flat CSS caption cards.

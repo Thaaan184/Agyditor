@@ -21,7 +21,12 @@ description: >-
   2. If not running, call `launch_weftcut` to start `tools/WeftCut/WeftCut.exe`.
   3. Use `begin_agent_session` for multi-step edits so the user can review changes visually via `Tacks` and `Changes` (Timeline Diff).
 
-## Core Reference Docs
+## Core Reference Docs & Studio Starter Motifs
 - See [references/bundled-skill/SKILL.md](references/bundled-skill/SKILL.md) for the official skill shipped inside WeftCut v0.8.1 (including `craft/rules.md`, `craft/editing.md`, and `recipes/teaching-explainer.md`).
 - See [references/mcp.md](references/mcp.md) for MCP transport, tool lifecycle, Tacks, and Timeline Diff conventions.
-- See [references/motif-authoring.md](references/motif-authoring.md) for the exact `motif.define({ setup, frame })` authoring contract (one purpose per Motif layer, pure function of time `t`, cue props `cue_<name>_s`, zero web app navigation bars).
+- See [references/motif-authoring.md](references/motif-authoring.md) for the exact `motif.define({ async setup(props, ctx), frame(t, ctx) })` authoring contract (one purpose per Motif layer, pure function of time `t`, cue props `cue_<name>_s`, bundled relative `./fonts/` loaded via `document.fonts.load(...)`, zero web app navigation bars).
+- Ready-to-use self-contained Starter Motifs live under `studio_kit/motifs/` (sharing `studio_kit/motion_primitives.js`):
+  - `studio_kit/motifs/apple-follower-reveal` (2-frame per-character stagger with blur resolve and tight per-glyph shadow).
+  - `studio_kit/motifs/ghost-echo-kinetic` (20% trailing ghost expansion + `[0.38, 0, 0, 1]` kinetic swap).
+  - `studio_kit/motifs/rolling-cylinder-slot` (clipped vertical reel columns with SVG directional Y blur at mid-velocity + split color accent).
+  - `studio_kit/motifs/kinetic-3d-spatial` (Mixed-Voice sans + italic serif across Z depth planes with Focal-Plane DoF blur).

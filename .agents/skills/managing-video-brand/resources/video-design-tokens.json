@@ -4,7 +4,9 @@
     "default_resolution": [1920, 1080],
     "vertical_resolution": [1080, 1920],
     "default_fps": 30,
-    "montage_fps": 60
+    "montage_fps": 60,
+    "draft_shutter_deg": 180,
+    "fast_text_shutter_deg": 360
   },
   "palettes": {
     "editorial_dark": {
@@ -32,13 +34,72 @@
     }
   },
   "typography": {
-    "display_sans": ["Plus Jakarta Sans", "Segoe UI", "Inter", "sans-serif"],
-    "technical_mono": ["JetBrains Mono", "Consolas", "monospace"]
+    "display_sans": ["Inter Tight", "Inter", "Archivo", "Geist", "sans-serif"],
+    "editorial_serif": ["Instrument Serif", "Fraunces", "serif"],
+    "condensed_impact": ["Oswald", "Montserrat", "sans-serif"],
+    "technical_mono": ["JetBrains Mono", "Geist Mono", "monospace"],
+    "display_tracking_em": -0.04,
+    "mixed_voice": {
+      "hero": { "family": "Inter Tight", "weight": 800, "style": "normal", "tracking_em": -0.04 },
+      "accent": { "family": "Instrument Serif", "weight": 400, "style": "italic", "tracking_em": -0.015 },
+      "connector": { "family": "Inter Tight", "weight": 300, "style": "normal", "tracking_em": 0.04 },
+      "telemetry": { "family": "JetBrains Mono", "weight": 500, "style": "normal", "tracking_em": 0.02 }
+    },
+    "local_font_files": {
+      "Inter Tight": "studio_kit/fonts/InterTight-Latin.woff2",
+      "Inter Tight Italic": "studio_kit/fonts/InterTight-Italic.woff2",
+      "Inter": "studio_kit/fonts/Inter.ttf",
+      "Instrument Serif": "studio_kit/fonts/InstrumentSerif.ttf",
+      "Fraunces": "studio_kit/fonts/Fraunces.ttf",
+      "Archivo": "studio_kit/fonts/Archivo.ttf",
+      "Oswald": "studio_kit/fonts/Oswald-Latin.woff2",
+      "Montserrat": "studio_kit/fonts/Montserrat-Latin.woff2",
+      "JetBrains Mono": "studio_kit/fonts/JetBrainsMono-Latin.woff2",
+      "Geist": "studio_kit/fonts/Geist.ttf",
+      "Geist Mono": "studio_kit/fonts/GeistMono.ttf"
+    }
   },
   "motion_curves": {
     "snap_enter": "cubic-bezier(0.16, 1, 0.3, 1)",
+    "apple_follower_out": "cubic-bezier(0.16, 1, 0.3, 1)",
+    "ghost_echo": "cubic-bezier(0.38, 0, 0, 1)",
+    "fusion_ease_85": "cubic-bezier(0.85, 0, 0.15, 1)",
+    "smooth_mask": "cubic-bezier(0.7, 0, 0.3, 1)",
     "carry_morph": "cubic-bezier(0.65, 0, 0.35, 1)",
-    "spring_damping": 0.78,
-    "spring_stiffness": 180.0
+    "spring_damping": 18.0,
+    "spring_stiffness": 180.0,
+    "spring_mass": 0.8
+  },
+  "text_motion_recipes": {
+    "apple_follower": {
+      "motif": "studio_kit/motifs/apple-follower-reveal",
+      "primitive": "AGYMotion.appleFollowerChar",
+      "stagger_frames_30fps": 2,
+      "resolve_frames_30fps": 10,
+      "start_blur_px": 6
+    },
+    "ghost_echo": {
+      "motif": "studio_kit/motifs/ghost-echo-kinetic",
+      "primitive": "AGYMotion.ghostEchoPair",
+      "echo_opacity": 0.2,
+      "curve": "cubic-bezier(0.38, 0, 0, 1)"
+    },
+    "rolling_cylinder": {
+      "motif": "studio_kit/motifs/rolling-cylinder-slot",
+      "primitive": "AGYMotion.rollingSlotColumn",
+      "max_vertical_blur_px": 15
+    },
+    "spatial_3d_dof": {
+      "motif": "studio_kit/motifs/kinetic-3d-spatial",
+      "primitive": "AGYMotion.spatial3DCameraWord",
+      "dof_range_z": 410,
+      "max_dof_blur_px": 9.5
+    }
+  },
+  "transition_recipes": {
+    "foreground_occlusion": { "primitive": "AGYMotion.foregroundOcclusionWipe", "window_frames_30fps": [12, 18] },
+    "cutout_frame_hold": { "primitive": "AGYMotion.cutoutFrameHoldSlide", "overlap_frames_30fps": [5, 8] },
+    "smooth_mask_reveal": { "primitive": "AGYMotion.smoothMaskReveal", "window_frames_30fps": [14, 20] },
+    "angled_feathered_split": { "primitive": "AGYMotion.angledSplitZoom", "window_frames_30fps": [8, 12] }
   }
 }

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rolling Cylinder Slot Motif</title>
+<style>
+  @font-face {
+    font-family: "Oswald";
+    src: url("./fonts/Oswald-Latin.woff2") format("woff2");
+    font-weight: 200 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "JetBrains Mono";
+    src: url("./fonts/JetBrainsMono-Latin.woff2") format("woff2");
+    font-weight: 100 800;
+    font-style: normal;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+  }
+  .svg-defs {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+  .stage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .slot-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 124px;
+    overflow: hidden;
+    padding: 0 18px;
+  }
+  .col-window {
+    position: relative;
+    height: 124px;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+  }
+  .col-strip {
+    display: flex;
+    flex-direction: column;
+    will-change: transform, filter;
+  }
+  .cell {
+    height: 124px;
+    line-height: 124px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 108px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    user-select: none;
+    text-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+  }
+  .kicker {
+    margin-top: 14px;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+</style>
+<script src="./motion_primitives.js"></script>
+</head>
+<body>
+<svg class="svg-defs" aria-hidden="true">
+  <defs id="blur-defs"></defs>
+</svg>
+<div id="stage" class="stage"></div>
+<script>
+(function () {
+  var WHEEL = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  var columns = [];
+  var kickerEl = null;
+  var cfg = null;
+
+  function makeWheelChar(targetChar, stepIndex, totalSteps, colIndex) {
+    if (stepIndex === totalSteps) return targetChar;
+    var baseIdx = WHEEL.indexOf(targetChar.toUpperCase());
+    if (baseIdx < 0) baseIdx = colIndex * 5;
+    var offset = (baseIdx + (totalSteps - stepIndex) * (colIndex % 2 === 0 ? 3 : 5)) % WHEEL.length;
+    return WHEEL[offset];
+  }
+
+  function renderFrame(t) {
+    if (!cfg) return;
+    var steps = Math.max(2, Math.round(Number(cfg.roll_steps) || 6));
+    for (var i = 0; i < columns.length; i++) {
+      var col = columns[i];
+      var st = AGYMotion.rollingSlotColumn(t, 0.05, i, {
+        steps: steps,
+        cellHeightPx: 124,
+        colStaggerS: 0.045,
+        durationS: 0.78,
+        maxBlurPx: 15
+      });
+      col.strip.style.transform = "translate3d(0," + st.offsetYPx.toFixed(2) + "px,0)";
+      col.blurNode.setAttribute("stdDeviation", "0 " + st.blurYPx.toFixed(2));
+      col.strip.style.filter = st.blurYPx > 0.15 ? "url(#" + col.filterId + ")" : "none";
+      col.strip.style.opacity = st.opacity.toFixed(4);
+    }
+    if (kickerEl) {
+      var k = AGYMotion.kinetic20Move("tracking-expand", t, 0.42, {
+        durationS: 0.45,
+        targetTrackingEm: 0.2
+      });
+      kickerEl.style.opacity = k.opacity.toFixed(4);
+      kickerEl.style.letterSpacing = k.letterSpacingEm.toFixed(4) + "em";
+    }
+  }
+
+  motif.define({
+    async setup(props, ctx) {
+      cfg = props;
+      await document.fonts.load('700 108px "Oswald"');
+      await document.fonts.load('500 20px "JetBrains Mono"');
+
+      var stage = document.getElementById("stage");
+      var defs = document.getElementById("blur-defs");
+      stage.replaceChildren();
+      defs.replaceChildren();
+      columns = [];
+
+      var mainText = String(props.main_text || "LOCAL").toUpperCase();
+      var accentText = String(props.accent_text || "FX").toUpperCase();
+      var fullText = mainText + accentText;
+      var steps = Math.max(2, Math.round(Number(props.roll_steps) || 6));
+      var ink = props.ink || "#F8FAFC";
+      var accent = props.accent || "#FACC15";
+
+      var row = document.createElement("div");
+      row.className = "slot-row";
+
+      for (var i = 0; i < fullText.length; i++) {
+        var ch = fullText[i];
+        var filterId = "vblur-" + i;
+        var filt = document.createElementNS("http://www.w3.org/2000/svg", "filter");
+        filt.setAttribute("id", filterId);
+        filt.setAttribute("x", "-10%");
+        filt.setAttribute("y", "-40%");
+        filt.setAttribute("width", "120%");
+        filt.setAttribute("height", "180%");
+        var gBlur = document.createElementNS("http://www.w3.org/2000/svg", "feGaussianBlur");
+        gBlur.setAttribute("stdDeviation", "0 0");
+        filt.appendChild(gBlur);
+        defs.appendChild(filt);
+
+        var win = document.createElement("div");
+        win.className = "col-window";
+        win.style.minWidth = ch === "I" ? "46px" : "66px";
+
+        var strip = document.createElement("div");
+        strip.className = "col-strip";
+        strip.style.color = i >= mainText.length ? accent : ink;
+
+        for (var s = 0; s <= steps; s++) {
+          var cell = document.createElement("div");
+          cell.className = "cell";
+          cell.textContent = ch === " " ? "\u00A0" : makeWheelChar(ch, s, steps, i);
+          strip.appendChild(cell);
+        }
+
+        win.appendChild(strip);
+        row.appendChild(win);
+        columns.push({ strip: strip, blurNode: gBlur, filterId: filterId });
+      }
+      stage.appendChild(row);
+
+      if (props.kicker && String(props.kicker).trim() !== "") {
+        kickerEl = document.createElement("div");
+        kickerEl.className = "kicker";
+        kickerEl.style.color = ink;
+        kickerEl.textContent = String(props.kicker);
+        stage.appendChild(kickerEl);
+      } else {
+        kickerEl = null;
+      }
+
+      renderFrame(0, ctx);
+    },
+    frame(t, ctx) {
+      renderFrame(t, ctx);
+    }
+  });
+}());
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "Apple Follower Reveal",
+  "size": [1400, 320],
+  "default_duration_s": 3.5,
+  "content_duration_s": 1.4,
+  "graphic_role": "title",
+  "fonts": [
+    "./fonts/InterTight-Latin.woff2",
+    "./fonts/Inter.ttf"
+  ],
+  "props_schema": {
+    "text": { "type": "string", "default": "MOTION WITH PURPOSE", "max_length": 48 },
+    "subtitle": { "type": "string", "default": "PER-CHARACTER TIMING", "max_length": 64 },
+    "ink": { "type": "color", "default": "#F8FAFC" },
+    "accent": { "type": "color", "default": "#0EA5E9" },
+    "stagger_ms": { "type": "number", "default": 34, "min": 10, "max": 120 },
+    "align": { "type": "enum", "options": ["center", "left"], "default": "center" }
+  }
+}

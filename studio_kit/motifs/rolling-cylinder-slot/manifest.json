@@ -1,0 +1,20 @@
+{
+  "name": "Rolling Cylinder Slot",
+  "size": [1200, 260],
+  "default_duration_s": 3.5,
+  "content_duration_s": 1.4,
+  "graphic_role": "callout",
+  "fonts": [
+    "./fonts/Oswald-Latin.woff2",
+    "./fonts/JetBrainsMono-Latin.woff2",
+    "./fonts/InterTight-Latin.woff2"
+  ],
+  "props_schema": {
+    "main_text": { "type": "string", "default": "LOCAL", "max_length": 14 },
+    "accent_text": { "type": "string", "default": "FX", "max_length": 8 },
+    "kicker": { "type": "string", "default": "MECHANICAL SHUTTER ROLL", "max_length": 40 },
+    "ink": { "type": "color", "default": "#F8FAFC" },
+    "accent": { "type": "color", "default": "#FACC15" },
+    "roll_steps": { "type": "number", "default": 6, "min": 2, "max": 14 }
+  }
+}

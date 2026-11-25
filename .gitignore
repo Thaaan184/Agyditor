@@ -8,3 +8,19 @@ bin/*.exe
 bin/*.zip
 *.tmp.mp4
 *.tmp.wav
+*.pt
+
+# Local client triage & scratch scripts
+triage.py
+docs/superpowers/
+
+# Raw downloaded study clips, audio stems, and extracted verification bursts
+references/**/*.mp4
+references/**/*.wav
+references/**/*.jsonl
+references/**/*.jpg
+references/**/*.jpeg
+references/**/*.png
+references/**/frames_*/
+references/**/burst_*/
+studio_kit/renders/_*

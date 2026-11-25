@@ -1,0 +1,22 @@
+{
+  "name": "Ghost Echo Kinetic",
+  "size": [1280, 340],
+  "default_duration_s": 3.5,
+  "max_duration_prop": "duration_s",
+  "graphic_role": "callout",
+  "fonts": [
+    "./fonts/InterTight-Latin.woff2",
+    "./fonts/InterTight-Italic.woff2",
+    "./fonts/Montserrat-Latin.woff2"
+  ],
+  "props_schema": {
+    "first_phrase": { "type": "string", "default": "SHARP CUTS", "max_length": 36 },
+    "second_phrase": { "type": "string", "default": "ZERO NOISE", "max_length": 36 },
+    "accent_word": { "type": "string", "default": "NOISE", "max_length": 20 },
+    "ink": { "type": "color", "default": "#F8FAFC" },
+    "accent": { "type": "color", "default": "#0EA5E9" },
+    "cue_swap_s": { "type": "number", "default": 1.15, "min": 0.3, "max": 8.0 },
+    "duration_s": { "type": "number", "default": 3.5, "min": 1.2, "max": 12.0 },
+    "echo_opacity": { "type": "number", "default": 0.2, "min": 0.08, "max": 0.4 }
+  }
+}

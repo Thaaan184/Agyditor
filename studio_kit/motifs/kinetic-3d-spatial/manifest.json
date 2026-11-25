@@ -1,0 +1,22 @@
+{
+  "name": "Kinetic 3D Spatial",
+  "size": [1080, 1920],
+  "default_duration_s": 4.0,
+  "content_duration_s": 2.4,
+  "graphic_role": "title",
+  "fonts": [
+    "./fonts/InterTight-Latin.woff2",
+    "./fonts/InstrumentSerif.ttf",
+    "./fonts/JetBrainsMono-Latin.woff2"
+  ],
+  "props_schema": {
+    "lead_text": { "type": "string", "default": "BUILT FOR", "max_length": 24 },
+    "hero_text": { "type": "string", "default": "CINEMA", "max_length": 20 },
+    "accent_serif": { "type": "string", "default": "precision", "max_length": 24 },
+    "sub_label": { "type": "string", "default": "1080P / 60FPS LOCAL PIPELINE", "max_length": 44 },
+    "ink": { "type": "color", "default": "#F8FAFC" },
+    "accent": { "type": "color", "default": "#0EA5E9" },
+    "ground_mode": { "type": "enum", "options": ["transparent", "ambient_dark"], "default": "transparent" },
+    "cue_push_s": { "type": "number", "default": 1.15, "min": 0.3, "max": 6.0 }
+  }
+}
