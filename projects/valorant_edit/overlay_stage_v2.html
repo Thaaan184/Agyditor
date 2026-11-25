@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0" />
+  <link rel="icon" href="data:," />
+  <title>Valorant Harbor 3K V2 Clean Kinetic Overlay</title>
+  <style>
+    @font-face {
+      font-family: 'Oswald';
+      src: url('/studio_kit/fonts/Oswald-Latin.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: 'Inter Tight';
+      src: url('/studio_kit/fonts/InterTight-Latin.woff2') format('woff2');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: 'Instrument Serif';
+      src: url('/studio_kit/fonts/InstrumentSerif.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: block;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: transparent !important;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    #stage {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    /* _S5mVxnVbcU-inspired translucent 3K sky glow (zero box, zero stat clutter) */
+    #sky-3k {
+      position: absolute;
+      left: 0;
+      width: 1080px;
+      top: 84px;
+      text-align: center;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 148px;
+      letter-spacing: 0.14em;
+      color: rgba(244, 239, 230, 0.88);
+      text-shadow: 0 8px 28px rgba(9, 9, 11, 0.65);
+      opacity: 0;
+      pointer-events: none;
+      will-change: transform, opacity;
+    }
+
+    /* _S5mVxnVbcU-inspired painted crimson/gold brush slash SVG on Kill #3 */
+    #fx-svg {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      pointer-events: none;
+    }
+
+    /* Golden Reels/Shorts Safe-Zone Centered Box-Less Kinetic Subtitles (y=1285..1310) */
+    #sub-container {
+      position: absolute;
+      left: 90px;
+      width: 900px;
+      top: 1275px;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    .sub-wrap {
+      position: relative;
+      display: inline-block;
+      max-width: 880px;
+      line-height: 1.08;
+      text-align: center;
+      will-change: transform, opacity, filter;
+    }
+
+    .sub-normal {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 800;
+      font-size: 62px;
+      letter-spacing: -0.02em;
+      color: #F4EFE6;
+      -webkit-text-stroke: 4px #09090B;
+      paint-order: stroke fill;
+      text-shadow: 0 8px 24px rgba(9, 9, 11, 0.92);
+    }
+
+    .sub-emphasis {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 800;
+      font-size: 74px;
+      letter-spacing: -0.025em;
+      color: #FACC15;
+      -webkit-text-stroke: 4.5px #09090B;
+      paint-order: stroke fill;
+      text-shadow: 0 10px 26px rgba(9, 9, 11, 0.95);
+    }
+
+    .sub-scream {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 102px;
+      letter-spacing: 0.03em;
+      color: #FF2E54;
+      -webkit-text-stroke: 5px #09090B;
+      paint-order: stroke fill;
+      text-shadow: 0 10px 30px rgba(9, 9, 11, 0.96);
+    }
+
+    .sub-deadpan {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 76px;
+      letter-spacing: -0.01em;
+      color: #F4EFE6;
+      -webkit-text-stroke: 3.5px #09090B;
+      paint-order: stroke fill;
+      text-shadow: 0 8px 24px rgba(9, 9, 11, 0.94);
+    }
+
+    .sub-lucky {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 800;
+      font-size: 64px;
+      letter-spacing: -0.02em;
+      color: #FACC15;
+      -webkit-text-stroke: 4.5px #09090B;
+      paint-order: stroke fill;
+      text-shadow: 0 10px 28px rgba(9, 9, 11, 0.96);
+    }
+    .sub-lucky .hl-reyna {
+      color: #FF2E54;
+    }
+
+    .sub-echo-ghost {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: auto;
+      pointer-events: none;
+      color: #FF2E54;
+      -webkit-text-stroke: 0 transparent;
+      text-shadow: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="stage">
+    <!-- Hidden SVG filter for real directional horizontal velocity smear (_S5mVxnVbcU style) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <filter id="h-smear" x="-35%" y="-15%" width="170%" height="130%">
+          <feGaussianBlur id="h-smear-blur" in="SourceGraphic" stdDeviation="0 0" />
+        </filter>
+      </defs>
+    </svg>
+
+    <div id="sky-3k">3K</div>
+
+    <!-- Painted Crimson/Gold Brush Slash Arc (Kill #3 Ace-style Finisher) -->
+    <svg id="fx-svg" viewBox="0 0 1080 1920">
+      <defs>
+        <linearGradient id="slash-grad" x1="0%" y1="60%" x2="100%" y2="35%">
+          <stop offset="0%" stop-color="#FF2E54" stop-opacity="0.0" />
+          <stop offset="22%" stop-color="#FF2E54" stop-opacity="0.92" />
+          <stop offset="68%" stop-color="#FF5533" stop-opacity="0.88" />
+          <stop offset="100%" stop-color="#FACC15" stop-opacity="0.0" />
+        </linearGradient>
+        <filter id="slash-glow" x="-20%" y="-40%" width="140%" height="180%">
+          <feGaussianBlur stdDeviation="10" result="b" />
+          <feMerge>
+            <feMergeNode in="b" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+      <g id="slash-group" opacity="0">
+        <path id="slash-wide" d="M -80 1245 Q 480 1075 1160 1165" fill="none" stroke="url(#slash-grad)" stroke-width="58" stroke-linecap="round" filter="url(#slash-glow)" />
+        <path id="slash-core" d="M -80 1245 Q 480 1078 1160 1165" fill="none" stroke="#F4EFE6" stroke-width="11" stroke-linecap="round" opacity="0.85" />
+      </g>
+    </svg>
+
+    <div id="sub-container"></div>
+  </div>
+
+  <script src="/studio_kit/motion_primitives.js"></script>
+  <script src="/studio_kit/keyframe_rig.js"></script>
+  <script src="/studio_kit/optical_stage.js"></script>
+  <script>
+    (function () {
+      'use strict';
+      var M = window.AGYMotion;
+      var R = window.AGYRig;
+      var O = window.AGYOptics;
+
+      var CFG = null;
+      var ACTIVE_SUB_ID = null;
+      var ACTIVE_WRAP_EL = null;
+      var ACTIVE_GHOST_EL = null;
+      var ACTIVE_INCOMING_EL = null;
+
+      var sky3kEl = document.getElementById('sky-3k');
+      var slashGroup = document.getElementById('slash-group');
+      var slashWide = document.getElementById('slash-wide');
+      var slashCore = document.getElementById('slash-core');
+      var subContainer = document.getElementById('sub-container');
+      var hSmearBlur = document.getElementById('h-smear-blur');
+
+      function mountSubtitle(cue) {
+        subContainer.innerHTML = '';
+        ACTIVE_WRAP_EL = null;
+        ACTIVE_GHOST_EL = null;
+        ACTIVE_INCOMING_EL = null;
+        if (!cue) {
+          ACTIVE_SUB_ID = null;
+          return;
+        }
+        ACTIVE_SUB_ID = cue.id;
+        subContainer.style.top = (cue.y_px - 30) + 'px';
+
+        var clsMap = {
+          normal: 'sub-normal',
+          emphasis: 'sub-emphasis',
+          scream: 'sub-scream',
+          deadpan_serif: 'sub-deadpan',
+          lucky_punch: 'sub-lucky',
+          hype_echo: 'sub-emphasis'
+        };
+        var cls = clsMap[cue.style] || 'sub-normal';
+        var wrap = document.createElement('div');
+        wrap.className = 'sub-wrap';
+
+        if (cue.anim === 'ghost_echo') {
+          var ghost = document.createElement('div');
+          ghost.className = cls + ' sub-echo-ghost';
+          ghost.textContent = cue.text;
+          var inc = document.createElement('div');
+          inc.className = cls;
+          inc.textContent = cue.text;
+          wrap.appendChild(ghost);
+          wrap.appendChild(inc);
+          ACTIVE_GHOST_EL = ghost;
+          ACTIVE_INCOMING_EL = inc;
+        } else {
+          var line = document.createElement('div');
+          line.className = cls;
+          if (cue.style === 'lucky_punch') {
+            line.innerHTML = cue.text.replace('REYNA', '<span class="hl-reyna">REYNA</span>');
+          } else {
+            line.textContent = cue.text;
+          }
+          wrap.appendChild(line);
+          ACTIVE_INCOMING_EL = line;
+        }
+        ACTIVE_WRAP_EL = wrap;
+        subContainer.appendChild(wrap);
+      }
+
+      window.__isFrameActive = function (t) {
+        if (!CFG) return false;
+        var k3 = CFG.milestones.kill3_t;
+        if (t >= k3 - 0.02 && t <= k3 + 1.95) return true;
+        for (var i = 0; i < CFG.subtitles.length; i++) {
+          var c = CFG.subtitles[i];
+          if (t >= c.t0 - 0.02 && t <= c.t1 + 0.02) return true;
+        }
+        return false;
+      };
+
+      window.__seek = function (t) {
+        if (!CFG) return;
+
+        // 1. Translucent 3K Sky Glow + Painted Crimson Brush-Slash on Kill #3
+        var k3 = CFG.milestones.kill3_t;
+        if (t >= k3 && t <= k3 + 1.85) {
+          var sIn = M.smoothstep(k3, k3 + 0.14, t);
+          var sOut = 1.0 - M.smoothstep(k3 + 1.15, k3 + 1.85, t);
+          sky3kEl.style.opacity = (0.34 * sIn * sOut).toFixed(4);
+          var skySc = M.lerp(1.22, 1.0, M.CURVES.appleOut(M.invLerp(k3, k3 + 0.30, t)));
+          sky3kEl.style.transform = 'scale(' + skySc.toFixed(4) + ')';
+        } else {
+          sky3kEl.style.opacity = '0';
+        }
+
+        if (t >= k3 && t <= k3 + 0.62) {
+          var slFade = 1.0 - M.smoothstep(k3 + 0.24, k3 + 0.62, t);
+          slashGroup.setAttribute('opacity', slFade.toFixed(4));
+          O.glowSignaturePath(slashWide, null, t, k3, 0.24);
+          O.glowSignaturePath(slashCore, null, t, k3 + 0.02, 0.20);
+        } else {
+          slashGroup.setAttribute('opacity', '0');
+        }
+
+        // 2. Clean Centered Subtitles with _S5mVxnVbcU Horizontal Smear Blur
+        var found = null;
+        for (var i = 0; i < CFG.subtitles.length; i++) {
+          var c = CFG.subtitles[i];
+          if (t >= c.t0 && t <= c.t1) {
+            found = c;
+            break;
+          }
+        }
+        if (!found) {
+          if (ACTIVE_SUB_ID !== null) mountSubtitle(null);
+          hSmearBlur.setAttribute('stdDeviation', '0 0');
+          return;
+        }
+        if (ACTIVE_SUB_ID !== found.id) {
+          mountSubtitle(found);
+        }
+
+        var localT = t - found.t0;
+        var remT = found.t1 - t;
+        var fadeOut = M.smoothstep(0.0, 0.11, remT);
+
+        if (found.anim === 'smear_pop' && ACTIVE_WRAP_EL) {
+          var inU = M.clamp01(localT / 0.14);
+          var outU = 1.0 - M.clamp01(remT / 0.11);
+          var eIn = M.CURVES.appleOut(inU);
+          var blurIn = (1.0 - eIn) * 34.0;
+          var blurOut = outU * outU * 30.0;
+          var blurX = Math.max(blurIn, blurOut);
+          hSmearBlur.setAttribute('stdDeviation', blurX.toFixed(1) + ' 0');
+          ACTIVE_WRAP_EL.style.filter = blurX > 0.4 ? 'url(#h-smear)' : 'none';
+
+          var trk = R.popOvershootTrack(found.t0, 0.18, 1.07);
+          var sc = R.evalTrack(trk, t, CFG.duration_s);
+          var tx = M.lerp(-48, 0, eIn) + outU * 38;
+          ACTIVE_WRAP_EL.style.opacity = (M.smoothstep(0.0, 0.05, localT) * fadeOut).toFixed(4);
+          ACTIVE_WRAP_EL.style.transform = 'translate3d(' + tx.toFixed(1) + 'px,0,0) scale(' + sc.toFixed(4) + ')';
+        } else if (found.anim === 'censor_shake' && ACTIVE_WRAP_EL) {
+          hSmearBlur.setAttribute('stdDeviation', '0 0');
+          ACTIVE_WRAP_EL.style.filter = 'none';
+          var sc2 = R.evalTrack(R.popOvershootTrack(found.t0, 0.14, 1.12), t, CFG.duration_s);
+          var jx = Math.sin(t * 94.0) * 9.0;
+          var jy = Math.cos(t * 118.0) * 5.0;
+          var rot = Math.sin(t * 70.0) * 2.4;
+          ACTIVE_WRAP_EL.style.opacity = fadeOut.toFixed(4);
+          ACTIVE_WRAP_EL.style.transform = 'translate3d(' + jx.toFixed(1) + 'px,' + jy.toFixed(1) + 'px,0) rotate(' + rot.toFixed(2) + 'deg) scale(' + sc2.toFixed(4) + ')';
+        } else if (found.anim === 'ghost_echo' && ACTIVE_GHOST_EL && ACTIVE_INCOMING_EL) {
+          hSmearBlur.setAttribute('stdDeviation', '0 0');
+          ACTIVE_WRAP_EL.style.filter = 'none';
+          var pair = M.ghostEchoPair(t, found.t0, {
+            durationS: 0.42,
+            slideDistancePx: 50,
+            echoOpacity: 0.28,
+            ghostScaleMax: 1.36,
+            ghostDriftPx: 0,
+            ghostBlurMax: 15
+          });
+          ACTIVE_GHOST_EL.style.opacity = (pair.ghost.opacity * fadeOut).toFixed(4);
+          ACTIVE_GHOST_EL.style.transform = 'scale(' + pair.ghost.scale.toFixed(4) + ')';
+          ACTIVE_GHOST_EL.style.filter = 'blur(' + pair.ghost.blurPx.toFixed(2) + 'px)';
+          ACTIVE_INCOMING_EL.style.opacity = (pair.incoming.opacity * fadeOut).toFixed(4);
+          ACTIVE_INCOMING_EL.style.transform = 'translate3d(' + pair.incoming.translateX.toFixed(1) + 'px,0,0) scale(' + pair.incoming.scale.toFixed(4) + ')';
+          ACTIVE_INCOMING_EL.style.filter = pair.incoming.blurPx > 0.2 ? ('blur(' + pair.incoming.blurPx.toFixed(2) + 'px)') : 'none';
+        }
+      };
+
+      Promise.all([
+        fetch('/work/stage_config_v2.json').then(function (r) { return r.json(); }),
+        document.fonts.load('700 48px "Oswald"'),
+        document.fonts.load('800 64px "Inter Tight"'),
+        document.fonts.load('400 72px "Instrument Serif"')
+      ]).then(function (res) {
+        CFG = res[0];
+        window.__loadedFonts = Array.from(document.fonts)
+          .filter(function (f) { return f.status === 'loaded'; })
+          .map(function (f) { return f.family.replace(/['"]/g, ''); });
+        window.__seek(0.0);
+        window.__ready = true;
+      }).catch(function (err) {
+        console.error('V2_STAGE_INIT_FAILED:', err);
+      });
+    })();
+  </script>
+</body>
+</html>

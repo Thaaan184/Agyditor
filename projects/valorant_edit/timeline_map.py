@@ -19,7 +19,9 @@ SOURCE_CLIP_PATH = pathlib.Path(r"D:\Clip\Valorant\Valorant 2026.11.25 - 01.10.2
 OUTPUT_ROOT = pathlib.Path(r"D:\Clip\Edit\Valorant")
 WORK_DIR = OUTPUT_ROOT / "work"
 QA_DIR = OUTPUT_ROOT / "qa"
+QA_V2_DIR = OUTPUT_ROOT / "qa_v2"
 FINAL_MP4_PATH = OUTPUT_ROOT / "valorant_harbor_3k_vertical.mp4"
+FINAL_V2_MP4_PATH = OUTPUT_ROOT / "valorant_harbor_3k_v2.mp4"
 
 SRC_W = 1366
 SRC_H = 768
@@ -420,6 +422,207 @@ def project_source_to_canvas(src_x: float, src_y: float, out_t: float) -> tuple[
     x_canvas = (float(src_x) - left) * eff_scale + cam["shake_x"]
     y_canvas = (float(src_y) - top) * eff_scale + cam["shake_y"]
     return round(x_canvas, 2), round(y_canvas, 2)
+
+
+def get_v2_layer_state(out_t: float) -> dict[str, Any]:
+    """Dynamic V2 zoomed-out wide-FOV gameplay layer + live blur fill + _S5mVxnVbcU Reyna zoom & slash."""
+    t = max(0.0, min(TOTAL_DURATION_S, float(out_t)))
+    # Base zoomed-out wide window: 1080x780 centered vertically at y=850 over full 1080x1920 blurred backdrop
+    win_h = 780.0
+    win_cy = 855.0
+    src_zoom = 1.12  # Shows ~89% of full 1366px width (wide Breeze FOV!)
+    cx = SRC_W * 0.5
+    cy = SRC_H * 0.5
+    shake_x = 0.0
+    shake_y = 0.0
+    smear_x = 0.0
+    dim_bg = 0.44
+    fg_dim = 1.0
+    fg_desat = 0.0
+    effect: str | None = None
+    effect_u = 0.0
+    reyna_pulse = 0.0
+    crimson_slash_u = 0.0
+
+    # Opening snappy vertical mask-in reveal (1AXvJp95kX8-inspired)
+    if t < 0.34:
+        e = _ease_out_expo(t / 0.34)
+        win_h = _lerp(560.0, 780.0, e)
+        src_zoom = _lerp(1.24, 1.12, e)
+
+    # Transition whip b01 -> b02 (t=2.40)
+    if 2.28 <= t <= 2.54:
+        p = _pulse(t, 2.28, 2.54)
+        smear_x = 58.0 * p
+        win_h = _lerp(win_h, 940.0, p)
+
+    # Comedic snap-zoom on "WOOO!"
+    wooo_t = map_src_to_out(49.25)
+    if wooo_t <= t <= wooo_t + 0.52:
+        p = _pulse(t, wooo_t, wooo_t + 0.52)
+        win_h = _lerp(win_h, 980.0, p)
+        src_zoom = _lerp(src_zoom, 1.32, p)
+        shake_x += 9.0 * math.sin(t * 82.0) * p
+
+    # Comedic snap-zoom expand + shake on censored "an***g!"
+    if CENSOR_OUT_T0 - 0.05 <= t <= CENSOR_OUT_T1 + 0.14:
+        p = _pulse(t, CENSOR_OUT_T0 - 0.05, CENSOR_OUT_T1 + 0.14) ** 0.7
+        win_h = _lerp(win_h, 1180.0, p)
+        src_zoom = _lerp(src_zoom, 1.52, p)
+        shake_x += 12.0 * math.sin(t * 96.0) * p
+        shake_y += 7.0 * math.cos(t * 114.0) * p
+
+    # Kill #1 (51m ADS HS through Sova Ult): expand layer dramatically into Sova laser + OpticalRadialMatch
+    if KILL1_OUT_T - 0.45 <= t <= KILL1_OUT_T + 0.80:
+        p_in = _smoothstep(KILL1_OUT_T - 0.45, KILL1_OUT_T, t)
+        p_out = 1.0 - _smoothstep(KILL1_OUT_T + 0.35, KILL1_OUT_T + 0.80, t)
+        env = p_in * p_out
+        win_h = _lerp(win_h, 1340.0, env)
+        src_zoom = _lerp(src_zoom, 1.48, env)
+        cx = _lerp(cx, 620.0, env)  # Keep electric-blue Sova laser prominent on left
+    if KILL1_OUT_T - 0.02 <= t <= KILL1_OUT_T + 0.34:
+        u = _clamp01((t - (KILL1_OUT_T - 0.02)) / 0.36)
+        effect = "optical_radial_match"
+        effect_u = u
+        decay = math.exp(-5.0 * u)
+        shake_x += 16.0 * math.sin(u * 38.0) * decay
+        shake_y += 11.0 * math.cos(u * 44.0) * decay
+
+    # Velocity Knife Whip: expand full-bleed for MotionTileWhip mirror streak!
+    if KNIFE_WHIP_OUT_T - 0.24 <= t <= KNIFE_WHIP_OUT_T + 0.28:
+        p_whip = _pulse(t, KNIFE_WHIP_OUT_T - 0.24, KNIFE_WHIP_OUT_T + 0.28) ** 0.6
+        win_h = _lerp(win_h, 1920.0, p_whip)
+        win_cy = _lerp(win_cy, 960.0, p_whip)
+        src_zoom = _lerp(src_zoom, 1.45, p_whip)
+    if KNIFE_WHIP_OUT_T - 0.14 <= t <= KNIFE_WHIP_OUT_T + 0.18:
+        effect = "motion_tile_whip"
+        effect_u = _clamp01((t - (KNIFE_WHIP_OUT_T - 0.14)) / 0.32)
+
+    # Arch stalk gentle build-up push toward archway
+    b07b_t0 = next(s["out0"] for s in TIME_SEGMENTS if s["id"] == "b07b_stalk")
+    if b07b_t0 <= t < FREEZE_OUT_T0:
+        u = _smoothstep(b07b_t0, FREEZE_OUT_T0, t)
+        win_h = _lerp(780.0, 920.0, u)
+        src_zoom = _lerp(1.12, 1.28, u)
+        cx = _lerp(683.0, 676.0, u)
+        cy = _lerp(384.0, 374.0, u)
+
+    # SIGNATURE _S5mVxnVbcU-INSPIRED REYNA LUCKY FREEZE SEQUENCE (NO SLOP CARDS!)
+    if FREEZE_OUT_T0 <= t <= FREEZE_OUT_T1:
+        if t < FREEZE_PHASE_B_T:
+            # Phase A: Punch camera smoothly onto Chamber inside wide dramatic frame
+            u_a = _ease_out_expo((t - FREEZE_OUT_T0) / 0.28)
+            win_h = _lerp(920.0, 1140.0, u_a)
+            win_cy = _lerp(855.0, 860.0, u_a)
+            src_zoom = _lerp(1.28, 2.05, u_a)
+            cx = _lerp(676.0, CHAMBER_SRC_XY[0], u_a)
+            cy = _lerp(374.0, CHAMBER_SRC_XY[1], u_a)
+            fg_dim = _lerp(1.0, 0.86, u_a)
+            fg_desat = _lerp(0.0, 0.22, u_a)
+        else:
+            # Phase B: Fast whip-zoom DEEP (4.85x!) straight onto tiny Reyna's headshot spark behind Chamber!
+            local_b = t - FREEZE_PHASE_B_T
+            u_b = _ease_out_expo(local_b / 0.22)
+            win_h = _lerp(1140.0, 1260.0, u_b)
+            win_cy = 855.0
+            src_zoom = _lerp(2.05, 4.85, u_b)
+            cx = _lerp(CHAMBER_SRC_XY[0], REYNA_SRC_XY[0] - 6.0, u_b)
+            cy = _lerp(CHAMBER_SRC_XY[1], REYNA_SRC_XY[1] + 4.0, u_b)
+            smear_x = 72.0 * _pulse(local_b, 0.0, 0.14)
+            reyna_pulse = _smoothstep(0.05, 0.22, local_b)
+            fg_dim = 0.96
+            fg_desat = 0.08
+            if local_b < 0.16:
+                shake_x += 14.0 * math.sin(local_b * 110.0) * (1.0 - local_b / 0.16)
+
+    # Post-freeze snap-back live -> Kill #3 Chamber HS -> _S5mVxnVbcU Crimson Brush-Slash Finisher!
+    if FREEZE_OUT_T1 < t <= KILL3_OUT_T + 0.72:
+        if t < KILL3_OUT_T:
+            u_back = _ease_out_expo((t - FREEZE_OUT_T1) / 0.20)
+            win_h = _lerp(1260.0, 1020.0, u_back)
+            src_zoom = _lerp(4.85, 1.42, u_back)
+            cx = _lerp(REYNA_SRC_XY[0], 680.0, u_back)
+            cy = _lerp(REYNA_SRC_XY[1], 380.0, u_back)
+            smear_x = -56.0 * _pulse(t - FREEZE_OUT_T1, 0.0, 0.12)
+        else:
+            u_k3 = _clamp01((t - KILL3_OUT_T) / 0.72)
+            win_h = _lerp(1480.0, 820.0, _smoothstep(0.28, 1.0, u_k3))
+            win_cy = _lerp(885.0, 855.0, _smoothstep(0.28, 1.0, u_k3))
+            src_zoom = _lerp(1.58, 1.14, _smoothstep(0.22, 1.0, u_k3))
+            crimson_slash_u = _clamp01((t - KILL3_OUT_T) / 0.58)
+    if KILL3_OUT_T - 0.01 <= t <= KILL3_OUT_T + 0.28:
+        effect = "flash_cutout_strobe"
+        effect_u = _clamp01((t - (KILL3_OUT_T - 0.01)) / 0.29)
+        decay = math.exp(-5.5 * effect_u)
+        shake_x += 20.0 * math.sin(effect_u * 42.0) * decay
+        shake_y += 14.0 * math.cos(effect_u * 48.0) * decay
+
+    # Outro settle back to wide FOV showing Jett stepping out on the left
+    b10_t0 = next(s["out0"] for s in TIME_SEGMENTS if s["id"] == "b10_gila_outro")
+    if t >= b10_t0 + 0.12:
+        u = _smoothstep(b10_t0 + 0.12, TOTAL_DURATION_S, t)
+        win_h = _lerp(820.0, 780.0, u)
+        src_zoom = _lerp(1.14, 1.08, u)
+        cx = _lerp(680.0, 650.0, u)
+
+    return {
+        "win_h": round(win_h, 2),
+        "win_cy": round(win_cy, 2),
+        "src_zoom": round(src_zoom, 5),
+        "cx": round(cx, 3),
+        "cy": round(cy, 3),
+        "shake_x": round(shake_x, 3),
+        "shake_y": round(shake_y, 3),
+        "smear_x": round(smear_x, 2),
+        "dim_bg": round(dim_bg, 3),
+        "fg_dim": round(fg_dim, 4),
+        "fg_desat": round(fg_desat, 4),
+        "effect": effect,
+        "effect_u": round(effect_u, 5),
+        "reyna_pulse": round(reyna_pulse, 4),
+        "crimson_slash_u": round(crimson_slash_u, 4),
+    }
+
+
+# V2 Clean Subtitles: strictly centered in Golden Safe Zone (y=1285..1310px, ABOVE Reels/Shorts/TikTok captions!)
+V2_SUBTITLE_CUES: list[dict[str, Any]] = [
+    {"id": "sub_ini_to", "t0": round(map_src_to_out(46.15), 3), "t1": round(map_src_to_out(47.20), 3), "text": "Ini To!", "style": "normal", "anim": "smear_pop", "y_px": 1295},
+    {"id": "sub_wooo", "t0": round(map_src_to_out(49.15), 3), "t1": round(map_src_to_out(50.25), 3), "text": "WOOO!", "style": "emphasis", "anim": "smear_pop", "y_px": 1290},
+    {"id": "sub_mana_backup", "t0": round(map_src_to_out(53.45), 3), "t1": round(CENSOR_OUT_T0 - 0.03, 3), "text": "To, mana backup-nya To,", "style": "normal", "anim": "smear_pop", "y_px": 1295},
+    {"id": "sub_censor_bleep", "t0": round(CENSOR_OUT_T0 - 0.02, 3), "t1": round(CENSOR_OUT_T1 + 0.16, 3), "text": "AN***G!", "style": "scream", "anim": "censor_shake", "y_px": 1285},
+    {"id": "sub_kiri_nice", "t0": round(map_src_to_out(58.45), 3), "t1": round(map_src_to_out(60.75), 3), "text": "Kiri, kiri... Nice!", "style": "emphasis", "anim": "smear_pop", "y_px": 1295},
+    {"id": "sub_headshot_tuh", "t0": round(map_src_to_out(60.85), 3), "t1": round(map_src_to_out(61.95), 3), "text": "Headshot tuh.", "style": "normal", "anim": "smear_pop", "y_px": 1295},
+    {"id": "sub_aish", "t0": round(map_src_to_out(68.20), 3), "t1": round(map_src_to_out(69.50), 3), "text": "Aish!", "style": "emphasis", "anim": "smear_pop", "y_px": 1295},
+    {"id": "sub_freeze_chamber", "t0": round(FREEZE_OUT_T0 + 0.05, 3), "t1": round(FREEZE_PHASE_B_T - 0.02, 3), "text": "Niatnya nembak Chamber...", "style": "deadpan_serif", "anim": "smear_pop", "y_px": 1300},
+    {"id": "sub_freeze_reyna", "t0": round(FREEZE_PHASE_B_T, 3), "t1": round(FREEZE_OUT_T1, 3), "text": "EH REYNA DI BELAKANG IKUT KENA?!", "style": "lucky_punch", "anim": "smear_pop", "y_px": 1285},
+    {"id": "sub_gila_to", "t0": round(map_src_to_out(72.85, after_freeze=True), 3), "t1": round(TOTAL_DURATION_S - 0.12, 3), "text": "Wuh! Eh, gila To!!", "style": "hype_echo", "anim": "ghost_echo", "y_px": 1290},
+]
+
+
+def export_v2_stage_config(path: str | pathlib.Path | None = None) -> pathlib.Path:
+    """Export lean V2 JSON manifest (zero dashboard cards, golden Reels/Shorts safe-zone subtitles)."""
+    target = pathlib.Path(path) if path else (WORK_DIR / "stage_config_v2.json")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    cfg = {
+        "width": OUT_W,
+        "height": OUT_H,
+        "fps": FPS,
+        "duration_s": TOTAL_DURATION_S,
+        "total_frames": TOTAL_FRAMES,
+        "milestones": {
+            "censor_t0": CENSOR_OUT_T0,
+            "censor_t1": CENSOR_OUT_T1,
+            "kill1_t": KILL1_OUT_T,
+            "knife_whip_t": KNIFE_WHIP_OUT_T,
+            "freeze_t0": FREEZE_OUT_T0,
+            "freeze_phase_b_t": FREEZE_PHASE_B_T,
+            "freeze_t1": FREEZE_OUT_T1,
+            "kill3_t": KILL3_OUT_T,
+        },
+        "subtitles": V2_SUBTITLE_CUES,
+    }
+    target.write_text(json.dumps(cfg, indent=2, ensure_ascii=False), encoding="utf-8")
+    return target
 
 
 def export_stage_config(path: str | pathlib.Path | None = None) -> pathlib.Path:

@@ -161,3 +161,71 @@ def test_final_mp4_specs_and_acoustic_gate():
         has_bgm=True,
     )
     assert verdict["ok"] is True, f"Final MP4 acoustic failure: {verdict['failures']}"
+
+
+def test_v2_anti_slop_zero_cards_and_reels_safe_subtitles():
+    import json
+
+    cfg_path = tm.export_v2_stage_config()
+    cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
+    for sub in cfg["subtitles"]:
+        assert "\u2014" not in sub["text"] and "\u2013" not in sub["text"]
+        # Strictly above TikTok/Reels/Shorts bottom caption & audio bar danger zone (y<=1340)
+        assert 1220 <= sub["y_px"] <= 1340, f"Subtitle too low for Reels/Shorts UI: {sub}"
+
+    html_v2 = ROOT / "projects" / "valorant_edit" / "overlay_stage_v2.html"
+    assert html_v2.exists(), f"Missing {html_v2}"
+    txt = html_v2.read_text(encoding="utf-8")
+    # Ban every AI-slop dashboard card, web telemetry label, and unrequested English stat copy
+    for banned in (
+        "TARGET: CHAMBER",
+        "STRAY HEADSHOT",
+        "4.2X",
+        "THROUGH ULT",
+        "0.40S DOUBLE HS",
+        "2V3 FLIPPED",
+        "2-4 ATTACK",
+        "waveform-dock",
+        "kill1-pill",
+        "kill3-counter",
+        "Segoe UI",
+        "<nav",
+        "<header",
+        "<footer",
+    ):
+        assert banned not in txt, f"V2 overlay still contains AI-slop card/copy: {banned}"
+    for font_file in ("Oswald-Latin.woff2", "InterTight-Latin.woff2", "InstrumentSerif.ttf"):
+        assert font_file in txt, f"Missing self-hosted font in V2 overlay: {font_file}"
+
+
+def test_v2_final_mp4_specs_and_acoustic_gate():
+    import json
+    import subprocess
+    from studio_kit.acoustic_audit import audit_media
+
+    mp4 = tm.FINAL_V2_MP4_PATH
+    assert mp4.exists(), f"Missing final V2 MP4: {mp4}"
+    probe = json.loads(
+        subprocess.check_output(
+            [
+                str(ROOT / "bin" / "ffprobe.exe"),
+                "-v", "error",
+                "-show_streams", "-show_format",
+                "-of", "json",
+                str(mp4),
+            ],
+            text=True,
+        )
+    )
+    v = next(s for s in probe["streams"] if s["codec_type"] == "video")
+    a = next(s for s in probe["streams"] if s["codec_type"] == "audio")
+    assert (v["width"], v["height"]) == (1080, 1920)
+    assert v["r_frame_rate"] == "60/1"
+    assert a["sample_rate"] == "48000" and a["channels"] == 2
+    verdict = audit_media(
+        mp4,
+        beat_sheet_path=ROOT / "projects" / "valorant_edit" / "beat_sheet.json",
+        profile="mograph_sfx",
+        has_bgm=True,
+    )
+    assert verdict["ok"] is True, f"V2 Final MP4 acoustic failure: {verdict['failures']}"

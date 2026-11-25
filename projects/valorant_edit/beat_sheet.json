@@ -34,10 +34,9 @@
       "t_start": 0.0,
       "t_end": 2.4,
       "shot_type": "a_roll",
-      "visual_subject": "Harbor sprinting up Breeze Mid Pillar with Xenohunter knife behind Jett and equipping Glitchpop Vandal",
-      "narrative_purpose": "Establish the 2-4 Attack deficit on Breeze and introduce Ardyto ('To') via live Indonesian teammate callout.",
+      "visual_subject": "Zoomed-out wide-FOV Breeze Mid Pillar gameplay over live blurred backdrop as Harbor sprints with Xenohunter knife behind Jett",
+      "narrative_purpose": "Open cleanly with full battlefield context and introduce Ardyto ('To') via live Indonesian teammate callout with zero card clutter.",
       "on_screen_copy": [
-        "BREEZE · 2-4 ATTACK",
         "Ini To!"
       ],
       "audio_intent": {
@@ -49,8 +48,8 @@
       "t_start": 2.4,
       "t_end": 4.883,
       "shot_type": "a_roll",
-      "visual_subject": "Harbor peeking Mid Pillar gunfire at 1.45x velocity as tracers cross and teammate gasps",
-      "narrative_purpose": "Accelerate past empty mid setup while punching a comedic snap-zoom on the loud teammate gasp.",
+      "visual_subject": "Harbor peeking Mid Pillar gunfire at 1.45x velocity with horizontal smear whip transition and dynamic layer zoom on teammate gasp",
+      "narrative_purpose": "Accelerate past empty mid setup while punching a comedic dynamic layer zoom on the loud teammate gasp.",
       "on_screen_copy": [
         "WOOO!"
       ],
@@ -63,11 +62,11 @@
       "t_start": 4.883,
       "t_end": 9.533,
       "shot_type": "a_roll",
-      "visual_subject": "Harbor holding ADS toward Mid Nest while teammate demands backup and curses on Discord",
+      "visual_subject": "Harbor holding ADS toward Mid Nest while layer expands cleanly on teammate panic curse",
       "narrative_purpose": "Build comedic mabar panic and land the first BGM cut-out censor bleep right before Sova ultimates.",
       "on_screen_copy": [
         "To, mana backup-nya To,",
-        "an***g!"
+        "AN***G!"
       ],
       "audio_intent": {
         "strategy": "Carve BGM under Indonesian comms then cut music dead for the censored profanity blip."
@@ -78,12 +77,9 @@
       "t_start": 9.533,
       "t_end": 12.35,
       "shot_type": "visual_proof",
-      "visual_subject": "Blue Sova Hunter's Fury laser erupting past Harbor left cheek as 51m ADS Vandal bullet headshots Sage in Mid Nest",
-      "narrative_purpose": "Prove the first improbable clutch headshot through an active enemy Sova ultimate with 0.45x hit-stop and optical zoom pulse.",
-      "on_screen_copy": [
-        "I AM THE HUNTER!",
-        "ardytoprancisko -> Sage · 51M THROUGH ULT"
-      ],
+      "visual_subject": "Expanded gameplay layer framing blue Sova Hunter's Fury laser erupting past Harbor left cheek as 51m ADS Vandal bullet headshots Sage",
+      "narrative_purpose": "Sell the first improbable clutch headshot through enemy Sova ultimate via 0.45x hit-stop and radial optical zoom pulse without fake UI cards.",
+      "on_screen_copy": [],
       "audio_intent": {
         "strategy": "3-band hero impact (sub, mid whoosh, cyber air) J-cut 95ms into Kill #1 Glitchpop chime."
       }
@@ -93,7 +89,7 @@
       "t_start": 12.35,
       "t_end": 15.49,
       "shot_type": "a_roll",
-      "visual_subject": "Harbor falling back through Mid Wood Doors as teammates celebrate the 51m headshot",
+      "visual_subject": "Wide-FOV gameplay settling back over live blur fill as Harbor rotates through Mid Wood Doors with teammates celebrating",
       "narrative_purpose": "Provide human breathing room and validate Kill #1 through genuine Indonesian party voice reactions.",
       "on_screen_copy": [
         "Kiri, kiri... Nice!",
@@ -108,7 +104,7 @@
       "t_start": 15.49,
       "t_end": 18.281,
       "shot_type": "a_roll",
-      "visual_subject": "2.15x velocity montage across Glitchpop Vandal reload behind stone wall and Xenohunter knife whip into Mid Top",
+      "visual_subject": "2.15x velocity montage expanding to full-bleed MotionTile mirror whip on Xenohunter knife flip into Mid Top",
       "narrative_purpose": "Compress six seconds of quiet rotation into a kinetic optical mirror whip anchored to the knife draw.",
       "on_screen_copy": [],
       "audio_intent": {
@@ -120,8 +116,8 @@
       "t_start": 18.281,
       "t_end": 21.73,
       "shot_type": "a_roll",
-      "visual_subject": "Harbor advancing silently on B-Tunnel archway as teammate dies to Chamber Operator and Jett dashes left",
-      "narrative_purpose": "Raise round stakes to 2v3 and frame Harbor lining up a spray directly onto Chamber at the stone arch.",
+      "visual_subject": "Wide-FOV Harbor approaching B-Tunnel archway as Jett teammate dashes left across the frame and Harbor sprays Chamber",
+      "narrative_purpose": "Show full horizontal battle geography as Jett dashes left and Harbor opens spray directly onto Chamber.",
       "on_screen_copy": [
         "Aish!"
       ],
@@ -134,15 +130,14 @@
       "t_start": 21.73,
       "t_end": 23.48,
       "shot_type": "silence_contrast",
-      "visual_subject": "Frozen frame 71.75s dimming Breeze arch while 4.2x circular optical magnifying loupe isolates tiny Reyna headshot spark behind Chamber",
-      "narrative_purpose": "Deliver the comedic lucky-shot reveal proving a stray spray meant for Chamber accidentally headshotted distant Reyna first.",
+      "visual_subject": "Frozen frame 71.75s punching onto Chamber then whip-zooming 3.85x deep into archway onto Reyna glowing headshot spark with pure cropped killfeed",
+      "narrative_purpose": "Deliver the comedic lucky-shot reveal using deep camera whip-zoom and raw killfeed proof instead of robotic web cards.",
       "on_screen_copy": [
         "Niatnya nembak Chamber...",
-        "EH REYNA DI BELAKANG IKUT KENA?!",
-        "STRAY HEADSHOT"
+        "EH REYNA DI BELAKANG IKUT KENA?!"
       ],
       "audio_intent": {
-        "strategy": "Total BGM hard cut-out silence pocket with dry camera shutter freeze, loupe pop, and subtle comedic huh accent."
+        "strategy": "Total BGM hard cut-out silence pocket with dry camera shutter freeze, whip pop, and subtle comedic huh accent."
       }
     },
     {
@@ -150,11 +145,10 @@
       "t_start": 23.48,
       "t_end": 24.575,
       "shot_type": "visual_proof",
-      "visual_subject": "Live snap release into instant Chamber headshot 0.40s later with 2-frame flash strobe and live cropped double killfeed",
-      "narrative_purpose": "Pay off the freeze-frame joke with explosive 3K cinema impact and verified double headshot killfeed proof.",
+      "visual_subject": "Live snap release into instant Chamber headshot with painted crimson brush-slash sweep, faint 3K sky glow, and raw cropped double killfeed",
+      "narrative_purpose": "Pay off the freeze-frame joke with explosive Ace-inspired slash finisher and raw Valorant double headshot killfeed proof.",
       "on_screen_copy": [
-        "3K",
-        "0.40S DOUBLE HS"
+        "3K"
       ],
       "audio_intent": {
         "strategy": "Slam tactical groove back in full force layered with 3-band cinema impact on Chamber headshot."
@@ -165,8 +159,8 @@
       "t_start": 24.575,
       "t_end": 26.975,
       "shot_type": "a_roll",
-      "visual_subject": "Teammate Jett stepping out from left cover in 2v1 aftermath as Discord party erupts",
-      "narrative_purpose": "Close on authentic Indonesian mabar disbelief and resolve musical momentum with a smooth hall tail.",
+      "visual_subject": "Zoomed-out wide-FOV aftermath showing Jett teammate stepping out left as Discord party erupts",
+      "narrative_purpose": "Close on authentic Indonesian mabar disbelief positioned safely above Reels and Shorts caption UI while BGM resolves on hall tail.",
       "on_screen_copy": [
         "Wuh! Eh, gila To!!"
       ],
