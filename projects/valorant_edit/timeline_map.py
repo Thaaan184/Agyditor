@@ -285,7 +285,7 @@ SUBTITLE_CUES: list[dict[str, Any]] = [
         "text": "Wuh! Eh, gila To!!",
         "style": "hype_echo",
         "anim": "ghost_echo",
-        "y_px": 1430,
+        "y_px": 1362,
     },
 ]
 

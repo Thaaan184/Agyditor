@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0" />
+  <link rel="icon" href="data:," />
+  <title>Valorant Harbor 3K Kinetic Overlay Stage</title>
+  <style>
+    @font-face {
+      font-family: 'Oswald';
+      src: url('/studio_kit/fonts/Oswald-Latin.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: 'Inter Tight';
+      src: url('/studio_kit/fonts/InterTight-Latin.woff2') format('woff2');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: 'Instrument Serif';
+      src: url('/studio_kit/fonts/InstrumentSerif.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: 'JetBrains Mono';
+      src: url('/studio_kit/fonts/JetBrainsMono-Latin.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: block;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: transparent !important;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    #stage {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    /* Opening tactical tag (upper safe zone y=248) */
+    #opening-tag {
+      position: absolute;
+      left: 84px;
+      top: 248px;
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 22px;
+      background: rgba(9, 9, 11, 0.84);
+      border: 1px solid rgba(244, 239, 230, 0.24);
+      clip-path: polygon(0 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+    .tag-map {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 34px;
+      letter-spacing: 0.04em;
+      color: #F4EFE6;
+      line-height: 1;
+    }
+    .tag-sep {
+      width: 2px;
+      height: 24px;
+      background: rgba(244, 239, 230, 0.32);
+    }
+    .tag-score {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: 0.06em;
+      color: #FACC15;
+      line-height: 1;
+    }
+
+    /* Kill #1 Clean Tactical Kill Pill (upper safe zone y=248) */
+    #kill1-pill {
+      position: absolute;
+      left: 112px;
+      top: 248px;
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      padding: 14px 24px;
+      background: rgba(9, 9, 11, 0.88);
+      border: 1px solid rgba(34, 211, 238, 0.42);
+      box-shadow: 0 14px 32px rgba(9, 9, 11, 0.55);
+      opacity: 0;
+      transform-origin: left center;
+      will-change: transform, opacity;
+    }
+    .k1-killer {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      letter-spacing: -0.02em;
+      color: #FACC15;
+    }
+    .k1-victim {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      letter-spacing: -0.02em;
+      color: #F4EFE6;
+    }
+    .k1-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+      font-size: 19px;
+      letter-spacing: 0.04em;
+      color: #09090B;
+      background: #22D3EE;
+      padding: 6px 12px;
+      clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+    }
+
+    /* SVG Optical Layer (Chamber Bracket, Reyna Loupe Ring & Leader Paths) */
+    #optics-svg {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      pointer-events: none;
+    }
+
+    #chamber-tag {
+      position: absolute;
+      left: 92px;
+      top: 716px;
+      padding: 8px 16px;
+      background: rgba(9, 9, 11, 0.88);
+      border: 1px solid rgba(250, 204, 21, 0.42);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+      font-size: 20px;
+      letter-spacing: 0.05em;
+      color: #FACC15;
+      opacity: 0;
+    }
+
+    #loupe-tag {
+      position: absolute;
+      left: 616px;
+      top: 404px;
+      padding: 7px 14px;
+      background: #22D3EE;
+      color: #09090B;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+      font-size: 20px;
+      letter-spacing: 0.05em;
+      clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+      box-shadow: 0 10px 24px rgba(9, 9, 11, 0.55);
+      opacity: 0;
+    }
+
+    /* Kill #3 Rolling Slot Counter (below Double Killfeed in upper safe zone) */
+    #kill3-counter {
+      position: absolute;
+      left: 126px;
+      top: 408px;
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      padding: 10px 22px;
+      background: rgba(9, 9, 11, 0.88);
+      border: 1px solid rgba(255, 46, 84, 0.45);
+      opacity: 0;
+      transform-origin: left center;
+    }
+    .drum-window {
+      width: 78px;
+      height: 68px;
+      overflow: hidden;
+      position: relative;
+    }
+    #drum-strip {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 78px;
+      will-change: transform, filter;
+    }
+    .drum-cell {
+      height: 68px;
+      line-height: 68px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 56px;
+      color: #FF2E54;
+      text-align: center;
+    }
+    .k3-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .k3-main {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 30px;
+      letter-spacing: 0.03em;
+      color: #F4EFE6;
+      line-height: 1.05;
+    }
+    .k3-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+      font-size: 18px;
+      color: #FACC15;
+      letter-spacing: 0.05em;
+    }
+
+    /* Lower Safe-Zone Kinetic Subtitles (y=1380..1550, x<=900 clear of platform icons) */
+    #sub-container {
+      position: absolute;
+      left: 78px;
+      width: 828px;
+      top: 1410px;
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      pointer-events: none;
+    }
+    .sub-wrap {
+      position: relative;
+      display: inline-block;
+      max-width: 828px;
+      line-height: 1.08;
+    }
+    .sub-char {
+      display: inline-block;
+      white-space: pre;
+      will-change: transform, opacity, filter;
+    }
+    .sub-normal {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 800;
+      font-size: 62px;
+      letter-spacing: -0.025em;
+      color: #F4EFE6;
+      -webkit-text-stroke: 4px #09090B;
+      paint-order: stroke fill;
+      text-shadow: 0 6px 18px rgba(9, 9, 11, 0.85);
+    }
+    .sub-emphasis {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 800;
+      font-size: 74px;
+      letter-spacing: -0.03em;
+      color: #FACC15;
+      -webkit-text-stroke: 4.5px #09090B;
+      paint-order: stroke fill;
+      text-shadow: 0 8px 22px rgba(9, 9, 11, 0.90);
+    }
+    .sub-scream {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 98px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #FF2E54;
+      -webkit-text-stroke: 5px #09090B;
+      paint-order: stroke fill;
+      text-shadow: 0 10px 26px rgba(9, 9, 11, 0.95);
+    }
+    .sub-sova {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 56px;
+      letter-spacing: 0.06em;
+      font-style: italic;
+      color: #22D3EE;
+      -webkit-text-stroke: 3.5px #09090B;
+      paint-order: stroke fill;
+      text-shadow: 0 6px 20px rgba(9, 9, 11, 0.88);
+    }
+    .sub-deadpan {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 76px;
+      letter-spacing: -0.01em;
+      color: #F4EFE6;
+      -webkit-text-stroke: 3.5px #09090B;
+      paint-order: stroke fill;
+      text-shadow: 0 8px 22px rgba(9, 9, 11, 0.92);
+    }
+    .sub-lucky {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 800;
+      font-size: 64px;
+      letter-spacing: -0.025em;
+      color: #FACC15;
+      -webkit-text-stroke: 4.5px #09090B;
+      paint-order: stroke fill;
+      text-shadow: 0 8px 24px rgba(9, 9, 11, 0.95);
+    }
+    .sub-lucky .hl-reyna {
+      color: #FF2E54;
+    }
+    .sub-echo-ghost {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 828px;
+      pointer-events: none;
+      color: #FF2E54;
+      -webkit-text-stroke: 0px transparent;
+      text-shadow: none;
+    }
+
+    /* Compact Authentic Live Audio Waveform Strip (lower-left safe margin) */
+    #waveform-dock {
+      position: absolute;
+      left: 84px;
+      top: 1598px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      opacity: 0.72;
+    }
+    #wf-bars {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      height: 34px;
+    }
+    .wf-bar {
+      width: 4px;
+      border-radius: 2px;
+      background: rgba(244, 239, 230, 0.35);
+      transform-origin: center;
+    }
+    #wf-time {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+      font-size: 17px;
+      color: rgba(244, 239, 230, 0.75);
+      text-shadow: 0 2px 6px rgba(9, 9, 11, 0.9);
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+</head>
+<body>
+  <div id="stage">
+    <!-- Opening Tactical Tag -->
+    <div id="opening-tag">
+      <span class="tag-map">BREEZE</span>
+      <span class="tag-sep"></span>
+      <span class="tag-score">2-4 ATTACK · HARBOR</span>
+    </div>
+
+    <!-- Kill #1 Clean Tactical Card -->
+    <div id="kill1-pill">
+      <span class="k1-killer">ardytoprancisko</span>
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+        <circle cx="15" cy="15" r="9" stroke="#FF2E54" stroke-width="2.6"/>
+        <line x1="15" y1="2" x2="15" y2="8" stroke="#FF2E54" stroke-width="2.6"/>
+        <line x1="15" y1="22" x2="15" y2="28" stroke="#FF2E54" stroke-width="2.6"/>
+        <line x1="2" y1="15" x2="8" y2="15" stroke="#FF2E54" stroke-width="2.6"/>
+        <line x1="22" y1="15" x2="28" y2="15" stroke="#FF2E54" stroke-width="2.6"/>
+        <circle cx="15" cy="15" r="2.2" fill="#FACC15"/>
+      </svg>
+      <span class="k1-victim">Sage</span>
+      <span class="k1-badge">51M · THROUGH ULT</span>
+    </div>
+
+    <!-- Optical Reticle, Magnifying Ring & SVG Trim-Path Leaders -->
+    <svg id="optics-svg" viewBox="0 0 1080 1920">
+      <defs>
+        <filter id="cyan-glow" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="4.5" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- Chamber Phase A Target Bracket -->
+      <g id="chamber-group" opacity="0">
+        <path id="chamber-brackets" fill="none" stroke="#FACC15" stroke-width="3.2" stroke-linecap="square" />
+        <path id="chamber-leader" fill="none" stroke="#F4EFE6" stroke-width="2.4" />
+        <circle id="chamber-nib" r="5" fill="#FACC15" opacity="0" />
+      </g>
+
+      <!-- Reyna Phase B Optical Loupe Ring & Leader Line -->
+      <g id="loupe-group" opacity="0">
+        <circle id="reyna-dot" r="7" fill="#FF2E54" stroke="#F4EFE6" stroke-width="2.2" />
+        <circle id="reyna-ring" r="20" fill="none" stroke="#22D3EE" stroke-width="2.2" stroke-dasharray="6 5" />
+        <path id="reyna-leader" fill="none" stroke="#22D3EE" stroke-width="3.4" filter="url(#cyan-glow)" />
+        <circle id="reyna-nib" r="6" fill="#22D3EE" filter="url(#cyan-glow)" opacity="0" />
+        <g id="loupe-bezel-group">
+          <circle id="loupe-outer-ring" fill="none" stroke="#22D3EE" stroke-width="5.5" filter="url(#cyan-glow)" />
+          <circle id="loupe-inner-ring" fill="none" stroke="rgba(244,239,230,0.45)" stroke-width="1.5" stroke-dasharray="10 8" />
+          <g id="loupe-ticks" stroke="#22D3EE" stroke-width="3.2"></g>
+        </g>
+      </g>
+    </svg>
+
+    <div id="chamber-tag">TARGET: CHAMBER</div>
+    <div id="loupe-tag">4.2X · STRAY HEADSHOT</div>
+
+    <!-- Kill #3 Rolling Slot Counter -->
+    <div id="kill3-counter">
+      <div class="drum-window">
+        <div id="drum-strip">
+          <div class="drum-cell">0K</div>
+          <div class="drum-cell">1K</div>
+          <div class="drum-cell">2K</div>
+          <div class="drum-cell">3K</div>
+        </div>
+      </div>
+      <div class="k3-meta">
+        <span class="k3-main">0.40S DOUBLE HS</span>
+        <span class="k3-sub">2V3 FLIPPED TO 2V1</span>
+      </div>
+    </div>
+
+    <!-- Lower Safe-Zone Kinetic Subtitles -->
+    <div id="sub-container"></div>
+
+    <!-- Authentic Real-Audio Live Waveform Strip -->
+    <div id="waveform-dock">
+      <div id="wf-bars"></div>
+      <span id="wf-time">00.0s</span>
+    </div>
+  </div>
+
+  <script src="/studio_kit/motion_primitives.js"></script>
+  <script src="/studio_kit/keyframe_rig.js"></script>
+  <script src="/studio_kit/optical_stage.js"></script>
+  <script>
+    (function () {
+      'use strict';
+      var M = window.AGYMotion;
+      var R = window.AGYRig;
+      var O = window.AGYOptics;
+
+      var CFG = null;
+      var WF = null;
+      var WF_BAR_ELS = [];
+      var WF_VISIBLE = 32;
+      var ACTIVE_SUB_ID = null;
+      var ACTIVE_CHAR_ELS = [];
+      var ACTIVE_GHOST_EL = null;
+      var ACTIVE_INCOMING_EL = null;
+
+      var openingEl = document.getElementById('opening-tag');
+      var kill1El = document.getElementById('kill1-pill');
+      var chamberGroup = document.getElementById('chamber-group');
+      var chamberBrackets = document.getElementById('chamber-brackets');
+      var chamberLeader = document.getElementById('chamber-leader');
+      var chamberNib = document.getElementById('chamber-nib');
+      var chamberTag = document.getElementById('chamber-tag');
+
+      var loupeGroup = document.getElementById('loupe-group');
+      var reynaDot = document.getElementById('reyna-dot');
+      var reynaRing = document.getElementById('reyna-ring');
+      var reynaLeader = document.getElementById('reyna-leader');
+      var reynaNib = document.getElementById('reyna-nib');
+      var loupeBezelGroup = document.getElementById('loupe-bezel-group');
+      var loupeOuterRing = document.getElementById('loupe-outer-ring');
+      var loupeInnerRing = document.getElementById('loupe-inner-ring');
+      var loupeTicks = document.getElementById('loupe-ticks');
+      var loupeTag = document.getElementById('loupe-tag');
+
+      var kill3El = document.getElementById('kill3-counter');
+      var drumStrip = document.getElementById('drum-strip');
+      var subContainer = document.getElementById('sub-container');
+      var wfBarsWrap = document.getElementById('wf-bars');
+      var wfTimeEl = document.getElementById('wf-time');
+
+      function initStaticGeometry() {
+        var cx = CFG.chamber.target_canvas_xy[0];
+        var cy = CFG.chamber.target_canvas_xy[1];
+        var bw = 46, bh = 58, cl = 14;
+        var x0 = cx - bw, x1 = cx + bw, y0 = cy - bh, y1 = cy + bh;
+        var dBracket = [
+          'M', x0, y0 + cl, 'L', x0, y0, 'L', x0 + cl, y0,
+          'M', x1 - cl, y0, 'L', x1, y0, 'L', x1, y0 + cl,
+          'M', x0, y1 - cl, 'L', x0, y1, 'L', x0 + cl, y1,
+          'M', x1 - cl, y1, 'L', x1, y1, 'L', x1, y1 - cl
+        ].join(' ');
+        chamberBrackets.setAttribute('d', dBracket);
+        chamberLeader.setAttribute('d', 'M ' + (x0 + 4).toFixed(1) + ' ' + (y0 + 4).toFixed(1) + ' L 330 762 L 265 762');
+
+        var rx = CFG.loupe.target_canvas_xy[0];
+        var ry = CFG.loupe.target_canvas_xy[1];
+        var lx = CFG.loupe.center_xy[0];
+        var ly = CFG.loupe.center_xy[1];
+        var rad = CFG.loupe.radius_px;
+
+        reynaDot.setAttribute('cx', rx);
+        reynaDot.setAttribute('cy', ry);
+        reynaRing.setAttribute('cx', rx);
+        reynaRing.setAttribute('cy', ry);
+
+        // Compute exact edge contact point on the loupe circle along vector (rx,ry) -> (lx,ly)
+        var dx = lx - rx;
+        var dy = ly - ry;
+        var dist = Math.hypot(dx, dy) || 1;
+        var edgeX = lx - (dx / dist) * (rad + 4);
+        var edgeY = ly - (dy / dist) * (rad + 4);
+        reynaLeader.setAttribute('d', 'M ' + rx.toFixed(1) + ' ' + ry.toFixed(1) + ' L ' + edgeX.toFixed(1) + ' ' + edgeY.toFixed(1));
+
+        loupeOuterRing.setAttribute('cx', lx);
+        loupeOuterRing.setAttribute('cy', ly);
+        loupeOuterRing.setAttribute('r', rad + 2);
+        loupeInnerRing.setAttribute('cx', lx);
+        loupeInnerRing.setAttribute('cy', ly);
+        loupeInnerRing.setAttribute('r', rad - 12);
+
+        // Four crisp precision compass ticks around the optical loupe
+        var tickAngles = [0, 90, 180, 270];
+        var tickSvg = '';
+        for (var i = 0; i < tickAngles.length; i++) {
+          var a = tickAngles[i] * Math.PI / 180;
+          var ix = lx + Math.cos(a) * (rad - 10);
+          var iy = ly + Math.sin(a) * (rad - 10);
+          var ox = lx + Math.cos(a) * (rad + 14);
+          var oy = ly + Math.sin(a) * (rad + 14);
+          tickSvg += '<line x1="' + ix.toFixed(1) + '" y1="' + iy.toFixed(1) + '" x2="' + ox.toFixed(1) + '" y2="' + oy.toFixed(1) + '" />';
+        }
+        loupeTicks.innerHTML = tickSvg;
+        loupeBezelGroup.style.transformOrigin = lx + 'px ' + ly + 'px';
+
+        // Build 32 compact waveform bar DOM nodes
+        wfBarsWrap.innerHTML = '';
+        WF_BAR_ELS = [];
+        for (var k = 0; k < WF_VISIBLE; k++) {
+          var b = document.createElement('div');
+          b.className = 'wf-bar';
+          b.style.height = '4px';
+          wfBarsWrap.appendChild(b);
+          WF_BAR_ELS.push(b);
+        }
+      }
+
+      function mountSubtitle(cue) {
+        subContainer.innerHTML = '';
+        ACTIVE_CHAR_ELS = [];
+        ACTIVE_GHOST_EL = null;
+        ACTIVE_INCOMING_EL = null;
+        if (!cue) {
+          ACTIVE_SUB_ID = null;
+          return;
+        }
+        ACTIVE_SUB_ID = cue.id;
+        subContainer.style.top = (cue.y_px - 36) + 'px';
+
+        var clsMap = {
+          normal: 'sub-normal',
+          emphasis: 'sub-emphasis',
+          scream: 'sub-scream',
+          sova_alert: 'sub-sova',
+          deadpan_serif: 'sub-deadpan',
+          lucky_punch: 'sub-lucky',
+          hype_echo: 'sub-emphasis'
+        };
+        var cls = clsMap[cue.style] || 'sub-normal';
+        var wrap = document.createElement('div');
+        wrap.className = 'sub-wrap';
+
+        if (cue.anim === 'ghost_echo') {
+          var ghost = document.createElement('div');
+          ghost.className = cls + ' sub-echo-ghost';
+          ghost.textContent = cue.text;
+          var inc = document.createElement('div');
+          inc.className = cls;
+          inc.textContent = cue.text;
+          wrap.appendChild(ghost);
+          wrap.appendChild(inc);
+          ACTIVE_GHOST_EL = ghost;
+          ACTIVE_INCOMING_EL = inc;
+        } else if (cue.anim === 'apple_follower') {
+          wrap.classList.add(cls);
+          var chars = Array.from(cue.text);
+          for (var i = 0; i < chars.length; i++) {
+            var sp = document.createElement('span');
+            sp.className = 'sub-char';
+            sp.textContent = chars[i];
+            wrap.appendChild(sp);
+            ACTIVE_CHAR_ELS.push(sp);
+          }
+        } else {
+          var line = document.createElement('div');
+          line.className = cls;
+          if (cue.style === 'lucky_punch') {
+            line.innerHTML = cue.text.replace('REYNA', '<span class="hl-reyna">REYNA</span>');
+          } else {
+            line.textContent = cue.text;
+          }
+          wrap.appendChild(line);
+          ACTIVE_INCOMING_EL = line;
+        }
+        subContainer.appendChild(wrap);
+      }
+
+      function updateSubtitle(t) {
+        var found = null;
+        for (var i = 0; i < CFG.subtitles.length; i++) {
+          var c = CFG.subtitles[i];
+          if (t >= c.t0 && t <= c.t1) {
+            found = c;
+            break;
+          }
+        }
+        if (!found) {
+          if (ACTIVE_SUB_ID !== null) mountSubtitle(null);
+          return;
+        }
+        if (ACTIVE_SUB_ID !== found.id) {
+          mountSubtitle(found);
+        }
+
+        var fadeOut = 1.0 - M.smoothstep(found.t1 - 0.10, found.t1, t);
+        if (found.anim === 'apple_follower') {
+          for (var ci = 0; ci < ACTIVE_CHAR_ELS.length; ci++) {
+            var st = M.appleFollowerChar(t, found.t0, ci, {
+              fps: 60,
+              staggerS: 0.015,
+              durationS: 0.18,
+              riseEm: 0.28,
+              startBlurPx: 5.5
+            });
+            var el = ACTIVE_CHAR_ELS[ci];
+            el.style.opacity = (st.opacity * fadeOut).toFixed(4);
+            el.style.transform = 'translate3d(0,' + st.translateYEm.toFixed(3) + 'em,0) scale(' + st.scale.toFixed(4) + ')';
+            el.style.filter = st.blurPx > 0.15 ? ('blur(' + st.blurPx.toFixed(2) + 'px)') : 'none';
+          }
+        } else if (found.anim === 'pop_overshoot' && ACTIVE_INCOMING_EL) {
+          var trk = R.popOvershootTrack(found.t0, 0.20, 1.09);
+          var sc = R.evalTrack(trk, t, CFG.duration_s);
+          ACTIVE_INCOMING_EL.style.opacity = fadeOut.toFixed(4);
+          ACTIVE_INCOMING_EL.style.transformOrigin = 'left center';
+          ACTIVE_INCOMING_EL.style.transform = 'scale(' + sc.toFixed(4) + ')';
+        } else if (found.anim === 'censor_shake' && ACTIVE_INCOMING_EL) {
+          var trk2 = R.popOvershootTrack(found.t0, 0.14, 1.12);
+          var sc2 = R.evalTrack(trk2, t, CFG.duration_s);
+          var jx = Math.sin(t * 92.0) * 7.5;
+          var jy = Math.cos(t * 118.0) * 4.5;
+          var rot = Math.sin(t * 68.0) * 2.2;
+          ACTIVE_INCOMING_EL.style.opacity = fadeOut.toFixed(4);
+          ACTIVE_INCOMING_EL.style.transformOrigin = 'left center';
+          ACTIVE_INCOMING_EL.style.transform = 'translate3d(' + jx.toFixed(1) + 'px,' + jy.toFixed(1) + 'px,0) rotate(' + rot.toFixed(2) + 'deg) scale(' + sc2.toFixed(4) + ')';
+        } else if (found.anim === 'ghost_echo' && ACTIVE_GHOST_EL && ACTIVE_INCOMING_EL) {
+          var pair = M.ghostEchoPair(t, found.t0, {
+            durationS: 0.44,
+            slideDistancePx: 54,
+            echoOpacity: 0.24,
+            ghostScaleMax: 1.32,
+            ghostDriftPx: -18,
+            ghostBlurMax: 14
+          });
+          ACTIVE_GHOST_EL.style.opacity = (pair.ghost.opacity * fadeOut).toFixed(4);
+          ACTIVE_GHOST_EL.style.transformOrigin = 'left center';
+          ACTIVE_GHOST_EL.style.transform = 'translate3d(' + pair.ghost.translateX.toFixed(1) + 'px,0,0) scale(' + pair.ghost.scale.toFixed(4) + ')';
+          ACTIVE_GHOST_EL.style.filter = 'blur(' + pair.ghost.blurPx.toFixed(2) + 'px)';
+
+          ACTIVE_INCOMING_EL.style.opacity = (pair.incoming.opacity * fadeOut).toFixed(4);
+          ACTIVE_INCOMING_EL.style.transformOrigin = 'left center';
+          ACTIVE_INCOMING_EL.style.transform = 'translate3d(' + pair.incoming.translateX.toFixed(1) + 'px,0,0) scale(' + pair.incoming.scale.toFixed(4) + ')';
+          ACTIVE_INCOMING_EL.style.filter = pair.incoming.blurPx > 0.2 ? ('blur(' + pair.incoming.blurPx.toFixed(2) + 'px)') : 'none';
+        }
+      }
+
+      function updateWaveform(t) {
+        if (!WF || !WF.bars || !WF.bars.length) return;
+        var totalBars = WF.bars.length;
+        var centerIdx = Math.floor((t / Math.max(0.1, CFG.duration_s)) * totalBars);
+        var half = Math.floor(WF_VISIBLE / 2);
+
+        // Highlight active playhead color based on current narrative phase
+        var inFreeze = (t >= CFG.milestones.freeze_t0 && t <= CFG.milestones.freeze_t1);
+        var inCensor = (t >= CFG.milestones.censor_t0 - 0.02 && t <= CFG.milestones.censor_t1 + 0.04);
+        var activeColor = inFreeze ? '#22D3EE' : (inCensor ? '#FF2E54' : '#FACC15');
+
+        for (var i = 0; i < WF_VISIBLE; i++) {
+          var idx = centerIdx - half + i;
+          var val = (idx >= 0 && idx < totalBars) ? WF.bars[idx] : 0.04;
+          var h = Math.max(3, Math.round(val * 32));
+          var el = WF_BAR_ELS[i];
+          el.style.height = h + 'px';
+          if (i === half) {
+            el.style.background = activeColor;
+          } else if (i < half) {
+            el.style.background = 'rgba(244, 239, 230, 0.72)';
+          } else {
+            el.style.background = 'rgba(244, 239, 230, 0.26)';
+          }
+        }
+        wfTimeEl.textContent = (45.0 + Math.min(30.0, t * (30.0 / CFG.duration_s))).toFixed(1) + 's';
+      }
+
+      window.__isFrameActive = function () {
+        return true; // Waveform strip keeps lightweight authentic sync alive on every frame
+      };
+
+      window.__seek = function (t) {
+        if (!CFG) return;
+        // 1. Opening Tag (0.12 .. 2.20s)
+        var opIn = M.CURVES.appleOut(M.invLerp(0.12, 0.42, t));
+        var opOut = 1.0 - M.smoothstep(1.90, 2.22, t);
+        var opAlpha = opIn * opOut;
+        openingEl.style.opacity = opAlpha.toFixed(4);
+        openingEl.style.transform = 'translate3d(' + M.lerp(-42, 0, opIn).toFixed(1) + 'px,0,0)';
+
+        // 2. Kill #1 Tactical Card (kill1_t .. kill1_t + 2.10s)
+        var k1t0 = CFG.milestones.kill1_t;
+        var k1t1 = k1t0 + 2.15;
+        if (t >= k1t0 && t <= k1t1) {
+          var k1sc = R.evalTrack(R.popOvershootTrack(k1t0, 0.22, 1.05), t, CFG.duration_s);
+          var k1fade = 1.0 - M.smoothstep(k1t1 - 0.22, k1t1, t);
+          kill1El.style.opacity = k1fade.toFixed(4);
+          kill1El.style.transform = 'scale(' + k1sc.toFixed(4) + ')';
+        } else {
+          kill1El.style.opacity = '0';
+        }
+
+        // 3. Freeze-Frame Optical Reticles (Chamber Phase A + Reyna Loupe Phase B)
+        var ft0 = CFG.milestones.freeze_t0;
+        var fpb = CFG.milestones.freeze_phase_b_t;
+        var ft1 = CFG.milestones.freeze_t1;
+        if (t >= ft0 && t <= ft1) {
+          var fOut = 1.0 - M.smoothstep(ft1 - 0.08, ft1, t);
+          var chAlpha = M.smoothstep(ft0, ft0 + 0.10, t) * fOut;
+          var chDimInPhaseB = t >= fpb ? M.lerp(1.0, 0.45, M.smoothstep(fpb, fpb + 0.15, t)) : 1.0;
+          chamberGroup.setAttribute('opacity', (chAlpha * chDimInPhaseB).toFixed(4));
+          chamberTag.style.opacity = (chAlpha * chDimInPhaseB).toFixed(4);
+          O.glowSignaturePath(chamberLeader, chamberNib, t, ft0 + 0.03, 0.26);
+
+          if (t >= fpb) {
+            var lpSc = R.evalTrack(R.popOvershootTrack(fpb, 0.20, 1.06), t, CFG.duration_s);
+            loupeGroup.setAttribute('opacity', fOut.toFixed(4));
+            loupeBezelGroup.style.transform = 'scale(' + lpSc.toFixed(4) + ')';
+            loupeTag.style.opacity = (M.smoothstep(fpb + 0.06, fpb + 0.18, t) * fOut).toFixed(4);
+            O.glowSignaturePath(reynaLeader, reynaNib, t, fpb + 0.02, 0.24);
+          } else {
+            loupeGroup.setAttribute('opacity', '0');
+            loupeTag.style.opacity = '0';
+          }
+        } else {
+          chamberGroup.setAttribute('opacity', '0');
+          chamberTag.style.opacity = '0';
+          loupeGroup.setAttribute('opacity', '0');
+          loupeTag.style.opacity = '0';
+        }
+
+        // 4. Kill #3 Rolling Slot Drum Counter (kill3_t .. end)
+        var k3t0 = CFG.milestones.kill3_t;
+        var k3t1 = CFG.duration_s - 0.12;
+        if (t >= k3t0 && t <= k3t1) {
+          var k3in = M.smoothstep(k3t0, k3t0 + 0.12, t);
+          var k3out = 1.0 - M.smoothstep(k3t1 - 0.25, k3t1, t);
+          kill3El.style.opacity = (k3in * k3out).toFixed(4);
+          var roll = M.rollingSlotColumn(t, k3t0, 0, {
+            steps: 3,
+            cellHeightPx: 68,
+            colStaggerS: 0.0,
+            durationS: 0.42,
+            maxBlurPx: 11
+          });
+          drumStrip.style.transform = 'translate3d(0,' + roll.offsetYPx.toFixed(2) + 'px,0)';
+          drumStrip.style.filter = roll.blurYPx > 0.3 ? ('blur(' + (roll.blurYPx * 0.45).toFixed(2) + 'px)') : 'none';
+        } else {
+          kill3El.style.opacity = '0';
+        }
+
+        // 5. Kinetic Subtitles + Authentic Waveform Strip
+        updateSubtitle(t);
+        updateWaveform(t);
+      };
+
+      Promise.all([
+        fetch('/work/stage_config.json').then(function (r) { return r.json(); }),
+        fetch('/work/audio_waveform.json').then(function (r) { return r.json(); }),
+        document.fonts.load('700 48px "Oswald"'),
+        document.fonts.load('800 64px "Inter Tight"'),
+        document.fonts.load('400 72px "Instrument Serif"'),
+        document.fonts.load('500 22px "JetBrains Mono"')
+      ]).then(function (res) {
+        CFG = res[0];
+        WF = res[1];
+        initStaticGeometry();
+        window.__loadedFonts = Array.from(document.fonts)
+          .filter(function (f) { return f.status === 'loaded'; })
+          .map(function (f) { return f.family.replace(/['"]/g, ''); });
+        window.__seek(0.0);
+        window.__ready = true;
+      }).catch(function (err) {
+        console.error('STAGE_INIT_FAILED:', err);
+      });
+    })();
+  </script>
+</body>
+</html>

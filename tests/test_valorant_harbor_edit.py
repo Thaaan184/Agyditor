@@ -91,3 +91,73 @@ def test_audio_master_censor_waveform_and_acoustic_gate():
     assert len(verdict["metrics"]["pocket_checks"]) == 2
     for pk in verdict["metrics"]["pocket_checks"]:
         assert pk["drop_db"] >= 8.0, f"Silence pocket too shallow: {pk}"
+
+
+def test_optical_effects_and_loupe_preserve_frame_shape():
+    import numpy as np
+    from projects.valorant_edit import render_gameplay as rg
+
+    dummy = np.full((1920, 1080, 3), 80, dtype=np.uint8)
+    for fx in ("motion_tile_whip", "optical_radial_match", "flash_cutout_strobe"):
+        out = rg.apply_optical_effect(dummy, fx, 0.5)
+        assert out.shape == (1920, 1080, 3) and out.dtype == np.uint8
+    src_dummy = np.full((768, 1366, 3), 120, dtype=np.uint8)
+    patch, mask = rg.render_loupe_inset(src_dummy, tm.REYNA_SRC_XY, radius_px=tm.LOUPE_RADIUS_PX, zoom_factor=tm.LOUPE_ZOOM_FACTOR)
+    d = tm.LOUPE_RADIUS_PX * 2
+    assert patch.shape == (d, d, 3) and mask.shape == (d, d)
+    assert mask[tm.LOUPE_RADIUS_PX, tm.LOUPE_RADIUS_PX] == 255 and mask[0, 0] == 0
+
+
+def test_stage_config_copy_safe_zones_and_overlay_contract():
+    import json
+
+    cfg_path = tm.export_stage_config()
+    cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
+    for sub in cfg["subtitles"]:
+        assert "\u2014" not in sub["text"] and "\u2013" not in sub["text"]
+        assert 1360 <= sub["y_px"] <= 1560
+    assert cfg["loupe"]["target_canvas_xy"][0] > cfg["chamber"]["target_canvas_xy"][0]
+
+    html_path = ROOT / "projects" / "valorant_edit" / "overlay_stage.html"
+    assert html_path.exists(), f"Missing {html_path}"
+    html = html_path.read_text(encoding="utf-8")
+    for font_file in ("Oswald-Latin.woff2", "InterTight-Latin.woff2", "InstrumentSerif.ttf", "JetBrainsMono-Latin.woff2"):
+        assert font_file in html, f"Missing self-hosted font {font_file}"
+    for forbidden in ("<nav", "<header", "<footer", "Segoe UI", "\u2014", "\u2013", "2V4 FLIPPED", "border-top: 3px"):
+        assert forbidden not in html, f"Forbidden token in video overlay: {forbidden}"
+    assert "2V3 FLIPPED TO 2V1" in html
+    gila_sub = next(s for s in cfg["subtitles"] if s["id"] == "sub_gila_to")
+    assert gila_sub["y_px"] <= 1370
+
+
+def test_final_mp4_specs_and_acoustic_gate():
+    import json
+    import subprocess
+    from studio_kit.acoustic_audit import audit_media
+
+    mp4 = tm.FINAL_MP4_PATH
+    assert mp4.exists(), f"Missing final MP4: {mp4}"
+    probe = json.loads(
+        subprocess.check_output(
+            [
+                str(ROOT / "bin" / "ffprobe.exe"),
+                "-v", "error",
+                "-show_streams", "-show_format",
+                "-of", "json",
+                str(mp4),
+            ],
+            text=True,
+        )
+    )
+    v = next(s for s in probe["streams"] if s["codec_type"] == "video")
+    a = next(s for s in probe["streams"] if s["codec_type"] == "audio")
+    assert (v["width"], v["height"]) == (1080, 1920)
+    assert v["r_frame_rate"] == "60/1"
+    assert a["sample_rate"] == "48000" and a["channels"] == 2
+    verdict = audit_media(
+        mp4,
+        beat_sheet_path=ROOT / "projects" / "valorant_edit" / "beat_sheet.json",
+        profile="mograph_sfx",
+        has_bgm=True,
+    )
+    assert verdict["ok"] is True, f"Final MP4 acoustic failure: {verdict['failures']}"
