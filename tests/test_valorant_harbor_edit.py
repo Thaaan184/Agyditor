@@ -42,3 +42,14 @@ def test_project_source_to_canvas_accuracy_and_censor_span():
     c1 = tm.map_src_to_out(54.82)
     assert 8.2 < c0 < c1 < 8.8
     assert tm.OUTPUT_ROOT == pathlib.Path(r"D:\Clip\Edit\Valorant")
+
+
+def test_beat_sheet_passes_studio_gate():
+    from studio_kit.beat_sheet import validate_beat_sheet_file
+
+    res = validate_beat_sheet_file(ROOT / "projects" / "valorant_edit" / "beat_sheet.json")
+    assert res["ok"] is True, f"Beat sheet errors: {res['errors']}"
+    assert res["warnings"] == []
+    assert res["metrics"]["shot_cv"] >= 0.20
+    assert res["metrics"]["silence_pockets_count"] == 2
+    assert res["metrics"]["hero_cues_count"] >= 2

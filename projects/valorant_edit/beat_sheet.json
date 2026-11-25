@@ -1,0 +1,343 @@
+{
+  "title": "Valorant Harbor 3K Lucky Clutch on Breeze (Comedic-Hype Hybrid)",
+  "profile": "gaming-comedic",
+  "sound_palette": "comedic-dry",
+  "audio_audit_profile": "mograph_sfx",
+  "dials": {
+    "ENERGY": 3,
+    "RHYTHM": 3,
+    "MOTION": 3
+  },
+  "silence_pockets": [
+    {
+      "id": "pocket_bleep_censor",
+      "t0": 8.303,
+      "t1": 8.743,
+      "fade_ms": 18.0,
+      "duck_music_db": -52.0,
+      "duck_ambience_db": -16.0,
+      "duck_transitions_db": -46.0
+    },
+    {
+      "id": "pocket_reyna_lucky_freeze",
+      "t0": 21.73,
+      "t1": 23.48,
+      "fade_ms": 22.0,
+      "duck_music_db": -54.0,
+      "duck_ambience_db": -14.0,
+      "duck_transitions_db": -48.0
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01_hook",
+      "t_start": 0.0,
+      "t_end": 2.4,
+      "shot_type": "a_roll",
+      "visual_subject": "Harbor sprinting up Breeze Mid Pillar with Xenohunter knife behind Jett and equipping Glitchpop Vandal",
+      "narrative_purpose": "Establish the 2-4 Attack deficit on Breeze and introduce Ardyto ('To') via live Indonesian teammate callout.",
+      "on_screen_copy": [
+        "BREEZE · 2-4 ATTACK",
+        "Ini To!"
+      ],
+      "audio_intent": {
+        "strategy": "Reversed tactical groove lead-in under crisp knife flip and teammate opening callout."
+      }
+    },
+    {
+      "id": "b02_mid_chaos",
+      "t_start": 2.4,
+      "t_end": 4.883,
+      "shot_type": "a_roll",
+      "visual_subject": "Harbor peeking Mid Pillar gunfire at 1.45x velocity as tracers cross and teammate gasps",
+      "narrative_purpose": "Accelerate past empty mid setup while punching a comedic snap-zoom on the loud teammate gasp.",
+      "on_screen_copy": [
+        "WOOO!"
+      ],
+      "audio_intent": {
+        "strategy": "Pitch-preserved 1.45x gunfire with sharp pop accent on teammate exclamation."
+      }
+    },
+    {
+      "id": "b03_comms_bleep",
+      "t_start": 4.883,
+      "t_end": 9.083,
+      "shot_type": "a_roll",
+      "visual_subject": "Harbor holding ADS toward Mid Nest while teammate demands backup and curses on Discord",
+      "narrative_purpose": "Build comedic mabar panic and land the first BGM cut-out censor bleep right before Sova ultimates.",
+      "on_screen_copy": [
+        "To, mana backup-nya To,",
+        "an***g!"
+      ],
+      "audio_intent": {
+        "strategy": "Carve BGM under Indonesian comms then cut music dead for the censored profanity blip."
+      }
+    },
+    {
+      "id": "b04_kill1_sova",
+      "t_start": 9.083,
+      "t_end": 12.35,
+      "shot_type": "visual_proof",
+      "visual_subject": "Blue Sova Hunter's Fury laser erupting past Harbor left cheek as 51m ADS Vandal bullet headshots Sage in Mid Nest",
+      "narrative_purpose": "Prove the first improbable clutch headshot through an active enemy Sova ultimate with 0.45x hit-stop and optical zoom pulse.",
+      "on_screen_copy": [
+        "I AM THE HUNTER!",
+        "ardytoprancisko -> Sage · 51M THROUGH ULT"
+      ],
+      "audio_intent": {
+        "strategy": "3-band hero impact (sub, mid whoosh, cyber air) J-cut 95ms into Kill #1 Glitchpop chime."
+      }
+    },
+    {
+      "id": "b05_nice_comms",
+      "t_start": 12.35,
+      "t_end": 15.49,
+      "shot_type": "a_roll",
+      "visual_subject": "Harbor falling back through Mid Wood Doors as teammates celebrate the 51m headshot",
+      "narrative_purpose": "Provide human breathing room and validate Kill #1 through genuine Indonesian party voice reactions.",
+      "on_screen_copy": [
+        "Kiri, kiri... Nice!",
+        "Headshot tuh."
+      ],
+      "audio_intent": {
+        "strategy": "Keep groove tucked cleanly under Discord praise via 9-band spectral voice carving."
+      }
+    },
+    {
+      "id": "b06_velocity_whip",
+      "t_start": 15.49,
+      "t_end": 18.281,
+      "shot_type": "a_roll",
+      "visual_subject": "2.15x velocity montage across Glitchpop Vandal reload behind stone wall and Xenohunter knife whip into Mid Top",
+      "narrative_purpose": "Compress six seconds of quiet rotation into a kinetic optical mirror whip anchored to the knife draw.",
+      "on_screen_copy": [],
+      "audio_intent": {
+        "strategy": "Crisp fast-motion whoosh and metallic click synced to the Xenohunter knife whip."
+      }
+    },
+    {
+      "id": "b07_arch_stalk",
+      "t_start": 18.281,
+      "t_end": 21.73,
+      "shot_type": "a_roll",
+      "visual_subject": "Harbor advancing silently on B-Tunnel archway as teammate dies to Chamber Operator and Jett dashes left",
+      "narrative_purpose": "Raise round stakes to 2v3 and frame Harbor lining up a spray directly onto Chamber at the stone arch.",
+      "on_screen_copy": [
+        "Aish!"
+      ],
+      "audio_intent": {
+        "strategy": "Gradual low-pass sweep on tactical groove during silent approach into sudden Vandal spray burst."
+      }
+    },
+    {
+      "id": "b08_lucky_freeze",
+      "t_start": 21.73,
+      "t_end": 23.48,
+      "shot_type": "silence_contrast",
+      "visual_subject": "Frozen frame 71.75s dimming Breeze arch while 4.2x circular optical magnifying loupe isolates tiny Reyna headshot spark behind Chamber",
+      "narrative_purpose": "Deliver the comedic lucky-shot reveal proving a stray spray meant for Chamber accidentally headshotted distant Reyna first.",
+      "on_screen_copy": [
+        "Niatnya nembak Chamber...",
+        "EH REYNA DI BELAKANG IKUT KENA?!",
+        "STRAY HEADSHOT"
+      ],
+      "audio_intent": {
+        "strategy": "Total BGM hard cut-out silence pocket with dry camera shutter freeze, loupe pop, and subtle comedic huh accent."
+      }
+    },
+    {
+      "id": "b09_kill3_drop",
+      "t_start": 23.48,
+      "t_end": 24.575,
+      "shot_type": "visual_proof",
+      "visual_subject": "Live snap release into instant Chamber headshot 0.40s later with 2-frame flash strobe and live cropped double killfeed",
+      "narrative_purpose": "Pay off the freeze-frame joke with explosive 3K cinema impact and verified double headshot killfeed proof.",
+      "on_screen_copy": [
+        "3K",
+        "0.40S DOUBLE HS"
+      ],
+      "audio_intent": {
+        "strategy": "Slam tactical groove back in full force layered with 3-band cinema impact on Chamber headshot."
+      }
+    },
+    {
+      "id": "b10_gila_outro",
+      "t_start": 24.575,
+      "t_end": 26.975,
+      "shot_type": "a_roll",
+      "visual_subject": "Teammate Jett stepping out from left cover in 2v1 aftermath as Discord party erupts",
+      "narrative_purpose": "Close on authentic Indonesian mabar disbelief and resolve musical momentum with a smooth hall tail.",
+      "on_screen_copy": [
+        "Wuh! Eh, gila To!!"
+      ],
+      "audio_intent": {
+        "strategy": "Ghost-echo reaction typography over uncarved party cheers while BGM dissolves into Great Hall T60=2.6s reverb tail."
+      }
+    }
+  ],
+  "sound_cues": [
+    {
+      "id": "cue_room_bed",
+      "t_s": 0.0,
+      "bus": "ambience",
+      "contrast_rule": "room_tone_bed",
+      "gain_db": -38.0,
+      "hp_hz": 90.0,
+      "lp_hz": 6200.0,
+      "layers": [
+        {
+          "asset": "se/ambience__fs-329533-room-tone-in-an-apartment-livi",
+          "spectrum_role": "room_bed"
+        }
+      ]
+    },
+    {
+      "id": "cue_wooo_pop",
+      "t_s": 3.68,
+      "bus": "foley",
+      "visual_cause": "Snap-zoom punch and yellow WOOO subtitle popping on screen during mid gunfire.",
+      "gain_db": -12.0,
+      "layers": [
+        {
+          "asset": "se/pop__fs-467951-ui-button-click",
+          "spectrum_role": "mid_body",
+          "hp_hz": 300.0,
+          "lp_hz": 4200.0
+        }
+      ]
+    },
+    {
+      "id": "cue_censor_bleep",
+      "t_s": 8.333,
+      "bus": "foley",
+      "palette": "gaming-montage",
+      "emotional_realism_note": "Comedic-Hype Hybrid uses a crisp dry CC0 UI blip to censor profanity cleanly without raw sine beeps.",
+      "visual_cause": "Red shaking an***g subtitle slamming in on snap-zoom during teammate curse.",
+      "gain_db": -6.5,
+      "layers": [
+        {
+          "asset": "se/ui-blip__kenney-digital-pepsound1",
+          "spectrum_role": "mid_body",
+          "hp_hz": 550.0,
+          "lp_hz": 5200.0,
+          "max_dur_s": 0.34
+        }
+      ]
+    },
+    {
+      "id": "cue_kill1_hero_impact",
+      "t_s": 10.969,
+      "bus": "transitions",
+      "intensity": "hero",
+      "palette": "kinetic-street",
+      "emotional_realism_note": "Comedic-Hype Hybrid elevates verified 51m headshot through Sova ultimate with a 3-band cinema impact.",
+      "visual_cause": "51m ADS Vandal headshot connecting on Sage right inside Sova Hunter's Fury beam with optical radial zoom pulse.",
+      "pre_lap_ms": 95.0,
+      "gain_db": -5.5,
+      "layers": [
+        {
+          "asset": "se/impact__kenney-sci-lowfrequency-explosion-000",
+          "spectrum_role": "sub_low"
+        },
+        {
+          "asset": "se/whoosh__fs-683101-quick-woosh",
+          "spectrum_role": "mid_body"
+        },
+        {
+          "asset": "se/transition__fs-856168-cyberpunk-glitch-hologram-tran",
+          "spectrum_role": "high_air"
+        }
+      ]
+    },
+    {
+      "id": "cue_knife_whip",
+      "t_s": 17.606,
+      "bus": "foley",
+      "palette": "kinetic-street",
+      "emotional_realism_note": "Fast kinetic whip texture underscores the 2.15x Xenohunter knife draw transition.",
+      "visual_cause": "Xenohunter knife whipping across screen during 2.15x MotionTile mirror whip transition.",
+      "pre_lap_ms": 75.0,
+      "gain_db": -8.5,
+      "layers": [
+        {
+          "asset": "se/whoosh__fs-683101-quick-woosh",
+          "spectrum_role": "mid_body",
+          "hp_hz": 320.0,
+          "lp_hz": 4000.0
+        },
+        {
+          "asset": "se/click__kenney-interface-select-003",
+          "spectrum_role": "high_air",
+          "hp_hz": 2600.0,
+          "gain_db": -10.5
+        }
+      ]
+    },
+    {
+      "id": "cue_freeze_shutter",
+      "t_s": 21.73,
+      "bus": "foley",
+      "visual_cause": "Gameplay freezing dead on frame 71.75s as target bracket snaps onto Chamber in the archway.",
+      "gain_db": -7.5,
+      "layers": [
+        {
+          "asset": "se/click__kenney-interface-select-001",
+          "spectrum_role": "mid_body",
+          "hp_hz": 400.0
+        },
+        {
+          "asset": "se/click__kenney-interface-tick-001",
+          "spectrum_role": "high_air",
+          "hp_hz": 2800.0,
+          "gain_db": -9.0
+        }
+      ]
+    },
+    {
+      "id": "cue_reyna_loupe_pop",
+      "t_s": 22.48,
+      "bus": "foley",
+      "visual_cause": "4.2x circular optical magnifying loupe popping open on tiny Reyna headshot spark behind Chamber.",
+      "gain_db": -7.5,
+      "layers": [
+        {
+          "asset": "se/pop__fs-467951-ui-button-click",
+          "spectrum_role": "mid_body",
+          "hp_hz": 280.0
+        },
+        {
+          "asset": "ge/huh-voice",
+          "spectrum_role": "full_spectrum",
+          "hp_hz": 350.0,
+          "lp_hz": 6500.0,
+          "gain_db": -11.5
+        }
+      ]
+    },
+    {
+      "id": "cue_kill3_hero_drop",
+      "t_s": 23.917,
+      "bus": "transitions",
+      "intensity": "hero",
+      "palette": "kinetic-street",
+      "emotional_realism_note": "Comedic-Hype Hybrid slams a 3-band bass impact on Kill #3 Chamber headshot to resolve the freeze-frame setup.",
+      "visual_cause": "Instant Chamber headshot 0.40s after unfreeze triggering 2-frame flash strobe and live double killfeed reveal.",
+      "pre_lap_ms": 105.0,
+      "gain_db": -4.5,
+      "layers": [
+        {
+          "asset": "se/impact__fs-177242-cinematic-impact",
+          "spectrum_role": "sub_low"
+        },
+        {
+          "asset": "se/impact__kenney-impact-impactsoft-heavy-000",
+          "spectrum_role": "mid_body"
+        },
+        {
+          "asset": "se/transition__fs-702773-swipe-wav",
+          "spectrum_role": "high_air"
+        }
+      ]
+    }
+  ]
+}
