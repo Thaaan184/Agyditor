@@ -1,0 +1,835 @@
+{
+  "video": "pdLEHfkwgV8",
+  "res": "1920x1080",
+  "fps": "24000/1001",
+  "dur_s": 313.96,
+  "acoustic": {
+    "file": "d:\\Files\\Project Iseng\\AGY Video Editor\\references\\sound_cinematography_study\\pdLEHfkwgV8.mp4",
+    "duration_s": 313.957,
+    "loudness": {
+      "lufs_i": -14.5,
+      "lra": 5.3,
+      "peak_dbfs": 0.9
+    },
+    "band_pct": {
+      "sub_20_90": 7.25,
+      "mud_100_350": 44.67,
+      "voice_350_2500": 43.65,
+      "detail_2500_8000": 3.08,
+      "air_8000_18000": 0.45
+    },
+    "detail_air_pct": 3.53,
+    "dynamics": {
+      "active_med_db": -18.6,
+      "quiet_15db_pct": 7.4,
+      "silence_48db_pct": 0.3,
+      "dead_digital_zero_pct": 0.0,
+      "p10_db": -31.8,
+      "p90_db": -13.81
+    },
+    "pocket_checks": [],
+    "cuts_count": 65,
+    "shot_cv": 1.618
+  },
+  "cuts": [
+    1.96,
+    4.88,
+    7.216,
+    8.008,
+    19.144,
+    19.937,
+    20.896,
+    23.19,
+    26.151,
+    31.406,
+    32.366,
+    33.283,
+    36.787,
+    36.828,
+    36.912,
+    41.75,
+    44.378,
+    53.011,
+    55.389,
+    55.931,
+    57.015,
+    57.557,
+    58.6,
+    63.23,
+    68.277,
+    90.257,
+    102.519,
+    114.906,
+    126.376,
+    150.025,
+    152.527,
+    162.579,
+    163.914,
+    164.539,
+    168.001,
+    171.421,
+    177.01,
+    178.72,
+    179.805,
+    183.225,
+    187.02,
+    191.233,
+    192.692,
+    193.36,
+    195.487,
+    196.113,
+    197.948,
+    198.824,
+    199.866,
+    200.534,
+    203.12,
+    209.876,
+    235.193,
+    246.371,
+    247.205,
+    247.914,
+    250.0,
+    253.962,
+    255.172,
+    256.298,
+    258.216,
+    260.969,
+    261.094,
+    261.178,
+    264.181
+  ],
+  "cut_onsets_sample": [
+    {
+      "cut_s": 1.96,
+      "nearest_onset_s": 2.025,
+      "offset_ms": 65.0
+    },
+    {
+      "cut_s": 4.88,
+      "nearest_onset_s": 4.825,
+      "offset_ms": -55.0
+    },
+    {
+      "cut_s": 7.216,
+      "nearest_onset_s": 7.275,
+      "offset_ms": 59.0
+    },
+    {
+      "cut_s": 8.008,
+      "nearest_onset_s": 8.05,
+      "offset_ms": 42.0
+    },
+    {
+      "cut_s": 19.144,
+      "nearest_onset_s": 19.05,
+      "offset_ms": -94.0
+    },
+    {
+      "cut_s": 19.937,
+      "nearest_onset_s": 20.0,
+      "offset_ms": 63.0
+    },
+    {
+      "cut_s": 20.896,
+      "nearest_onset_s": 20.825,
+      "offset_ms": -71.0
+    },
+    {
+      "cut_s": 23.19,
+      "nearest_onset_s": 23.275,
+      "offset_ms": 85.0
+    },
+    {
+      "cut_s": 26.151,
+      "nearest_onset_s": 26.25,
+      "offset_ms": 99.0
+    },
+    {
+      "cut_s": 31.406,
+      "nearest_onset_s": 31.525,
+      "offset_ms": 119.0
+    },
+    {
+      "cut_s": 32.366,
+      "nearest_onset_s": 32.225,
+      "offset_ms": -141.0
+    },
+    {
+      "cut_s": 33.283,
+      "nearest_onset_s": 33.275,
+      "offset_ms": -8.0
+    },
+    {
+      "cut_s": 36.787,
+      "nearest_onset_s": 36.7,
+      "offset_ms": -87.0
+    },
+    {
+      "cut_s": 36.828,
+      "nearest_onset_s": 36.925,
+      "offset_ms": 97.0
+    },
+    {
+      "cut_s": 36.912,
+      "nearest_onset_s": 36.925,
+      "offset_ms": 13.0
+    },
+    {
+      "cut_s": 41.75,
+      "nearest_onset_s": 41.8,
+      "offset_ms": 50.0
+    },
+    {
+      "cut_s": 44.378,
+      "nearest_onset_s": 44.225,
+      "offset_ms": -153.0
+    },
+    {
+      "cut_s": 53.011,
+      "nearest_onset_s": 52.875,
+      "offset_ms": -136.0
+    },
+    {
+      "cut_s": 55.389,
+      "nearest_onset_s": 55.05,
+      "offset_ms": -339.0
+    },
+    {
+      "cut_s": 55.931,
+      "nearest_onset_s": 55.775,
+      "offset_ms": -156.0
+    },
+    {
+      "cut_s": 57.015,
+      "nearest_onset_s": 57.0,
+      "offset_ms": -15.0
+    },
+    {
+      "cut_s": 57.557,
+      "nearest_onset_s": 57.6,
+      "offset_ms": 43.0
+    },
+    {
+      "cut_s": 58.6,
+      "nearest_onset_s": 58.5,
+      "offset_ms": -100.0
+    },
+    {
+      "cut_s": 63.23,
+      "nearest_onset_s": 63.3,
+      "offset_ms": 70.0
+    },
+    {
+      "cut_s": 68.277,
+      "nearest_onset_s": 68.3,
+      "offset_ms": 23.0
+    },
+    {
+      "cut_s": 90.257,
+      "nearest_onset_s": 90.3,
+      "offset_ms": 43.0
+    },
+    {
+      "cut_s": 102.519,
+      "nearest_onset_s": 102.475,
+      "offset_ms": -44.0
+    },
+    {
+      "cut_s": 114.906,
+      "nearest_onset_s": 114.675,
+      "offset_ms": -231.0
+    },
+    {
+      "cut_s": 126.376,
+      "nearest_onset_s": 126.45,
+      "offset_ms": 74.0
+    },
+    {
+      "cut_s": 150.025,
+      "nearest_onset_s": 150.125,
+      "offset_ms": 100.0
+    },
+    {
+      "cut_s": 152.527,
+      "nearest_onset_s": 152.65,
+      "offset_ms": 123.0
+    },
+    {
+      "cut_s": 162.579,
+      "nearest_onset_s": 162.625,
+      "offset_ms": 46.0
+    },
+    {
+      "cut_s": 163.914,
+      "nearest_onset_s": 163.925,
+      "offset_ms": 11.0
+    },
+    {
+      "cut_s": 164.539,
+      "nearest_onset_s": 164.525,
+      "offset_ms": -14.0
+    },
+    {
+      "cut_s": 168.001,
+      "nearest_onset_s": 168.05,
+      "offset_ms": 49.0
+    },
+    {
+      "cut_s": 171.421,
+      "nearest_onset_s": 171.475,
+      "offset_ms": 54.0
+    },
+    {
+      "cut_s": 177.01,
+      "nearest_onset_s": 176.95,
+      "offset_ms": -60.0
+    },
+    {
+      "cut_s": 178.72,
+      "nearest_onset_s": 178.75,
+      "offset_ms": 30.0
+    },
+    {
+      "cut_s": 179.805,
+      "nearest_onset_s": 179.85,
+      "offset_ms": 45.0
+    },
+    {
+      "cut_s": 183.225,
+      "nearest_onset_s": 183.3,
+      "offset_ms": 75.0
+    }
+  ],
+  "pauses_gt_350ms": [
+    {
+      "at": 4.6,
+      "gap_s": 0.44,
+      "after": "process.",
+      "before": "Now,"
+    },
+    {
+      "at": 7.96,
+      "gap_s": 0.42,
+      "after": "grading,",
+      "before": "sound"
+    },
+    {
+      "at": 8.98,
+      "gap_s": 0.4,
+      "after": "design,",
+      "before": "music,"
+    },
+    {
+      "at": 9.76,
+      "gap_s": 0.38,
+      "after": "music,",
+      "before": "it's"
+    },
+    {
+      "at": 18.84,
+      "gap_s": 1.74,
+      "after": "cinematic.",
+      "before": "And"
+    },
+    {
+      "at": 31.26,
+      "gap_s": 1.9,
+      "after": "once.",
+      "before": "The"
+    },
+    {
+      "at": 39.4,
+      "gap_s": 0.52,
+      "after": "hook.",
+      "before": "I"
+    },
+    {
+      "at": 55.2,
+      "gap_s": 3.04,
+      "after": "this.",
+      "before": "Now"
+    },
+    {
+      "at": 62.84,
+      "gap_s": 0.4,
+      "after": "things.",
+      "before": "And"
+    },
+    {
+      "at": 74.5,
+      "gap_s": 0.38,
+      "after": "design.",
+      "before": "I'm"
+    },
+    {
+      "at": 79.02,
+      "gap_s": 7.82,
+      "after": "them.",
+      "before": "So"
+    },
+    {
+      "at": 90.08,
+      "gap_s": 0.38,
+      "after": "music.",
+      "before": "Now"
+    },
+    {
+      "at": 96.62,
+      "gap_s": 0.4,
+      "after": "rhythm,",
+      "before": "pace,"
+    },
+    {
+      "at": 97.26,
+      "gap_s": 0.42,
+      "after": "pace,",
+      "before": "emotion,"
+    },
+    {
+      "at": 98.04,
+      "gap_s": 0.62,
+      "after": "emotion,",
+      "before": "what's"
+    },
+    {
+      "at": 100.06,
+      "gap_s": 0.38,
+      "after": "story.",
+      "before": "You"
+    },
+    {
+      "at": 114.54,
+      "gap_s": 0.42,
+      "after": "visuals.",
+      "before": "To"
+    },
+    {
+      "at": 147.2,
+      "gap_s": 2.56,
+      "after": "way.",
+      "before": "Now"
+    },
+    {
+      "at": 152.3,
+      "gap_s": 0.38,
+      "after": "flavor.",
+      "before": "You"
+    },
+    {
+      "at": 156.42,
+      "gap_s": 0.38,
+      "after": "together,",
+      "before": "you"
+    },
+    {
+      "at": 170.98,
+      "gap_s": 0.54,
+      "after": "beautiful.",
+      "before": "Now,"
+    },
+    {
+      "at": 209.58,
+      "gap_s": 1.72,
+      "after": "below.",
+      "before": "Now,"
+    },
+    {
+      "at": 240.32,
+      "gap_s": 0.72,
+      "after": "creativity,",
+      "before": "whether"
+    },
+    {
+      "at": 254.16,
+      "gap_s": 0.6,
+      "after": "million,",
+      "before": "content"
+    },
+    {
+      "at": 263.92,
+      "gap_s": 0.46,
+      "after": "below.",
+      "before": "Now,"
+    },
+    {
+      "at": 294.7,
+      "gap_s": 0.46,
+      "after": "process.",
+      "before": "That's"
+    }
+  ],
+  "segments": [
+    {
+      "start": 3.24,
+      "end": 11.08,
+      "text": "The editing process. Now, don't get me wrong, I really enjoy it. Color grading, sound design, music, it's all really fun."
+    },
+    {
+      "start": 11.32,
+      "end": 18.84,
+      "text": "But sometimes it can get a bit overwhelming. So here are three things I do to make my editing a little easier and make my videos a little more cinematic."
+    },
+    {
+      "start": 20.58,
+      "end": 25.86,
+      "text": "And it starts with what I just did right there. Now in the business we like to call that the shot sequence."
+    },
+    {
+      "start": 25.86,
+      "end": 31.26,
+      "text": "I didn't make it up, but it's a very helpful editing technique that allows you to accomplish two things at once."
+    },
+    {
+      "start": 33.16,
+      "end": 41.62,
+      "text": "The first thing it allows you to do is move your story forward pretty quickly. And secondly, it works as a really good hook. I mean, you're still here, aren't you?"
+    },
+    {
+      "start": 41.8,
+      "end": 48.48,
+      "text": "To accomplish this, it's quite simple. First, we're going to get a few clips doing one action. Then we're going to cut all of our clips so they're the same length."
+    },
+    {
+      "start": 48.74,
+      "end": 55.2,
+      "text": "And finally, we're going to stitch all of the clips so that they flow together in motion. And the final cut should look something like this."
+    },
+    {
+      "start": 58.24,
+      "end": 68.12,
+      "text": "Now while that looks really good, it still feels like it's missing a few things. And to be honest, that's because it is because visuals are only half of the picture."
+    },
+    {
+      "start": 68.4,
+      "end": 74.5,
+      "text": "Now this is where sound design comes in. Now this is not a sponsored section where I'm going to tell you where you can get your best sound design."
+    },
+    {
+      "start": 74.88,
+      "end": 79.02,
+      "text": "I'm simply going to show you what sound effects I use and the names of them."
+    },
+    {
+      "start": 86.84,
+      "end": 90.08,
+      "text": "So now that we've got that out of the way, let's talk about music."
+    },
+    {
+      "start": 90.46,
+      "end": 100.06,
+      "text": "Now music is the backbone of any video. It dictates a multiple variety of things, rhythm, pace, emotion, what's going on in the story."
+    },
+    {
+      "start": 100.44,
+      "end": 107.4,
+      "text": "You name it, music has a hold on it. When choosing my music, I try to stay away from lo-fi. I think it's a little bit stale and overused."
+    },
+    {
+      "start": 107.4,
+      "end": 114.54,
+      "text": "I stick to genres like jazz or house music or something a little more cinematic that can tell the story as I'm sharing my visuals."
+    },
+    {
+      "start": 114.96,
+      "end": 120.44,
+      "text": "To be honest, finding music that fits your video is a bit of a skill and can take a long time."
+    },
+    {
+      "start": 120.64,
+      "end": 126.3,
+      "text": "That's why I always find my music before I start filming. That way, when I am filming, I know the rhythm that I'm shooting for."
+    },
+    {
+      "start": 126.48,
+      "end": 129.7,
+      "text": "So a few things I do when I'm looking for music is I look at the beats per minute."
+    },
+    {
+      "start": 129.84,
+      "end": 132.38,
+      "text": "This allows me to see how fast the song will go."
+    },
+    {
+      "start": 132.38,
+      "end": 138.14,
+      "text": "And the other thing that I do, which I'll just show a screenshot of a song, is I look for dips in the song."
+    },
+    {
+      "start": 138.24,
+      "end": 143.04,
+      "text": "I like those cuts because it allows me to actually change the scene pretty naturally with the music,"
+    },
+    {
+      "start": 143.06,
+      "end": 147.2,
+      "text": "opposed to having to cut the music up in an unorganic natural way."
+    },
+    {
+      "start": 149.76,
+      "end": 152.3,
+      "text": "Now the fun part, adding our flavor."
+    },
+    {
+      "start": 152.68,
+      "end": 157.46,
+      "text": "You see, editing is a lot like making bread. You get all the ingredients together, you bake it,"
+    },
+    {
+      "start": 157.46,
+      "end": 162.38,
+      "text": "and once the bread is done, you get to add your flavor, which is color grading."
+    },
+    {
+      "start": 162.64,
+      "end": 165.12,
+      "text": "Color grading communicates the whole aesthetic of the video."
+    },
+    {
+      "start": 165.36,
+      "end": 169.96,
+      "text": "And now more than ever, color grading is making a massive impact, stopping people in their scroll."
+    },
+    {
+      "start": 170.08,
+      "end": 170.98,
+      "text": "That's beautiful."
+    },
+    {
+      "start": 171.52,
+      "end": 174.6,
+      "text": "Now, since this video is all about how I edit quickly and cinematically,"
+    },
+    {
+      "start": 174.88,
+      "end": 176.88,
+      "text": "I'm going to show you everything I do when I color grade."
+    },
+    {
+      "start": 177.06,
+      "end": 180.44,
+      "text": "So the first step is adding light, more light, more information."
+    },
+    {
+      "start": 180.78,
+      "end": 183.08,
+      "text": "Not enough light, not enough information to edit."
+    },
+    {
+      "start": 183.26,
+      "end": 186.88,
+      "text": "Then I'll add these little practical lights in the back to give it a little bit more pop."
+    },
+    {
+      "start": 186.88,
+      "end": 191.14,
+      "text": "On top of that, I like to use objects in my frame that have a little bit more color."
+    },
+    {
+      "start": 191.32,
+      "end": 194.32,
+      "text": "After that, I go into the edit and apply my one-click color grade,"
+    },
+    {
+      "start": 194.42,
+      "end": 197.84,
+      "text": "which turns boring footage into cinematic footage with one click."
+    },
+    {
+      "start": 198.08,
+      "end": 202.86,
+      "text": "It's simple, efficient, and it makes your frames look very cinematic with just one click."
+    },
+    {
+      "start": 203.16,
+      "end": 206.22,
+      "text": "Now, that's just what I do because it really does save me a lot of time."
+    },
+    {
+      "start": 206.4,
+      "end": 209.58,
+      "text": "If you want to check out the one-click grade, it's linked in the description below."
+    },
+    {
+      "start": 211.3,
+      "end": 216.14,
+      "text": "Now, believe it or not, that genuinely is all I do when it comes to making a video."
+    },
+    {
+      "start": 216.14,
+      "end": 219.4,
+      "text": "Now, a lot of people think you need to be really crazy creative"
+    },
+    {
+      "start": 219.4,
+      "end": 222.82,
+      "text": "and think about things that nobody's ever thought about to make a really good video."
+    },
+    {
+      "start": 223.02,
+      "end": 225.92,
+      "text": "But over the last two years, I've learned that less is more."
+    },
+    {
+      "start": 226.08,
+      "end": 229.04,
+      "text": "And to be honest, there's so much about YouTube and creativity"
+    },
+    {
+      "start": 229.04,
+      "end": 234.04,
+      "text": "that I've learned about in the last two years that I never thought about when I first started."
+    },
+    {
+      "start": 234.26,
+      "end": 237.72,
+      "text": "And I actually spent the last year putting everything together that I know about"
+    },
+    {
+      "start": 237.72,
+      "end": 240.14,
+      "text": "when it comes to creating a career with your creativity,"
+    },
+    {
+      "start": 241.04,
+      "end": 244.56,
+      "text": "whether it's YouTube, being a content creator, or working with brands."
+    },
+    {
+      "start": 244.56,
+      "end": 248.2,
+      "text": "And I've put it all together in a very interactive creative blueprint"
+    },
+    {
+      "start": 248.2,
+      "end": 249.9,
+      "text": "that's linked in the description below."
+    },
+    {
+      "start": 250.08,
+      "end": 251.2,
+      "text": "So definitely check that out."
+    },
+    {
+      "start": 251.3,
+      "end": 254.16,
+      "text": "I interview people who have sold their businesses for $100 million,"
+    },
+    {
+      "start": 254.76,
+      "end": 257.26,
+      "text": "content creators with over 200,000 followers,"
+    },
+    {
+      "start": 257.5,
+      "end": 260.66,
+      "text": "and business minds that talk about what worked versus what doesn't work."
+    },
+    {
+      "start": 260.84,
+      "end": 262.36,
+      "text": "So definitely check out the creative blueprint."
+    },
+    {
+      "start": 262.54,
+      "end": 263.92,
+      "text": "It's linked in the description below."
+    },
+    {
+      "start": 264.38,
+      "end": 266.12,
+      "text": "Now, I know that was really quick and short,"
+    },
+    {
+      "start": 266.12,
+      "end": 268.46,
+      "text": "but I'm trying to package these type of videos"
+    },
+    {
+      "start": 268.46,
+      "end": 271.6,
+      "text": "where they're very informative and they're very straight to the point."
+    },
+    {
+      "start": 271.6,
+      "end": 275.5,
+      "text": "Now, my encouragement and my charge to you guys is come up with a story"
+    },
+    {
+      "start": 275.5,
+      "end": 277.7,
+      "text": "and break that story up into three chapters,"
+    },
+    {
+      "start": 278.04,
+      "end": 281.06,
+      "text": "and for each chapter, try to create a visual sequence"
+    },
+    {
+      "start": 281.06,
+      "end": 283.0,
+      "text": "that pairs well with two to three songs"
+    },
+    {
+      "start": 283.0,
+      "end": 287.16,
+      "text": "and have a very aesthetic framing that the audience will feel a sense of,"
+    },
+    {
+      "start": 287.44,
+      "end": 288.42,
+      "text": "this is very beautiful."
+    },
+    {
+      "start": 288.72,
+      "end": 291.4,
+      "text": "And by the end of the video, maybe talk about it the way that I'm doing"
+    },
+    {
+      "start": 291.4,
+      "end": 294.7,
+      "text": "so that your audience can feel like they're a part of the creative process."
+    },
+    {
+      "start": 295.16,
+      "end": 296.4,
+      "text": "That's what's worked for me,"
+    },
+    {
+      "start": 296.6,
+      "end": 298.8,
+      "text": "and I would love to see what you guys create."
+    },
+    {
+      "start": 298.8,
+      "end": 301.82,
+      "text": "So if you've made it this far, it means you're a part of the 20% of people"
+    },
+    {
+      "start": 301.82,
+      "end": 303.28,
+      "text": "that watch this video all the way through."
+    },
+    {
+      "start": 303.62,
+      "end": 306.14,
+      "text": "Leave a comment letting me know you are a part of the 20%,"
+    },
+    {
+      "start": 306.14,
+      "end": 308.8,
+      "text": "and let me know what other topics you'd like me to make"
+    },
+    {
+      "start": 308.8,
+      "end": 311.56,
+      "text": "these small, quick videos about."
+    },
+    {
+      "start": 311.84,
+      "end": 313.58,
+      "text": "So I will see you all in the next one."
+    }
+  ],
+  "full_transcript": "The editing process. Now, don't get me wrong, I really enjoy it. Color grading, sound design, music, it's all really fun. But sometimes it can get a bit overwhelming. So here are three things I do to make my editing a little easier and make my videos a little more cinematic. And it starts with what I just did right there. Now in the business we like to call that the shot sequence. I didn't make it up, but it's a very helpful editing technique that allows you to accomplish two things at once. The first thing it allows you to do is move your story forward pretty quickly. And secondly, it works as a really good hook. I mean, you're still here, aren't you? To accomplish this, it's quite simple. First, we're going to get a few clips doing one action. Then we're going to cut all of our clips so they're the same length. And finally, we're going to stitch all of the clips so that they flow together in motion. And the final cut should look something like this. Now while that looks really good, it still feels like it's missing a few things. And to be honest, that's because it is because visuals are only half of the picture. Now this is where sound design comes in. Now this is not a sponsored section where I'm going to tell you where you can get your best sound design. I'm simply going to show you what sound effects I use and the names of them. So now that we've got that out of the way, let's talk about music. Now music is the backbone of any video. It dictates a multiple variety of things, rhythm, pace, emotion, what's going on in the story. You name it, music has a hold on it. When choosing my music, I try to stay away from lo-fi. I think it's a little bit stale and overused. I stick to genres like jazz or house music or something a little more cinematic that can tell the story as I'm sharing my visuals. To be honest, finding music that fits your video is a bit of a skill and can take a long time. That's why I always find my music before I start filming. That way, when I am filming, I know the rhythm that I'm shooting for. So a few things I do when I'm looking for music is I look at the beats per minute. This allows me to see how fast the song will go. And the other thing that I do, which I'll just show a screenshot of a song, is I look for dips in the song. I like those cuts because it allows me to actually change the scene pretty naturally with the music, opposed to having to cut the music up in an unorganic natural way. Now the fun part, adding our flavor. You see, editing is a lot like making bread. You get all the ingredients together, you bake it, and once the bread is done, you get to add your flavor, which is color grading. Color grading communicates the whole aesthetic of the video. And now more than ever, color grading is making a massive impact, stopping people in their scroll. That's beautiful. Now, since this video is all about how I edit quickly and cinematically, I'm going to show you everything I do when I color grade. So the first step is adding light, more light, more information. Not enough light, not enough information to edit. Then I'll add these little practical lights in the back to give it a little bit more pop. On top of that, I like to use objects in my frame that have a little bit more color. After that, I go into the edit and apply my one-click color grade, which turns boring footage into cinematic footage with one click. It's simple, efficient, and it makes your frames look very cinematic with just one click. Now, that's just what I do because it really does save me a lot of time. If you want to check out the one-click grade, it's linked in the description below. Now, believe it or not, that genuinely is all I do when it comes to making a video. Now, a lot of people think you need to be really crazy creative and think about things that nobody's ever thought about to make a really good video. But over the last two years, I've learned that less is more. And to be honest, there's so much about YouTube and creativity that I've learned about in the last two years that I never thought about when I first started. And I actually spent the last year putting everything together that I know about when it comes to creating a career with your creativity, whether it's YouTube, being a content creator, or working with brands. And I've put it all together in a very interactive creative blueprint that's linked in the description below. So definitely check that out. I interview people who have sold their businesses for $100 million, content creators with over 200,000 followers, and business minds that talk about what worked versus what doesn't work. So definitely check out the creative blueprint. It's linked in the description below. Now, I know that was really quick and short, but I'm trying to package these type of videos where they're very informative and they're very straight to the point. Now, my encouragement and my charge to you guys is come up with a story and break that story up into three chapters, and for each chapter, try to create a visual sequence that pairs well with two to three songs and have a very aesthetic framing that the audience will feel a sense of, this is very beautiful. And by the end of the video, maybe talk about it the way that I'm doing so that your audience can feel like they're a part of the creative process. That's what's worked for me, and I would love to see what you guys create. So if you've made it this far, it means you're a part of the 20% of people that watch this video all the way through. Leave a comment letting me know you are a part of the 20%, and let me know what other topics you'd like me to make these small, quick videos about. So I will see you all in the next one.",
+  "arc_png": "d:\\Files\\Project Iseng\\AGY Video Editor\\references\\sound_cinematography_study\\audio_arc_pdLEHfkwgV8.png"
+}

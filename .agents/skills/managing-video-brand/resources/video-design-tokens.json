@@ -9,13 +9,21 @@
     "fast_text_shutter_deg": 360
   },
   "palettes": {
-    "editorial_dark": {
-      "surface_primary": "#0B0F17",
-      "surface_elevated": "#131B2E",
-      "text_primary": "#F8FAFC",
-      "text_muted": "#94A3B8",
-      "accent_primary": "#0EA5E9",
-      "border_subtle": "#1E293B"
+    "tactile_paper": {
+      "surface_primary": "#F4EFE6",
+      "surface_elevated": "#FFFDF9",
+      "text_primary": "#18181B",
+      "text_muted": "#52525B",
+      "accent_primary": "#D97706",
+      "border_subtle": "#D6CEBF"
+    },
+    "cutting_mat_studio": {
+      "surface_primary": "#1B3B2B",
+      "surface_elevated": "#234B37",
+      "text_primary": "#F4EFE6",
+      "text_muted": "#B8C7BE",
+      "accent_primary": "#22C55E",
+      "border_subtle": "#34634C"
     },
     "editorial_light": {
       "surface_primary": "#F8FAFC",
@@ -24,6 +32,14 @@
       "text_muted": "#475569",
       "accent_primary": "#0284C7",
       "border_subtle": "#E2E8F0"
+    },
+    "editorial_dark": {
+      "surface_primary": "#0B0F17",
+      "surface_elevated": "#131B2E",
+      "text_primary": "#F8FAFC",
+      "text_muted": "#94A3B8",
+      "accent_primary": "#0EA5E9",
+      "border_subtle": "#1E293B"
     },
     "gaming_comedic": {
       "subtitle_normal": "#FFFFFF",
@@ -62,6 +78,8 @@
   "motion_curves": {
     "snap_enter": "cubic-bezier(0.16, 1, 0.3, 1)",
     "apple_follower_out": "cubic-bezier(0.16, 1, 0.3, 1)",
+    "ae_whip_out": "cubic-bezier(0.12, 0.96, 0.18, 1.0)",
+    "ae_whip_in_out": "cubic-bezier(0.78, 0.0, 0.18, 1.0)",
     "ghost_echo": "cubic-bezier(0.38, 0, 0, 1)",
     "fusion_ease_85": "cubic-bezier(0.85, 0, 0.15, 1)",
     "smooth_mask": "cubic-bezier(0.7, 0, 0.3, 1)",
@@ -91,15 +109,115 @@
     },
     "spatial_3d_dof": {
       "motif": "studio_kit/motifs/kinetic-3d-spatial",
-      "primitive": "AGYMotion.spatial3DCameraWord",
-      "dof_range_z": 410,
-      "max_dof_blur_px": 9.5
+      "primitive": "AGYRig.resolveCameraState",
+      "focal_mm": 35,
+      "default_aperture_px": 64
+    },
+    "cylinder_3d_orbit": {
+      "motif": "studio_kit/motifs/cylinder-3d-orbit",
+      "primitive": "AGYOptics.createCylinderRibbonTexture",
+      "spotlight_shadows": true
+    },
+    "signature_glow_trim": {
+      "motif": "studio_kit/motifs/signature-glow-trim",
+      "primitive": "AGYOptics.glowSignaturePath",
+      "bloom_blur_px": 6
+    },
+    "narrative_cluster": {
+      "engine": "studio_kit/tactile_scene_kit.html#layer-narrative-cluster",
+      "primitive": "AGYMotion.narrativeClusterWord",
+      "safe_y_band_pct": [49, 65],
+      "max_highlight_ratio": 0.60
+    },
+    "camera_2d_canvas": {
+      "engine": "studio_kit/tactile_scene_kit.html#layer-camera-2d",
+      "primitive": "AGYMotion.camera2DTypographyState",
+      "pre_beat_lead_s": 0.083,
+      "transition_s": 0.28
+    },
+    "explainer_visual_diagram": {
+      "engine": "studio_kit/tactile_scene_kit.html#layer-explainer-diagram",
+      "primitive": "AGYMotion.goldenTypeScale",
+      "golden_ratio": 1.618,
+      "grid_unit_px": 8,
+      "modes": ["anatomy_ruler", "flanking_word_field", "chapter_slam"]
     }
+  },
+  "platform_safe_zones": {
+    "guard_module": "studio_kit/safe_zones.py",
+    "universal_vertical": { "left": 0.055, "right": 0.830, "top": 0.135, "bottom": 0.702 },
+    "yt_shorts": { "left": 0.055, "right": 0.843, "top": 0.115, "bottom": 0.771 },
+    "tiktok": { "left": 0.055, "right": 0.833, "top": 0.130, "bottom": 0.708 },
+    "ig_reels": { "left": 0.055, "right": 0.843, "top": 0.125, "bottom": 0.719 },
+    "youtube_16x9": { "left": 0.060, "right": 0.940, "top": 0.080, "bottom": 0.885 }
   },
   "transition_recipes": {
     "foreground_occlusion": { "primitive": "AGYMotion.foregroundOcclusionWipe", "window_frames_30fps": [12, 18] },
     "cutout_frame_hold": { "primitive": "AGYMotion.cutoutFrameHoldSlide", "overlap_frames_30fps": [5, 8] },
     "smooth_mask_reveal": { "primitive": "AGYMotion.smoothMaskReveal", "window_frames_30fps": [14, 20] },
-    "angled_feathered_split": { "primitive": "AGYMotion.angledSplitZoom", "window_frames_30fps": [8, 12] }
+    "angled_feathered_split": { "primitive": "AGYMotion.angledSplitZoom", "window_frames_30fps": [8, 12] },
+    "popup_anchor_overshoot": { "primitive": "AGYRig.popOvershootTrack", "overshoot_scale": 1.06 },
+    "flash_cutout_strobe": { "primitive": "AGYRig.flashStrobeEval", "shader": "AGYOptics.FlashCutoutStrobeShader" },
+    "motion_tile_mirror_whip": { "shader": "AGYOptics.MotionTileWhipShader", "mirror_edges": true },
+    "optical_radial_match": { "shader": "AGYOptics.OpticalRadialMatchShader", "seam_overlap_s": 0.15 }
+  },
+  "sound_architecture": {
+    "engine": "studio_kit/sound_engine.py",
+    "palette_index": "studio_kit/sound_palette_index.json",
+    "auditor": "studio_kit/acoustic_audit.py",
+    "beat_sheet_gate": "studio_kit/beat_sheet.py",
+    "sample_rate_hz": 48000,
+    "target_lufs": -16.0,
+    "peak_ceiling_dbfs": -3.5,
+    "room_ir_t60_s": 1.05,
+    "hall_tail_t60_s": 2.6,
+    "profiles": {
+      "cinematic_essay": {
+        "lufs_window": [-24.0, -16.5],
+        "min_lra_lu": 4.5,
+        "max_mud_100_350_pct": 55.0,
+        "min_voice_mid_pct": 12.0,
+        "min_detail_air_pct": 2.0,
+        "max_dead_zero_pct": 35.0
+      },
+      "podcast_collage_short": {
+        "lufs_window": [-14.5, -8.0],
+        "min_lra_lu": 2.0,
+        "max_mud_100_350_pct": 42.0,
+        "min_voice_mid_pct": 20.0,
+        "min_detail_air_pct": 3.5,
+        "max_dead_zero_pct": 25.0
+      },
+      "narrative_voice_film": {
+        "max_mud_100_350_pct": 48.0,
+        "min_voice_mid_pct": 18.0,
+        "min_detail_air_pct": 2.5,
+        "max_dead_zero_pct": 28.0
+      },
+      "mograph_sfx": {
+        "max_mud_100_350_pct": 35.0,
+        "min_voice_mid_pct": 5.0,
+        "min_detail_air_pct": 4.0,
+        "max_dead_zero_pct": 35.0
+      }
+    },
+    "color_grading": {
+      "engine": "studio_kit/color_grade.py",
+      "lut_dir": "studio_kit/luts/",
+      "clean_plate_before_overlays": true,
+      "presets": ["luda_filmic_warm", "gaku_filmic_teal", "editorial_tungsten_clean", "collage_punch_clean", "neutral_rec709"]
+    },
+    "tonal_sfx": {
+      "pack_dir": "studio_kit/sfx/tonal_pack/",
+      "key_detector": "sound_engine.detect_musical_key",
+      "keys_supported": ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+    },
+    "palettes": {
+      "editorial-clean": "mograph-pro / talking-head-reel",
+      "kinetic-street": "promo-editorial / gaming-montage",
+      "organic-cinema": "narrative-film / cinematic-doc / emotional-realism",
+      "comedic-dry": "gaming-comedic",
+      "gaming-montage": "gaming-montage"
+    }
   }
 }

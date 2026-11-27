@@ -1,0 +1,1177 @@
+[
+  {
+    "category": "transition",
+    "id": "FZS0olGLPIw",
+    "title": "Why Your Video Transitions SUCK (And How to FIX IT)",
+    "channel": "Herman Huang",
+    "duration_s": 262,
+    "width": 3840,
+    "height": 2160,
+    "chapters": [
+      {
+        "start_time": 0,
+        "title": "Why your transitions feel off",
+        "end_time": 31
+      },
+      {
+        "start_time": 31,
+        "title": "Fix 1",
+        "end_time": 107
+      },
+      {
+        "start_time": 107,
+        "title": "Fix 2",
+        "end_time": 214
+      },
+      {
+        "start_time": 214,
+        "title": "Fix 3",
+        "end_time": 262
+      }
+    ],
+    "links_in_desc": [
+      "https://geni.us/filmwhip_herman",
+      "https://geni.us/happyediting_herman",
+      "https://geni.us/fbf_yt",
+      "https://geni.us/cbgt_yt",
+      "https://geni.us/etf_yt",
+      "https://geni.us/artlist_hermanhuang",
+      "https://www.instagram.com/coffeelicker/",
+      "https://www.tiktok.com/@coffeelicker"
+    ],
+    "transcript_path": "references\\editorial_classup_study\\subs\\transition__FZS0olGLPIw.txt",
+    "transcript_chars": 4729,
+    "transcript_preview": "So, you're watching a video and this\ncrazy transition hits. You start\nthinking, \"Why don't mine ever look like\nthat?\" You've watched all the tutorials.\nYou've bought the fancy plugins. And\nyou've even spent hours tweaking them\nframe by frame. But somehow, they still\nkind of suck.\nI've been there. And after breaking down\nwhat actually made my transitions\nbetter, it all came down to three simple\nchanges. And the last one might surprise\nyou. It's not about the VFX or hopping\non trends. Once you try",
+    "audio": {
+      "lufs_i": -15.0,
+      "lra": 3.2,
+      "peak_dbfs": 0.2,
+      "band_pct": {
+        "sub_20_90": 51.27,
+        "mud_100_350": 23.11,
+        "voice_350_2500": 19.61,
+        "detail_2500_8000": 2.22,
+        "air_8000_18000": 0.77
+      },
+      "detail_air_pct": 2.99,
+      "quiet15_pct": 2.7,
+      "dead_zero_pct": 0.0
+    },
+    "pacing": {
+      "scan_window_s": 180.0,
+      "cuts_in_window": 65,
+      "cuts_per_min": 21.7,
+      "median_shot_s": 1.79,
+      "p90_shot_s": 6.32,
+      "shot_cv": 0.957,
+      "first_12_cuts_s": [
+        6.59,
+        6.84,
+        7.09,
+        7.67,
+        8.51,
+        8.97,
+        9.76,
+        11.01,
+        12.43,
+        13.35,
+        19.48,
+        22.06
+      ]
+    },
+    "color": {
+      "black_floor_p5_L": 2.0,
+      "midtone_p50_L": 8.2,
+      "highlight_p95_L": 52.5,
+      "dynamic_span_L": 50.6,
+      "sat_median": 0.233,
+      "lab_a_green_magenta": 1.69,
+      "lab_b_blue_yellow": 1.39,
+      "shadow_blue_minus_red": 0.2,
+      "highlight_blue_minus_red": 4.7
+    },
+    "sheet": "references\\editorial_classup_study\\sheets\\sheet_transition__FZS0olGLPIw.jpg",
+    "hook_sheet": "references\\editorial_classup_study\\sheets\\hook45_transition__FZS0olGLPIw.jpg"
+  },
+  {
+    "category": "motion_direction",
+    "id": "EWqrpI1IAyI",
+    "title": "why your edits feel choppy (and how to fix it)",
+    "channel": "Gaku Lange",
+    "duration_s": 681,
+    "width": 3840,
+    "height": 2160,
+    "chapters": [
+      {
+        "start_time": 0,
+        "title": "Intro",
+        "end_time": 72
+      },
+      {
+        "start_time": 72,
+        "title": "Direction",
+        "end_time": 252
+      },
+      {
+        "start_time": 252,
+        "title": "Cutting on Motion",
+        "end_time": 441
+      },
+      {
+        "start_time": 441,
+        "title": "Prioritize the Viewer",
+        "end_time": 578
+      },
+      {
+        "start_time": 578,
+        "title": "Closing Thoughts",
+        "end_time": 681
+      }
+    ],
+    "links_in_desc": [
+      "https://higgsfield.ai/cinematic-video-generator/?utm_source=GakuLange",
+      "https://higgsfield.ai/blog/cinema-studio-guide",
+      "https://shop.gakuyen.com/products/genesis-plugin",
+      "https://shop.gakuyen.com/products/ultimate-lut-pack",
+      "https://shop.gakuyen.com/products/ultimate-sound-fx-pack",
+      "https://shop.gakuyen.com/products/clean-animation-ui-pack",
+      "https://shop.gakuyen.com/products/odyssey-powergrade",
+      "https://shop.gakuyen.com/",
+      "https://www.instagram.com/gakuyen",
+      "https://amzn.to/4h1UJ7e",
+      "https://amzn.to/3BW5Aft",
+      "https://amzn.to/3ZgsryG",
+      "https://amzn.to/46V5dki",
+      "https://amzn.to/4i1YhXi",
+      "https://bit.ly/3VrOkZF",
+      "https://amzn.to/3IwaiYc",
+      "https://amzn.to/493qJUz",
+      "https://amzn.to/49457r3",
+      "https://amzn.to/3OFXtKl",
+      "https://amzn.to/3CBl9MS",
+      "https://amzn.to/3V3kxX0",
+      "https://amzn.to/48YGewZ",
+      "https://amzn.to/3QDyitc",
+      "https://amzn.to/48jxfYX",
+      "https://amzn.to/4fVsTru",
+      "https://amzn.to/3Oli1r6",
+      "https://amzn.to/4fFpNYV",
+      "https://amzn.to/3CG7QuI",
+      "https://amzn.to/3yTMSXP",
+      "https://amzn.to/3wsTKtT"
+    ],
+    "transcript_path": "references\\editorial_classup_study\\subs\\motion_direction__EWqrpI1IAyI.txt",
+    "transcript_chars": 14490,
+    "transcript_preview": "You know that feeling when an edit just\nhits? Like it feels smooth, it feels\neffortless, it feels expensive, and\nyou're not really sure what it is about\nit, but it just flows. That's not luck.\nWell, I guess sometimes it is. That's a\nseasoned editor [music] guiding a\nviewer's eyes through a film. So, when I\ntalk about smooth editing, it's\nbasically just one principle. Editing is\nall about cutting between clips and\nguiding a viewer's eyes through a scene.\nA viewer moving their eyes is actually a\np",
+    "audio": {
+      "lufs_i": -14.8,
+      "lra": 2.3,
+      "peak_dbfs": 1.7,
+      "band_pct": {
+        "sub_20_90": 14.29,
+        "mud_100_350": 43.26,
+        "voice_350_2500": 26.44,
+        "detail_2500_8000": 10.4,
+        "air_8000_18000": 2.67
+      },
+      "detail_air_pct": 13.07,
+      "quiet15_pct": 0.9,
+      "dead_zero_pct": 0.0
+    },
+    "pacing": {
+      "scan_window_s": 180.0,
+      "cuts_in_window": 27,
+      "cuts_per_min": 9.0,
+      "median_shot_s": 1.71,
+      "p90_shot_s": 20.11,
+      "shot_cv": 1.505,
+      "first_12_cuts_s": [
+        28.19,
+        30.7,
+        32.97,
+        66.17,
+        67.33,
+        67.53,
+        71.57,
+        71.84,
+        72.44,
+        84.48,
+        86.19,
+        87.75
+      ]
+    },
+    "color": {
+      "black_floor_p5_L": 6.7,
+      "midtone_p50_L": 9.8,
+      "highlight_p95_L": 46.5,
+      "dynamic_span_L": 39.8,
+      "sat_median": 0.2,
+      "lab_a_green_magenta": 5.87,
+      "lab_b_blue_yellow": 5.09,
+      "shadow_blue_minus_red": -6.9,
+      "highlight_blue_minus_red": -53.6
+    },
+    "sheet": "references\\editorial_classup_study\\sheets\\sheet_motion_direction__EWqrpI1IAyI.jpg",
+    "hook_sheet": "references\\editorial_classup_study\\sheets\\hook45_motion_direction__EWqrpI1IAyI.jpg"
+  },
+  {
+    "category": "text_animation",
+    "id": "yRsK2JyfMGM",
+    "title": "Your Reels Need THIS",
+    "channel": "Maciek Sulima",
+    "duration_s": 361,
+    "width": 3840,
+    "height": 2160,
+    "chapters": [
+      {
+        "start_time": 0,
+        "title": "Intro",
+        "end_time": 183
+      },
+      {
+        "start_time": 183,
+        "title": "The fastest way to create Captions",
+        "end_time": 361
+      }
+    ],
+    "links_in_desc": [
+      "https://youtu.be/HpP5IOnKoDQ",
+      "https://payhip.com/b/rbsdt"
+    ],
+    "transcript_path": "references\\editorial_classup_study\\subs\\text_animation__yRsK2JyfMGM.txt",
+    "transcript_chars": 5531,
+    "transcript_preview": "Okay, guys. In this video, I will show\nyou two uh very simple rules that will\ntake your text animation to the next\nlevel.\nThese are very simple things that many\npeople forget about. And once you start\nusing these tricks, you will probably\nnever want to go back. And the best part\nis that you don't really need some extra\ntools to benefit from this video. You\ncan actually create these animations\nfrom scratch or use your own presets.\nHowever, I also want to show you the\ntool I use to create my capti",
+    "audio": {
+      "lufs_i": -15.9,
+      "lra": 4.4,
+      "peak_dbfs": -1.1,
+      "band_pct": {
+        "sub_20_90": 3.78,
+        "mud_100_350": 55.18,
+        "voice_350_2500": 33.38,
+        "detail_2500_8000": 5.26,
+        "air_8000_18000": 1.66
+      },
+      "detail_air_pct": 6.92,
+      "quiet15_pct": 15.1,
+      "dead_zero_pct": 3.0
+    },
+    "pacing": {
+      "scan_window_s": 180.0,
+      "cuts_in_window": 2,
+      "cuts_per_min": 0.7,
+      "median_shot_s": 49.52,
+      "p90_shot_s": 113.62,
+      "shot_cv": 0.885,
+      "first_12_cuts_s": [
+        49.52,
+        50.36
+      ]
+    },
+    "color": {
+      "black_floor_p5_L": 2.7,
+      "midtone_p50_L": 14.9,
+      "highlight_p95_L": 56.1,
+      "dynamic_span_L": 53.3,
+      "sat_median": 0.184,
+      "lab_a_green_magenta": 2.42,
+      "lab_b_blue_yellow": 5.01,
+      "shadow_blue_minus_red": -4.7,
+      "highlight_blue_minus_red": -45.7
+    },
+    "sheet": "references\\editorial_classup_study\\sheets\\sheet_text_animation__yRsK2JyfMGM.jpg",
+    "hook_sheet": "references\\editorial_classup_study\\sheets\\hook45_text_animation__yRsK2JyfMGM.jpg"
+  },
+  {
+    "category": "longform_1",
+    "id": "NFm2Xjx61Q8",
+    "title": "\"Got any hobbies?\"",
+    "channel": "Luda",
+    "duration_s": 507,
+    "width": 3840,
+    "height": 1606,
+    "chapters": [
+      {
+        "start_time": 0,
+        "title": "The evolution of identity",
+        "end_time": 107
+      },
+      {
+        "start_time": 107,
+        "title": "Constraints of adult life",
+        "end_time": 275
+      },
+      {
+        "start_time": 275,
+        "title": "Finding space for change",
+        "end_time": 391
+      },
+      {
+        "start_time": 391,
+        "title": "Embracing the seasons of life",
+        "end_time": 507
+      }
+    ],
+    "links_in_desc": [
+      "https://www.patreon.com/Ludalx",
+      "https://www.instagram.com/luda.lx/",
+      "https://www.dehancer.com/",
+      "https://fm.pxf.io/ludafreetrial",
+      "https://amzn.to/3QJ3RkZ",
+      "https://amzn.to/4h8DEXF",
+      "https://amzn.to/3XthnNc",
+      "https://amzn.to/43j5BZD",
+      "https://amzn.to/4ktLmhV",
+      "https://amzn.to/41Jk9k8",
+      "https://amzn.to/41IyBZp"
+    ],
+    "transcript_path": "references\\editorial_classup_study\\subs\\longform_1__NFm2Xjx61Q8.txt",
+    "transcript_chars": 4135,
+    "transcript_preview": "Many things in life come in threes.\nBreakfast, lunch, and dinner.\nScissors, paper, rock.\nBeginning,\nmiddle,\nand end.\nRecently I realized something else might\nalso come in threes.\n&gt;&gt; Got any hobbies?\n&gt;&gt; What do you answer when you get asked\nthat? See, when you're a kid, the answer\ncomes easily.\n&gt;&gt; And as you grow older, those hobbies\nchange\nuntil eventually\nyou find something that feels a little\ndifferent.\nsomething that doesn't just fill your\ntime,\nbut starts to shape who you a",
+    "audio": {
+      "lufs_i": -19.9,
+      "lra": 11.6,
+      "peak_dbfs": 1.7,
+      "band_pct": {
+        "sub_20_90": 7.41,
+        "mud_100_350": 51.79,
+        "voice_350_2500": 31.87,
+        "detail_2500_8000": 5.62,
+        "air_8000_18000": 2.41
+      },
+      "detail_air_pct": 8.03,
+      "quiet15_pct": 10.6,
+      "dead_zero_pct": 0.0
+    },
+    "pacing": {
+      "scan_window_s": 180.0,
+      "cuts_in_window": 41,
+      "cuts_per_min": 13.7,
+      "median_shot_s": 1.77,
+      "p90_shot_s": 9.86,
+      "shot_cv": 1.688,
+      "first_12_cuts_s": [
+        9.92,
+        27.92,
+        37.25,
+        39.29,
+        39.58,
+        41.38,
+        43.0,
+        43.62,
+        54.83,
+        57.04,
+        57.92,
+        61.38
+      ]
+    },
+    "color": {
+      "black_floor_p5_L": 4.5,
+      "midtone_p50_L": 10.6,
+      "highlight_p95_L": 48.2,
+      "dynamic_span_L": 43.7,
+      "sat_median": 0.349,
+      "lab_a_green_magenta": -1.38,
+      "lab_b_blue_yellow": 4.08,
+      "shadow_blue_minus_red": 8.1,
+      "highlight_blue_minus_red": -43.0
+    },
+    "sheet": "references\\editorial_classup_study\\sheets\\sheet_longform_1__NFm2Xjx61Q8.jpg",
+    "hook_sheet": "references\\editorial_classup_study\\sheets\\hook45_longform_1__NFm2Xjx61Q8.jpg"
+  },
+  {
+    "category": "longform_2",
+    "id": "RAWhQycgvNY",
+    "title": "How I Turn Raw Footage Into a First Cut (Full Workflow)",
+    "channel": "Gaku Lange",
+    "duration_s": 601,
+    "width": 3840,
+    "height": 2160,
+    "chapters": [
+      {
+        "start_time": 0,
+        "title": "intro",
+        "end_time": 78
+      },
+      {
+        "start_time": 78,
+        "title": "getting started",
+        "end_time": 109
+      },
+      {
+        "start_time": 109,
+        "title": "importing + organizing footage",
+        "end_time": 152
+      },
+      {
+        "start_time": 152,
+        "title": "finding selects + building the first cut",
+        "end_time": 354
+      },
+      {
+        "start_time": 354,
+        "title": "sound design + effects",
+        "end_time": 495
+      },
+      {
+        "start_time": 495,
+        "title": "exporting xmls",
+        "end_time": 534
+      },
+      {
+        "start_time": 534,
+        "title": "final result + thoughts",
+        "end_time": 601
+      }
+    ],
+    "links_in_desc": [
+      "https://invideo.io/?ref=gakul&via=influencer",
+      "https://shop.gakuyen.com/products/odyssey-powergrade",
+      "https://shop.gakuyen.com/products/ultimate-lut-pack",
+      "https://shop.gakuyen.com/products/genesis-plugin",
+      "https://shop.gakuyen.com/products/the-complete-collection-masterclass-bundle",
+      "https://shop.gakuyen.com/products/ultimate-sound-fx-pack",
+      "https://shop.gakuyen.com/products/clean-animation-ui-pack",
+      "https://www.instagram.com/gakuyen",
+      "https://amzn.to/4h1UJ7e",
+      "https://amzn.to/3BW5Aft",
+      "https://amzn.to/3ZgsryG",
+      "https://amzn.to/46V5dki",
+      "https://amzn.to/4i1YhXi",
+      "https://bit.ly/3VrOkZF",
+      "https://amzn.to/3IwaiYc",
+      "https://amzn.to/493qJUz",
+      "https://amzn.to/49457r3",
+      "https://amzn.to/3OFXtKl",
+      "https://amzn.to/3CBl9MS",
+      "https://amzn.to/3V3kxX0",
+      "https://amzn.to/48YGewZ",
+      "https://amzn.to/3QDyitc",
+      "https://amzn.to/48jxfYX",
+      "https://amzn.to/4fVsTru",
+      "https://amzn.to/3Oli1r6",
+      "https://amzn.to/4fFpNYV",
+      "https://amzn.to/3CG7QuI",
+      "https://amzn.to/3yTMSXP",
+      "https://amzn.to/3wsTKtT",
+      "https://amzn.to/4cLE4UM",
+      "https://amzn.to/3P9ByyQ",
+      "https://amzn.to/3Qb9yLt",
+      "https://amzn.to/4mw6UMb"
+    ],
+    "transcript_path": "references\\editorial_classup_study\\subs\\longform_2__RAWhQycgvNY.txt",
+    "transcript_chars": 12808,
+    "transcript_preview": "So, I don't know about you, but the\nediting process is something that I both\nreally enjoy, but I also kind of dread.\nWhenever I go out to shoot, whether\nthat's for client work or even my own\npersonal YouTube or social work, often\ntimes I shoot a lot of footage, and then\nwhen I get home to the edit, I have to\ndump all of my files, and it's just a\nwhole hassle to get started. I\npersonally love getting deep in the\nsound design and selecting different\nclips to create seamless transitions.\nThose are ",
+    "audio": {
+      "lufs_i": -16.4,
+      "lra": 2.6,
+      "peak_dbfs": 0.8,
+      "band_pct": {
+        "sub_20_90": 5.45,
+        "mud_100_350": 45.6,
+        "voice_350_2500": 34.19,
+        "detail_2500_8000": 7.9,
+        "air_8000_18000": 1.55
+      },
+      "detail_air_pct": 9.45,
+      "quiet15_pct": 4.1,
+      "dead_zero_pct": 0.0
+    },
+    "pacing": {
+      "scan_window_s": 180.0,
+      "cuts_in_window": 9,
+      "cuts_per_min": 3.0,
+      "median_shot_s": 2.18,
+      "p90_shot_s": 52.6,
+      "shot_cv": 1.891,
+      "first_12_cuts_s": [
+        1.77,
+        2.74,
+        5.14,
+        9.11,
+        9.94,
+        10.71,
+        12.68,
+        21.79,
+        67.77
+      ]
+    },
+    "color": {
+      "black_floor_p5_L": 7.1,
+      "midtone_p50_L": 10.6,
+      "highlight_p95_L": 50.2,
+      "dynamic_span_L": 43.1,
+      "sat_median": 0.0,
+      "lab_a_green_magenta": 0.14,
+      "lab_b_blue_yellow": 0.36,
+      "shadow_blue_minus_red": -0.3,
+      "highlight_blue_minus_red": 0.0
+    },
+    "sheet": "references\\editorial_classup_study\\sheets\\sheet_longform_2__RAWhQycgvNY.jpg",
+    "hook_sheet": "references\\editorial_classup_study\\sheets\\hook45_longform_2__RAWhQycgvNY.jpg"
+  },
+  {
+    "category": "short_1",
+    "id": "g_UpY8VNwa0",
+    "title": "Job market is cooked",
+    "channel": "Luda",
+    "duration_s": 36,
+    "width": 2160,
+    "height": 3840,
+    "chapters": [],
+    "links_in_desc": [],
+    "transcript_path": "references\\editorial_classup_study\\subs\\short_1__g_UpY8VNwa0.txt",
+    "transcript_chars": 310,
+    "transcript_preview": "Like most university students in their\nfinal year, the biggest priority was to\nfind a job.\nThe market was bad\nand people were desperate.\nCountless rounds and months of\ninterviews.\n&gt;&gt; My name is Alex.\n&gt;&gt; Thanks for having me. Where do I see\nmyself in 5 years?\nThen, the offer landed.\nAnd the pay\nwas",
+    "audio": {
+      "lufs_i": -20.8,
+      "lra": 10.3,
+      "peak_dbfs": -1.5,
+      "band_pct": {
+        "sub_20_90": 18.83,
+        "mud_100_350": 47.03,
+        "voice_350_2500": 23.05,
+        "detail_2500_8000": 3.15,
+        "air_8000_18000": 2.01
+      },
+      "detail_air_pct": 5.16,
+      "quiet15_pct": 6.4,
+      "dead_zero_pct": 0.0
+    },
+    "pacing": {
+      "scan_window_s": 36.0,
+      "cuts_in_window": 3,
+      "cuts_per_min": 5.0,
+      "median_shot_s": 9.53,
+      "p90_shot_s": 13.75,
+      "shot_cv": 0.516,
+      "first_12_cuts_s": [
+        14.62,
+        21.96,
+        24.29
+      ]
+    },
+    "color": {
+      "black_floor_p5_L": 0.0,
+      "midtone_p50_L": 0.0,
+      "highlight_p95_L": 35.7,
+      "dynamic_span_L": 35.7,
+      "sat_median": 0.0,
+      "lab_a_green_magenta": 0.19,
+      "lab_b_blue_yellow": 0.89,
+      "shadow_blue_minus_red": 3.0,
+      "highlight_blue_minus_red": -19.0
+    },
+    "sheet": "references\\editorial_classup_study\\sheets\\sheet_short_1__g_UpY8VNwa0.jpg"
+  },
+  {
+    "category": "short_2",
+    "id": "MoVlt-ptxIk",
+    "title": "How to Edit Short Form Content in Premiere Pro and After Effects",
+    "channel": "marksoy",
+    "duration_s": 17,
+    "width": 1080,
+    "height": 1920,
+    "chapters": [],
+    "links_in_desc": [
+      "https://www.instagram.com/marksoy.edits/"
+    ],
+    "transcript_path": null,
+    "audio": {
+      "lufs_i": -8.7,
+      "lra": 2.9,
+      "peak_dbfs": 0.8,
+      "band_pct": {
+        "sub_20_90": 37.78,
+        "mud_100_350": 20.24,
+        "voice_350_2500": 9.59,
+        "detail_2500_8000": 9.56,
+        "air_8000_18000": 0.49
+      },
+      "detail_air_pct": 10.05,
+      "quiet15_pct": 0.9,
+      "dead_zero_pct": 0.3
+    },
+    "pacing": {
+      "scan_window_s": 17.0,
+      "cuts_in_window": 3,
+      "cuts_per_min": 10.6,
+      "median_shot_s": 3.26,
+      "p90_shot_s": 6.85,
+      "shot_cv": 0.559,
+      "first_12_cuts_s": [
+        8.28,
+        11.28,
+        14.8
+      ]
+    },
+    "color": {
+      "black_floor_p5_L": 2.5,
+      "midtone_p50_L": 87.5,
+      "highlight_p95_L": 94.1,
+      "dynamic_span_L": 91.6,
+      "sat_median": 0.0,
+      "lab_a_green_magenta": 1.41,
+      "lab_b_blue_yellow": -0.89,
+      "shadow_blue_minus_red": 2.1,
+      "highlight_blue_minus_red": -0.6
+    },
+    "sheet": "references\\editorial_classup_study\\sheets\\sheet_short_2__MoVlt-ptxIk.jpg"
+  },
+  {
+    "category": "short_3",
+    "id": "SmsNAtaLR9I",
+    "title": "Recent Visual Editing Trends✨",
+    "channel": "Gaku Lange",
+    "duration_s": 42,
+    "width": 1080,
+    "height": 1920,
+    "chapters": [],
+    "links_in_desc": [],
+    "transcript_path": "references\\editorial_classup_study\\subs\\short_3__SmsNAtaLR9I.txt",
+    "transcript_chars": 885,
+    "transcript_preview": "Here are a few visual editing trends\nthat I've seen recently. Okay, so first\nup is this freeze frame rotoscope\ntechnique. You basically take a freeze\nframe from a video and then overlay it\non top of another clip that's been shot\nfrom the same exact angle. It definitely\nmakes you pause and analyze the details.\nNext up, this grow effect. You take two\nclips, one with your item rocking in a\nframe and another clean plate. And by\nrotoscoping out the item and scaling it\ninto your frame, you can create ",
+    "audio": {
+      "lufs_i": -14.9,
+      "lra": 2.3,
+      "peak_dbfs": 0.0,
+      "band_pct": {
+        "sub_20_90": 28.41,
+        "mud_100_350": 32.32,
+        "voice_350_2500": 25.43,
+        "detail_2500_8000": 3.96,
+        "air_8000_18000": 0.72
+      },
+      "detail_air_pct": 4.68,
+      "quiet15_pct": 0.5,
+      "dead_zero_pct": 0.0
+    },
+    "pacing": {
+      "scan_window_s": 42.0,
+      "cuts_in_window": 4,
+      "cuts_per_min": 5.7,
+      "median_shot_s": 9.44,
+      "p90_shot_s": 13.54,
+      "shot_cv": 0.577,
+      "first_12_cuts_s": [
+        2.67,
+        12.11,
+        25.69,
+        39.17
+      ]
+    },
+    "color": {
+      "black_floor_p5_L": 7.1,
+      "midtone_p50_L": 99.2,
+      "highlight_p95_L": 99.2,
+      "dynamic_span_L": 92.2,
+      "sat_median": 0.0,
+      "lab_a_green_magenta": 0.68,
+      "lab_b_blue_yellow": 1.26,
+      "shadow_blue_minus_red": -10.6,
+      "highlight_blue_minus_red": -0.4
+    },
+    "sheet": "references\\editorial_classup_study\\sheets\\sheet_short_3__SmsNAtaLR9I.jpg"
+  },
+  {
+    "category": "color_1",
+    "id": "-14_cGVgV20",
+    "title": "The Secret to Cinematic Color Grading",
+    "channel": "Gaku Lange",
+    "duration_s": 9,
+    "width": 1080,
+    "height": 1920,
+    "chapters": [],
+    "links_in_desc": [],
+    "transcript_path": "references\\editorial_classup_study\\subs\\color_1__-14_cGVgV20.txt",
+    "transcript_chars": 30,
+    "transcript_preview": "[Music]\nbro what are you doing",
+    "audio": {
+      "lufs_i": -14.6,
+      "lra": 11.0,
+      "peak_dbfs": -2.1,
+      "band_pct": {
+        "sub_20_90": 91.18,
+        "mud_100_350": 2.59,
+        "voice_350_2500": 4.13,
+        "detail_2500_8000": 0.35,
+        "air_8000_18000": 0.03
+      },
+      "detail_air_pct": 0.38,
+      "quiet15_pct": 2.8,
+      "dead_zero_pct": 0.0
+    },
+    "pacing": {
+      "scan_window_s": 9.0,
+      "cuts_in_window": 8,
+      "cuts_per_min": 53.3,
+      "median_shot_s": 0.5,
+      "p90_shot_s": 2.3,
+      "shot_cv": 1.071,
+      "first_12_cuts_s": [
+        3.64,
+        5.61,
+        6.04,
+        6.51,
+        6.54,
+        6.94,
+        7.44,
+        7.94
+      ]
+    },
+    "color": {
+      "black_floor_p5_L": 5.3,
+      "midtone_p50_L": 14.5,
+      "highlight_p95_L": 62.5,
+      "dynamic_span_L": 57.3,
+      "sat_median": 0.2,
+      "lab_a_green_magenta": 2.23,
+      "lab_b_blue_yellow": -2.8,
+      "shadow_blue_minus_red": 5.5,
+      "highlight_blue_minus_red": -9.8
+    },
+    "sheet": "references\\editorial_classup_study\\sheets\\sheet_color_1__-14_cGVgV20.jpg"
+  },
+  {
+    "category": "color_2",
+    "id": "f31-WqH7izk",
+    "title": "How to Color Grade (Filmic🎨)",
+    "channel": "Gaku Lange",
+    "duration_s": 13,
+    "width": 1080,
+    "height": 1920,
+    "chapters": [],
+    "links_in_desc": [],
+    "transcript_path": null,
+    "audio": {
+      "lufs_i": -12.3,
+      "lra": 3.1,
+      "peak_dbfs": 1.4,
+      "band_pct": {
+        "sub_20_90": 34.09,
+        "mud_100_350": 45.97,
+        "voice_350_2500": 4.31,
+        "detail_2500_8000": 1.16,
+        "air_8000_18000": 2.37
+      },
+      "detail_air_pct": 3.53,
+      "quiet15_pct": 2.7,
+      "dead_zero_pct": 0.4
+    },
+    "pacing": {
+      "scan_window_s": 13.0,
+      "cuts_in_window": 0,
+      "cuts_per_min": 0.0,
+      "median_shot_s": 13.0,
+      "p90_shot_s": 13.0,
+      "shot_cv": 0.0,
+      "first_12_cuts_s": []
+    },
+    "color": {
+      "black_floor_p5_L": 4.5,
+      "midtone_p50_L": 18.4,
+      "highlight_p95_L": 78.8,
+      "dynamic_span_L": 74.3,
+      "sat_median": 0.304,
+      "lab_a_green_magenta": 0.67,
+      "lab_b_blue_yellow": 0.29,
+      "shadow_blue_minus_red": 9.4,
+      "highlight_blue_minus_red": -26.8
+    },
+    "sheet": "references\\editorial_classup_study\\sheets\\sheet_color_2__f31-WqH7izk.jpg"
+  },
+  {
+    "category": "color_3",
+    "id": "PuoI9paASys",
+    "title": "How to Color Grade between Premiere Pro and Davinci",
+    "channel": "Gaku Lange",
+    "duration_s": 38,
+    "width": 1080,
+    "height": 1920,
+    "chapters": [],
+    "links_in_desc": [],
+    "transcript_path": "references\\editorial_classup_study\\subs\\color_3__PuoI9paASys.txt",
+    "transcript_chars": 750,
+    "transcript_preview": "here's an easy way to edit completely in\nPremiere Pro but then color grade IND\nVinci resolve without using XML files I\nI hate those they're just such a pain in\nthe once you finished editing your\nproject hide any Motion Graphics or text\nlayers and Export your entire sequence\nin either Apple Pros 422 or whatever\nhigh quality settings you typically use\nin divin resolve import that single mov\nfile and here's the key go up to\ntimeline and select detect scene Cuts\nthis will chop up your entire project",
+    "audio": {
+      "lufs_i": -13.4,
+      "lra": 3.8,
+      "peak_dbfs": 0.3,
+      "band_pct": {
+        "sub_20_90": 27.17,
+        "mud_100_350": 49.53,
+        "voice_350_2500": 16.14,
+        "detail_2500_8000": 2.6,
+        "air_8000_18000": 0.48
+      },
+      "detail_air_pct": 3.08,
+      "quiet15_pct": 1.2,
+      "dead_zero_pct": 0.3
+    },
+    "pacing": {
+      "scan_window_s": 38.0,
+      "cuts_in_window": 4,
+      "cuts_per_min": 6.3,
+      "median_shot_s": 3.6,
+      "p90_shot_s": 17.79,
+      "shot_cv": 1.135,
+      "first_12_cuts_s": [
+        8.68,
+        12.28,
+        36.14,
+        36.17
+      ]
+    },
+    "color": {
+      "black_floor_p5_L": 3.1,
+      "midtone_p50_L": 14.9,
+      "highlight_p95_L": 65.7,
+      "dynamic_span_L": 62.5,
+      "sat_median": 0.137,
+      "lab_a_green_magenta": 1.9,
+      "lab_b_blue_yellow": -3.32,
+      "shadow_blue_minus_red": 2.2,
+      "highlight_blue_minus_red": 23.7
+    },
+    "sheet": "references\\editorial_classup_study\\sheets\\sheet_color_3__PuoI9paASys.jpg"
+  },
+  {
+    "category": "audio_1",
+    "id": "I66_LmOTlSk",
+    "title": "Sound Design for Cinematic Filmmaking | My Process",
+    "channel": "Jacob Nordin",
+    "duration_s": 636,
+    "width": 3840,
+    "height": 2160,
+    "chapters": [
+      {
+        "start_time": 0,
+        "title": "Intro",
+        "end_time": 50
+      },
+      {
+        "start_time": 50,
+        "title": "Layers of audio",
+        "end_time": 90
+      },
+      {
+        "start_time": 90,
+        "title": "Ambience",
+        "end_time": 130
+      },
+      {
+        "start_time": 130,
+        "title": "SFX (diegetic)",
+        "end_time": 164
+      },
+      {
+        "start_time": 164,
+        "title": "SFX (non-diegetic)",
+        "end_time": 204
+      },
+      {
+        "start_time": 204,
+        "title": "Adding impact",
+        "end_time": 234
+      },
+      {
+        "start_time": 234,
+        "title": "No need to be literal",
+        "end_time": 275
+      },
+      {
+        "start_time": 275,
+        "title": "Artlist",
+        "end_time": 348
+      },
+      {
+        "start_time": 348,
+        "title": "Panning",
+        "end_time": 375
+      },
+      {
+        "start_time": 375,
+        "title": "J-cuts & L-cuts",
+        "end_time": 422
+      },
+      {
+        "start_time": 422,
+        "title": "Reverb",
+        "end_time": 473
+      },
+      {
+        "start_time": 473,
+        "title": "EQ",
+        "end_time": 499
+      },
+      {
+        "start_time": 499,
+        "title": "Low-pass & high-pass",
+        "end_time": 526
+      },
+      {
+        "start_time": 526,
+        "title": "Mixing",
+        "end_time": 580
+      },
+      {
+        "start_time": 580,
+        "title": "Conclusion",
+        "end_time": 636
+      }
+    ],
+    "links_in_desc": [
+      "https://jacobnord.se/nord-powergrade/",
+      "https://artlist.io/artlist-70446/?artlist_aid=JacobNordin_3472&utm_source=affiliate_p&utm_medium=JacobNordin_3472&utm_campaign=JacobNordin_3472",
+      "https://www.instagram.com/jacobnordin/",
+      "https://www.jacobnord.se/",
+      "https://amzn.to/4ejVjL1",
+      "https://amzn.to/47Xxu9L",
+      "https://amzn.to/3B6Yzew",
+      "https://amzn.to/485ClpG",
+      "https://amzn.to/3CY21cv",
+      "https://amzn.to/480H5wv",
+      "https://amzn.to/3BBO42Y",
+      "https://amzn.to/3Yd4rff",
+      "https://amzn.to/482DVIH"
+    ],
+    "transcript_path": "references\\editorial_classup_study\\subs\\audio_1__I66_LmOTlSk.txt",
+    "transcript_chars": 10014,
+    "transcript_preview": "audio plays a huge role in how a film\nfeels and sound design is a big part of\nthat it helps shape the flow and pacing\nof a film adds depth to the edit and\nconnects the viewer to what's happening\non screen in ways they might not even\nrealize it's what makes a scene feel\nimmersive whether through subtle\nAmbience or dramatic sound\neffects as filmmakers it's easy to fall\ninto the Trap obsessing with visuals but\nsometimes in that process we forget that\naudio is just as important just like\nlighting or",
+    "audio": {
+      "lufs_i": -23.2,
+      "lra": 6.2,
+      "peak_dbfs": -1.2,
+      "band_pct": {
+        "sub_20_90": 32.82,
+        "mud_100_350": 34.7,
+        "voice_350_2500": 25.66,
+        "detail_2500_8000": 3.12,
+        "air_8000_18000": 0.2
+      },
+      "detail_air_pct": 3.32,
+      "quiet15_pct": 6.7,
+      "dead_zero_pct": 0.5
+    },
+    "pacing": {
+      "scan_window_s": 180.0,
+      "cuts_in_window": 64,
+      "cuts_per_min": 21.3,
+      "median_shot_s": 1.72,
+      "p90_shot_s": 5.61,
+      "shot_cv": 0.923,
+      "first_12_cuts_s": [
+        0.12,
+        0.36,
+        0.64,
+        0.84,
+        0.92,
+        1.8,
+        5.48,
+        7.2,
+        8.52,
+        10.2,
+        10.88,
+        11.6
+      ]
+    },
+    "color": {
+      "black_floor_p5_L": 2.9,
+      "midtone_p50_L": 14.5,
+      "highlight_p95_L": 58.4,
+      "dynamic_span_L": 55.5,
+      "sat_median": 0.165,
+      "lab_a_green_magenta": 0.0,
+      "lab_b_blue_yellow": 0.0,
+      "shadow_blue_minus_red": 0.7,
+      "highlight_blue_minus_red": -11.4
+    },
+    "sheet": "references\\editorial_classup_study\\sheets\\sheet_audio_1__I66_LmOTlSk.jpg",
+    "hook_sheet": "references\\editorial_classup_study\\sheets\\hook45_audio_1__I66_LmOTlSk.jpg"
+  },
+  {
+    "category": "audio_2",
+    "id": "b9hBHt317mw",
+    "title": "FREE Transition Sound Effects [Swoosh Pack] (Sam Kolder | Taylor Cut Films | JR Alli )",
+    "channel": "Haseeb Ahsan",
+    "duration_s": 28,
+    "width": 1920,
+    "height": 1080,
+    "chapters": [
+      {
+        "start_time": 0,
+        "end_time": 1,
+        "title": "<Untitled Chapter 1>"
+      },
+      {
+        "start_time": 1,
+        "title": "STANDARD SWOOSH",
+        "end_time": 4
+      },
+      {
+        "start_time": 4,
+        "title": "TRAIL SWOOSH",
+        "end_time": 8
+      },
+      {
+        "start_time": 8,
+        "title": "FAST SWOOSH REVERB",
+        "end_time": 12
+      },
+      {
+        "start_time": 12,
+        "title": "LONG WOOSH",
+        "end_time": 15
+      },
+      {
+        "start_time": 15,
+        "title": "BREATH WOOSH",
+        "end_time": 28
+      }
+    ],
+    "links_in_desc": [
+      "https://bit.ly/3LQFgbl",
+      "http://bit.ly/SubscribetoHaseeb​",
+      "https://bit.ly/3yxn2Uo",
+      "https://www.youtube.com/watch?v=dd7p9IHOv8o&t=9s",
+      "https://www.youtube.com/watch?v=ZinFXi68RTw&t=5s",
+      "https://www.youtube.com/watch?v=LOVhJW6SvB0"
+    ],
+    "transcript_path": null,
+    "audio": {
+      "lufs_i": -14.6,
+      "lra": 13.8,
+      "peak_dbfs": 0.9,
+      "band_pct": {
+        "sub_20_90": 61.84,
+        "mud_100_350": 26.09,
+        "voice_350_2500": 4.45,
+        "detail_2500_8000": 1.24,
+        "air_8000_18000": 0.22
+      },
+      "detail_air_pct": 1.46,
+      "quiet15_pct": 55.9,
+      "dead_zero_pct": 40.5
+    },
+    "pacing": {
+      "scan_window_s": 28.0,
+      "cuts_in_window": 0,
+      "cuts_per_min": 0.0,
+      "median_shot_s": 28.0,
+      "p90_shot_s": 28.0,
+      "shot_cv": 0.0,
+      "first_12_cuts_s": []
+    },
+    "color": {
+      "black_floor_p5_L": 0.0,
+      "midtone_p50_L": 0.0,
+      "highlight_p95_L": 0.0,
+      "dynamic_span_L": 0.0,
+      "sat_median": 0.0,
+      "lab_a_green_magenta": 0.0,
+      "lab_b_blue_yellow": 0.0,
+      "shadow_blue_minus_red": 0.0,
+      "highlight_blue_minus_red": 0.0
+    },
+    "sheet": "references\\editorial_classup_study\\sheets\\sheet_audio_2__b9hBHt317mw.jpg"
+  },
+  {
+    "category": "audio_3_drive",
+    "id": "c01Oqf69CC4",
+    "title": "FREE Tonal Sound Effects Every Video Editor Needs",
+    "channel": "Multiply Sound",
+    "duration_s": 399,
+    "width": 3840,
+    "height": 2160,
+    "chapters": [
+      {
+        "start_time": 0,
+        "title": "24 FREE tonal sound effects",
+        "end_time": 100
+      },
+      {
+        "start_time": 100,
+        "title": "The CHPTRS Nashville sound design process",
+        "end_time": 136
+      },
+      {
+        "start_time": 136,
+        "title": "Why human-made sound matters",
+        "end_time": 166
+      },
+      {
+        "start_time": 166,
+        "title": "How to use these sounds",
+        "end_time": 255
+      },
+      {
+        "start_time": 255,
+        "title": "Building a cinematic intro",
+        "end_time": 342
+      },
+      {
+        "start_time": 342,
+        "title": "Final edit + how to download the sounds",
+        "end_time": 399
+      }
+    ],
+    "links_in_desc": [
+      "https://multiplysound.com",
+      "https://drive.google.com/drive/folders/1_MRY1aN_3N7Q2QBAW_zeNsD2q-dCexe1?usp=drive_link",
+      "https://multiplysound.com"
+    ],
+    "transcript_path": "references\\editorial_classup_study\\subs\\audio_3_drive__c01Oqf69CC4.txt",
+    "transcript_chars": 5103,
+    "transcript_preview": "I'm giving away 24 new tonal sound\neffects for completely free and here's\nhow it's going to level up your sound\ndesign. The first folder is this tonal\ntransition that sounds like this.\nIt will build so much anticipation for\nyour videos. And this tonal transition\ncomes in all 12 keys, so you'll be able\nto match it up with any song. You could\nput it with someone looking directly at\na camera. I mean, doesn't it sound like\nan introduction to a movie trailer?\nOr my personal favorite, build something\n",
+    "audio": {
+      "lufs_i": -12.9,
+      "lra": 4.4,
+      "peak_dbfs": 0.5,
+      "band_pct": {
+        "sub_20_90": 9.54,
+        "mud_100_350": 38.59,
+        "voice_350_2500": 45.39,
+        "detail_2500_8000": 5.37,
+        "air_8000_18000": 0.41
+      },
+      "detail_air_pct": 5.78,
+      "quiet15_pct": 9.2,
+      "dead_zero_pct": 0.0
+    },
+    "pacing": {
+      "scan_window_s": 180.0,
+      "cuts_in_window": 49,
+      "cuts_per_min": 16.3,
+      "median_shot_s": 1.87,
+      "p90_shot_s": 5.06,
+      "shot_cv": 2.137,
+      "first_12_cuts_s": [
+        5.05,
+        5.51,
+        5.96,
+        6.21,
+        6.42,
+        7.34,
+        7.72,
+        8.17,
+        8.8,
+        23.31,
+        26.86,
+        41.71
+      ]
+    },
+    "color": {
+      "black_floor_p5_L": 0.0,
+      "midtone_p50_L": 9.8,
+      "highlight_p95_L": 52.2,
+      "dynamic_span_L": 52.2,
+      "sat_median": 0.0,
+      "lab_a_green_magenta": 0.31,
+      "lab_b_blue_yellow": -0.62,
+      "shadow_blue_minus_red": 0.7,
+      "highlight_blue_minus_red": -4.2
+    },
+    "sheet": "references\\editorial_classup_study\\sheets\\sheet_audio_3_drive__c01Oqf69CC4.jpg",
+    "hook_sheet": "references\\editorial_classup_study\\sheets\\hook45_audio_3_drive__c01Oqf69CC4.jpg"
+  }
+]

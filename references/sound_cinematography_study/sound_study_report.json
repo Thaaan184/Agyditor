@@ -1,0 +1,252 @@
+{
+  "PLZRzKMxsqE": {
+    "kind": "short",
+    "res": "608x1080",
+    "fps": "30000/1001",
+    "dur": 24.08,
+    "lang": "en",
+    "loudness": {
+      "lufs_i": -13.6,
+      "lra": 2.8,
+      "peak_dbfs": 0.4
+    },
+    "band_pct": {
+      "sub_20_90": 37.77,
+      "mud_100_350": 28.5,
+      "voice_350_2500": 25.44,
+      "detail_2500_8000": 4.43,
+      "air_8000_18000": 0.62
+    },
+    "dynamics": {
+      "active_med_db": -16.7,
+      "quiet_15db_pct": 1.6,
+      "silence_48db_pct": 0.2,
+      "onset_count": 148,
+      "near_cut_onset_offsets_ms": [
+        -133.5
+      ]
+    },
+    "cuts_count": 1,
+    "shot_avg_s": 12.04,
+    "shot_cv": 0.94,
+    "speech_gaps_gt_035s": [
+      0.5
+    ],
+    "transcript": "Here's a sound design trick that I think you might find useful. I like to break out my short form content into three sections. The hook, the transition, and the end. Almost every intro has two or three impacts. Different styles help build depth. For the transition that happens four or five seconds in, I like to join different kinds of risers with a whoosh sound. And I end every video with at least one or two risers. This helps loop everything together. Quick tip, you can also reverse a riser to become an impact or vice versa. Try it out."
+  },
+  "YKGhX9Dxycg": {
+    "kind": "short",
+    "res": "608x1080",
+    "fps": "30/1",
+    "dur": 44.16,
+    "lang": "en",
+    "loudness": {
+      "lufs_i": -15.2,
+      "lra": 2.9,
+      "peak_dbfs": 0.1
+    },
+    "band_pct": {
+      "sub_20_90": 26.6,
+      "mud_100_350": 32.1,
+      "voice_350_2500": 30.99,
+      "detail_2500_8000": 5.0,
+      "air_8000_18000": 0.91
+    },
+    "dynamics": {
+      "active_med_db": -18.2,
+      "quiet_15db_pct": 0.5,
+      "silence_48db_pct": 0.2,
+      "onset_count": 249,
+      "near_cut_onset_offsets_ms": [
+        192.2,
+        159.2,
+        68.1,
+        9.1
+      ]
+    },
+    "cuts_count": 4,
+    "shot_avg_s": 11.03,
+    "shot_cv": 0.53,
+    "speech_gaps_gt_035s": [
+      0.4,
+      9.5
+    ],
+    "transcript": "What happens when you give Claude access to the biggest sound effects library in the world? Well, it sounds something like this. To do this, upload your video ideas and image references into Claude and ask for a C-dance 2.5 prompt. Copy your prompt and paste it into Artlist where you can use C-dance 2.5 to generate your video. Then most importantly, connect the Artlist MCP into Claude to give it access to all of the sound effects. Once connected, you can upload your video and ask Claude to do the entire soundscape on your video using the Artlist Sound Effects Library. And it's that easy."
+  },
+  "MlaidhI2034": {
+    "kind": "short",
+    "res": "608x1080",
+    "fps": "25/1",
+    "dur": 8.82,
+    "lang": "en",
+    "loudness": {
+      "lufs_i": -9.9,
+      "lra": 4.0,
+      "peak_dbfs": 0.8
+    },
+    "band_pct": {
+      "sub_20_90": 48.18,
+      "mud_100_350": 26.58,
+      "voice_350_2500": 18.24,
+      "detail_2500_8000": 0.58,
+      "air_8000_18000": 0.19
+    },
+    "dynamics": {
+      "active_med_db": -14.2,
+      "quiet_15db_pct": 4.0,
+      "silence_48db_pct": 3.1,
+      "onset_count": 48,
+      "near_cut_onset_offsets_ms": []
+    },
+    "cuts_count": 0,
+    "shot_avg_s": 8.82,
+    "shot_cv": 0.0,
+    "speech_gaps_gt_035s": [],
+    "transcript": ""
+  },
+  "6V8zYYzxPCA": {
+    "kind": "short",
+    "res": "608x1080",
+    "fps": "25/1",
+    "dur": 27.77,
+    "lang": "en",
+    "loudness": {
+      "lufs_i": -21.8,
+      "lra": 9.1,
+      "peak_dbfs": -7.1
+    },
+    "band_pct": {
+      "sub_20_90": 30.13,
+      "mud_100_350": 44.95,
+      "voice_350_2500": 19.82,
+      "detail_2500_8000": 1.2,
+      "air_8000_18000": 0.32
+    },
+    "dynamics": {
+      "active_med_db": -28.6,
+      "quiet_15db_pct": 7.2,
+      "silence_48db_pct": 6.5,
+      "onset_count": 104,
+      "near_cut_onset_offsets_ms": []
+    },
+    "cuts_count": 0,
+    "shot_avg_s": 27.77,
+    "shot_cv": 0.0,
+    "speech_gaps_gt_035s": [],
+    "transcript": "I"
+  },
+  "UYq0o9Klf8I": {
+    "kind": "short",
+    "res": "608x1080",
+    "fps": "24/1",
+    "dur": 17.07,
+    "lang": "en",
+    "loudness": {
+      "lufs_i": -14.3,
+      "lra": 3.7,
+      "peak_dbfs": 0.1
+    },
+    "band_pct": {
+      "sub_20_90": 17.54,
+      "mud_100_350": 26.49,
+      "voice_350_2500": 46.82,
+      "detail_2500_8000": 7.06,
+      "air_8000_18000": 1.42
+    },
+    "dynamics": {
+      "active_med_db": -19.1,
+      "quiet_15db_pct": 11.4,
+      "silence_48db_pct": 6.3,
+      "onset_count": 75,
+      "near_cut_onset_offsets_ms": [
+        248.3,
+        -1.7,
+        248.1,
+        -1.9,
+        -251.9,
+        88.6,
+        103.6,
+        152.4
+      ]
+    },
+    "cuts_count": 8,
+    "shot_avg_s": 1.89,
+    "shot_cv": 0.85,
+    "speech_gaps_gt_035s": [
+      0.6,
+      0.94,
+      0.38,
+      0.54
+    ],
+    "transcript": "Sound design is important. I mean, very good. Without any sound design, the audio will sound like this. Well, this mic's noise cancelling feature is amazing, but let's compare the intro with sound design and with that sound. When editing, sound design is important. I mean, very important. When editing..."
+  },
+  "tzfzkTAQsnE": {
+    "kind": "long",
+    "res": "1280x720",
+    "fps": "24000/1001",
+    "dur": 441.67,
+    "lang": "en",
+    "loudness": {
+      "lufs_i": -14.5,
+      "lra": 3.9,
+      "peak_dbfs": 0.4
+    },
+    "band_pct": {
+      "sub_20_90": 30.31,
+      "mud_100_350": 33.59,
+      "voice_350_2500": 29.27,
+      "detail_2500_8000": 3.39,
+      "air_8000_18000": 0.94
+    },
+    "dynamics": {
+      "active_med_db": -18.2,
+      "quiet_15db_pct": 5.3,
+      "silence_48db_pct": 1.5,
+      "onset_count": 2029,
+      "near_cut_onset_offsets_ms": [
+        -51.3,
+        -45.1,
+        -197.8,
+        -280.8,
+        -0.9,
+        146.2,
+        94.9,
+        86.5,
+        -49.3,
+        62.0,
+        -17.2,
+        64.4,
+        21.9,
+        28.3,
+        -19.5,
+        -73.8
+      ]
+    },
+    "cuts_count": 152,
+    "shot_avg_s": 2.89,
+    "shot_cv": 0.97,
+    "speech_gaps_gt_035s": [
+      7.26,
+      0.36,
+      1.36,
+      1.14,
+      0.4,
+      1.56,
+      4.36,
+      0.4,
+      1.48,
+      0.46,
+      0.48,
+      3.24,
+      0.42,
+      0.78,
+      0.4,
+      13.96,
+      0.48,
+      0.36,
+      0.52,
+      0.48
+    ],
+    "transcript": "Doomscrolling on Mute has made us forget how powerful sound really is. Pretty visuals grab your attention, but it's sound that keeps you hooked. I'm going to share the three sound design techniques that took me 16 years to master, but it'll only take you a few minutes to learn. Using these three alone will instantly upgrade your work, but for each technique I'm going to share a secret cheat code that made the biggest difference in my work, so you won't want to miss any of these. My sound effects used to sound really flat and boring. It wasn't necessarily the sounds that I used, but it was how I used it. Now the best example I can give is a whoosh. A single whoosh can be okay for matching visuals of a small movement, but when there's a big dramatic one, a single whoosh isn't quite enough. Finding a deeper whoosh will help, but still lacks weight. Thinking about sounds in different frequencies is what solved the problem. So imagine layering a cake, where each layer adds a unique flavor, except on an audio spectrum it looks more like this. Now by layering sounds with different frequencies, you can achieve a much more full dynamic sound. Instead of scrolling endlessly for the right sound effects, thinking in layers puts you miles ahead. Now the cheat code for using this technique is applying it outside of sound effects, like with your dialogue and your music. I used to throw my dialogue track right onto my timeline and then lower the gain of my background music and just call it a day. But ever since I saw a tutorial from my buddy Dave, I've been using this technique he shared in every video I've ever edited since I've learned it. Instead of using the de-esser effect for its intended purpose, you can use it to carve out a pocket in the mid frequencies of your music track. Your dialogue naturally sits in that pocket and you can always EQ it to cut off the low and high ends for a better fit. But this technique gives each element its own space, resulting in a fuller mix. A lot of you have asked me where I get my sound effects from and my go-to answer has always been art list, but a secret weapon I've been using for years is sound packs from heavy editing. I'm really excited that they're sponsoring this video and I want to show you how I use their packs to make my video stand out. First, let's have a listen of this promo cut using sound effects that's scattered across different sources and genres. So it sounds pretty good, but it does feel a little bit safe because I'm using the same set of sounds that I would for any video I work on. Having a broad library of sound effects is amazing when you're working on a lot of different genres of videos, but if you're working on an athletic commercial and you're using the same sound effects that you would for a wedding video or a corporate video, you're not going to get the best results. Now let's replace the sounds with ones from Happy Editing's Transition Sound Effects pack. This pack covers all the category of sounds that I frequently use when I'm editing, like risers, hits, and wooshes. Especially wooshes. Let's take a listen. Sound Effects Hear the difference? The sound matches the visual aesthetic and feels way more coherent, and that's the main tip that I want to share. Commit to a style instead of mixing random sounds. Gritty bass hits aren't going to work for your corporate videos the same way clean bell dings won't work for your streetwear promo. Sound packs have been the easiest way for me to keep my style consistent or to keep a specific video feeling consistent. Most of the glitchy sound effects that you hear in my work have been from Happy Editing, so if you like the sounds that you heard, check out this Transition Sound Effects pack with the link below. Huge thank you to Happy Editing for sponsoring this video. Keeping this tip in mind, the cheat code I'll sometimes use to make my video stand out is using sounds that do not match the visuals. This was inspired by the show Euphoria, where the director uses something they call emotional realism. The cinematography on the show portrays how the characters feel in their environment rather than what's literally happening. I took that same principle and applied it to sound design. So in a video I made called the Vessel and the Filter, it's just shots of me making coffee. But the message is how making coffee is similar to our creative process as filmmakers. To add more weight to the visuals, I replaced the literal sounds with only nature sounds. Coffee grounds breaking became the crackling of icebergs and the swish of coffee transformed into an ocean crash. By limiting myself to only nature sounds and intentionally mismatching the visuals, you can create a deeper experience for your audience. Okay, so let's say you're editing a 30-second promo video and you want to use a song that's three minutes. How do you cut the music to fit in that video length? I had a lot of trouble trimming down music when I first started because ending a song early felt like just driving and then suddenly slamming my bricks. The remix feature in Premiere does a pretty good job, but most of the time I need more control to fit the visuals or to emphasize key moments. So after watching endless amounts of movie trailers and promo videos, I'm going to share my favorite way to transition in and out of a song. If the song you're using doesn't have a natural lead in, you can use the beginning beat of the song, reverse it, and use it as a riser to naturally ease into the song. If the beginning beat doesn't work, you can always try reversing the tail end of the song to use as a riser as well. This method is a great way to introduce a new song in the same video or to get back into a song after a bridge or a quiet moment of the song. Now the way that I like to get out of a song is adding a reverb on the final beat. All I do is cut before the next beat hits, cut the beginning of the beat, nest it, extend the nested sequence by placing something else further down the timeline. In this case, I just duplicate that section, disable it, and move it down further so we don't hear it a second time. And then I go back to the main timeline and add a studio reverb on it. You can play with different presets to find the best fit, but usually I like to start out with the great hall preset. This is without the reverb, and this is with the reverb. Sometimes I'll do a little fade at the end of the original track, and then play the reverb version underneath like this. Using these two methods already gets you great and natural sounding results, but the cheat code that I use to make it feel absolutely seamless is layering sound effects on top of these methods. So to ease into a track, I look for sounds like risers, swells, or suckbacks to layer underneath like this. They're also great for getting out of a song to emphasize moments in your videos, like this. If you want the ending of your song to hit harder, don't be afraid to add these sounds as well, and even impacts, slams, or hits to wrap it all up with a bang. The quality of my sound design improved drastically after applying these three techniques, so let me know in the comments if they helped you as well."
+  }
+}

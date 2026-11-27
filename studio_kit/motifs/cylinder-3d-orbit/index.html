@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cylinder 3D Orbit Motif</title>
+<style>
+  @font-face {
+    font-family: "Oswald";
+    src: url("./fonts/Oswald-Latin.woff2") format("woff2");
+    font-weight: 200 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Archivo";
+    src: url("./fonts/Archivo.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+  }
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+<script src="./motion_primitives.js"></script>
+<script src="./keyframe_rig.js"></script>
+<script src="./optical_stage.js"></script>
+<script src="./vendor/three_optical.bundle.js"></script>
+</head>
+<body>
+<script>
+(function () {
+  var state = null;
+
+  function disposeScene() {
+    if (!state) return;
+    if (state.ringTex) state.ringTex.dispose();
+    if (state.pmremTarget) state.pmremTarget.dispose();
+    if (state.scene) {
+      state.scene.traverse(function (obj) {
+        if (obj.geometry) obj.geometry.dispose();
+        if (obj.material) {
+          if (Array.isArray(obj.material)) obj.material.forEach(function (m) { m.dispose(); });
+          else obj.material.dispose();
+        }
+      });
+    }
+    if (state.renderer) {
+      if (state.renderer.domElement && state.renderer.domElement.parentNode) {
+        state.renderer.domElement.parentNode.removeChild(state.renderer.domElement);
+      }
+      state.renderer.dispose();
+    }
+    state = null;
+  }
+
+  function renderFrame(t, ctx) {
+    if (!state) return;
+    var dur = (ctx && ctx.duration) || 4.0;
+    var isPortrait = state.width < state.height;
+    var baseCamZ = isPortrait ? 9.4 : 6.4;
+    var camState = AGYRig.resolveCameraState({
+      fovDeg: 40,
+      positionTrack: [
+        { u: 0.0, v: [0, 0.45, baseCamZ + 2.2], ease: "aeWhipOut" },
+        { u: 0.55, v: [0.16, 0.08, baseCamZ], ease: "smoothStop" },
+        { u: 1.0, v: [-0.08, 0.0, baseCamZ + 0.35] }
+      ],
+      target: [0, 0, 0]
+    }, t, dur, state.width / state.height);
+
+    state.camera.position.set(camState.position[0], camState.position[1], camState.position[2]);
+    state.camera.lookAt(camState.target[0], camState.target[1], camState.target[2]);
+
+    var orbitRad = (Number(state.props.orbit_deg_s) || 48) * (Math.PI / 180) * t;
+    if (state.ringMesh) {
+      state.ringMesh.rotation.y = orbitRad;
+    }
+    if (state.centerMesh) {
+      var popU = AGYMotion.CURVES.appleOut(AGYMotion.clamp01(t / 0.45));
+      var sc = state.fitScale * AGYMotion.lerp(0.84, 1.0, popU);
+      state.centerMesh.scale.set(sc, sc, sc);
+      state.centerMesh.rotation.y = Math.sin(t * 1.1) * 0.24;
+    }
+
+    state.spotLight.position.x = Math.sin(t * 1.1) * 4.2;
+    state.renderer.render(state.scene, state.camera);
+  }
+
+  motif.define({
+    async setup(props, ctx) {
+      disposeScene();
+      await document.fonts.load('700 118px "Oswald"');
+
+      var w = (ctx && ctx.width) || 1080;
+      var h = (ctx && ctx.height) || 1920;
+
+      var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setClearColor(0x000000, 0);
+      renderer.setSize(w, h, false);
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.08;
+      document.body.appendChild(renderer.domElement);
+
+      var scene = new THREE.Scene();
+      var pmrem = new THREE.PMREMGenerator(renderer);
+      var pmremTarget = pmrem.fromScene(new THREEX.RoomEnvironment(), 0.04);
+      scene.environment = pmremTarget.texture;
+      scene.environmentIntensity = 0.35;
+      pmrem.dispose();
+
+      var camera = new THREE.PerspectiveCamera(40, w / h, 0.1, 100);
+      camera.position.set(0, 0.2, w < h ? 9.4 : 6.4);
+
+      var ambient = new THREE.AmbientLight(0xffffff, 0.20);
+      scene.add(ambient);
+
+      var keyLight = new THREE.DirectionalLight(0xffffff, 1.85);
+      keyLight.position.set(3.4, 5.8, 5.2);
+      keyLight.castShadow = true;
+      scene.add(keyLight);
+
+      var rimLight = new THREE.SpotLight(new THREE.Color(props.accent || "#0EA5E9"), 28, 28, Math.PI / 3.5, 0.6, 1.1);
+      rimLight.position.set(3.2, -1.6, 4.2);
+      scene.add(rimLight);
+
+      var spotLight = new THREE.SpotLight(new THREE.Color(props.spot_color || "#FF3B5C"), 34, 28, Math.PI / 3.8, 0.55, 1.1);
+      spotLight.position.set(-3.2, 3.4, 4.8);
+      spotLight.castShadow = true;
+      scene.add(spotLight);
+
+      var shadowPlane = new THREE.Mesh(
+        new THREE.PlaneGeometry(16, 16),
+        new THREE.ShadowMaterial({ opacity: 0.48 })
+      );
+      shadowPlane.position.set(0, -1.55, -0.5);
+      shadowPlane.rotation.x = -Math.PI / 2;
+      shadowPlane.receiveShadow = true;
+      scene.add(shadowPlane);
+
+      var resp = await fetch("./fonts/Archivo.ttf");
+      var ttfBuf = await resp.arrayBuffer();
+      var threeFont = THREEX.parseTtfToFont(ttfBuf);
+
+      var heroGeo = new THREEX.TextGeometry(String(props.center_word || "DEPTH").toUpperCase(), {
+        font: threeFont,
+        size: 0.68,
+        depth: 0.28,
+        curveSegments: 8,
+        bevelEnabled: true,
+        bevelThickness: 0.035,
+        bevelSize: 0.024,
+        bevelSegments: 3
+      });
+      heroGeo.computeBoundingBox();
+      var wordW = Math.max(0.5, heroGeo.boundingBox.max.x - heroGeo.boundingBox.min.x);
+      var fitScale = Math.min(1.0, 2.35 / wordW);
+      heroGeo.center();
+
+      var heroMat = new THREE.MeshStandardMaterial({
+        color: new THREE.Color(props.ink || "#F8FAFC"),
+        roughness: 0.22,
+        metalness: 0.78
+      });
+      var centerMesh = new THREE.Mesh(heroGeo, heroMat);
+      centerMesh.castShadow = true;
+      centerMesh.receiveShadow = true;
+      scene.add(centerMesh);
+
+      var ringMesh = null;
+      var ringTex = null;
+      if ((props.style_mode || "cylinder_ribbon") === "cylinder_ribbon") {
+        ringTex = AGYOptics.createCylinderRibbonTexture(THREE, String(props.ring_text || "AGY STUDIO   3D OPTICS   "), {
+          fontFamily: '"Oswald", sans-serif',
+          fontSizePx: 112,
+          textColor: props.ink || "#F8FAFC",
+          bandColor: props.accent || "#0EA5E9",
+          repeatCount: 2
+        });
+        var cylRadius = w < h ? 1.72 : 2.05;
+        var cylGeo = new THREE.CylinderGeometry(cylRadius, cylRadius, 0.44, 72, 1, true);
+        var cylFrontMat = new THREE.MeshStandardMaterial({
+          map: ringTex,
+          transparent: true,
+          side: THREE.FrontSide,
+          roughness: 0.34,
+          metalness: 0.25,
+          depthWrite: true
+        });
+        var cylInnerMat = new THREE.MeshStandardMaterial({
+          color: new THREE.Color("#0B1628"),
+          side: THREE.BackSide,
+          roughness: 0.82,
+          metalness: 0.15,
+          transparent: true,
+          opacity: 0.92
+        });
+        ringMesh = new THREE.Group();
+        var outerBand = new THREE.Mesh(cylGeo, cylFrontMat);
+        outerBand.castShadow = true;
+        var innerBand = new THREE.Mesh(new THREE.CylinderGeometry(cylRadius - 0.015, cylRadius - 0.015, 0.44, 72, 1, true), cylInnerMat);
+        ringMesh.add(outerBand);
+        ringMesh.add(innerBand);
+
+        var ringGroup = new THREE.Group();
+        ringGroup.rotation.z = ((Number(props.tilt_deg) || -14) * Math.PI) / 180;
+        ringGroup.rotation.x = 0.24;
+        ringGroup.add(ringMesh);
+        scene.add(ringGroup);
+      }
+
+      state = {
+        props: props,
+        width: w,
+        height: h,
+        fitScale: fitScale,
+        renderer: renderer,
+        scene: scene,
+        camera: camera,
+        spotLight: spotLight,
+        centerMesh: centerMesh,
+        ringMesh: ringMesh,
+        ringTex: ringTex,
+        pmremTarget: pmremTarget
+      };
+
+      renderFrame(0, ctx);
+    },
+    frame(t, ctx) {
+      renderFrame(t, ctx);
+    }
+  });
+}());
+</script>
+</body>
+</html>

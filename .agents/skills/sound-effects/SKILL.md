@@ -131,3 +131,7 @@ Add `--use-case "..."`, and `--music-source`/`--music-license` once confirmed. I
 
 ## Report to the user
 Report the licence check (all known, or each unknown sound by name), the use case and whether it is allowed, the music source and licence (or that it is not confirmed), that `CREDITS.txt` is there if they want it, the beat-grid result (shifted or not, and by how much), the cut-to-beat errors, final LUFS and true peak (stereo and mono), and the 5 timestamps. Don't tell them it sounds good.
+
+## Studio v3 Multi-Stem & Spectral Hygiene Override
+- For full studio productions on this machine, route cues through `studio_kit/sound_engine.py` and `studio_kit/sound_palette_index.json` (`149` indexed local assets): enforce `ambience` room-tone bedrock (`-34` to `-40 dBFS`), stack dramatic hits/whooshes across `sub_low` + `mid_body` + `high_air` bands (`50-240 ms` pre-lap), carve speech frequencies dynamically out of active BGM, and resolve music cut-offs with `Great Hall` (`T60 = 2.6s`) reverb tails or reversed risers.
+- After exporting MP4, verify both loudness and spectral cleanliness via `python studio_kit/acoustic_audit.py <out.mp4>` (`mud_100_350 < 34%`, `detail+air >= 4%`, `dead_digital_zero <= 35%`).

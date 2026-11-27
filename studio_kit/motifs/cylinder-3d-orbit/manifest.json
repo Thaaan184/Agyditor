@@ -1,0 +1,21 @@
+{
+  "name": "Cylinder 3D Orbit",
+  "size": [1080, 1920],
+  "default_duration_s": 4.0,
+  "content_duration_s": 3.5,
+  "graphic_role": "title",
+  "fonts": [
+    "./fonts/Oswald-Latin.woff2",
+    "./fonts/Archivo.ttf"
+  ],
+  "props_schema": {
+    "ring_text": { "type": "string", "default": "AGY STUDIO   3D OPTICS   ", "max_length": 48 },
+    "center_word": { "type": "string", "default": "DEPTH", "max_length": 14 },
+    "style_mode": { "type": "enum", "options": ["cylinder_ribbon", "extruded_hero"], "default": "cylinder_ribbon" },
+    "ink": { "type": "color", "default": "#F8FAFC" },
+    "accent": { "type": "color", "default": "#0EA5E9" },
+    "spot_color": { "type": "color", "default": "#FF3B5C" },
+    "orbit_deg_s": { "type": "number", "default": 48, "min": -180, "max": 180 },
+    "tilt_deg": { "type": "number", "default": -14, "min": -45, "max": 45 }
+  }
+}

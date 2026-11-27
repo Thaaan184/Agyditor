@@ -455,6 +455,155 @@
     };
   }
 
+  /**
+   * Maciek Sulima (yRsK2JyfMGM) Rule 1 & 2: Split-S-Curve Handoff along a single directional axis.
+   * Outgoing element accelerates out (u^3.2) and incoming element decelerates in (1-(1-u)^3.6),
+   * uniting both into one continuous S-curve peaking right across tSwap.
+   */
+  function splitSCurveHandoff(t, tSwap, opts) {
+    var o = opts || {};
+    var durOut = Math.max(0.06, o.durOutS !== undefined ? o.durOutS : 0.24);
+    var durIn = Math.max(0.06, o.durInS !== undefined ? o.durInS : 0.34);
+    var dist = o.distancePx !== undefined ? o.distancePx : 56;
+    var axis = o.axis === 'x' ? 'x' : 'y';
+    var dir = o.direction === -1 ? -1 : 1; // 1 = move upward/leftward across handoff
+
+    var uOut = clamp01((t - (tSwap - durOut)) / durOut);
+    var eOut = Math.pow(uOut, 3.2); // slow start -> rapid acceleration into swap
+    var uIn = clamp01((t - tSwap) / durIn);
+    var eIn = 1 - Math.pow(1 - uIn, 3.6); // rapid launch at swap -> velvety slow settle
+
+    var outOffset = -dir * eOut * dist;
+    var inOffset = dir * (1 - eIn) * dist;
+    var outBlur = (uOut > 0 && uOut < 1) ? Math.pow(uOut, 2.0) * (o.maxBlurPx !== undefined ? o.maxBlurPx : 10) : 0;
+    var inBlur = (uIn > 0 && uIn < 1) ? Math.pow(1 - uIn, 2.2) * (o.maxBlurPx !== undefined ? o.maxBlurPx : 10) : 0;
+
+    return {
+      axis: axis,
+      outgoing: {
+        offsetPx: outOffset,
+        opacity: t >= tSwap ? 0 : (1 - smoothstep(0.55, 1.0, uOut)),
+        blurPx: outBlur
+      },
+      incoming: {
+        offsetPx: inOffset,
+        opacity: t < tSwap ? 0 : smoothstep(0.0, 0.22, uIn),
+        blurPx: inBlur,
+        settled: uIn >= 1
+      }
+    };
+  }
+
+  /**
+   * Maciek Sulima (yRsK2JyfMGM): Asymmetric 3-tier Reels caption hierarchy (lead / HERO / tail).
+   */
+  function asymmetricCaptionLayout(words, heroIdx) {
+    var list = Array.isArray(words) ? words : [];
+    var hi = (heroIdx !== undefined && heroIdx >= 0 && heroIdx < list.length) ? heroIdx : Math.floor(list.length / 2);
+    return list.map(function (w, idx) {
+      var isHero = idx === hi;
+      return {
+        word: String(w),
+        tier: isHero ? 'hero' : (idx < hi ? 'lead' : 'tail'),
+        scale: isHero ? 1.55 : 0.78,
+        weight: isHero ? 900 : 600,
+        italic: isHero
+      };
+    });
+  }
+
+  /**
+   * Gaku Lange (SmsNAtaLR9I): Match-Cut Split Screen trajectory alignment & reveal.
+   */
+  function matchCutSplitWipe(t, tStart, opts) {
+    var o = opts || {};
+    var dur = Math.max(0.08, o.durationS !== undefined ? o.durationS : 0.36);
+    var targetSplit = clamp01(o.splitRatio !== undefined ? o.splitRatio : 0.5);
+    var u = clamp01((t - tStart) / dur);
+    var e = CURVES.appleOut(u);
+    return {
+      u: u,
+      splitPct: lerp(0, targetSplit * 100, e),
+      seamOpacity: smoothstep(0.0, 0.25, u),
+      settled: u >= 1
+    };
+  }
+
+  /**
+   * PeeJ ENT (G-DHQAzulyU): 2D Virtual Camera Typography over a spatial word canvas.
+   * Shifts camera arrival 2-3 frames (-83ms default) early before each audio word stop
+   * so the eye lands squarely on the cluster right when the ear hears the beat.
+   */
+  function camera2DTypographyState(t, stops, opts) {
+    var o = opts || {};
+    var list = Array.isArray(stops) && stops.length ? stops : [{ t: 0, x: 0, y: 0, zoom: 1, rotateDeg: 0 }];
+    var leadS = o.preBeatLeadS !== undefined ? o.preBeatLeadS : 0.083;
+    var transS = Math.max(0.08, o.transitionS !== undefined ? o.transitionS : 0.28);
+    var maxBlur = o.maxBlurPx !== undefined ? o.maxBlurPx : 7;
+    var tAdj = t + leadS;
+
+    var idx = 0;
+    for (var i = 0; i < list.length; i++) {
+      if (tAdj >= list[i].t) idx = i;
+    }
+    var curr = list[idx];
+    var prev = idx > 0 ? list[idx - 1] : curr;
+    var u = idx > 0 ? clamp01((tAdj - curr.t) / transS) : 1;
+    var e = CURVES.smoothMask(u);
+    var vel = (idx > 0 && u > 0 && u < 1) ? Math.sin(u * Math.PI) : 0;
+
+    return {
+      stopIndex: idx,
+      camX: lerp(prev.x || 0, curr.x || 0, e),
+      camY: lerp(prev.y || 0, curr.y || 0, e),
+      zoom: lerp(prev.zoom || 1, curr.zoom || 1, e),
+      rotateDeg: lerp(prev.rotateDeg || 0, curr.rotateDeg || 0, e),
+      blurPx: vel * maxBlur,
+      strokeProgress: clamp01((idx + e) / Math.max(1, list.length - 1))
+    };
+  }
+
+  /**
+   * Editor Keling (RhVB8WPLJAI): Staggered Narrative Cluster Word & Highlight Swipe.
+   * Words enter briskly and accumulate together on screen until clauseEndS.
+   */
+  function narrativeClusterWord(t, wordStartS, opts) {
+    var o = opts || {};
+    var dur = Math.max(0.06, o.durationS !== undefined ? o.durationS : 0.22);
+    var u = clamp01((t - wordStartS) / dur);
+    var e = CURVES.appleOut(u);
+    var swU = clamp01((t - (wordStartS + 0.06)) / 0.24);
+    var swE = CURVES.smoothMask(swU);
+    return {
+      visible: t >= wordStartS,
+      opacity: smoothstep(0.0, 0.28, u),
+      translateYPx: lerp(22, 0, e),
+      scale: lerp(0.90, 1.0, e),
+      highlightSweepPct: swE * 100
+    };
+  }
+
+  /**
+   * aayusucks (BWRdNeNkph4): Golden-Ratio 1.618x Scale & 8pt Grid Typography Calculator.
+   */
+  function goldenTypeScale(basePx) {
+    var b = Math.max(12, basePx || 16);
+    function snap8(v) { return Math.max(8, Math.round(v / 8) * 8); }
+    var sub = snap8(b * 1.618);
+    var head = snap8(b * 1.618 * 1.618);
+    var disp = snap8(head * 1.618);
+    return {
+      bodyPx: snap8(b),
+      bodyLeadingPx: snap8(b * 1.5),
+      subheadPx: sub,
+      headlinePx: head,
+      headlineLeadingPx: Math.round(head * 1.2),
+      displayPx: disp,
+      maxCharsPerLine: 65,
+      gridUnitPx: 8
+    };
+  }
+
   return {
     clamp01: clamp01,
     lerp: lerp,
@@ -476,6 +625,12 @@
     foregroundOcclusionWipe: foregroundOcclusionWipe,
     cutoutFrameHoldSlide: cutoutFrameHoldSlide,
     smoothMaskReveal: smoothMaskReveal,
-    angledSplitZoom: angledSplitZoom
+    angledSplitZoom: angledSplitZoom,
+    splitSCurveHandoff: splitSCurveHandoff,
+    asymmetricCaptionLayout: asymmetricCaptionLayout,
+    matchCutSplitWipe: matchCutSplitWipe,
+    camera2DTypographyState: camera2DTypographyState,
+    narrativeClusterWord: narrativeClusterWord,
+    goldenTypeScale: goldenTypeScale
   };
 }));

@@ -1,0 +1,4932 @@
+{
+  "version": 1,
+  "total_assets": 173,
+  "by_pack": {
+    "sound-effects-cc0": 103,
+    "media-use-pixabay": 19,
+    "ghost-editor-cc0": 27,
+    "multiply-sound-tonal": 24
+  },
+  "by_spectrum_role": {
+    "sub_low": 44,
+    "full_spectrum": 18,
+    "mid_body": 69,
+    "high_air": 38,
+    "room_bed": 4
+  },
+  "palette_rules": {
+    "editorial-clean": "Tight transients, crisp air >3kHz, low-mud controlled whooshes, room-tone beds.",
+    "kinetic-street": "Glitch textures, punchy low-mid impacts paired with high mechanical whips.",
+    "organic-cinema": "Foley materials (paper, wood, glass, metal, deep boom) & Emotional Realism contrast.",
+    "comedic-dry": "Dry un-reverbed stingers & rapid silence drop-outs before punchlines.",
+    "gaming-montage": "Sharp transient cutters lock-synced to beat onsets & swept pre-drops."
+  },
+  "assets": [
+    {
+      "id": "se/whoosh__fs-264777-swoosh",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/whoosh/fs-264777-swoosh.ogg",
+      "category": "whoosh",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Shinplaster via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/Shinplaster/sounds/264777/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 3.999,
+      "peak_dbfs": 0.15,
+      "rms_dbfs": -14.35,
+      "spectral_centroid_hz": 26.6,
+      "band_pct": {
+        "sub_20_90": 62.64,
+        "mud_100_350": 0.27,
+        "voice_350_2500": 0.0,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/whoosh__fs-169867-swoosh",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/whoosh/fs-169867-swoosh.ogg",
+      "category": "whoosh",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Halgrimm via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/Halgrimm/sounds/169867/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 2.136,
+      "peak_dbfs": -0.1,
+      "rms_dbfs": -15.88,
+      "spectral_centroid_hz": 236.8,
+      "band_pct": {
+        "sub_20_90": 27.47,
+        "mud_100_350": 55.04,
+        "voice_350_2500": 14.35,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/whoosh__fs-127197-fast-simple-chop-5-aif",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/whoosh/fs-127197-fast-simple-chop-5-aif.ogg",
+      "category": "whoosh",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "dave.des via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/dave.des/sounds/127197/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.48,
+      "peak_dbfs": -3.62,
+      "rms_dbfs": -19.5,
+      "spectral_centroid_hz": 151.7,
+      "band_pct": {
+        "sub_20_90": 9.0,
+        "mud_100_350": 23.27,
+        "voice_350_2500": 18.97,
+        "detail_2500_8000": 0.05,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "se/whoosh__fs-683101-quick-woosh",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/whoosh/fs-683101-quick-woosh.ogg",
+      "category": "whoosh",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "florianreichelt via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/florianreichelt/sounds/683101/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.282,
+      "peak_dbfs": -6.3,
+      "rms_dbfs": -23.85,
+      "spectral_centroid_hz": 922.1,
+      "band_pct": {
+        "sub_20_90": 0.03,
+        "mud_100_350": 2.61,
+        "voice_350_2500": 95.46,
+        "detail_2500_8000": 1.78,
+        "air_8000_18000": 0.1
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/pop__fs-447910-plop",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/fs-447910-plop.ogg",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Breviceps via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/Breviceps/sounds/447910/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.243,
+      "peak_dbfs": 0.47,
+      "rms_dbfs": -16.61,
+      "spectral_centroid_hz": 1313.0,
+      "band_pct": {
+        "sub_20_90": 0.38,
+        "mud_100_350": 2.07,
+        "voice_350_2500": 94.5,
+        "detail_2500_8000": 2.59,
+        "air_8000_18000": 0.24
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/pop__fs-467951-ui-button-click",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/fs-467951-ui-button-click.ogg",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "benzix2 via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/benzix2/sounds/467951/",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.098,
+      "peak_dbfs": -0.32,
+      "rms_dbfs": -15.2,
+      "spectral_centroid_hz": 1111.6,
+      "band_pct": {
+        "sub_20_90": 3.06,
+        "mud_100_350": 0.3,
+        "voice_350_2500": 96.4,
+        "detail_2500_8000": 0.03,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/pop__fs-258269-mouth-pop",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/fs-258269-mouth-pop.ogg",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "jcallison via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/jcallison/sounds/258269/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.262,
+      "peak_dbfs": -3.2,
+      "rms_dbfs": -23.04,
+      "spectral_centroid_hz": 622.1,
+      "band_pct": {
+        "sub_20_90": 0.8,
+        "mud_100_350": 1.58,
+        "voice_350_2500": 96.29,
+        "detail_2500_8000": 0.11,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/pop__fs-514833-user-interface-menu-sounds-wav",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/fs-514833-user-interface-menu-sounds-wav.ogg",
+      "category": "pop",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "oussamaben via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/oussamaben/sounds/514833/",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 3.793,
+      "peak_dbfs": -2.41,
+      "rms_dbfs": -27.66,
+      "spectral_centroid_hz": 4525.6,
+      "band_pct": {
+        "sub_20_90": 0.11,
+        "mud_100_350": 0.14,
+        "voice_350_2500": 56.58,
+        "detail_2500_8000": 21.21,
+        "air_8000_18000": 20.74
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/pop__fs-824189-pop-in-sfx",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/fs-824189-pop-in-sfx.ogg",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Sadiquecat via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/Sadiquecat/sounds/824189/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.211,
+      "peak_dbfs": -3.41,
+      "rms_dbfs": -24.19,
+      "spectral_centroid_hz": 865.6,
+      "band_pct": {
+        "sub_20_90": 2.13,
+        "mud_100_350": 3.33,
+        "voice_350_2500": 92.84,
+        "detail_2500_8000": 0.32,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/typing__fs-323432-typing",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/typing/fs-323432-typing.ogg",
+      "category": "typing",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Alivvie via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/Alivvie/sounds/323432/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 3.994,
+      "peak_dbfs": -3.69,
+      "rms_dbfs": -17.35,
+      "spectral_centroid_hz": 149.4,
+      "band_pct": {
+        "sub_20_90": 89.45,
+        "mud_100_350": 0.44,
+        "voice_350_2500": 3.49,
+        "detail_2500_8000": 1.0,
+        "air_8000_18000": 0.15
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/typing__fs-79388-keyboard-typing-wav",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/typing/fs-79388-keyboard-typing-wav.ogg",
+      "category": "typing",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "j1987 via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/j1987/sounds/79388/",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 3.994,
+      "peak_dbfs": -5.76,
+      "rms_dbfs": -32.62,
+      "spectral_centroid_hz": 2312.1,
+      "band_pct": {
+        "sub_20_90": 25.22,
+        "mud_100_350": 9.23,
+        "voice_350_2500": 15.05,
+        "detail_2500_8000": 32.97,
+        "air_8000_18000": 6.8
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "se/typing__fs-416777-digital-typing-wav",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/typing/fs-416777-digital-typing-wav.ogg",
+      "category": "typing",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Sky_Motion via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/Sky_Motion/sounds/416777/",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 1.0,
+      "peak_dbfs": -0.86,
+      "rms_dbfs": -12.35,
+      "spectral_centroid_hz": 6739.9,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.08,
+        "voice_350_2500": 15.52,
+        "detail_2500_8000": 59.98,
+        "air_8000_18000": 24.4
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/typing__fs-511418-data-reveal-sound",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/typing/fs-511418-data-reveal-sound.ogg",
+      "category": "typing",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Sky_Motion via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/Sky_Motion/sounds/511418/",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 2.03,
+      "peak_dbfs": -2.68,
+      "rms_dbfs": -24.45,
+      "spectral_centroid_hz": 11675.7,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.0,
+        "voice_350_2500": 0.0,
+        "detail_2500_8000": 14.66,
+        "air_8000_18000": 85.33
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/typing__fs-447909-keyboard-typing",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/typing/fs-447909-keyboard-typing.ogg",
+      "category": "typing",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Breviceps via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/Breviceps/sounds/447909/",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 3.799,
+      "peak_dbfs": -0.85,
+      "rms_dbfs": -28.65,
+      "spectral_centroid_hz": 2821.4,
+      "band_pct": {
+        "sub_20_90": 29.05,
+        "mud_100_350": 8.2,
+        "voice_350_2500": 10.93,
+        "detail_2500_8000": 45.3,
+        "air_8000_18000": 3.63
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "se/riser__fs-685256-riser-sound-effect-short-wav",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/riser/fs-685256-riser-sound-effect-short-wav.ogg",
+      "category": "riser",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "syntheffects via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/syntheffects/sounds/685256/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 2.459,
+      "peak_dbfs": -2.98,
+      "rms_dbfs": -19.87,
+      "spectral_centroid_hz": 1286.8,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 15.47,
+        "voice_350_2500": 70.67,
+        "detail_2500_8000": 13.67,
+        "air_8000_18000": 0.15
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/riser__fs-396161-scary-hits-risers-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/riser/fs-396161-scary-hits-risers-001.ogg",
+      "category": "riser",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Xinematix via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/Xinematix/sounds/396161/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 5.968,
+      "peak_dbfs": -4.78,
+      "rms_dbfs": -23.18,
+      "spectral_centroid_hz": 252.5,
+      "band_pct": {
+        "sub_20_90": 76.56,
+        "mud_100_350": 11.91,
+        "voice_350_2500": 5.85,
+        "detail_2500_8000": 1.08,
+        "air_8000_18000": 0.73
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/riser__fs-396160-scary-hits-risers-002",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/riser/fs-396160-scary-hits-risers-002.ogg",
+      "category": "riser",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Xinematix via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/Xinematix/sounds/396160/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 5.978,
+      "peak_dbfs": -4.99,
+      "rms_dbfs": -23.57,
+      "spectral_centroid_hz": 380.3,
+      "band_pct": {
+        "sub_20_90": 73.16,
+        "mud_100_350": 11.61,
+        "voice_350_2500": 7.31,
+        "detail_2500_8000": 3.16,
+        "air_8000_18000": 0.9
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/riser__fs-174363-rewind",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/riser/fs-174363-rewind.ogg",
+      "category": "riser",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "kasa90 via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/kasa90/sounds/174363/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 5.998,
+      "peak_dbfs": -6.28,
+      "rms_dbfs": -24.89,
+      "spectral_centroid_hz": 1267.7,
+      "band_pct": {
+        "sub_20_90": 0.38,
+        "mud_100_350": 9.73,
+        "voice_350_2500": 82.17,
+        "detail_2500_8000": 7.53,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/riser__fs-464250-echo-chromatic-riser-wav",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/riser/fs-464250-echo-chromatic-riser-wav.ogg",
+      "category": "riser",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "DylanTheFish via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/DylanTheFish/sounds/464250/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 5.965,
+      "peak_dbfs": -5.02,
+      "rms_dbfs": -27.27,
+      "spectral_centroid_hz": 374.8,
+      "band_pct": {
+        "sub_20_90": 0.54,
+        "mud_100_350": 63.82,
+        "voice_350_2500": 34.65,
+        "detail_2500_8000": 0.83,
+        "air_8000_18000": 0.05
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/impact__fs-177242-cinematic-impact",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/impact/fs-177242-cinematic-impact.ogg",
+      "category": "impact",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "deleted_user_3277771 via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/deleted_user_3277771/sounds/177242/",
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 3.997,
+      "peak_dbfs": -3.48,
+      "rms_dbfs": -16.88,
+      "spectral_centroid_hz": 231.2,
+      "band_pct": {
+        "sub_20_90": 72.41,
+        "mud_100_350": 11.8,
+        "voice_350_2500": 6.97,
+        "detail_2500_8000": 2.07,
+        "air_8000_18000": 0.14
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/impact__fs-222517-dramatic-hit",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/impact/fs-222517-dramatic-hit.ogg",
+      "category": "impact",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "qubodup via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/qubodup/sounds/222517/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 3.978,
+      "peak_dbfs": -0.23,
+      "rms_dbfs": -16.65,
+      "spectral_centroid_hz": 147.0,
+      "band_pct": {
+        "sub_20_90": 78.29,
+        "mud_100_350": 8.6,
+        "voice_350_2500": 6.34,
+        "detail_2500_8000": 0.02,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/impact__fs-347561-micheal-bay-hit",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/impact/fs-347561-micheal-bay-hit.ogg",
+      "category": "impact",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Kinoton via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/Kinoton/sounds/347561/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 3.999,
+      "peak_dbfs": -3.48,
+      "rms_dbfs": -14.96,
+      "spectral_centroid_hz": 90.8,
+      "band_pct": {
+        "sub_20_90": 46.15,
+        "mud_100_350": 5.07,
+        "voice_350_2500": 7.55,
+        "detail_2500_8000": 0.06,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "se/ding__fs-349504-triangle-open-04",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ding/fs-349504-triangle-open-04.ogg",
+      "category": "ding",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "cabled_mess via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/cabled_mess/sounds/349504/",
+      "profiles": [
+        "editorial-clean"
+      ],
+      "duration_s": 3.545,
+      "peak_dbfs": -0.79,
+      "rms_dbfs": -30.12,
+      "spectral_centroid_hz": 4434.8,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 0.98,
+        "voice_350_2500": 0.25,
+        "detail_2500_8000": 84.93,
+        "air_8000_18000": 13.76
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/ding__fs-634690-lil-pip",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ding/fs-634690-lil-pip.ogg",
+      "category": "ding",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "adh.dreaming via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/adh.dreaming/sounds/634690/",
+      "profiles": [
+        "editorial-clean"
+      ],
+      "duration_s": 0.058,
+      "peak_dbfs": -3.6,
+      "rms_dbfs": -21.63,
+      "spectral_centroid_hz": 1329.8,
+      "band_pct": {
+        "sub_20_90": 0.57,
+        "mud_100_350": 14.72,
+        "voice_350_2500": 84.15,
+        "detail_2500_8000": 0.28,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/ding__fs-571513-soft-notifications-bell-ding-d",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ding/fs-571513-soft-notifications-bell-ding-d.ogg",
+      "category": "ding",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "LegitCheese via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/LegitCheese/sounds/571513/",
+      "profiles": [
+        "editorial-clean"
+      ],
+      "duration_s": 0.695,
+      "peak_dbfs": -9.66,
+      "rms_dbfs": -28.01,
+      "spectral_centroid_hz": 2929.0,
+      "band_pct": {
+        "sub_20_90": 0.98,
+        "mud_100_350": 0.01,
+        "voice_350_2500": 55.49,
+        "detail_2500_8000": 43.26,
+        "air_8000_18000": 0.14
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/transition__fs-702773-swipe-wav",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/transition/fs-702773-swipe-wav.ogg",
+      "category": "transition",
+      "length_tag": "medium",
+      "license": "CC0 1.0",
+      "attribution": "LilMati via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/LilMati/sounds/702773/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.839,
+      "peak_dbfs": -4.3,
+      "rms_dbfs": -21.75,
+      "spectral_centroid_hz": 4224.6,
+      "band_pct": {
+        "sub_20_90": 0.04,
+        "mud_100_350": 0.01,
+        "voice_350_2500": 31.37,
+        "detail_2500_8000": 57.95,
+        "air_8000_18000": 10.61
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/transition__fs-786514-swoosh-v2",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/transition/fs-786514-swoosh-v2.ogg",
+      "category": "transition",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "migoreng1 via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/migoreng1/sounds/786514/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.3,
+      "peak_dbfs": 0.71,
+      "rms_dbfs": -3.12,
+      "spectral_centroid_hz": 368.7,
+      "band_pct": {
+        "sub_20_90": 9.14,
+        "mud_100_350": 36.99,
+        "voice_350_2500": 51.82,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/transition__fs-856168-cyberpunk-glitch-hologram-tran",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/transition/fs-856168-cyberpunk-glitch-hologram-tran.ogg",
+      "category": "transition",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "brktkrgll via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/brktkrgll/sounds/856168/",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 1.798,
+      "peak_dbfs": -5.77,
+      "rms_dbfs": -22.37,
+      "spectral_centroid_hz": 7009.8,
+      "band_pct": {
+        "sub_20_90": 2.4,
+        "mud_100_350": 3.25,
+        "voice_350_2500": 10.03,
+        "detail_2500_8000": 38.99,
+        "air_8000_18000": 44.97
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/transition__fs-816262-broomstick-whoosh-3-quiet-okm1",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/transition/fs-816262-broomstick-whoosh-3-quiet-okm1.ogg",
+      "category": "transition",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Sadiquecat via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/Sadiquecat/sounds/816262/",
+      "profiles": [
+        "universal-room",
+        "organic-cinema",
+        "editorial-clean"
+      ],
+      "duration_s": 0.361,
+      "peak_dbfs": 0.16,
+      "rms_dbfs": -11.38,
+      "spectral_centroid_hz": 30.9,
+      "band_pct": {
+        "sub_20_90": 0.81,
+        "mud_100_350": 18.05,
+        "voice_350_2500": 0.06,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "se/transition__fs-850347-swipe-various",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/transition/fs-850347-swipe-various.ogg",
+      "category": "transition",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Gravy42 via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/Gravy42/sounds/850347/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 3.668,
+      "peak_dbfs": -3.13,
+      "rms_dbfs": -25.26,
+      "spectral_centroid_hz": 107.7,
+      "band_pct": {
+        "sub_20_90": 49.2,
+        "mud_100_350": 0.37,
+        "voice_350_2500": 12.85,
+        "detail_2500_8000": 0.09,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "se/transition__fs-683096-woosh",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/transition/fs-683096-woosh.ogg",
+      "category": "transition",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "florianreichelt via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/florianreichelt/sounds/683096/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 1.497,
+      "peak_dbfs": -3.87,
+      "rms_dbfs": -17.73,
+      "spectral_centroid_hz": 109.4,
+      "band_pct": {
+        "sub_20_90": 66.34,
+        "mud_100_350": 22.85,
+        "voice_350_2500": 2.36,
+        "detail_2500_8000": 0.29,
+        "air_8000_18000": 0.04
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/glitch__fs-402451-fast-forward",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/glitch/fs-402451-fast-forward.ogg",
+      "category": "glitch",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "plasterbrain via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/plasterbrain/sounds/402451/",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 3.991,
+      "peak_dbfs": -5.69,
+      "rms_dbfs": -20.17,
+      "spectral_centroid_hz": 868.6,
+      "band_pct": {
+        "sub_20_90": 5.68,
+        "mud_100_350": 25.38,
+        "voice_350_2500": 63.63,
+        "detail_2500_8000": 3.92,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/glitch__fs-339521-vhs-rewind-forward-and-eject",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/glitch/fs-339521-vhs-rewind-forward-and-eject.ogg",
+      "category": "glitch",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "lucaslima via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/lucaslima/sounds/339521/",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 3.976,
+      "peak_dbfs": -0.8,
+      "rms_dbfs": -30.28,
+      "spectral_centroid_hz": 1189.3,
+      "band_pct": {
+        "sub_20_90": 8.28,
+        "mud_100_350": 33.2,
+        "voice_350_2500": 40.27,
+        "detail_2500_8000": 13.9,
+        "air_8000_18000": 0.04
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/glitch__fs-144546-touchs-wav",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/glitch/fs-144546-touchs-wav.ogg",
+      "category": "glitch",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "garogourou via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/garogourou/sounds/144546/",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 3.988,
+      "peak_dbfs": -8.19,
+      "rms_dbfs": -27.82,
+      "spectral_centroid_hz": 675.8,
+      "band_pct": {
+        "sub_20_90": 24.13,
+        "mud_100_350": 38.55,
+        "voice_350_2500": 29.89,
+        "detail_2500_8000": 2.46,
+        "air_8000_18000": 1.55
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/ambience__fs-329533-room-tone-in-an-apartment-livi",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ambience/fs-329533-room-tone-in-an-apartment-livi.ogg",
+      "category": "ambience",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "leonelmail via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/leonelmail/sounds/329533/",
+      "profiles": [
+        "universal-room",
+        "organic-cinema",
+        "editorial-clean"
+      ],
+      "duration_s": 17.307,
+      "peak_dbfs": -10.48,
+      "rms_dbfs": -22.85,
+      "spectral_centroid_hz": 23.6,
+      "band_pct": {
+        "sub_20_90": 40.34,
+        "mud_100_350": 0.32,
+        "voice_350_2500": 0.08,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "room_bed"
+    },
+    {
+      "id": "se/ambience__fs-426767-apartment-room-tone-wav",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ambience/fs-426767-apartment-room-tone-wav.ogg",
+      "category": "ambience",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "cMilan via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/cMilan/sounds/426767/",
+      "profiles": [
+        "universal-room",
+        "organic-cinema",
+        "editorial-clean"
+      ],
+      "duration_s": 20.0,
+      "peak_dbfs": -14.99,
+      "rms_dbfs": -31.12,
+      "spectral_centroid_hz": 124.9,
+      "band_pct": {
+        "sub_20_90": 27.82,
+        "mud_100_350": 31.74,
+        "voice_350_2500": 5.38,
+        "detail_2500_8000": 0.1,
+        "air_8000_18000": 0.07
+      },
+      "spectrum_role": "room_bed"
+    },
+    {
+      "id": "se/ambience__fs-329569-roomtone-bedroom-yew",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ambience/fs-329569-roomtone-bedroom-yew.ogg",
+      "category": "ambience",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "leonelmail via Freesound (CC0; credit optional)",
+      "source_url": "https://freesound.org/people/leonelmail/sounds/329569/",
+      "profiles": [
+        "universal-room",
+        "organic-cinema",
+        "editorial-clean"
+      ],
+      "duration_s": 20.0,
+      "peak_dbfs": -19.82,
+      "rms_dbfs": -32.96,
+      "spectral_centroid_hz": 446.6,
+      "band_pct": {
+        "sub_20_90": 19.51,
+        "mud_100_350": 5.14,
+        "voice_350_2500": 10.62,
+        "detail_2500_8000": 2.51,
+        "air_8000_18000": 1.72
+      },
+      "spectrum_role": "room_bed"
+    },
+    {
+      "id": "se/click__kenney-interface-click-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/click/kenney-interface-click-001.ogg",
+      "category": "click",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.097,
+      "peak_dbfs": -0.85,
+      "rms_dbfs": -25.33,
+      "spectral_centroid_hz": 1495.0,
+      "band_pct": {
+        "sub_20_90": 2.51,
+        "mud_100_350": 21.36,
+        "voice_350_2500": 56.43,
+        "detail_2500_8000": 16.25,
+        "air_8000_18000": 2.01
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/click__kenney-interface-select-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/click/kenney-interface-select-001.ogg",
+      "category": "click",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.04,
+      "peak_dbfs": -0.06,
+      "rms_dbfs": -16.28,
+      "spectral_centroid_hz": 2410.3,
+      "band_pct": {
+        "sub_20_90": 0.02,
+        "mud_100_350": 0.01,
+        "voice_350_2500": 70.58,
+        "detail_2500_8000": 29.32,
+        "air_8000_18000": 0.07
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/click__kenney-interface-select-002",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/click/kenney-interface-select-002.ogg",
+      "category": "click",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.04,
+      "peak_dbfs": 0.02,
+      "rms_dbfs": -15.06,
+      "spectral_centroid_hz": 1179.1,
+      "band_pct": {
+        "sub_20_90": 1.66,
+        "mud_100_350": 2.08,
+        "voice_350_2500": 79.33,
+        "detail_2500_8000": 16.51,
+        "air_8000_18000": 0.07
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/click__kenney-interface-select-003",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/click/kenney-interface-select-003.ogg",
+      "category": "click",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.207,
+      "peak_dbfs": -0.05,
+      "rms_dbfs": -15.59,
+      "spectral_centroid_hz": 3137.6,
+      "band_pct": {
+        "sub_20_90": 0.03,
+        "mud_100_350": 0.31,
+        "voice_350_2500": 14.62,
+        "detail_2500_8000": 84.1,
+        "air_8000_18000": 0.89
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/click__kenney-interface-tick-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/click/kenney-interface-tick-001.ogg",
+      "category": "click",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.009,
+      "peak_dbfs": -0.39,
+      "rms_dbfs": -15.65,
+      "spectral_centroid_hz": 9504.6,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.08,
+        "voice_350_2500": 16.29,
+        "detail_2500_8000": 30.07,
+        "air_8000_18000": 39.22
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/click__kenney-interface-toggle-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/click/kenney-interface-toggle-001.ogg",
+      "category": "click",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.098,
+      "peak_dbfs": 0.22,
+      "rms_dbfs": -11.72,
+      "spectral_centroid_hz": 2016.6,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.01,
+        "voice_350_2500": 70.38,
+        "detail_2500_8000": 28.98,
+        "air_8000_18000": 0.63
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/click__kenney-interface-toggle-002",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/click/kenney-interface-toggle-002.ogg",
+      "category": "click",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.096,
+      "peak_dbfs": 0.49,
+      "rms_dbfs": -9.74,
+      "spectral_centroid_hz": 2541.7,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.0,
+        "voice_350_2500": 82.85,
+        "detail_2500_8000": 16.06,
+        "air_8000_18000": 1.07
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/ui-blip__kenney-ui-rollover1",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ui-blip/kenney-ui-rollover1.ogg",
+      "category": "ui-blip",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/ui-audio",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.183,
+      "peak_dbfs": -4.94,
+      "rms_dbfs": -28.83,
+      "spectral_centroid_hz": 3891.8,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.02,
+        "voice_350_2500": 31.48,
+        "detail_2500_8000": 64.32,
+        "air_8000_18000": 4.18
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/ui-blip__kenney-ui-rollover2",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ui-blip/kenney-ui-rollover2.ogg",
+      "category": "ui-blip",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/ui-audio",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.05,
+      "peak_dbfs": -3.65,
+      "rms_dbfs": -25.65,
+      "spectral_centroid_hz": 1788.9,
+      "band_pct": {
+        "sub_20_90": 0.11,
+        "mud_100_350": 11.24,
+        "voice_350_2500": 79.19,
+        "detail_2500_8000": 7.9,
+        "air_8000_18000": 1.55
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/ui-blip__kenney-ui-rollover3",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ui-blip/kenney-ui-rollover3.ogg",
+      "category": "ui-blip",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/ui-audio",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.066,
+      "peak_dbfs": -5.38,
+      "rms_dbfs": -20.15,
+      "spectral_centroid_hz": 5641.4,
+      "band_pct": {
+        "sub_20_90": 6.31,
+        "mud_100_350": 6.23,
+        "voice_350_2500": 9.7,
+        "detail_2500_8000": 54.16,
+        "air_8000_18000": 22.48
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/ui-blip__kenney-ui-rollover4",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ui-blip/kenney-ui-rollover4.ogg",
+      "category": "ui-blip",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/ui-audio",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.066,
+      "peak_dbfs": -7.32,
+      "rms_dbfs": -24.26,
+      "spectral_centroid_hz": 1233.9,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.0,
+        "voice_350_2500": 90.6,
+        "detail_2500_8000": 9.13,
+        "air_8000_18000": 0.26
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/ui-blip__kenney-digital-twotone1",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ui-blip/kenney-digital-twotone1.ogg",
+      "category": "ui-blip",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/digital-audio",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.363,
+      "peak_dbfs": 0.26,
+      "rms_dbfs": -10.34,
+      "spectral_centroid_hz": 373.4,
+      "band_pct": {
+        "sub_20_90": 0.07,
+        "mud_100_350": 94.05,
+        "voice_350_2500": 4.6,
+        "detail_2500_8000": 1.25,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/ui-blip__kenney-digital-twotone2",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ui-blip/kenney-digital-twotone2.ogg",
+      "category": "ui-blip",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/digital-audio",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.384,
+      "peak_dbfs": -0.05,
+      "rms_dbfs": -10.49,
+      "spectral_centroid_hz": 438.9,
+      "band_pct": {
+        "sub_20_90": 0.04,
+        "mud_100_350": 58.12,
+        "voice_350_2500": 38.88,
+        "detail_2500_8000": 2.93,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "se/ui-blip__kenney-digital-threetone1",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ui-blip/kenney-digital-threetone1.ogg",
+      "category": "ui-blip",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/digital-audio",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.491,
+      "peak_dbfs": 0.05,
+      "rms_dbfs": -8.66,
+      "spectral_centroid_hz": 289.9,
+      "band_pct": {
+        "sub_20_90": 0.04,
+        "mud_100_350": 98.34,
+        "voice_350_2500": 1.55,
+        "detail_2500_8000": 0.06,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/ui-blip__kenney-digital-threetone2",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ui-blip/kenney-digital-threetone2.ogg",
+      "category": "ui-blip",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/digital-audio",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.572,
+      "peak_dbfs": -0.82,
+      "rms_dbfs": -11.21,
+      "spectral_centroid_hz": 551.8,
+      "band_pct": {
+        "sub_20_90": 0.08,
+        "mud_100_350": 1.57,
+        "voice_350_2500": 94.96,
+        "detail_2500_8000": 3.37,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/ui-blip__kenney-digital-pepsound1",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ui-blip/kenney-digital-pepsound1.ogg",
+      "category": "ui-blip",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/digital-audio",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.318,
+      "peak_dbfs": 0.19,
+      "rms_dbfs": -9.57,
+      "spectral_centroid_hz": 288.0,
+      "band_pct": {
+        "sub_20_90": 0.21,
+        "mud_100_350": 97.36,
+        "voice_350_2500": 2.34,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/ui-blip__kenney-digital-pepsound2",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ui-blip/kenney-digital-pepsound2.ogg",
+      "category": "ui-blip",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/digital-audio",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.367,
+      "peak_dbfs": -0.01,
+      "rms_dbfs": -10.88,
+      "spectral_centroid_hz": 270.9,
+      "band_pct": {
+        "sub_20_90": 0.25,
+        "mud_100_350": 99.2,
+        "voice_350_2500": 0.48,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/ui-blip__kenney-digital-pepsound3",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ui-blip/kenney-digital-pepsound3.ogg",
+      "category": "ui-blip",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/digital-audio",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.322,
+      "peak_dbfs": 0.01,
+      "rms_dbfs": -8.9,
+      "spectral_centroid_hz": 434.8,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 13.8,
+        "voice_350_2500": 86.16,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/glitch__kenney-interface-glitch-002",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/glitch/kenney-interface-glitch-002.ogg",
+      "category": "glitch",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.027,
+      "peak_dbfs": -0.43,
+      "rms_dbfs": -12.7,
+      "spectral_centroid_hz": 1355.4,
+      "band_pct": {
+        "sub_20_90": 59.65,
+        "mud_100_350": 7.6,
+        "voice_350_2500": 11.44,
+        "detail_2500_8000": 15.89,
+        "air_8000_18000": 3.97
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "se/glitch__kenney-sci-computernoise-000",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/glitch/kenney-sci-computernoise-000.ogg",
+      "category": "glitch",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/sci-fi-sounds",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 3.999,
+      "peak_dbfs": 0.01,
+      "rms_dbfs": -6.93,
+      "spectral_centroid_hz": 1073.7,
+      "band_pct": {
+        "sub_20_90": 0.09,
+        "mud_100_350": 0.23,
+        "voice_350_2500": 99.52,
+        "detail_2500_8000": 0.13,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/glitch__kenney-sci-computernoise-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/glitch/kenney-sci-computernoise-001.ogg",
+      "category": "glitch",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/sci-fi-sounds",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 3.999,
+      "peak_dbfs": -0.22,
+      "rms_dbfs": -7.95,
+      "spectral_centroid_hz": 1062.8,
+      "band_pct": {
+        "sub_20_90": 0.11,
+        "mud_100_350": 0.29,
+        "voice_350_2500": 99.4,
+        "detail_2500_8000": 0.14,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/glitch__kenney-sci-computernoise-002",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/glitch/kenney-sci-computernoise-002.ogg",
+      "category": "glitch",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/sci-fi-sounds",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 3.998,
+      "peak_dbfs": -0.39,
+      "rms_dbfs": -10.65,
+      "spectral_centroid_hz": 865.3,
+      "band_pct": {
+        "sub_20_90": 0.32,
+        "mud_100_350": 0.75,
+        "voice_350_2500": 98.37,
+        "detail_2500_8000": 0.43,
+        "air_8000_18000": 0.04
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/impact__kenney-impact-impactpunch-heavy-000",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/impact/kenney-impact-impactpunch-heavy-000.ogg",
+      "category": "impact",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.527,
+      "peak_dbfs": 0.19,
+      "rms_dbfs": -16.04,
+      "spectral_centroid_hz": 120.1,
+      "band_pct": {
+        "sub_20_90": 63.67,
+        "mud_100_350": 30.03,
+        "voice_350_2500": 2.58,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/impact__kenney-impact-impactpunch-heavy-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/impact/kenney-impact-impactpunch-heavy-001.ogg",
+      "category": "impact",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.442,
+      "peak_dbfs": 0.17,
+      "rms_dbfs": -15.41,
+      "spectral_centroid_hz": 138.8,
+      "band_pct": {
+        "sub_20_90": 68.14,
+        "mud_100_350": 25.18,
+        "voice_350_2500": 3.1,
+        "detail_2500_8000": 0.02,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/impact__kenney-impact-impactsoft-heavy-000",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/impact/kenney-impact-impactsoft-heavy-000.ogg",
+      "category": "impact",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.505,
+      "peak_dbfs": 0.11,
+      "rms_dbfs": -16.26,
+      "spectral_centroid_hz": 84.1,
+      "band_pct": {
+        "sub_20_90": 31.75,
+        "mud_100_350": 15.66,
+        "voice_350_2500": 0.09,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "se/impact__kenney-impact-impactsoft-heavy-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/impact/kenney-impact-impactsoft-heavy-001.ogg",
+      "category": "impact",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.569,
+      "peak_dbfs": 0.09,
+      "rms_dbfs": -16.34,
+      "spectral_centroid_hz": 78.3,
+      "band_pct": {
+        "sub_20_90": 67.34,
+        "mud_100_350": 3.28,
+        "voice_350_2500": 0.07,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/impact__kenney-sci-lowfrequency-explosion-000",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/impact/kenney-sci-lowfrequency-explosion-000.ogg",
+      "category": "impact",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/sci-fi-sounds",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 1.993,
+      "peak_dbfs": 0.01,
+      "rms_dbfs": -17.14,
+      "spectral_centroid_hz": 77.3,
+      "band_pct": {
+        "sub_20_90": 50.27,
+        "mud_100_350": 30.0,
+        "voice_350_2500": 0.0,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/impact__kenney-sci-lowfrequency-explosion-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/impact/kenney-sci-lowfrequency-explosion-001.ogg",
+      "category": "impact",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/sci-fi-sounds",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.993,
+      "peak_dbfs": -0.14,
+      "rms_dbfs": -14.75,
+      "spectral_centroid_hz": 90.1,
+      "band_pct": {
+        "sub_20_90": 45.42,
+        "mud_100_350": 42.65,
+        "voice_350_2500": 0.01,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/ding__kenney-interface-confirmation-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ding/kenney-interface-confirmation-001.ogg",
+      "category": "ding",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean"
+      ],
+      "duration_s": 0.287,
+      "peak_dbfs": 0.07,
+      "rms_dbfs": -10.32,
+      "spectral_centroid_hz": 500.7,
+      "band_pct": {
+        "sub_20_90": 0.08,
+        "mud_100_350": 1.31,
+        "voice_350_2500": 98.57,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/ding__kenney-interface-confirmation-002",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ding/kenney-interface-confirmation-002.ogg",
+      "category": "ding",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean"
+      ],
+      "duration_s": 0.526,
+      "peak_dbfs": 0.11,
+      "rms_dbfs": -13.8,
+      "spectral_centroid_hz": 1833.2,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 0.05,
+        "voice_350_2500": 84.12,
+        "detail_2500_8000": 15.81,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/ding__kenney-interface-confirmation-003",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ding/kenney-interface-confirmation-003.ogg",
+      "category": "ding",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean"
+      ],
+      "duration_s": 0.316,
+      "peak_dbfs": 0.2,
+      "rms_dbfs": -14.26,
+      "spectral_centroid_hz": 2544.7,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 0.02,
+        "voice_350_2500": 86.0,
+        "detail_2500_8000": 13.83,
+        "air_8000_18000": 0.15
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/ding__kenney-interface-bong-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ding/kenney-interface-bong-001.ogg",
+      "category": "ding",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean"
+      ],
+      "duration_s": 0.12,
+      "peak_dbfs": -0.06,
+      "rms_dbfs": -15.33,
+      "spectral_centroid_hz": 208.6,
+      "band_pct": {
+        "sub_20_90": 6.3,
+        "mud_100_350": 90.67,
+        "voice_350_2500": 0.46,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/ding__kenney-interface-glass-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ding/kenney-interface-glass-001.ogg",
+      "category": "ding",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.276,
+      "peak_dbfs": 0.11,
+      "rms_dbfs": -18.88,
+      "spectral_centroid_hz": 1889.7,
+      "band_pct": {
+        "sub_20_90": 0.45,
+        "mud_100_350": 0.48,
+        "voice_350_2500": 98.65,
+        "detail_2500_8000": 0.21,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/ding__kenney-interface-glass-002",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/ding/kenney-interface-glass-002.ogg",
+      "category": "ding",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.122,
+      "peak_dbfs": -0.1,
+      "rms_dbfs": -18.25,
+      "spectral_centroid_hz": 1946.0,
+      "band_pct": {
+        "sub_20_90": 0.87,
+        "mud_100_350": 0.86,
+        "voice_350_2500": 97.5,
+        "detail_2500_8000": 0.43,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/pop__kenney-interface-drop-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/kenney-interface-drop-001.ogg",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.109,
+      "peak_dbfs": -0.3,
+      "rms_dbfs": -19.88,
+      "spectral_centroid_hz": 1533.2,
+      "band_pct": {
+        "sub_20_90": 2.67,
+        "mud_100_350": 3.2,
+        "voice_350_2500": 85.41,
+        "detail_2500_8000": 7.41,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/pop__kenney-interface-drop-002",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/kenney-interface-drop-002.ogg",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.188,
+      "peak_dbfs": 0.08,
+      "rms_dbfs": -18.67,
+      "spectral_centroid_hz": 712.3,
+      "band_pct": {
+        "sub_20_90": 2.29,
+        "mud_100_350": 2.85,
+        "voice_350_2500": 93.91,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/pop__kenney-interface-drop-003",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/kenney-interface-drop-003.ogg",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.188,
+      "peak_dbfs": 0.19,
+      "rms_dbfs": -18.43,
+      "spectral_centroid_hz": 688.4,
+      "band_pct": {
+        "sub_20_90": 2.22,
+        "mud_100_350": 2.75,
+        "voice_350_2500": 94.1,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/pop__kenney-interface-pluck-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/kenney-interface-pluck-001.ogg",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.1,
+      "peak_dbfs": -1.62,
+      "rms_dbfs": -20.79,
+      "spectral_centroid_hz": 4659.2,
+      "band_pct": {
+        "sub_20_90": 0.2,
+        "mud_100_350": 0.29,
+        "voice_350_2500": 54.04,
+        "detail_2500_8000": 23.47,
+        "air_8000_18000": 20.27
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/pop__kenney-interface-pluck-002",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/kenney-interface-pluck-002.ogg",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.117,
+      "peak_dbfs": -0.25,
+      "rms_dbfs": -20.55,
+      "spectral_centroid_hz": 4718.3,
+      "band_pct": {
+        "sub_20_90": 0.15,
+        "mud_100_350": 0.17,
+        "voice_350_2500": 55.28,
+        "detail_2500_8000": 24.42,
+        "air_8000_18000": 17.26
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/pop__kenney-interface-maximize-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/kenney-interface-maximize-001.ogg",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.253,
+      "peak_dbfs": 0.11,
+      "rms_dbfs": -12.2,
+      "spectral_centroid_hz": 4635.0,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.0,
+        "voice_350_2500": 0.82,
+        "detail_2500_8000": 98.18,
+        "air_8000_18000": 0.97
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/pop__kenney-interface-maximize-002",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/kenney-interface-maximize-002.ogg",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.254,
+      "peak_dbfs": 0.93,
+      "rms_dbfs": -9.65,
+      "spectral_centroid_hz": 5399.3,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.0,
+        "voice_350_2500": 4.16,
+        "detail_2500_8000": 83.53,
+        "air_8000_18000": 12.31
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/transition__kenney-interface-maximize-005",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/transition/kenney-interface-maximize-005.ogg",
+      "category": "transition",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.503,
+      "peak_dbfs": 0.15,
+      "rms_dbfs": -15.98,
+      "spectral_centroid_hz": 6881.3,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.0,
+        "voice_350_2500": 2.56,
+        "detail_2500_8000": 63.71,
+        "air_8000_18000": 28.67
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/transition__kenney-interface-maximize-006",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/transition/kenney-interface-maximize-006.ogg",
+      "category": "transition",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.368,
+      "peak_dbfs": 0.03,
+      "rms_dbfs": -13.08,
+      "spectral_centroid_hz": 343.4,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 63.05,
+        "voice_350_2500": 36.95,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/transition__kenney-interface-minimize-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/transition/kenney-interface-minimize-001.ogg",
+      "category": "transition",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.255,
+      "peak_dbfs": -0.25,
+      "rms_dbfs": -12.38,
+      "spectral_centroid_hz": 4630.3,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.0,
+        "voice_350_2500": 0.85,
+        "detail_2500_8000": 98.17,
+        "air_8000_18000": 0.97
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/transition__kenney-interface-minimize-002",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/transition/kenney-interface-minimize-002.ogg",
+      "category": "transition",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.255,
+      "peak_dbfs": 0.42,
+      "rms_dbfs": -9.7,
+      "spectral_centroid_hz": 5401.9,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.0,
+        "voice_350_2500": 4.78,
+        "detail_2500_8000": 83.43,
+        "air_8000_18000": 11.78
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/transition__kenney-interface-scroll-001",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/transition/kenney-interface-scroll-001.ogg",
+      "category": "transition",
+      "length_tag": "medium",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.957,
+      "peak_dbfs": 0.63,
+      "rms_dbfs": -22.04,
+      "spectral_centroid_hz": 7901.2,
+      "band_pct": {
+        "sub_20_90": 0.13,
+        "mud_100_350": 2.18,
+        "voice_350_2500": 12.25,
+        "detail_2500_8000": 39.26,
+        "air_8000_18000": 40.58
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/transition__kenney-interface-scroll-002",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/transition/kenney-interface-scroll-002.ogg",
+      "category": "transition",
+      "length_tag": "medium",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/interface-sounds",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 1.0,
+      "peak_dbfs": -0.01,
+      "rms_dbfs": -21.1,
+      "spectral_centroid_hz": 511.4,
+      "band_pct": {
+        "sub_20_90": 5.56,
+        "mud_100_350": 29.01,
+        "voice_350_2500": 61.25,
+        "detail_2500_8000": 0.39,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/riser__kenney-digital-phaserup1",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/riser/kenney-digital-phaserup1.ogg",
+      "category": "riser",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/digital-audio",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.386,
+      "peak_dbfs": -6.79,
+      "rms_dbfs": -18.46,
+      "spectral_centroid_hz": 468.2,
+      "band_pct": {
+        "sub_20_90": 0.11,
+        "mud_100_350": 54.5,
+        "voice_350_2500": 45.26,
+        "detail_2500_8000": 0.08,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "se/riser__kenney-digital-phaserup2",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/riser/kenney-digital-phaserup2.ogg",
+      "category": "riser",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/digital-audio",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.316,
+      "peak_dbfs": -6.19,
+      "rms_dbfs": -18.74,
+      "spectral_centroid_hz": 608.1,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 43.12,
+        "voice_350_2500": 56.39,
+        "detail_2500_8000": 0.47,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/riser__kenney-digital-phaserup3",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/riser/kenney-digital-phaserup3.ogg",
+      "category": "riser",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/digital-audio",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.383,
+      "peak_dbfs": -6.71,
+      "rms_dbfs": -18.87,
+      "spectral_centroid_hz": 614.3,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 25.53,
+        "voice_350_2500": 74.03,
+        "detail_2500_8000": 0.42,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/riser__kenney-digital-powerup1",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/riser/kenney-digital-powerup1.ogg",
+      "category": "riser",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/digital-audio",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.955,
+      "peak_dbfs": 0.25,
+      "rms_dbfs": -12.65,
+      "spectral_centroid_hz": 2536.5,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.02,
+        "voice_350_2500": 60.52,
+        "detail_2500_8000": 39.46,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/riser__kenney-digital-powerup2",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/riser/kenney-digital-powerup2.ogg",
+      "category": "riser",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/digital-audio",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.179,
+      "peak_dbfs": 0.01,
+      "rms_dbfs": -12.78,
+      "spectral_centroid_hz": 2614.8,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.01,
+        "voice_350_2500": 63.3,
+        "detail_2500_8000": 36.68,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/riser__kenney-digital-powerup3",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/riser/kenney-digital-powerup3.ogg",
+      "category": "riser",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Kenney (kenney.nl), CC0; credit optional",
+      "source_url": "https://kenney.nl/assets/digital-audio",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.858,
+      "peak_dbfs": -0.05,
+      "rms_dbfs": -13.6,
+      "spectral_centroid_hz": 3250.7,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.01,
+        "voice_350_2500": 64.73,
+        "detail_2500_8000": 27.19,
+        "air_8000_18000": 8.07
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/whoosh__fs830856",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/whoosh/fs830856.ogg",
+      "category": "whoosh",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "MeanRaccoon via Freesound (CC0; credit given voluntarily)",
+      "source_url": "https://freesound.org/people/MeanRaccoon/sounds/830856/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.4,
+      "peak_dbfs": -4.14,
+      "rms_dbfs": -17.54,
+      "spectral_centroid_hz": 48.0,
+      "band_pct": {
+        "sub_20_90": 85.76,
+        "mud_100_350": 6.59,
+        "voice_350_2500": 0.03,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/whoosh__fs810485",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/whoosh/fs810485.ogg",
+      "category": "whoosh",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "CVLTIV8R via Freesound (CC0; credit given voluntarily)",
+      "source_url": "https://freesound.org/people/CVLTIV8R/sounds/810485/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.569,
+      "peak_dbfs": -4.84,
+      "rms_dbfs": -19.85,
+      "spectral_centroid_hz": 1586.6,
+      "band_pct": {
+        "sub_20_90": 25.94,
+        "mud_100_350": 5.48,
+        "voice_350_2500": 0.55,
+        "detail_2500_8000": 44.64,
+        "air_8000_18000": 0.73
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "se/whoosh__fs393811",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/whoosh/fs393811.ogg",
+      "category": "whoosh",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "deleted_user_6479820 via Freesound (CC0; credit given voluntarily)",
+      "source_url": "https://freesound.org/people/deleted_user_6479820/sounds/393811/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.172,
+      "peak_dbfs": -0.78,
+      "rms_dbfs": -13.44,
+      "spectral_centroid_hz": 1770.0,
+      "band_pct": {
+        "sub_20_90": 0.33,
+        "mud_100_350": 0.04,
+        "voice_350_2500": 89.38,
+        "detail_2500_8000": 9.42,
+        "air_8000_18000": 0.6
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/click__fs788933",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/click/fs788933.ogg",
+      "category": "click",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Mediasaur via Freesound (CC0; credit given voluntarily)",
+      "source_url": "https://freesound.org/people/Mediasaur/sounds/788933/",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.12,
+      "peak_dbfs": -1.03,
+      "rms_dbfs": -23.05,
+      "spectral_centroid_hz": 5917.0,
+      "band_pct": {
+        "sub_20_90": 3.03,
+        "mud_100_350": 2.28,
+        "voice_350_2500": 40.98,
+        "detail_2500_8000": 13.54,
+        "air_8000_18000": 37.91
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/pop__fs527522",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/fs527522.ogg",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Narjara via Freesound (CC0; credit given voluntarily)",
+      "source_url": "https://freesound.org/people/Narjara/sounds/527522/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.082,
+      "peak_dbfs": 0.05,
+      "rms_dbfs": -13.32,
+      "spectral_centroid_hz": 760.6,
+      "band_pct": {
+        "sub_20_90": 6.35,
+        "mud_100_350": 1.75,
+        "voice_350_2500": 91.67,
+        "detail_2500_8000": 0.08,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/pop__fs323738",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/fs323738.ogg",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Reitanna via Freesound (CC0; credit given voluntarily)",
+      "source_url": "https://freesound.org/people/Reitanna/sounds/323738/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.081,
+      "peak_dbfs": 0.07,
+      "rms_dbfs": -15.05,
+      "spectral_centroid_hz": 817.7,
+      "band_pct": {
+        "sub_20_90": 5.54,
+        "mud_100_350": 5.39,
+        "voice_350_2500": 87.89,
+        "detail_2500_8000": 0.46,
+        "air_8000_18000": 0.1
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/pop__fs202230",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/pop/fs202230.ogg",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "deraj via Freesound (CC0; credit given voluntarily)",
+      "source_url": "https://freesound.org/people/deraj/sounds/202230/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.196,
+      "peak_dbfs": 0.48,
+      "rms_dbfs": -13.81,
+      "spectral_centroid_hz": 1189.3,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.1,
+        "voice_350_2500": 98.43,
+        "detail_2500_8000": 1.45,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/riser__fs867126",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/riser/fs867126.ogg",
+      "category": "riser",
+      "length_tag": "long",
+      "license": "CC0 1.0",
+      "attribution": "Diim_1 via Freesound (CC0; credit given voluntarily)",
+      "source_url": "https://freesound.org/people/Diim_1/sounds/867126/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 2.018,
+      "peak_dbfs": -6.69,
+      "rms_dbfs": -25.52,
+      "spectral_centroid_hz": 452.1,
+      "band_pct": {
+        "sub_20_90": 60.29,
+        "mud_100_350": 6.92,
+        "voice_350_2500": 8.98,
+        "detail_2500_8000": 5.46,
+        "air_8000_18000": 1.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/impact__fs524817",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/impact/fs524817.ogg",
+      "category": "impact",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "DeVern via Freesound (CC0; credit given voluntarily)",
+      "source_url": "https://freesound.org/people/DeVern/sounds/524817/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.749,
+      "peak_dbfs": -2.97,
+      "rms_dbfs": -18.12,
+      "spectral_centroid_hz": 100.9,
+      "band_pct": {
+        "sub_20_90": 57.48,
+        "mud_100_350": 37.67,
+        "voice_350_2500": 0.77,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "se/impact__fs745291",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/impact/fs745291.ogg",
+      "category": "impact",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "SamsterBirdies via Freesound (CC0; credit given voluntarily)",
+      "source_url": "https://freesound.org/people/SamsterBirdies/sounds/745291/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.263,
+      "peak_dbfs": -3.89,
+      "rms_dbfs": -27.11,
+      "spectral_centroid_hz": 1341.9,
+      "band_pct": {
+        "sub_20_90": 0.34,
+        "mud_100_350": 4.57,
+        "voice_350_2500": 88.98,
+        "detail_2500_8000": 5.32,
+        "air_8000_18000": 0.03
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/tick__fs528561",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/tick/fs528561.ogg",
+      "category": "tick",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "Jummit via Freesound (CC0; credit given voluntarily)",
+      "source_url": "https://freesound.org/people/Jummit/sounds/528561/",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.076,
+      "peak_dbfs": -0.5,
+      "rms_dbfs": -15.01,
+      "spectral_centroid_hz": 2903.2,
+      "band_pct": {
+        "sub_20_90": 3.96,
+        "mud_100_350": 4.08,
+        "voice_350_2500": 31.08,
+        "detail_2500_8000": 54.73,
+        "air_8000_18000": 2.01
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "se/tick__fs384187",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/tick/fs384187.ogg",
+      "category": "tick",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "malle99 via Freesound (CC0; credit given voluntarily)",
+      "source_url": "https://freesound.org/people/malle99/sounds/384187/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.077,
+      "peak_dbfs": -3.38,
+      "rms_dbfs": -19.58,
+      "spectral_centroid_hz": 2608.4,
+      "band_pct": {
+        "sub_20_90": 0.18,
+        "mud_100_350": 0.06,
+        "voice_350_2500": 78.08,
+        "detail_2500_8000": 11.06,
+        "air_8000_18000": 9.1
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "se/tick__fs721514",
+      "pack": "sound-effects-cc0",
+      "rel_path": ".agents/skills/sound-effects/sfx/tick/fs721514.ogg",
+      "category": "tick",
+      "length_tag": "short",
+      "license": "CC0 1.0",
+      "attribution": "BaggoNotes via Freesound (CC0; credit given voluntarily)",
+      "source_url": "https://freesound.org/people/BaggoNotes/sounds/721514/",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.022,
+      "peak_dbfs": -0.88,
+      "rms_dbfs": -10.46,
+      "spectral_centroid_hz": 756.8,
+      "band_pct": {
+        "sub_20_90": 0.89,
+        "mud_100_350": 28.36,
+        "voice_350_2500": 62.34,
+        "detail_2500_8000": 7.42,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "mu/chime",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/chime.mp3",
+      "category": "transition",
+      "length_tag": "long",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Soft melodic chime \u2014 gentle positive beat: success/confirmation or a lighthearted transition. Sync to the visual moment.",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 2.5,
+      "peak_dbfs": -9.34,
+      "rms_dbfs": -32.36,
+      "spectral_centroid_hz": 3519.0,
+      "band_pct": {
+        "sub_20_90": 0.1,
+        "mud_100_350": 0.3,
+        "voice_350_2500": 0.14,
+        "detail_2500_8000": 98.62,
+        "air_8000_18000": 0.53
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "mu/click-soft",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/click-soft.mp3",
+      "category": "click",
+      "length_tag": "short",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Quiet short click \u2014 low-key UI tap / soft selection. Short accent, sync exactly to the on-screen action.",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.366,
+      "peak_dbfs": -5.39,
+      "rms_dbfs": -30.71,
+      "spectral_centroid_hz": 3977.8,
+      "band_pct": {
+        "sub_20_90": 0.32,
+        "mud_100_350": 0.25,
+        "voice_350_2500": 45.25,
+        "detail_2500_8000": 37.58,
+        "air_8000_18000": 16.56
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "mu/click",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/click.mp3",
+      "category": "click",
+      "length_tag": "short",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Crisp UI click \u2014 button press, toggle, selection. Short accent, sync exactly to the on-screen action.",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.366,
+      "peak_dbfs": -5.39,
+      "rms_dbfs": -30.71,
+      "spectral_centroid_hz": 3977.8,
+      "band_pct": {
+        "sub_20_90": 0.32,
+        "mud_100_350": 0.25,
+        "voice_350_2500": 45.25,
+        "detail_2500_8000": 37.58,
+        "air_8000_18000": 16.56
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "mu/error",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/error.mp3",
+      "category": "error",
+      "length_tag": "long",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Negative / error tone \u2014 failure state, a 'wrong' beat, or a glitchy interruption.",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 1.62,
+      "peak_dbfs": -21.18,
+      "rms_dbfs": -36.02,
+      "spectral_centroid_hz": 393.8,
+      "band_pct": {
+        "sub_20_90": 0.07,
+        "mud_100_350": 84.66,
+        "voice_350_2500": 12.77,
+        "detail_2500_8000": 2.46,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "mu/glitch-1",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/glitch-1.mp3",
+      "category": "glitch",
+      "length_tag": "long",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Punchy digital glitch \u2014 hard-cut accent or sudden reveal. Trigger on the hit; let the decay bleed into the next shot (J-cut).",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 2.638,
+      "peak_dbfs": 0.27,
+      "rms_dbfs": -17.1,
+      "spectral_centroid_hz": 2697.6,
+      "band_pct": {
+        "sub_20_90": 6.21,
+        "mud_100_350": 9.6,
+        "voice_350_2500": 30.43,
+        "detail_2500_8000": 18.45,
+        "air_8000_18000": 12.51
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "mu/glitch-2",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/glitch-2.mp3",
+      "category": "glitch",
+      "length_tag": "long",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Harsh, longer glitch \u2014 chaotic / jarring transition or a distorted reveal.",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 3.504,
+      "peak_dbfs": 0.8,
+      "rms_dbfs": -9.4,
+      "spectral_centroid_hz": 4789.5,
+      "band_pct": {
+        "sub_20_90": 10.24,
+        "mud_100_350": 8.19,
+        "voice_350_2500": 22.54,
+        "detail_2500_8000": 31.38,
+        "air_8000_18000": 21.9
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "mu/glitch-3",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/glitch-3.mp3",
+      "category": "glitch",
+      "length_tag": "long",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Low-key glitch texture \u2014 subtle digital shift, minimal transition that sits under other audio.",
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 3.096,
+      "peak_dbfs": -4.64,
+      "rms_dbfs": -31.4,
+      "spectral_centroid_hz": 8003.6,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 0.05,
+        "voice_350_2500": 9.57,
+        "detail_2500_8000": 41.11,
+        "air_8000_18000": 49.26
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "mu/impact-bass-1",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/impact-bass-1.mp3",
+      "category": "ui-blip",
+      "length_tag": "long",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Bass impact hit \u2014 logo/hero snap, headline slam. Trigger on the visual landing; decay carries into the next shot (J-cut).",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 2.116,
+      "peak_dbfs": -0.46,
+      "rms_dbfs": -5.0,
+      "spectral_centroid_hz": 50.9,
+      "band_pct": {
+        "sub_20_90": 98.37,
+        "mud_100_350": 0.04,
+        "voice_350_2500": 0.0,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "mu/impact-bass-2",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/impact-bass-2.mp3",
+      "category": "ui-blip",
+      "length_tag": "long",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Bass impact with a short swell \u2014 brief anticipation then a deep hit. Place so the peak lands on the reveal.",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 2.592,
+      "peak_dbfs": 0.01,
+      "rms_dbfs": -3.08,
+      "spectral_centroid_hz": 50.0,
+      "band_pct": {
+        "sub_20_90": 74.82,
+        "mud_100_350": 6.65,
+        "voice_350_2500": 0.01,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "mu/key-press",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/key-press.mp3",
+      "category": "ui-blip",
+      "length_tag": "short",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Single key press \u2014 one keystroke / terminal-input beat. Short accent, sync to the typed character.",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 0.4,
+      "peak_dbfs": -5.66,
+      "rms_dbfs": -39.25,
+      "spectral_centroid_hz": 6085.5,
+      "band_pct": {
+        "sub_20_90": 0.41,
+        "mud_100_350": 9.26,
+        "voice_350_2500": 5.96,
+        "detail_2500_8000": 67.45,
+        "air_8000_18000": 16.82
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "mu/notification",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/notification.mp3",
+      "category": "notification",
+      "length_tag": "long",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Notification chime \u2014 alert, message-in, toast/badge appears. Sync to the element entering.",
+      "profiles": [
+        "editorial-clean"
+      ],
+      "duration_s": 2.456,
+      "peak_dbfs": -2.58,
+      "rms_dbfs": -28.15,
+      "spectral_centroid_hz": 2206.4,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.0,
+        "voice_350_2500": 43.56,
+        "detail_2500_8000": 55.8,
+        "air_8000_18000": 0.64
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "mu/ping",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/ping.mp3",
+      "category": "ping",
+      "length_tag": "long",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Sharp electronic ping \u2014 punchy accent on a key reveal or data point. Sync to the beat.",
+      "profiles": [
+        "editorial-clean"
+      ],
+      "duration_s": 1.32,
+      "peak_dbfs": -4.49,
+      "rms_dbfs": -34.74,
+      "spectral_centroid_hz": 3858.3,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 0.02,
+        "voice_350_2500": 72.29,
+        "detail_2500_8000": 13.23,
+        "air_8000_18000": 14.43
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "mu/pop",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/pop.mp3",
+      "category": "pop",
+      "length_tag": "short",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Quick pop \u2014 element appear/spawn, chip/tag/badge in. Small precise accent, sync to the pop-in.",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.72,
+      "peak_dbfs": -3.19,
+      "rms_dbfs": -26.21,
+      "spectral_centroid_hz": 580.4,
+      "band_pct": {
+        "sub_20_90": 0.31,
+        "mud_100_350": 4.23,
+        "voice_350_2500": 95.3,
+        "detail_2500_8000": 0.02,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "mu/riser",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/riser.mp3",
+      "category": "riser",
+      "length_tag": "long",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Long cinematic riser (~10s build, peak at the end). Trigger at (climax_time \u2212 10.03s) so it crests exactly on the reveal.",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 10.032,
+      "peak_dbfs": 0.12,
+      "rms_dbfs": -17.34,
+      "spectral_centroid_hz": 565.4,
+      "band_pct": {
+        "sub_20_90": 42.31,
+        "mud_100_350": 23.08,
+        "voice_350_2500": 2.41,
+        "detail_2500_8000": 6.66,
+        "air_8000_18000": 1.15
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "mu/sparkle",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/sparkle.mp3",
+      "category": "sparkle",
+      "length_tag": "long",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Bright sparkle / shimmer \u2014 magical reveal or 'shine' highlight on a hero element. Sync to the highlight.",
+      "profiles": [
+        "editorial-clean"
+      ],
+      "duration_s": 1.802,
+      "peak_dbfs": 0.01,
+      "rms_dbfs": -18.47,
+      "spectral_centroid_hz": 4908.0,
+      "band_pct": {
+        "sub_20_90": 0.05,
+        "mud_100_350": 0.07,
+        "voice_350_2500": 13.25,
+        "detail_2500_8000": 81.38,
+        "air_8000_18000": 5.23
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "mu/typing",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/typing.mp3",
+      "category": "typing",
+      "length_tag": "long",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Typing burst (~1.5s of keys) \u2014 keyboard / code typing reveal, text-being-typed beat. Start as the text begins typing.",
+      "profiles": [
+        "editorial-clean",
+        "talking-head-reel",
+        "comedic-dry"
+      ],
+      "duration_s": 1.5,
+      "peak_dbfs": -9.13,
+      "rms_dbfs": -37.41,
+      "spectral_centroid_hz": 3270.0,
+      "band_pct": {
+        "sub_20_90": 0.04,
+        "mud_100_350": 1.33,
+        "voice_350_2500": 29.24,
+        "detail_2500_8000": 63.77,
+        "air_8000_18000": 5.58
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "mu/whoosh-cinematic",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/whoosh-cinematic.mp3",
+      "category": "whoosh",
+      "length_tag": "long",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Cinematic whoosh build (~5.5s) \u2014 sweeping scene transition. Align so the swell peaks on the cut.",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 5.544,
+      "peak_dbfs": -0.19,
+      "rms_dbfs": -17.94,
+      "spectral_centroid_hz": 136.1,
+      "band_pct": {
+        "sub_20_90": 86.58,
+        "mud_100_350": 7.54,
+        "voice_350_2500": 2.06,
+        "detail_2500_8000": 0.6,
+        "air_8000_18000": 0.21
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "mu/whoosh-short",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/whoosh-short.mp3",
+      "category": "whoosh",
+      "length_tag": "short",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Short whoosh \u2014 quick swipe/slide accent, fast element move, snappy transition. Sync to the motion.",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.575,
+      "peak_dbfs": -2.28,
+      "rms_dbfs": -19.22,
+      "spectral_centroid_hz": 382.9,
+      "band_pct": {
+        "sub_20_90": 0.02,
+        "mud_100_350": 52.67,
+        "voice_350_2500": 47.07,
+        "detail_2500_8000": 0.2,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "mu/whoosh",
+      "pack": "media-use-pixabay",
+      "rel_path": ".agents/skills/media-use/audio/assets/sfx/whoosh.mp3",
+      "category": "whoosh",
+      "length_tag": "short",
+      "license": "Pixabay Content License (Commercial OK, no attribution required)",
+      "attribution": "Pixabay via media-use bundle",
+      "description": "Punchy whoosh/impact \u2014 fast reveal or hard transition accent. Sync to the motion.",
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 0.575,
+      "peak_dbfs": -2.28,
+      "rms_dbfs": -19.22,
+      "spectral_centroid_hz": 382.9,
+      "band_pct": {
+        "sub_20_90": 0.02,
+        "mud_100_350": 52.67,
+        "voice_350_2500": 47.07,
+        "detail_2500_8000": 0.2,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "ge/paper-flip",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-paper-flip.wav",
+      "category": "foley",
+      "length_tag": "short",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/gynation/sounds/82379/ \"paper flip 3.wav\" by gynation (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "paper",
+        "page",
+        "card-flip",
+        "white-page"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.45,
+      "peak_dbfs": -2.26,
+      "rms_dbfs": -31.07,
+      "spectral_centroid_hz": 5932.7,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.5,
+        "voice_350_2500": 17.22,
+        "detail_2500_8000": 56.47,
+        "air_8000_18000": 25.77
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "ge/paper-riffle",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-paper-riffle.wav",
+      "category": "foley",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/davidbain/sounds/136778/ \"Page Turn\" by davidbain (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "paper",
+        "prints",
+        "montage",
+        "page-turn"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 1.0,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -30.35,
+      "spectral_centroid_hz": 2882.3,
+      "band_pct": {
+        "sub_20_90": 1.21,
+        "mud_100_350": 2.62,
+        "voice_350_2500": 63.73,
+        "detail_2500_8000": 27.06,
+        "air_8000_18000": 5.24
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "ge/whoosh-reverse",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-whoosh-reverse.wav",
+      "category": "whoosh",
+      "length_tag": "short",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/SlavicMagic/sounds/446010/ \"Backwards Whoosh\" by SlavicMagic (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "reverse",
+        "push-out",
+        "into-cut",
+        "suck"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.62,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -17.12,
+      "spectral_centroid_hz": 198.1,
+      "band_pct": {
+        "sub_20_90": 30.71,
+        "mud_100_350": 55.15,
+        "voice_350_2500": 5.57,
+        "detail_2500_8000": 0.53,
+        "air_8000_18000": 0.11
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "ge/swell-short",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-swell-short.wav",
+      "category": "riser",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/jordivburgel/sounds/218354/ \"Movie Short Swell\" by jordivburgel (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "swell",
+        "into-step-card",
+        "gap-riser",
+        "back-timed"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 1.65,
+      "peak_dbfs": -3.56,
+      "rms_dbfs": -16.08,
+      "spectral_centroid_hz": 804.5,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 12.43,
+        "voice_350_2500": 87.32,
+        "detail_2500_8000": 0.25,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "ge/wood-plane",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-wood-plane.wav",
+      "category": "foley",
+      "length_tag": "short",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/DeqstersLab/sounds/847374/ \"Victor No. 5, Face Planing, Doug Fir\" by DeqstersLab (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "craft",
+        "wood",
+        "workshop",
+        "carpenter",
+        "hand-plane"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.85,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -21.35,
+      "spectral_centroid_hz": 2397.5,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 3.26,
+        "voice_350_2500": 54.32,
+        "detail_2500_8000": 40.6,
+        "air_8000_18000": 1.74
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "ge/deep-boom",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-deep-boom.wav",
+      "category": "foley",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/Za-Games/sounds/539968/ \"Deep Boom\" by Za-Games (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "punchline",
+        "claim",
+        "reveal",
+        "sus"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 2.5,
+      "peak_dbfs": -0.96,
+      "rms_dbfs": -15.45,
+      "spectral_centroid_hz": 75.6,
+      "band_pct": {
+        "sub_20_90": 69.9,
+        "mud_100_350": 20.45,
+        "voice_350_2500": 1.43,
+        "detail_2500_8000": 0.02,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "ge/vinyl-scratch",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-vinyl-scratch.wav",
+      "category": "foley",
+      "length_tag": "short",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/ludvique/sounds/71853/ \"record_scratch.wav\" by ludvique (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "wait",
+        "freeze-frame",
+        "twist"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.448,
+      "peak_dbfs": -0.95,
+      "rms_dbfs": -13.93,
+      "spectral_centroid_hz": 874.7,
+      "band_pct": {
+        "sub_20_90": 4.02,
+        "mud_100_350": 27.23,
+        "voice_350_2500": 59.99,
+        "detail_2500_8000": 3.8,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "ge/error-beep",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-error-beep.wav",
+      "category": "foley",
+      "length_tag": "short",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/JonnyRuss01/sounds/478191/ \"Beep_Error_1.wav\" by JonnyRuss01 (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "wrong",
+        "myth",
+        "fail"
+      ],
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.245,
+      "peak_dbfs": -1.02,
+      "rms_dbfs": -13.25,
+      "spectral_centroid_hz": 5796.0,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.0,
+        "voice_350_2500": 9.1,
+        "detail_2500_8000": 61.83,
+        "air_8000_18000": 29.03
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "ge/metal-clang",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-metal-clang.wav",
+      "category": "foley",
+      "length_tag": "short",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/jasonLON/sounds/125404/ \"Metallic Clang.aif\" by jasonLON (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "fail",
+        "sudden",
+        "absurd"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.339,
+      "peak_dbfs": -1.01,
+      "rms_dbfs": -22.64,
+      "spectral_centroid_hz": 1966.8,
+      "band_pct": {
+        "sub_20_90": 7.84,
+        "mud_100_350": 4.92,
+        "voice_350_2500": 50.42,
+        "detail_2500_8000": 32.22,
+        "air_8000_18000": 0.54
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "ge/dark-sting",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-dark-sting.wav",
+      "category": "foley",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/nomiqbomi/sounds/578577/ \"Dark Crescendo 3\" by nomiqbomi (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "reveal",
+        "twist",
+        "drama"
+      ],
+      "profiles": [
+        "editorial-clean"
+      ],
+      "duration_s": 2.692,
+      "peak_dbfs": -2.64,
+      "rms_dbfs": -23.53,
+      "spectral_centroid_hz": 476.5,
+      "band_pct": {
+        "sub_20_90": 0.17,
+        "mud_100_350": 53.96,
+        "voice_350_2500": 44.17,
+        "detail_2500_8000": 0.87,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "ge/piano-sting",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-piano-sting.wav",
+      "category": "foley",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/ecfike/sounds/183500/ \"Piano Cord.wav\" by ecfike (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "drama",
+        "mystery",
+        "reveal"
+      ],
+      "profiles": [
+        "editorial-clean"
+      ],
+      "duration_s": 1.749,
+      "peak_dbfs": -3.08,
+      "rms_dbfs": -21.01,
+      "spectral_centroid_hz": 727.3,
+      "band_pct": {
+        "sub_20_90": 1.43,
+        "mud_100_350": 24.69,
+        "voice_350_2500": 57.66,
+        "detail_2500_8000": 2.11,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "ge/group-ooh",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-group-ooh.wav",
+      "category": "foley",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/CHallSmith/sounds/870650/ \"Group Ooh 1\" by CHallSmith (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "burn",
+        "spicy",
+        "shock"
+      ],
+      "profiles": [
+        "comedic-dry"
+      ],
+      "duration_s": 2.8,
+      "peak_dbfs": -0.99,
+      "rms_dbfs": -15.82,
+      "spectral_centroid_hz": 283.6,
+      "band_pct": {
+        "sub_20_90": 0.11,
+        "mud_100_350": 74.22,
+        "voice_350_2500": 25.54,
+        "detail_2500_8000": 0.05,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "ge/gong-hit",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-gong-hit.wav",
+      "category": "foley",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/rabban625/sounds/436486/ \"gong-013.wav\" by rabban625 (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "punchline",
+        "stop",
+        "verdict"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 2.9,
+      "peak_dbfs": -2.84,
+      "rms_dbfs": -20.16,
+      "spectral_centroid_hz": 554.9,
+      "band_pct": {
+        "sub_20_90": 15.77,
+        "mud_100_350": 39.6,
+        "voice_350_2500": 29.24,
+        "detail_2500_8000": 2.89,
+        "air_8000_18000": 0.42
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "ge/cricket-chirp",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-cricket-chirp.wav",
+      "category": "ambience",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/_sinny_/sounds/822935/ \"cricket chirping (slow)\" by _sinny_ (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "awkward",
+        "silence"
+      ],
+      "profiles": [
+        "universal-room",
+        "organic-cinema",
+        "editorial-clean"
+      ],
+      "duration_s": 2.8,
+      "peak_dbfs": -1.05,
+      "rms_dbfs": -20.85,
+      "spectral_centroid_hz": 8731.5,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.0,
+        "voice_350_2500": 0.01,
+        "detail_2500_8000": 44.01,
+        "air_8000_18000": 55.95
+      },
+      "spectrum_role": "room_bed"
+    },
+    {
+      "id": "ge/air-horn",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-air-horn.wav",
+      "category": "foley",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/jacksonacademyashmore/sounds/414208/ \"Airhorn\" by jacksonacademyashmore (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "hype",
+        "win"
+      ],
+      "profiles": [
+        "comedic-dry"
+      ],
+      "duration_s": 1.6,
+      "peak_dbfs": -0.98,
+      "rms_dbfs": -12.9,
+      "spectral_centroid_hz": 1672.4,
+      "band_pct": {
+        "sub_20_90": 0.03,
+        "mud_100_350": 6.74,
+        "voice_350_2500": 74.3,
+        "detail_2500_8000": 18.61,
+        "air_8000_18000": 0.27
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "ge/huh-voice",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-huh-voice.wav",
+      "category": "foley",
+      "length_tag": "short",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/davdud101/sounds/150505/ \"Huh? - Vocal\" by davdud101 (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "confused",
+        "disbelief"
+      ],
+      "profiles": [
+        "comedic-dry"
+      ],
+      "duration_s": 0.514,
+      "peak_dbfs": -1.12,
+      "rms_dbfs": -16.04,
+      "spectral_centroid_hz": 458.7,
+      "band_pct": {
+        "sub_20_90": 0.04,
+        "mud_100_350": 57.7,
+        "voice_350_2500": 42.08,
+        "detail_2500_8000": 0.14,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "ge/wow-voice",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-wow-voice.wav",
+      "category": "foley",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/willy_ineedthatapp_com/sounds/167355/ \"wow.mp3\" by willy_ineedthatapp_com (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "impressive",
+        "flex"
+      ],
+      "profiles": [
+        "comedic-dry"
+      ],
+      "duration_s": 1.6,
+      "peak_dbfs": -1.03,
+      "rms_dbfs": -15.69,
+      "spectral_centroid_hz": 1302.7,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 4.14,
+        "voice_350_2500": 95.49,
+        "detail_2500_8000": 0.36,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "ge/bike-honk",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-bike-honk.wav",
+      "category": "foley",
+      "length_tag": "short",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/AntumDeluge/sounds/188039/ \"Bicycle Horn\" by AntumDeluge (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "absurd",
+        "dumb",
+        "bad-joke"
+      ],
+      "profiles": [
+        "comedic-dry"
+      ],
+      "duration_s": 0.7,
+      "peak_dbfs": -0.97,
+      "rms_dbfs": -10.26,
+      "spectral_centroid_hz": 1593.2,
+      "band_pct": {
+        "sub_20_90": 0.07,
+        "mud_100_350": 0.02,
+        "voice_350_2500": 90.13,
+        "detail_2500_8000": 8.48,
+        "air_8000_18000": 1.27
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "ge/whip-crack",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-whip-crack.wav",
+      "category": "foley",
+      "length_tag": "short",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/SciFiSounds/sounds/529925/ \"Whip Crack.m4a\" by SciFiSounds (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "roast",
+        "savage",
+        "fast"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 0.476,
+      "peak_dbfs": -0.99,
+      "rms_dbfs": -16.93,
+      "spectral_centroid_hz": 2171.7,
+      "band_pct": {
+        "sub_20_90": 3.6,
+        "mud_100_350": 3.99,
+        "voice_350_2500": 65.83,
+        "detail_2500_8000": 21.23,
+        "air_8000_18000": 4.25
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "ge/tada",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-tada.wav",
+      "category": "foley",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/plasterbrain/sounds/397355/ \"Tada Fanfare A\" by plasterbrain (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "win",
+        "done",
+        "reveal"
+      ],
+      "profiles": [
+        "comedic-dry"
+      ],
+      "duration_s": 1.442,
+      "peak_dbfs": -2.17,
+      "rms_dbfs": -19.6,
+      "spectral_centroid_hz": 1471.5,
+      "band_pct": {
+        "sub_20_90": 0.02,
+        "mud_100_350": 4.33,
+        "voice_350_2500": 82.54,
+        "detail_2500_8000": 12.26,
+        "air_8000_18000": 0.79
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "ge/glass-break",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-glass-break.wav",
+      "category": "foley",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/avrahamy/sounds/141563/ \"Glass Break\" by avrahamy (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "fail",
+        "broke",
+        "shatter"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 1.484,
+      "peak_dbfs": -2.36,
+      "rms_dbfs": -20.57,
+      "spectral_centroid_hz": 4842.3,
+      "band_pct": {
+        "sub_20_90": 1.27,
+        "mud_100_350": 3.6,
+        "voice_350_2500": 14.8,
+        "detail_2500_8000": 68.02,
+        "air_8000_18000": 11.99
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "ge/cartoon-zip",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-cartoon-zip.wav",
+      "category": "foley",
+      "length_tag": "short",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/se2001/sounds/541507/ \"Cartoon Quick Zip 02\" by se2001 (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "fast",
+        "exit",
+        "gone"
+      ],
+      "profiles": [
+        "comedic-dry"
+      ],
+      "duration_s": 0.157,
+      "peak_dbfs": -1.04,
+      "rms_dbfs": -11.34,
+      "spectral_centroid_hz": 2114.7,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.0,
+        "voice_350_2500": 73.89,
+        "detail_2500_8000": 24.71,
+        "air_8000_18000": 1.39
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "ge/riser-short",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-riser-short.wav",
+      "category": "riser",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/syntheffects/sounds/685256/ \"Riser sound effect short.wav\" by syntheffects (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "build-up",
+        "suspense"
+      ],
+      "profiles": [
+        "editorial-clean",
+        "kinetic-street",
+        "organic-cinema"
+      ],
+      "duration_s": 2.13,
+      "peak_dbfs": -1.62,
+      "rms_dbfs": -16.93,
+      "spectral_centroid_hz": 1321.8,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 14.46,
+        "voice_350_2500": 71.02,
+        "detail_2500_8000": 14.31,
+        "air_8000_18000": 0.15
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "ge/oof-voice",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-oof-voice.wav",
+      "category": "foley",
+      "length_tag": "short",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/unfa/sounds/719053/ \"Oof (original)\" by unfa (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "fail",
+        "pain",
+        "ouch"
+      ],
+      "profiles": [
+        "comedic-dry"
+      ],
+      "duration_s": 0.272,
+      "peak_dbfs": -0.97,
+      "rms_dbfs": -16.02,
+      "spectral_centroid_hz": 544.3,
+      "band_pct": {
+        "sub_20_90": 0.02,
+        "mud_100_350": 59.31,
+        "voice_350_2500": 38.95,
+        "detail_2500_8000": 1.39,
+        "air_8000_18000": 0.31
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "ge/oh-no-voice",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-oh-no-voice.wav",
+      "category": "foley",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/Sadiquecat/sounds/801386/ \"Fear - ohno ohno ohno\" by Sadiquecat (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "mistake",
+        "dread"
+      ],
+      "profiles": [
+        "comedic-dry"
+      ],
+      "duration_s": 1.53,
+      "peak_dbfs": -0.99,
+      "rms_dbfs": -17.6,
+      "spectral_centroid_hz": 432.3,
+      "band_pct": {
+        "sub_20_90": 0.09,
+        "mud_100_350": 40.7,
+        "voice_350_2500": 58.95,
+        "detail_2500_8000": 0.1,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "ge/glitch-hit",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-glitch-hit.wav",
+      "category": "impact",
+      "length_tag": "short",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/h0p1r4e7o/sounds/673773/ \"Glitch SFX - 1 sek.wav\" by h0p1r4e7o (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "error",
+        "tech",
+        "glitch"
+      ],
+      "profiles": [
+        "kinetic-street",
+        "gaming-montage"
+      ],
+      "duration_s": 0.773,
+      "peak_dbfs": -3.23,
+      "rms_dbfs": -19.63,
+      "spectral_centroid_hz": 3157.7,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.01,
+        "voice_350_2500": 43.55,
+        "detail_2500_8000": 50.7,
+        "air_8000_18000": 5.5
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "ge/violin-sad",
+      "pack": "ghost-editor-cc0",
+      "rel_path": ".agents/skills/ghost-editor/library/sfx/cc0-violin-sad.wav",
+      "category": "foley",
+      "length_tag": "long",
+      "license": "CC0 1.0 public domain (Freesound; commercial OK, no credit, redistribution OK)",
+      "attribution": "https://freesound.org/people/andyssoundbox/sounds/234311/ \"Hearts and Flowers.wav\" by andyssoundbox (HQ preview, cdn.freesound.org/previews)",
+      "tags": [
+        "sad",
+        "pity"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street"
+      ],
+      "duration_s": 5.5,
+      "peak_dbfs": -0.99,
+      "rms_dbfs": -18.46,
+      "spectral_centroid_hz": 2202.3,
+      "band_pct": {
+        "sub_20_90": 0.02,
+        "mud_100_350": 0.0,
+        "voice_350_2500": 88.86,
+        "detail_2500_8000": 10.93,
+        "air_8000_18000": 0.18
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "tonal/atlantic-major-minor-a-bb",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Atlantic Major_Minor/Atlantic Major_Minor A#_Bb.wav",
+      "category": "tonal_drone",
+      "tonal_type": "tonal_drone",
+      "musical_key": "A#",
+      "length_tag": "long",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_drone",
+        "key:A#",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 125.005,
+      "peak_dbfs": -18.27,
+      "rms_dbfs": -32.98,
+      "spectral_centroid_hz": 728.8,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 3.37,
+        "voice_350_2500": 96.52,
+        "detail_2500_8000": 0.11,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "tonal/atlantic-major-minor-a",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Atlantic Major_Minor/Atlantic Major_Minor A.wav",
+      "category": "tonal_drone",
+      "tonal_type": "tonal_drone",
+      "musical_key": "A",
+      "length_tag": "long",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_drone",
+        "key:A",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 125.005,
+      "peak_dbfs": -18.68,
+      "rms_dbfs": -32.95,
+      "spectral_centroid_hz": 675.5,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 5.27,
+        "voice_350_2500": 94.69,
+        "detail_2500_8000": 0.04,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "tonal/atlantic-major-minor-b",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Atlantic Major_Minor/Atlantic Major_Minor B.wav",
+      "category": "tonal_drone",
+      "tonal_type": "tonal_drone",
+      "musical_key": "B",
+      "length_tag": "long",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_drone",
+        "key:B",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 125.005,
+      "peak_dbfs": -16.61,
+      "rms_dbfs": -31.11,
+      "spectral_centroid_hz": 790.4,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 2.58,
+        "voice_350_2500": 97.21,
+        "detail_2500_8000": 0.21,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "tonal/atlantic-major-minor-c-db",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Atlantic Major_Minor/Atlantic Major_Minor C#_Db.wav",
+      "category": "tonal_drone",
+      "tonal_type": "tonal_drone",
+      "musical_key": "C#",
+      "length_tag": "long",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_drone",
+        "key:C#",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 125.005,
+      "peak_dbfs": -17.93,
+      "rms_dbfs": -32.78,
+      "spectral_centroid_hz": 898.2,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 1.76,
+        "voice_350_2500": 98.08,
+        "detail_2500_8000": 0.16,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "tonal/atlantic-major-minor-c",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Atlantic Major_Minor/Atlantic Major_Minor C.wav",
+      "category": "tonal_drone",
+      "tonal_type": "tonal_drone",
+      "musical_key": "C",
+      "length_tag": "long",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_drone",
+        "key:C",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 125.005,
+      "peak_dbfs": -17.56,
+      "rms_dbfs": -31.98,
+      "spectral_centroid_hz": 828.6,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 1.77,
+        "voice_350_2500": 98.03,
+        "detail_2500_8000": 0.2,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "tonal/atlantic-major-minor-d-eb",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Atlantic Major_Minor/Atlantic Major_Minor D#_Eb.wav",
+      "category": "tonal_drone",
+      "tonal_type": "tonal_drone",
+      "musical_key": "D#",
+      "length_tag": "long",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_drone",
+        "key:D#",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 125.005,
+      "peak_dbfs": -18.88,
+      "rms_dbfs": -33.5,
+      "spectral_centroid_hz": 951.6,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 2.03,
+        "voice_350_2500": 97.65,
+        "detail_2500_8000": 0.32,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "tonal/atlantic-major-minor-d",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Atlantic Major_Minor/Atlantic Major_Minor D.wav",
+      "category": "tonal_drone",
+      "tonal_type": "tonal_drone",
+      "musical_key": "D",
+      "length_tag": "long",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_drone",
+        "key:D",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 125.005,
+      "peak_dbfs": -16.1,
+      "rms_dbfs": -30.76,
+      "spectral_centroid_hz": 957.6,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 1.71,
+        "voice_350_2500": 98.08,
+        "detail_2500_8000": 0.21,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "tonal/atlantic-major-minor-e",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Atlantic Major_Minor/Atlantic Major_Minor E.wav",
+      "category": "tonal_drone",
+      "tonal_type": "tonal_drone",
+      "musical_key": "E",
+      "length_tag": "long",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_drone",
+        "key:E",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 125.005,
+      "peak_dbfs": -17.67,
+      "rms_dbfs": -32.13,
+      "spectral_centroid_hz": 534.4,
+      "band_pct": {
+        "sub_20_90": 0.04,
+        "mud_100_350": 25.4,
+        "voice_350_2500": 74.53,
+        "detail_2500_8000": 0.02,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "tonal/atlantic-major-minor-f-gb",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Atlantic Major_Minor/Atlantic Major_Minor F#_Gb.wav",
+      "category": "tonal_drone",
+      "tonal_type": "tonal_drone",
+      "musical_key": "F#",
+      "length_tag": "long",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_drone",
+        "key:F#",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 125.005,
+      "peak_dbfs": -17.71,
+      "rms_dbfs": -32.12,
+      "spectral_centroid_hz": 576.2,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 7.62,
+        "voice_350_2500": 92.35,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "tonal/atlantic-major-minor-f",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Atlantic Major_Minor/Atlantic Major_Minor F.wav",
+      "category": "tonal_drone",
+      "tonal_type": "tonal_drone",
+      "musical_key": "F",
+      "length_tag": "long",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_drone",
+        "key:F",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 125.005,
+      "peak_dbfs": -18.74,
+      "rms_dbfs": -32.97,
+      "spectral_centroid_hz": 551.6,
+      "band_pct": {
+        "sub_20_90": 0.04,
+        "mud_100_350": 15.71,
+        "voice_350_2500": 84.23,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "tonal/atlantic-major-minor-g-ab",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Atlantic Major_Minor/Atlantic Major_Minor G#_Ab.wav",
+      "category": "tonal_drone",
+      "tonal_type": "tonal_drone",
+      "musical_key": "G#",
+      "length_tag": "long",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_drone",
+        "key:G#",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 125.005,
+      "peak_dbfs": -18.57,
+      "rms_dbfs": -33.26,
+      "spectral_centroid_hz": 659.0,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 3.63,
+        "voice_350_2500": 96.34,
+        "detail_2500_8000": 0.03,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "tonal/atlantic-major-minor-g",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Atlantic Major_Minor/Atlantic Major_Minor G.wav",
+      "category": "tonal_drone",
+      "tonal_type": "tonal_drone",
+      "musical_key": "G",
+      "length_tag": "long",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_drone",
+        "key:G",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 125.005,
+      "peak_dbfs": -17.32,
+      "rms_dbfs": -32.25,
+      "spectral_centroid_hz": 641.4,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 6.67,
+        "voice_350_2500": 93.27,
+        "detail_2500_8000": 0.02,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "tonal/ping-boom-major-minor-a-bb",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Ping Boom Major_Minor/Ping Boom Major_Minor A#_Bb.wav",
+      "category": "tonal_impact",
+      "tonal_type": "tonal_hit",
+      "musical_key": "A#",
+      "length_tag": "medium",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_hit",
+        "key:A#",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 13.0,
+      "peak_dbfs": -1.09,
+      "rms_dbfs": -23.42,
+      "spectral_centroid_hz": 85.8,
+      "band_pct": {
+        "sub_20_90": 86.91,
+        "mud_100_350": 5.41,
+        "voice_350_2500": 4.83,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "tonal/ping-boom-major-minor-a",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Ping Boom Major_Minor/Ping Boom Major_Minor A.wav",
+      "category": "tonal_impact",
+      "tonal_type": "tonal_hit",
+      "musical_key": "A",
+      "length_tag": "medium",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_hit",
+        "key:A",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 13.0,
+      "peak_dbfs": -0.68,
+      "rms_dbfs": -23.3,
+      "spectral_centroid_hz": 106.1,
+      "band_pct": {
+        "sub_20_90": 86.72,
+        "mud_100_350": 5.35,
+        "voice_350_2500": 5.25,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "tonal/ping-boom-major-minor-b",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Ping Boom Major_Minor/Ping Boom Major_Minor B.wav",
+      "category": "tonal_impact",
+      "tonal_type": "tonal_hit",
+      "musical_key": "B",
+      "length_tag": "medium",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_hit",
+        "key:B",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 13.0,
+      "peak_dbfs": -1.23,
+      "rms_dbfs": -23.44,
+      "spectral_centroid_hz": 86.7,
+      "band_pct": {
+        "sub_20_90": 87.0,
+        "mud_100_350": 5.3,
+        "voice_350_2500": 4.81,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "tonal/ping-boom-major-minor-c-db",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Ping Boom Major_Minor/Ping Boom Major_Minor C#_Db.wav",
+      "category": "tonal_impact",
+      "tonal_type": "tonal_hit",
+      "musical_key": "C#",
+      "length_tag": "medium",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_hit",
+        "key:C#",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 13.0,
+      "peak_dbfs": -1.19,
+      "rms_dbfs": -23.34,
+      "spectral_centroid_hz": 89.4,
+      "band_pct": {
+        "sub_20_90": 87.39,
+        "mud_100_350": 5.36,
+        "voice_350_2500": 4.45,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "tonal/ping-boom-major-minor-c",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Ping Boom Major_Minor/Ping Boom Major_Minor C.wav",
+      "category": "tonal_impact",
+      "tonal_type": "tonal_hit",
+      "musical_key": "C",
+      "length_tag": "medium",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_hit",
+        "key:C",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 13.0,
+      "peak_dbfs": -1.07,
+      "rms_dbfs": -23.34,
+      "spectral_centroid_hz": 91.9,
+      "band_pct": {
+        "sub_20_90": 86.53,
+        "mud_100_350": 5.29,
+        "voice_350_2500": 5.29,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "tonal/ping-boom-major-minor-d-eb",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Ping Boom Major_Minor/Ping Boom Major_Minor D#_Eb.wav",
+      "category": "tonal_impact",
+      "tonal_type": "tonal_hit",
+      "musical_key": "D#",
+      "length_tag": "medium",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_hit",
+        "key:D#",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 13.0,
+      "peak_dbfs": -0.25,
+      "rms_dbfs": -23.27,
+      "spectral_centroid_hz": 103.9,
+      "band_pct": {
+        "sub_20_90": 85.21,
+        "mud_100_350": 5.22,
+        "voice_350_2500": 6.77,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "tonal/ping-boom-major-minor-d",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Ping Boom Major_Minor/Ping Boom Major_Minor D.wav",
+      "category": "tonal_impact",
+      "tonal_type": "tonal_hit",
+      "musical_key": "D",
+      "length_tag": "medium",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_hit",
+        "key:D",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 13.0,
+      "peak_dbfs": -0.3,
+      "rms_dbfs": -23.36,
+      "spectral_centroid_hz": 88.5,
+      "band_pct": {
+        "sub_20_90": 87.54,
+        "mud_100_350": 5.27,
+        "voice_350_2500": 4.31,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "tonal/ping-boom-major-minor-e",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Ping Boom Major_Minor/Ping Boom Major_Minor E.wav",
+      "category": "tonal_impact",
+      "tonal_type": "tonal_hit",
+      "musical_key": "E",
+      "length_tag": "medium",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_hit",
+        "key:E",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 13.0,
+      "peak_dbfs": -0.6,
+      "rms_dbfs": -23.4,
+      "spectral_centroid_hz": 89.3,
+      "band_pct": {
+        "sub_20_90": 87.42,
+        "mud_100_350": 5.69,
+        "voice_350_2500": 3.98,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "tonal/ping-boom-major-minor-f-gb",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Ping Boom Major_Minor/Ping Boom Major_Minor F#_Gb.wav",
+      "category": "tonal_impact",
+      "tonal_type": "tonal_hit",
+      "musical_key": "F#",
+      "length_tag": "medium",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_hit",
+        "key:F#",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 13.0,
+      "peak_dbfs": -0.56,
+      "rms_dbfs": -23.44,
+      "spectral_centroid_hz": 90.7,
+      "band_pct": {
+        "sub_20_90": 87.71,
+        "mud_100_350": 5.43,
+        "voice_350_2500": 3.89,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "tonal/ping-boom-major-minor-f",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Ping Boom Major_Minor/Ping Boom Major_Minor F.wav",
+      "category": "tonal_impact",
+      "tonal_type": "tonal_hit",
+      "musical_key": "F",
+      "length_tag": "medium",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_hit",
+        "key:F",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 13.0,
+      "peak_dbfs": -0.76,
+      "rms_dbfs": -23.38,
+      "spectral_centroid_hz": 88.8,
+      "band_pct": {
+        "sub_20_90": 88.16,
+        "mud_100_350": 5.35,
+        "voice_350_2500": 3.67,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "tonal/ping-boom-major-minor-g-ab",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Ping Boom Major_Minor/Ping Boom Major_Minor G#_Ab.wav",
+      "category": "tonal_impact",
+      "tonal_type": "tonal_hit",
+      "musical_key": "G#",
+      "length_tag": "medium",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_hit",
+        "key:G#",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 13.0,
+      "peak_dbfs": -0.81,
+      "rms_dbfs": -23.27,
+      "spectral_centroid_hz": 121.2,
+      "band_pct": {
+        "sub_20_90": 84.39,
+        "mud_100_350": 5.26,
+        "voice_350_2500": 7.47,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "tonal/ping-boom-major-minor-g",
+      "pack": "multiply-sound-tonal",
+      "rel_path": "studio_kit/sfx/tonal_pack/Ping Boom Major_Minor/Ping Boom Major_Minor G.wav",
+      "category": "tonal_impact",
+      "tonal_type": "tonal_hit",
+      "musical_key": "G",
+      "length_tag": "medium",
+      "license": "Copyright-Free (Multiply Sound / CHPTRS Free Pack)",
+      "attribution": "Multiply Sound (c01Oqf69CC4)",
+      "tags": [
+        "tonal",
+        "tonal_hit",
+        "key:G",
+        "cinematic",
+        "musical"
+      ],
+      "profiles": [
+        "organic-cinema",
+        "editorial-clean",
+        "kinetic-street",
+        "cinematic-essay"
+      ],
+      "duration_s": 13.0,
+      "peak_dbfs": -1.04,
+      "rms_dbfs": -23.39,
+      "spectral_centroid_hz": 120.6,
+      "band_pct": {
+        "sub_20_90": 83.96,
+        "mud_100_350": 5.27,
+        "voice_350_2500": 7.85,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    }
+  ]
+}

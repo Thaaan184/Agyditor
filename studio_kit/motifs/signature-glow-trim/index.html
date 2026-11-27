@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Signature Glow Trim Motif</title>
+<style>
+  @font-face {
+    font-family: "Instrument Serif";
+    src: url("./fonts/InstrumentSerif.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "JetBrains Mono";
+    src: url("./fonts/JetBrainsMono-Latin.woff2") format("woff2");
+    font-weight: 100 800;
+    font-style: normal;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+  }
+  .stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sig-wrap {
+    position: relative;
+    width: 1120px;
+    height: 250px;
+  }
+  svg.sig-svg {
+    position: absolute;
+    inset: 0;
+    width: 1120px;
+    height: 250px;
+    overflow: visible;
+  }
+  .emitter-nib {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 26px;
+    height: 26px;
+    margin-left: -13px;
+    margin-top: -13px;
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: transform, opacity;
+  }
+  .kicker {
+    margin-top: 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+</style>
+<script src="./motion_primitives.js"></script>
+<script src="./optical_stage.js"></script>
+<script src="./vendor/three_optical.bundle.js"></script>
+</head>
+<body>
+<div id="stage" class="stage"></div>
+<script>
+(function () {
+  var glyphItems = [];
+  var nibEl = null;
+  var kickerEl = null;
+  var totalAllLen = 1;
+  var cfg = null;
+
+  function renderFrame(t) {
+    if (!cfg || glyphItems.length === 0) return;
+    var drawDur = Math.max(0.4, Number(cfg.draw_duration_s) || 2.1);
+    var t0 = 0.08;
+    var cursorLen = totalAllLen * AGYMotion.CURVES.appleOut(AGYMotion.clamp01((t - t0) / drawDur));
+
+    var activeTip = null;
+    var activeNibAlpha = 0;
+
+    for (var i = 0; i < glyphItems.length; i++) {
+      var g = glyphItems[i];
+      var localProgress = AGYMotion.clamp01((cursorLen - g.startLen) / Math.max(1, g.len));
+      var drawn = g.len * localProgress;
+
+      g.pathEl.style.strokeDasharray = g.len.toFixed(2);
+      g.pathEl.style.strokeDashoffset = Math.max(0, g.len - drawn).toFixed(2);
+      g.pathEl.style.strokeOpacity = localProgress > 0 ? (1 - AGYMotion.smoothstep(0.75, 1.0, localProgress) * 0.55).toFixed(3) : "0";
+
+      g.glowEl.style.strokeDasharray = g.len.toFixed(2);
+      g.glowEl.style.strokeDashoffset = Math.max(0, g.len - drawn).toFixed(2);
+      g.glowEl.style.strokeOpacity = localProgress > 0 && localProgress < 1 ? "0.95" : "0.18";
+
+      g.fillEl.style.fillOpacity = AGYMotion.smoothstep(0.55, 1.0, localProgress).toFixed(4);
+
+      if (localProgress > 0 && localProgress < 1 && !activeTip) {
+        activeTip = g.pathEl.getPointAtLength(Math.min(g.len, drawn));
+        activeNibAlpha = AGYMotion.smoothstep(0.0, 0.06, (t - t0) / drawDur) * (1 - AGYMotion.smoothstep(0.92, 1.0, (t - t0) / drawDur));
+      }
+    }
+
+    if (nibEl) {
+      if (activeTip && activeNibAlpha > 0.02) {
+        nibEl.style.opacity = activeNibAlpha.toFixed(4);
+        nibEl.style.transform = "translate3d(" + activeTip.x.toFixed(2) + "px," + activeTip.y.toFixed(2) + "px,0)";
+      } else {
+        nibEl.style.opacity = "0";
+      }
+    }
+
+    if (kickerEl) {
+      var k = AGYMotion.kinetic20Move("tracking-expand", t, t0 + drawDur * 0.48, { durationS: 0.45, targetTrackingEm: 0.22 });
+      kickerEl.style.opacity = k.opacity.toFixed(4);
+      kickerEl.style.letterSpacing = k.letterSpacingEm.toFixed(4) + "em";
+    }
+  }
+
+  motif.define({
+    async setup(props, ctx) {
+      cfg = props;
+      await document.fonts.load('italic 400 132px "Instrument Serif"');
+      await document.fonts.load('500 19px "JetBrains Mono"');
+
+      var stage = document.getElementById("stage");
+      stage.replaceChildren();
+      glyphItems = [];
+
+      var ink = props.ink || "#F8FAFC";
+      var glow = props.glow_color || "#22C55E";
+      var label = String(props.label || "Optical Signature");
+
+      var resp = await fetch("./fonts/InstrumentSerif.ttf");
+      var ttfBuf = await resp.arrayBuffer();
+      var otFont = THREEX.parseTtfOpenType(ttfBuf);
+
+      var wrap = document.createElement("div");
+      wrap.className = "sig-wrap";
+
+      var ns = "http://www.w3.org/2000/svg";
+      var svg = document.createElementNS(ns, "svg");
+      svg.setAttribute("class", "sig-svg");
+      svg.setAttribute("viewBox", "0 0 1120 250");
+
+      var defs = document.createElementNS(ns, "defs");
+      var filt = document.createElementNS(ns, "filter");
+      filt.setAttribute("id", "sig-bloom");
+      filt.setAttribute("x", "-30%");
+      filt.setAttribute("y", "-40%");
+      filt.setAttribute("width", "160%");
+      filt.setAttribute("height", "180%");
+      var blur = document.createElementNS(ns, "feGaussianBlur");
+      blur.setAttribute("stdDeviation", "6");
+      filt.appendChild(blur);
+      defs.appendChild(filt);
+      svg.appendChild(defs);
+
+      function layoutSafeGlyphs(font, text, baseY, fontSize, boxWidth) {
+        var glyphs = [];
+        var adv = 0;
+        var prevG = null;
+        for (var i = 0; i < text.length; i++) {
+          var g = font.charToGlyph(text[i]);
+          if (prevG) adv += (font.getKerningValue(prevG, g) / (font.unitsPerEm || 1000)) * fontSize;
+          glyphs.push({ glyph: g, x: adv });
+          adv += ((g.advanceWidth || 400) / (font.unitsPerEm || 1000)) * fontSize;
+          prevG = g;
+        }
+        var fitScale = Math.min(1.0, (boxWidth - 120) / Math.max(10, adv));
+        var scaledSize = fontSize * fitScale;
+        var totalW = adv * fitScale;
+        var startX = (boxWidth - totalW) * 0.5;
+        return glyphs.map(function (it) {
+          return it.glyph.getPath(startX + it.x * fitScale, baseY, scaledSize);
+        });
+      }
+
+      var glyphPaths = layoutSafeGlyphs(otFont, label, 178, 148, 1120);
+      var runningLen = 0;
+
+      for (var i = 0; i < glyphPaths.length; i++) {
+        var dStr = glyphPaths[i].toPathData(2);
+        if (!dStr || dStr.trim() === "") continue;
+
+        var fillEl = document.createElementNS(ns, "path");
+        fillEl.setAttribute("d", dStr);
+        fillEl.setAttribute("fill", ink);
+        fillEl.setAttribute("fill-opacity", "0");
+
+        var glowEl = document.createElementNS(ns, "path");
+        glowEl.setAttribute("d", dStr);
+        glowEl.setAttribute("fill", "none");
+        glowEl.setAttribute("stroke", glow);
+        glowEl.setAttribute("stroke-width", "5.5");
+        glowEl.setAttribute("stroke-linecap", "round");
+        glowEl.setAttribute("stroke-linejoin", "round");
+        glowEl.setAttribute("filter", "url(#sig-bloom)");
+
+        var pathEl = document.createElementNS(ns, "path");
+        pathEl.setAttribute("d", dStr);
+        pathEl.setAttribute("fill", "none");
+        pathEl.setAttribute("stroke", ink);
+        pathEl.setAttribute("stroke-width", "2.4");
+        pathEl.setAttribute("stroke-linecap", "round");
+        pathEl.setAttribute("stroke-linejoin", "round");
+
+        svg.appendChild(fillEl);
+        svg.appendChild(glowEl);
+        svg.appendChild(pathEl);
+
+        var gLen = Math.max(1, pathEl.getTotalLength());
+        glyphItems.push({
+          fillEl: fillEl,
+          glowEl: glowEl,
+          pathEl: pathEl,
+          startLen: runningLen,
+          len: gLen
+        });
+        runningLen += gLen;
+      }
+
+      totalAllLen = Math.max(1, runningLen);
+      wrap.appendChild(svg);
+
+      nibEl = document.createElement("div");
+      nibEl.className = "emitter-nib";
+      nibEl.style.background = "radial-gradient(circle, #FFFFFF 0%, " + glow + " 46%, transparent 74%)";
+      nibEl.style.boxShadow = "0 0 28px 9px " + glow;
+      wrap.appendChild(nibEl);
+      stage.appendChild(wrap);
+
+      if (props.kicker && String(props.kicker).trim() !== "") {
+        kickerEl = document.createElement("div");
+        kickerEl.className = "kicker";
+        kickerEl.style.color = "#94A3B8";
+        kickerEl.textContent = String(props.kicker);
+        stage.appendChild(kickerEl);
+      } else {
+        kickerEl = null;
+      }
+
+      renderFrame(0, ctx);
+    },
+    frame(t, ctx) {
+      renderFrame(t, ctx);
+    }
+  });
+}());
+</script>
+</body>
+</html>

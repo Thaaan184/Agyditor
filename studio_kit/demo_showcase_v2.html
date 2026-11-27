@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<title>AGY Studio v2 3D Optical Showcase</title>
+<style>
+  @font-face {
+    font-family: "Inter Tight";
+    src: url("./fonts/InterTight-Latin.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Inter Tight";
+    src: url("./fonts/InterTight-Italic.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Instrument Serif";
+    src: url("./fonts/InstrumentSerif.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Oswald";
+    src: url("./fonts/Oswald-Latin.woff2") format("woff2");
+    font-weight: 200 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "JetBrains Mono";
+    src: url("./fonts/JetBrainsMono-Latin.woff2") format("woff2");
+    font-weight: 100 800;
+    font-style: normal;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    background: #0B0F17;
+    color: #F8FAFC;
+    font-family: "Inter Tight", sans-serif;
+  }
+  .canvas {
+    position: relative;
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    background: #0B0F17;
+  }
+  .bg-parallax {
+    position: absolute;
+    inset: -140px;
+    background:
+      radial-gradient(48% 36% at 50% 42%, rgba(14, 165, 233, 0.20), transparent 72%),
+      radial-gradient(56% 42% at 22% 76%, rgba(255, 59, 92, 0.11), transparent 70%),
+      linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 110px 110px, 110px 110px;
+    will-change: transform;
+  }
+  .vignette {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(76% 72% at 50% 48%, transparent 48%, rgba(3, 6, 14, 0.78) 100%);
+  }
+  .scene {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    will-change: transform, opacity, filter;
+  }
+
+  /* Beat 1: 3D Spiral Mixed-Voice */
+  .b1-wrap {
+    perspective: 1100px;
+  }
+  .node-3d {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    transform-origin: center center;
+    will-change: transform, opacity, filter;
+  }
+  .v-conn {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 300;
+    font-size: 54px;
+    letter-spacing: 0.16em;
+    color: #94A3B8;
+  }
+  .v-hero {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 800;
+    font-size: 104px;
+    letter-spacing: -0.04em;
+    line-height: 0.94;
+    text-shadow: 0 22px 46px rgba(0, 0, 0, 0.58);
+  }
+  .v-accent {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 124px;
+    letter-spacing: -0.015em;
+    color: #0EA5E9;
+    font-size-adjust: from-font;
+    text-shadow: 0 22px 46px rgba(14, 165, 233, 0.28);
+  }
+  @supports not (font-size-adjust: from-font) {
+    .v-accent { line-height: 1.02; }
+  }
+  .kicker-mono {
+    position: absolute;
+    left: 50%;
+    bottom: 260px;
+    transform: translateX(-50%);
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    color: #94A3B8;
+    white-space: nowrap;
+  }
+
+  /* Beat 2: Three.js Extrude + Cylinder Orbit + GLSL Post Canvas */
+  #gl-canvas {
+    position: absolute;
+    inset: 0;
+    width: 1080px;
+    height: 1920px;
+    display: block;
+  }
+  .b2-flash-overlay {
+    position: absolute;
+    inset: 0;
+    background: #FFFFFF;
+    opacity: 0;
+    mix-blend-mode: screen;
+    pointer-events: none;
+  }
+
+  /* Beat 3: Signature Glow Trim */
+  .b3-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sig-wrap {
+    position: relative;
+    width: 960px;
+    height: 240px;
+  }
+  svg.sig-svg {
+    position: absolute;
+    inset: 0;
+    width: 960px;
+    height: 240px;
+    overflow: visible;
+  }
+  .emitter-nib {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    margin-left: -14px;
+    margin-top: -14px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #FFFFFF 0%, #22C55E 44%, transparent 74%);
+    box-shadow: 0 0 30px 10px #22C55E;
+    opacity: 0;
+  }
+
+  /* Beat 4: Dolly Zoom Lock */
+  .b4-dolly {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    perspective: 950px;
+  }
+  .b4-bg-ring {
+    position: absolute;
+    width: 680px;
+    height: 680px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(14, 165, 233, 0.34);
+    box-shadow: 0 0 90px rgba(14, 165, 233, 0.14);
+  }
+  .b4-lock {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    font-size-adjust: from-font;
+  }
+  .b4-sans {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 800;
+    font-size: 118px;
+    letter-spacing: -0.04em;
+    text-shadow: 0 24px 52px rgba(0, 0, 0, 0.65);
+  }
+  .b4-serif {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-size: 132px;
+    color: #0EA5E9;
+  }
+  .b4-sub {
+    margin-top: 26px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+    letter-spacing: 0.22em;
+    color: #94A3B8;
+  }
+
+  /* Seam GLSL Optical Whip Overlay Canvas */
+  #shader-fx {
+    position: absolute;
+    inset: 0;
+    width: 1080px;
+    height: 1920px;
+    pointer-events: none;
+    opacity: 0;
+  }
+</style>
+<script src="./motion_primitives.js"></script>
+<script src="./keyframe_rig.js"></script>
+<script src="./optical_stage.js"></script>
+<script src="./vendor/three_optical.bundle.js"></script>
+</head>
+<body>
+<div class="canvas" id="canvas">
+  <div class="bg-parallax" id="bg-parallax"></div>
+  <div class="vignette"></div>
+
+  <!-- Beat 1: 0.00 -> 2.60 (3D Spiral Mixed-Voice + 35mm DoF) -->
+  <section class="scene b1-wrap" id="scene1">
+    <div id="b1-words"></div>
+    <div class="kicker-mono" id="b1-kicker">01 / 35MM SPIRAL KEYFRAMED DOF</div>
+  </section>
+
+  <!-- Beat 2: 2.35 -> 5.30 (Three.js Extrude + Cylinder Orbit + SpotLight + Pop-Up Overshoot) -->
+  <section class="scene" id="scene2">
+    <canvas id="gl-canvas"></canvas>
+    <div class="kicker-mono" id="b2-kicker">02 / 3D EXTRUDE + CYLINDER + SPOTLIGHT</div>
+    <div class="b2-flash-overlay" id="b2-flash"></div>
+  </section>
+
+  <!-- Beat 3: 5.05 -> 7.25 (Trim Path Glow Nib + Radial Optical Out) -->
+  <section class="scene b3-center" id="scene3">
+    <div class="sig-wrap" id="sig-wrap">
+      <svg class="sig-svg" id="sig-svg" viewBox="0 0 960 240">
+        <defs>
+          <filter id="glow-filt" x="-30%" y="-40%" width="160%" height="180%">
+            <feGaussianBlur stdDeviation="6"></feGaussianBlur>
+          </filter>
+        </defs>
+      </svg>
+      <div class="emitter-nib" id="sig-nib"></div>
+    </div>
+    <div class="kicker-mono" id="b3-kicker">03 / TRIM PATH BLOOM NIB</div>
+  </section>
+
+  <!-- Beat 4: 7.05 -> 9.00 (Solved Dolly Zoom Lock) -->
+  <section class="scene b4-dolly" id="scene4">
+    <div class="b4-bg-ring" id="b4-ring"></div>
+    <div class="b4-lock" id="b4-lock">
+      <span class="b4-sans">PURE</span>
+      <span class="b4-serif">depth</span>
+    </div>
+    <div class="b4-sub" id="b4-sub">AGY STUDIO V2 / 4-AXIS RIG</div>
+  </section>
+
+  <!-- Three.js ShaderPass Transition Bridge Canvas -->
+  <canvas id="shader-fx"></canvas>
+</div>
+
+<script>
+(function () {
+  var DUR = 9.0;
+  var FPS = 60;
+  window.__meta = { dur: DUR, fps: FPS };
+
+  var b1Nodes = [];
+  var sigGlyphs = [];
+  var sigTotalLen = 1;
+  var glState = null;
+  var fxState = null;
+
+  function buildBeat1() {
+    var tokens = [
+      { text: "TRUE", role: "conn", appearAt: 0.04 },
+      { text: "OPTICAL", role: "hero", appearAt: 0.14 },
+      { text: "3D", role: "hero", appearAt: 0.24 },
+      { text: "SPACE", role: "hero", appearAt: 0.34 },
+      { text: "precision", role: "accent", appearAt: 0.44 }
+    ];
+    var placed = AGYRig.buildSpiralWordLayout(tokens, {
+      radiusX: 0.44,
+      radiusY: 1.38,
+      startZ: 1.18,
+      stepZ: -0.60,
+      angleStepRad: 0.94
+    });
+    var host = document.getElementById("b1-words");
+    for (var i = 0; i < placed.length; i++) {
+      var p = placed[i];
+      var el = document.createElement("div");
+      el.className = "node-3d " + (p.role === "accent" ? "v-accent" : p.role === "conn" ? "v-conn" : "v-hero");
+      el.textContent = p.text;
+      host.appendChild(el);
+      b1Nodes.push({ el: el, pos: p.pos, rotYDeg: p.rotYDeg, rotZDeg: p.rotZDeg, appearAt: p.appearAt });
+    }
+  }
+
+  function buildBeat3(otFont) {
+    var svg = document.getElementById("sig-svg");
+    var ns = "http://www.w3.org/2000/svg";
+    var label = "Cinematic Craft";
+    var glyphs = [];
+    var adv = 0;
+    var prevG = null;
+    for (var i = 0; i < label.length; i++) {
+      var g = otFont.charToGlyph(label[i]);
+      if (prevG) adv += (otFont.getKerningValue(prevG, g) / (otFont.unitsPerEm || 1000)) * 136;
+      glyphs.push({ glyph: g, x: adv });
+      adv += ((g.advanceWidth || 400) / (otFont.unitsPerEm || 1000)) * 136;
+      prevG = g;
+    }
+    var fitScale = Math.min(1.0, 860 / Math.max(10, adv));
+    var startX = (960 - adv * fitScale) * 0.5;
+    var running = 0;
+    for (var j = 0; j < glyphs.length; j++) {
+      var gp = glyphs[j].glyph.getPath(startX + glyphs[j].x * fitScale, 165, 136 * fitScale);
+      var dStr = gp.toPathData(2);
+      if (!dStr || dStr.trim() === "") continue;
+
+      var fillEl = document.createElementNS(ns, "path");
+      fillEl.setAttribute("d", dStr);
+      fillEl.setAttribute("fill", "#F8FAFC");
+      fillEl.setAttribute("fill-opacity", "0");
+
+      var glowEl = document.createElementNS(ns, "path");
+      glowEl.setAttribute("d", dStr);
+      glowEl.setAttribute("fill", "none");
+      glowEl.setAttribute("stroke", "#22C55E");
+      glowEl.setAttribute("stroke-width", "5.5");
+      glowEl.setAttribute("stroke-linecap", "round");
+      glowEl.setAttribute("filter", "url(#glow-filt)");
+
+      var pathEl = document.createElementNS(ns, "path");
+      pathEl.setAttribute("d", dStr);
+      pathEl.setAttribute("fill", "none");
+      pathEl.setAttribute("stroke", "#F8FAFC");
+      pathEl.setAttribute("stroke-width", "2.2");
+      pathEl.setAttribute("stroke-linecap", "round");
+
+      svg.appendChild(fillEl);
+      svg.appendChild(glowEl);
+      svg.appendChild(pathEl);
+      var len = Math.max(1, pathEl.getTotalLength());
+      sigGlyphs.push({ fillEl: fillEl, glowEl: glowEl, pathEl: pathEl, startLen: running, len: len });
+      running += len;
+    }
+    sigTotalLen = Math.max(1, running);
+  }
+
+  function initBeat2Three(threeFont) {
+    var canvasEl = document.getElementById("gl-canvas");
+    var renderer = new THREE.WebGLRenderer({ canvas: canvasEl, alpha: true, antialias: true });
+    renderer.setClearColor(0x000000, 0);
+    renderer.setSize(1080, 1920, false);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.08;
+
+    var scene = new THREE.Scene();
+    var pmrem = new THREE.PMREMGenerator(renderer);
+    var pmremTex = pmrem.fromScene(new THREEX.RoomEnvironment(), 0.04).texture;
+    scene.environment = pmremTex;
+    scene.environmentIntensity = 0.36;
+    pmrem.dispose();
+
+    var camera = new THREE.PerspectiveCamera(40, 1080 / 1920, 0.1, 100);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.22));
+
+    var key = new THREE.DirectionalLight(0xffffff, 1.9);
+    key.position.set(3.2, 5.8, 5.0);
+    key.castShadow = true;
+    scene.add(key);
+
+    var spot = new THREE.SpotLight(0xFF3B5C, 38, 28, Math.PI / 3.6, 0.55, 1.1);
+    spot.position.set(-3.2, 3.2, 4.8);
+    spot.castShadow = true;
+    scene.add(spot);
+
+    var rim = new THREE.SpotLight(0x0EA5E9, 30, 28, Math.PI / 3.5, 0.6, 1.1);
+    rim.position.set(3.4, -1.6, 4.4);
+    scene.add(rim);
+
+    var floor = new THREE.Mesh(new THREE.PlaneGeometry(16, 16), new THREE.ShadowMaterial({ opacity: 0.48 }));
+    floor.position.set(0, -1.55, -0.5);
+    floor.rotation.x = -Math.PI / 2;
+    floor.receiveShadow = true;
+    scene.add(floor);
+
+    var geo = new THREEX.TextGeometry("DEPTH", {
+      font: threeFont,
+      size: 0.68,
+      depth: 0.28,
+      curveSegments: 8,
+      bevelEnabled: true,
+      bevelThickness: 0.035,
+      bevelSize: 0.024,
+      bevelSegments: 3
+    });
+    geo.computeBoundingBox();
+    var fitScale = Math.min(1.0, 2.35 / Math.max(0.5, geo.boundingBox.max.x - geo.boundingBox.min.x));
+    geo.center();
+
+    var centerMesh = new THREE.Mesh(
+      geo,
+      new THREE.MeshStandardMaterial({ color: 0xF8FAFC, roughness: 0.22, metalness: 0.78 })
+    );
+    centerMesh.castShadow = true;
+    centerMesh.receiveShadow = true;
+    scene.add(centerMesh);
+
+    var tex = AGYOptics.createCylinderRibbonTexture(THREE, "AGY STUDIO   3D OPTICS   ", {
+      fontFamily: '"Oswald", sans-serif',
+      fontSizePx: 110,
+      textColor: "#F8FAFC",
+      bandColor: "#0EA5E9",
+      repeatCount: 2
+    });
+    var ringGroup = new THREE.Group();
+    var ringSpinner = new THREE.Group();
+    var outer = new THREE.Mesh(
+      new THREE.CylinderGeometry(1.72, 1.72, 0.44, 72, 1, true),
+      new THREE.MeshStandardMaterial({ map: tex, transparent: true, side: THREE.FrontSide, roughness: 0.34, metalness: 0.25 })
+    );
+    outer.castShadow = true;
+    var inner = new THREE.Mesh(
+      new THREE.CylinderGeometry(1.705, 1.705, 0.44, 72, 1, true),
+      new THREE.MeshStandardMaterial({ color: 0x0B1628, side: THREE.BackSide, roughness: 0.85, metalness: 0.12 })
+    );
+    ringSpinner.add(outer);
+    ringSpinner.add(inner);
+    ringGroup.rotation.z = (-14 * Math.PI) / 180;
+    ringGroup.rotation.x = 0.24;
+    ringGroup.add(ringSpinner);
+    scene.add(ringGroup);
+
+    var composer = new THREEX.EffectComposer(renderer);
+    composer.addPass(new THREEX.RenderPass(scene, camera));
+    var strobePass = new THREEX.ShaderPass(AGYOptics.FlashCutoutStrobeShader);
+    composer.addPass(strobePass);
+    composer.addPass(new THREEX.OutputPass());
+
+    glState = { renderer: renderer, composer: composer, scene: scene, camera: camera, spot: spot, centerMesh: centerMesh, fitScale: fitScale, ringSpinner: ringSpinner, strobePass: strobePass };
+  }
+
+  function initTransitionShaderBridge() {
+    var canvas = document.getElementById("shader-fx");
+    var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+    renderer.setClearColor(0x000000, 0);
+    renderer.setSize(1080, 1920, false);
+
+    // Paint procedural MotionTile + Radial Match visual energy plate onto GPU composer
+    var texCanvas = document.createElement("canvas");
+    texCanvas.width = 512;
+    texCanvas.height = 512;
+    var tc = texCanvas.getContext("2d");
+    var grad = tc.createLinearGradient(0, 0, 512, 512);
+    grad.addColorStop(0, "#0B0F17");
+    grad.addColorStop(0.45, "#0EA5E9");
+    grad.addColorStop(0.55, "#F8FAFC");
+    grad.addColorStop(1, "#0B0F17");
+    tc.fillStyle = grad;
+    tc.fillRect(0, 0, 512, 512);
+
+    var planeTex = new THREE.CanvasTexture(texCanvas);
+    var scene = new THREE.Scene();
+    var cam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+    scene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), new THREE.MeshBasicMaterial({ map: planeTex })));
+
+    var composer = new THREEX.EffectComposer(renderer);
+    composer.addPass(new THREEX.RenderPass(scene, cam));
+    var motionTile = new THREEX.ShaderPass(AGYOptics.MotionTileWhipShader);
+    var radialMatch = new THREEX.ShaderPass(AGYOptics.OpticalRadialMatchShader);
+    composer.addPass(motionTile);
+    composer.addPass(radialMatch);
+    composer.addPass(new THREEX.OutputPass());
+
+    fxState = { canvas: canvas, composer: composer, motionTile: motionTile, radialMatch: radialMatch };
+  }
+
+  window.__seek = function (t) {
+    // Background Z parallax tied smoothly across beats
+    var bgTrack = [
+      { u: 0.0, v: 1.02, ease: "aeWhipOut" },
+      { u: 0.28, v: 1.14, ease: "easyEase" },
+      { u: 0.78, v: 1.06, ease: "aeWhipOut" },
+      { u: 1.0, v: 1.24 }
+    ];
+    var bgScale = AGYRig.evalTrack(bgTrack, t, DUR);
+    document.getElementById("bg-parallax").style.transform =
+      "translate3d(" + (Math.sin(t * 0.7) * 28).toFixed(1) + "px," + (Math.cos(t * 0.5) * 22).toFixed(1) + "px,0) scale(" + bgScale.toFixed(4) + ")";
+
+    // Transition 1 (2.18 -> 2.66): Motion Tile Mirror Whip tracks
+    var mtTrack = [
+      { t: 2.18, v: 0.0, ease: "aeWhipInOut" },
+      { t: 2.42, v: 1.0, ease: "aeWhipInOut" },
+      { t: 2.66, v: 2.0 }
+    ];
+    var mtOffsetX = AGYRig.evalTrack(mtTrack, t, DUR);
+    var mtVel = AGYRig.trackVelocity(mtTrack, t, DUR);
+
+    // Transition 2 (4.92 -> 5.26): Flash Cutout Strobe
+    var fl = AGYRig.flashStrobeEval(t, 4.92, 0.34, 3);
+
+    // Transition 3 (6.92 -> 7.26): Optical Radial Match
+    var rmTrack = [
+      { t: 6.92, v: [1.0, 0.0], ease: "aeWhipInOut" },
+      { t: 7.09, v: [1.75, 0.42], ease: "aeWhipInOut" },
+      { t: 7.26, v: [1.0, 0.0] }
+    ];
+    var rmVal = AGYRig.evalTrack(rmTrack, t, DUR);
+    var rmActive = t >= 6.92 && t <= 7.26;
+
+    // Scene 1 (0.00 -> 2.68)
+    var s1 = document.getElementById("scene1");
+    if (t <= 2.68) {
+      s1.style.display = "block";
+      var camSpec1 = {
+        focalLengthMm: 35,
+        positionTrack: [
+          { t: 0.0, v: [-0.24, 0.16, 3.2], ease: "aeWhipOut" },
+          { t: 1.15, v: [0.06, 0.02, 6.1], ease: "smoothStop" },
+          { t: 2.55, v: [0.0, -0.04, 6.85] }
+        ],
+        targetTrack: [
+          { t: 0.0, v: [0.0, 0.02, 0.1], ease: "aeWhipOut" },
+          { t: 2.55, v: [0.0, 0.0, -0.3] }
+        ],
+        focusDistanceTrack: [
+          { t: 0.0, v: 2.7, ease: "aeWhipOut" },
+          { t: 1.15, v: 6.1, ease: "smoothStop" },
+          { t: 2.55, v: 7.2 }
+        ],
+        apertureTrack: [
+          { t: 0.0, v: 68, ease: "easyEase" },
+          { t: 2.55, v: 46 }
+        ],
+        rollTrack: [
+          { t: 0.0, v: -4.5, ease: "aeWhipOut" },
+          { t: 1.2, v: 0.0 }
+        ]
+      };
+      var cs1 = AGYRig.resolveCameraState(camSpec1, t, 2.55, 1080 / 1920);
+      var whipShiftX = t > 2.18 ? -AGYMotion.clamp01((t - 2.18) / 0.26) * 1140 : 0;
+      s1.style.transform = "translate3d(" + whipShiftX.toFixed(1) + "px,0,0)";
+      s1.style.opacity = t > 2.40 ? (1 - AGYMotion.smoothstep(2.40, 2.56, t)).toFixed(3) : "1";
+
+      for (var i = 0; i < b1Nodes.length; i++) {
+        var nd = b1Nodes[i];
+        var tr = AGYMotion.smoothstep(nd.appearAt, nd.appearAt + 0.08, t);
+        var pr = AGYRig.projectWorldToScreen(nd.pos, cs1, 1080, 1920);
+        var bPx = pr.dofBlurPx + Math.min(8, Math.abs(mtVel) * 1.4);
+        nd.el.style.opacity = (pr.visible ? pr.nearFade * tr : 0).toFixed(4);
+        nd.el.style.transform =
+          "translate3d(" + pr.x.toFixed(2) + "px," + pr.y.toFixed(2) + "px,0) translate3d(-50%,-50%,0) " +
+          "rotateY(" + nd.rotYDeg.toFixed(1) + "deg) rotateZ(" + nd.rotZDeg.toFixed(1) + "deg) " +
+          "scale(" + Math.min(2.4, Math.max(0.3, pr.scale * 0.42)).toFixed(4) + ")";
+        nd.el.style.filter = bPx > 0.1 ? "blur(" + bPx.toFixed(2) + "px)" : "none";
+      }
+      document.getElementById("b1-kicker").style.opacity = AGYMotion.smoothstep(0.3, 0.7, t).toFixed(3);
+    } else {
+      s1.style.display = "none";
+    }
+
+    // Scene 2 (2.26 -> 5.26): Three.js Extrude + Cylinder Orbit + Pop-Up Scale + Flash Strobe
+    var s2 = document.getElementById("scene2");
+    if (t >= 2.26 && t <= 5.26 && glState) {
+      s2.style.display = "block";
+      var localT = t - 2.34;
+      var popSc = AGYRig.evalTrack(AGYRig.popOvershootTrack(2.36, 0.36, 1.07), t, DUR);
+      var whipInX = t < 2.66 ? AGYMotion.lerp(1080, 0, AGYRig.SPEED_GRAPHS.aeWhipInOut(AGYMotion.invLerp(2.34, 2.66, t))) : 0;
+      s2.style.transform = "translate3d(" + whipInX.toFixed(1) + "px,0,0) scale(" + Math.max(0.01, popSc).toFixed(4) + ")";
+      s2.style.transformOrigin = "50% 62%";
+
+      var cam2 = AGYRig.resolveCameraState({
+        fovDeg: 40,
+        positionTrack: [
+          { t: 0.0, v: [0, 0.35, 11.2], ease: "aeWhipOut" },
+          { t: 1.4, v: [0.16, 0.08, 9.2], ease: "smoothStop" },
+          { t: 2.8, v: [-0.08, 0.0, 9.55] }
+        ],
+        target: [0, 0, 0]
+      }, Math.max(0, localT), 2.8, 1080 / 1920);
+
+      glState.camera.position.set(cam2.position[0], cam2.position[1], cam2.position[2]);
+      glState.camera.lookAt(0, 0, 0);
+      glState.ringSpinner.rotation.y = localT * 1.15;
+      glState.centerMesh.scale.set(glState.fitScale, glState.fitScale, glState.fitScale);
+      glState.centerMesh.rotation.y = Math.sin(localT * 1.2) * 0.22;
+      glState.spot.position.x = Math.sin(localT * 1.3) * 4.2;
+
+      glState.strobePass.uniforms.uInvertMix.value = fl.active ? fl.flashPulse * 0.85 : 0.0;
+      glState.strobePass.uniforms.uTintMix.value = fl.active ? 0.55 : 0.0;
+      glState.strobePass.uniforms.uScalePunch.value = fl.active ? fl.scalePunch : 1.0;
+      glState.strobePass.uniforms.uFlashGain.value = fl.active ? (1.0 + fl.flashPulse * 0.45) : 1.0;
+      glState.composer.render();
+
+      document.getElementById("b2-flash").style.opacity = fl.active ? (fl.whiteFillMix * fl.cutoutOpacity * 0.55).toFixed(3) : "0";
+      document.getElementById("b2-kicker").style.opacity = AGYMotion.smoothstep(2.55, 2.95, t).toFixed(3);
+      s2.style.opacity = t > 5.14 ? (1 - AGYMotion.smoothstep(5.14, 5.26, t)).toFixed(3) : "1";
+    } else {
+      s2.style.display = "none";
+    }
+
+    // Scene 3 (5.05 -> 7.26): Signature Glow Trim + Radial Optical Exit
+    var s3 = document.getElementById("scene3");
+    if (t >= 5.05 && t <= 7.26) {
+      s3.style.display = "flex";
+      var drawT0 = 5.12;
+      var drawDur = 1.65;
+      var cursor = sigTotalLen * AGYMotion.CURVES.appleOut(AGYMotion.clamp01((t - drawT0) / drawDur));
+      var tip = null;
+      var nibOp = 0;
+
+      for (var k = 0; k < sigGlyphs.length; k++) {
+        var g = sigGlyphs[k];
+        var lp = AGYMotion.clamp01((cursor - g.startLen) / Math.max(1, g.len));
+        var dr = g.len * lp;
+        g.pathEl.style.strokeDasharray = g.len.toFixed(2);
+        g.pathEl.style.strokeDashoffset = Math.max(0, g.len - dr).toFixed(2);
+        g.pathEl.style.strokeOpacity = lp > 0 ? "1" : "0";
+        g.glowEl.style.strokeDasharray = g.len.toFixed(2);
+        g.glowEl.style.strokeDashoffset = Math.max(0, g.len - dr).toFixed(2);
+        g.glowEl.style.strokeOpacity = lp > 0 && lp < 1 ? "0.95" : "0.18";
+        g.fillEl.style.fillOpacity = AGYMotion.smoothstep(0.55, 1.0, lp).toFixed(4);
+        if (lp > 0 && lp < 1 && !tip) {
+          tip = g.pathEl.getPointAtLength(Math.min(g.len, dr));
+          nibOp = AGYMotion.smoothstep(0, 0.08, (t - drawT0) / drawDur);
+        }
+      }
+      var nib = document.getElementById("sig-nib");
+      if (tip && nibOp > 0.02) {
+        nib.style.opacity = nibOp.toFixed(3);
+        nib.style.transform = "translate3d(" + tip.x.toFixed(2) + "px," + tip.y.toFixed(2) + "px,0)";
+      } else {
+        nib.style.opacity = "0";
+      }
+      document.getElementById("b3-kicker").style.opacity = AGYMotion.smoothstep(5.6, 6.0, t).toFixed(3);
+
+      var exitBlur = rmActive ? (rmVal[0] - 1.0) * 14 : 0;
+      var exitRot = rmActive ? rmVal[1] * 28 : 0;
+      s3.style.transform = "scale(" + rmVal[0].toFixed(4) + ") rotate(" + exitRot.toFixed(2) + "deg)";
+      s3.style.filter = exitBlur > 0.15 ? "blur(" + exitBlur.toFixed(2) + "px)" : "none";
+      s3.style.opacity = t < 5.26 ? AGYMotion.smoothstep(5.05, 5.26, t).toFixed(3) : (t > 7.12 ? (1 - AGYMotion.smoothstep(7.12, 7.26, t)).toFixed(3) : "1");
+    } else {
+      s3.style.display = "none";
+    }
+
+    // Scene 4 (7.06 -> 9.00): Solved Dolly Zoom Lock (d * tan(FOV/2) = const)
+    var s4 = document.getElementById("scene4");
+    if (t >= 7.06) {
+      s4.style.display = "flex";
+      var du = AGYRig.SPEED_GRAPHS.aeWhipOut(AGYMotion.invLerp(7.08, 8.55, t));
+      var dollyDist = AGYMotion.lerp(2.8, 7.2, du);
+      var solvedFov = AGYRig.solveDollyZoomFov(4.5, 42, dollyDist);
+      var ringCompression = (42 / solvedFov);
+      var holdFade = 1 - AGYMotion.smoothstep(8.72, 9.0, t);
+
+      var inScale = rmActive ? (2.1 - rmVal[0] * 0.65) : 1.0;
+      var inBlur = rmActive ? (rmVal[0] - 1.0) * 10 : 0;
+      s4.style.opacity = (AGYMotion.smoothstep(7.06, 7.22, t) * holdFade).toFixed(3);
+      s4.style.transform = "scale(" + inScale.toFixed(4) + ")";
+      s4.style.filter = inBlur > 0.15 ? "blur(" + inBlur.toFixed(2) + "px)" : "none";
+
+      document.getElementById("b4-ring").style.transform = "scale(" + (ringCompression * 0.88).toFixed(4) + ")";
+      document.getElementById("b4-sub").style.opacity = (AGYMotion.smoothstep(7.35, 7.75, t) * holdFade).toFixed(3);
+    } else {
+      s4.style.display = "none";
+    }
+
+    // GLSL Seam Shader Bridge during MotionTile (2.18..2.66) & RadialMatch (6.92..7.26)
+    if (fxState) {
+      var mtActive = t >= 2.18 && t <= 2.66;
+      if (mtActive || rmActive) {
+        fxState.canvas.style.opacity = (mtActive ? Math.sin(AGYMotion.invLerp(2.18, 2.66, t) * Math.PI) * 0.34 : Math.sin(AGYMotion.invLerp(6.92, 7.26, t) * Math.PI) * 0.28).toFixed(3);
+        fxState.motionTile.uniforms.uOffset.value = mtActive ? [mtOffsetX * 0.5, 0] : [0, 0];
+        fxState.motionTile.uniforms.uBlurVec.value = mtActive ? [Math.min(0.18, Math.abs(mtVel) * 0.02), 0] : [0, 0];
+        fxState.radialMatch.uniforms.uZoom.value = rmActive ? rmVal[0] : 1.0;
+        fxState.radialMatch.uniforms.uAngleRad.value = rmActive ? rmVal[1] : 0.0;
+        fxState.radialMatch.uniforms.uRadialBlur.value = rmActive ? 0.85 : 0.0;
+        fxState.radialMatch.uniforms.uChromatic.value = rmActive ? 1.0 : 0.0;
+        fxState.composer.render();
+      } else {
+        fxState.canvas.style.opacity = "0";
+      }
+    }
+  };
+
+  async function boot() {
+    await document.fonts.load('800 104px "Inter Tight"');
+    await document.fonts.load('300 54px "Inter Tight"');
+    await document.fonts.load('italic 400 132px "Instrument Serif"');
+    await document.fonts.load('700 110px "Oswald"');
+    await document.fonts.load('500 20px "JetBrains Mono"');
+
+    var archBuf = await (await fetch("./fonts/Archivo.ttf")).arrayBuffer();
+    var threeFont = THREEX.parseTtfToFont(archBuf);
+
+    var serifBuf = await (await fetch("./fonts/InstrumentSerif.ttf")).arrayBuffer();
+    var otSerif = THREEX.parseTtfOpenType(serifBuf);
+
+    buildBeat1();
+    buildBeat3(otSerif);
+    initBeat2Three(threeFont);
+    initTransitionShaderBridge();
+    window.__seek(0);
+    window.__ready = true;
+  }
+
+  boot();
+}());
+</script>
+</body>
+</html>

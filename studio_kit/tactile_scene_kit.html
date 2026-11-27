@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>AGY Tactile Narrative Stage</title>
+<style>
+@font-face {
+  font-family: "Inter Tight";
+  src: url("./fonts/InterTight-Latin.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Inter Tight";
+  src: url("./fonts/InterTight-Italic.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: italic;
+  font-display: block;
+}
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("./fonts/InstrumentSerif.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: block;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("./fonts/JetBrainsMono-Latin.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --paper: #F4EFE6;
+  --paper-hi: #FFFDF9;
+  --mat: #1B3B2B;
+  --mat-grid: rgba(184, 199, 190, 0.16);
+  --mat-major: rgba(214, 232, 221, 0.34);
+  --ink: #18181B;
+  --ink-muted: #52525B;
+  --ivory: #FAF7F0;
+  --amber: #D97706;
+  --emerald: #22C55E;
+  --off-red: #DC2626;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+  font-family: "Inter Tight", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.stage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Tactile Craft Cutting Mat Stage */
+.cutting-mat {
+  background-color: var(--mat);
+  opacity: 0.992;
+  background-image:
+    linear-gradient(var(--mat-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--mat-major) 1px, transparent 1px),
+    linear-gradient(var(--mat-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--mat-grid) 1px, transparent 1px);
+  background-size: 160px 160px, 160px 160px, 32px 32px, 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6.5%;
+}
+
+.mat-ruler {
+  position: absolute;
+  top: 5.5%;
+  left: 7%;
+  right: 7%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(15px, 1.2vw, 20px);
+  font-weight: 700;
+  color: rgba(244, 239, 230, 0.72);
+  border-bottom: 1px solid rgba(244, 239, 230, 0.30);
+  padding-bottom: 8px;
+}
+
+.mat-heading {
+  font-size: clamp(34px, 4.1vw, 72px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: var(--ivory);
+  margin-bottom: 40px;
+  text-align: center;
+}
+.mat-heading em {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #FDE68A;
+  padding-left: 6px;
+}
+
+.clip-row {
+  display: flex;
+  gap: 30px;
+  width: min(1480px, 88vw);
+  justify-content: center;
+  align-items: stretch;
+}
+.is-portrait .clip-row {
+  flex-direction: column;
+  width: 84vw;
+  gap: 24px;
+}
+
+.paper-clip {
+  flex: 1;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 30px 28px;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.36), inset 0 0 0 1px rgba(24, 24, 27, 0.08);
+  position: relative;
+  transform-origin: center center;
+}
+.paper-clip::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 26px;
+  width: 72px;
+  height: 20px;
+  background: rgba(245, 224, 178, 0.78);
+  transform: rotate(-1.5deg);
+}
+.clip-code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #B45309;
+  margin-bottom: 10px;
+}
+.clip-title {
+  font-size: clamp(26px, 2.3vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 10px;
+}
+.clip-meta {
+  font-size: clamp(18px, 1.35vw, 22px);
+  color: #3F3F46;
+  line-height: 1.42;
+}
+.cut-guide {
+  position: relative;
+  width: min(1480px, 88vw);
+  height: 24px;
+  margin-top: 30px;
+  border-top: 2px dashed rgba(250, 247, 240, 0.52);
+}
+.is-portrait .cut-guide {
+  width: 84vw;
+}
+.cut-blade {
+  position: absolute;
+  top: -14px;
+  width: 5px;
+  height: 28px;
+  background: #FDE68A;
+  box-shadow: 0 0 14px rgba(253, 230, 138, 0.65);
+}
+
+/* Tactile Paper Prompt Cards */
+.paper-card-scene {
+  background: var(--paper);
+  color: var(--ink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8%;
+}
+.paper-frame {
+  max-width: 78vw;
+  border-left: 7px solid var(--ink);
+  padding: 12px 0 12px 36px;
+}
+.is-portrait .paper-frame {
+  max-width: 82vw;
+  padding: 10px 0 10px 26px;
+}
+.paper-kicker {
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(16px, 1.3vw, 21px);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #92400E;
+  margin-bottom: 14px;
+}
+.paper-headline {
+  font-size: clamp(44px, 5.2vw, 88px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+.paper-headline em {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Speaker Caption (Universal Safe Zone, clears bottom 30% UI & right 17% rail on 9:16) */
+.speaker-caption-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12.5%;
+  display: flex;
+  justify-content: center;
+  padding: 0 8%;
+}
+.is-portrait .speaker-caption-wrap {
+  bottom: 31.5%;
+  left: 6.5%;
+  right: 18%;
+  padding: 0;
+  justify-content: center;
+}
+.speaker-pill {
+  max-width: 740px;
+  background: rgba(244, 239, 230, 0.95);
+  color: var(--ink);
+  padding: 14px 28px;
+  border-radius: 6px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.30);
+  font-size: clamp(24px, 2.5vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  text-align: center;
+  line-height: 1.24;
+}
+.is-portrait .speaker-pill {
+  max-width: 100%;
+  font-size: clamp(20px, 3.6vw, 34px);
+  padding: 12px 18px;
+}
+.speaker-pill .dim { color: rgba(24, 24, 27, 0.42); }
+.speaker-pill .lit { color: #18181B; }
+
+/* Honest A/B Corner Tag */
+.ab-corner {
+  position: absolute;
+  top: 9%;
+  right: 7%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 5px;
+  background: rgba(24, 24, 27, 0.88);
+  border: 1px solid rgba(250, 247, 240, 0.22);
+  color: var(--ivory);
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(14px, 1.2vw, 20px);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.is-portrait .ab-corner {
+  top: 14.5%;
+  left: 6.5%;
+  right: auto;
+}
+.ab-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+/* Live NLE Stereo Waveform Pop-Up Badge (Universal Safe Zone) */
+.nle-badge-anchor {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.is-portrait .nle-badge-anchor {
+  left: 6.5%;
+  right: 18%;
+  bottom: 31.5%;
+}
+.nle-wave-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 18px;
+  background: rgba(16, 20, 18, 0.88);
+  border: 1px solid rgba(34, 197, 94, 0.52);
+  border-radius: 8px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.36);
+}
+.wave-bar {
+  width: 4px;
+  border-radius: 2px;
+  background: var(--emerald);
+  transition: none;
+}
+.nle-label {
+  background: rgba(244, 239, 230, 0.95);
+  color: var(--ink);
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(13px, 1.1vw, 17px);
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Real NLE Music Volume Dip Overlay Strip (Universal Safe Zone) */
+.nle-strip-anchor {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12.5%;
+  display: flex;
+  justify-content: center;
+  padding: 0 7%;
+}
+.is-portrait .nle-strip-anchor {
+  left: 6.5%;
+  right: 18%;
+  bottom: 31.5%;
+  padding: 0;
+}
+.nle-track-box {
+  width: min(760px, 84vw);
+  background: rgba(22, 26, 24, 0.93);
+  border: 1px solid rgba(250, 247, 240, 0.22);
+  border-radius: 8px;
+  padding: 18px 22px 16px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45);
+}
+.is-portrait .nle-track-box {
+  width: 100%;
+  padding: 12px 14px 10px;
+}
+.nle-track-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  color: rgba(250, 247, 240, 0.86);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+}
+.nle-svg {
+  width: 100%;
+  height: 112px;
+  overflow: visible;
+}
+
+/* Closing Ivory Title over Sea Horizon */
+.closing-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+  background: linear-gradient(to top, rgba(12, 16, 18, 0.48), rgba(12, 16, 18, 0.14));
+}
+.closing-title {
+  color: var(--ivory);
+  font-size: clamp(34px, 4.4vw, 72px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  text-align: center;
+  text-shadow: 0 8px 26px rgba(0, 0, 0, 0.55);
+}
+.closing-title em {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Luda Cinema Vertical Rounded Letterbox + Bare Crimson Micro Captions */
+.luda-letterbox-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.luda-bar-top, .luda-bar-bot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #000000;
+}
+.luda-bar-top { top: 0; height: 22%; }
+.is-portrait .luda-bar-top { height: 14.5%; }
+.luda-bar-bot { bottom: 0; height: 36%; display: flex; flex-direction: column; align-items: center; padding-top: 16px; }
+.is-portrait .luda-bar-bot { padding-left: 6.5%; padding-right: 18%; }
+.luda-act-tag {
+  position: absolute;
+  bottom: 37.5%;
+  left: 6.5%;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(12px, 1.25vw, 18px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #F5F5F5;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+}
+.luda-act-tag .act-red { color: #DC2626; }
+.luda-micro-cap {
+  font-family: "Inter Tight", sans-serif;
+  font-size: clamp(22px, 2.6vw, 40px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: #F5F5F5;
+  text-align: center;
+  padding: 0 4%;
+}
+.luda-micro-cap .accent-red { color: #DC2626; font-weight: 700; }
+
+/* marksoy Mixed-Media Collage Cards (cream_serif, cobalt_grid, newspaper_circle, dark_highlighter) */
+.collage-scene {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+  text-align: center;
+}
+.collage-cream { background: #ECEAD8; color: #18181B; }
+.collage-cobalt {
+  background: #0B1A8A;
+  color: #FAF7F0;
+  background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.collage-newspaper {
+  background: #E7E3D7;
+  color: #18181B;
+  background-image: repeating-linear-gradient(0deg, rgba(24,24,27,0.04) 0px, rgba(24,24,27,0.04) 2px, transparent 2px, transparent 14px);
+}
+.collage-dark {
+  background: #101012;
+  color: #FAF7F0;
+  background-image: linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+.collage-word-main {
+  font-size: clamp(46px, 6.2vw, 96px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+}
+.collage-word-main em {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.18em;
+}
+.collage-highlight-red {
+  display: inline-block;
+  background: #DC2626;
+  color: #FAF7F0;
+  padding: 2px 14px;
+  transform: rotate(-1.2deg);
+}
+.collage-circle-red {
+  display: inline-block;
+  padding: 2px 18px;
+  border: 5px solid #DC2626;
+  border-radius: 50% 45% 52% 48%;
+  transform: rotate(-2deg);
+}
+
+/* Maciek Sulima Split-S-Curve Asymmetric 3-Tier Captions (Universal Safe Zone) */
+.maciek-anchor {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 13%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 8%;
+}
+.is-portrait .maciek-anchor {
+  left: 6.5%;
+  right: 18%;
+  bottom: 32.5%;
+  padding: 0;
+}
+.maciek-lead, .maciek-tail {
+  font-size: clamp(20px, 2.2vw, 34px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FAF7F0;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.72);
+}
+.maciek-hero {
+  font-size: clamp(44px, 5.6vw, 90px);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.03em;
+  line-height: 0.96;
+  color: #F59E0B;
+  text-shadow: 0 8px 28px rgba(0, 0, 0, 0.75);
+}
+
+/* Gaku Lange Social Commentary Bubble (Universal Safe Zone) */
+.social-anchor {
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  bottom: 13%;
+  display: flex;
+  justify-content: center;
+}
+.is-portrait .social-anchor {
+  left: 6.5%;
+  right: 18%;
+  bottom: 32%;
+}
+.imessage-bubble {
+  background: #1D84FF;
+  color: #FFFFFF;
+  font-size: clamp(20px, 2.1vw, 32px);
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 22px 22px 6px 22px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.34);
+  max-width: 78%;
+}
+.ig-note-bubble {
+  background: rgba(18, 18, 22, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #FAF7F0;
+  padding: 14px 22px;
+  border-radius: 12px;
+  max-width: 72%;
+  text-align: left;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.36);
+}
+.is-portrait .imessage-bubble,
+.is-portrait .ig-note-bubble {
+  max-width: 100%;
+}
+.ig-note-user {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  color: rgba(250, 247, 240, 0.65);
+  margin-bottom: 4px;
+}
+.ig-note-body {
+  font-size: clamp(18px, 1.9vw, 28px);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* Engine 1: Editor Keling (RhVB8WPLJAI) Narrative Cluster (Chest-Safe Zone y=48..65%) */
+.cluster-anchor {
+  position: absolute;
+  top: 52%;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.is-portrait .cluster-anchor {
+  top: 49%;
+  left: 6.5%;
+  right: 18%;
+}
+.cluster-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px 12px;
+  max-width: 100%;
+  text-align: center;
+}
+.is-portrait .cluster-box {
+  max-width: 82%;
+  gap: 10px 14px;
+}
+.cl-word {
+  display: inline-block;
+  position: relative;
+  -webkit-text-stroke: 2px rgba(9, 9, 11, 0.78);
+  paint-order: stroke fill;
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.92), 0 1px 4px rgba(0, 0, 0, 0.95);
+  line-height: 1.04;
+}
+.cl-connector {
+  font-size: clamp(20px, 2.2vw, 32px);
+  font-weight: 500;
+  color: rgba(250, 247, 240, 0.92);
+}
+.cl-bold {
+  font-size: clamp(36px, 4.4vw, 68px);
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  color: #FAF7F0;
+}
+.cl-cobalt {
+  font-size: clamp(40px, 4.8vw, 74px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #3B82F6;
+}
+.cl-serif {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(44px, 5.2vw, 80px);
+  color: #FAF7F0;
+}
+.cl-brush-red {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(44px, 5.2vw, 80px);
+  color: #FAF7F0;
+  padding: 2px 16px;
+  background: #DC2626;
+  border-radius: 3px;
+  -webkit-text-stroke: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  transform: rotate(-1.5deg);
+}
+.cl-oval-red {
+  font-size: clamp(40px, 4.8vw, 74px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #3B82F6;
+  padding: 2px 18px;
+  border: 5px solid #DC2626;
+  border-radius: 52% 46% 50% 48%;
+  transform: rotate(-2deg);
+}
+
+/* Engine 2: PeeJ ENT (G-DHQAzulyU) 2D Spatial Camera Typography */
+.cam2d-backdrop {
+  background: rgba(10, 11, 14, 0.94);
+  overflow: hidden;
+}
+.cam2d-world {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: 0 0;
+}
+.cam2d-node {
+  position: absolute;
+  transform-origin: center center;
+  white-space: nowrap;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #FAF7F0;
+  text-shadow: 0 0 24px rgba(250, 247, 240, 0.25);
+}
+.cam2d-node.is-accent {
+  color: #F59E0B;
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  text-shadow: 0 0 28px rgba(245, 158, 11, 0.45);
+}
+
+/* Engine 3: aayusucks (BWRdNeNkph4) Long-Form Visual Narrative Explainers (8pt grid) */
+.explainer-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exp-light-bg { background: #F4EFE6; color: #18181B; }
+.exp-crimson-bg { background: #B91C1C; color: #FAF7F0; }
+.exp-obsidian-bg { background: #141417; color: #FAF7F0; }
+.exp-box {
+  width: 84%;
+  max-width: 1520px;
+  position: relative;
+}
+.exp-ruler-stage {
+  position: relative;
+  padding: 48px 32px;
+  border-top: 1px dashed rgba(24, 24, 27, 0.28);
+  border-bottom: 1px dashed rgba(24, 24, 27, 0.28);
+}
+.exp-ruler-tag {
+  position: absolute;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  font-weight: 700;
+  background: #18181B;
+  color: #F4EFE6;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.exp-ratio-head {
+  font-size: clamp(56px, 6.2vw, 104px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+}
+.exp-ratio-head em {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #B91C1C;
+}
+.exp-ratio-body {
+  margin-top: 24px;
+  font-size: clamp(22px, 1.9vw, 32px);
+  line-height: 1.5;
+  max-width: 48ch;
+  color: #3F3F46;
+}
+.exp-flank-grid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.exp-flank-col {
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.exp-flank-col.right { text-align: right; align-items: flex-end; }
+.exp-flank-word {
+  font-size: clamp(26px, 2.6vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #FAF7F0;
+  text-shadow: 0 6px 22px rgba(0, 0, 0, 0.78);
+}
+.exp-flank-word.accent {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(34px, 3.3vw, 56px);
+  color: #FDE68A;
+}
+.exp-slam-kicker {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.78;
+  margin-bottom: 16px;
+}
+.exp-slam-title {
+  font-size: clamp(68px, 8.2vw, 148px);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 0.94;
+}
+.exp-slam-title em {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Optional Debug Safe-Zone HUD Overlay */
+.debug-sz-band { position: absolute; background: rgba(220, 38, 38, 0.20); border: 1px dashed rgba(248, 113, 113, 0.85); }
+.debug-sz-safe { position: absolute; border: 2px solid rgba(34, 197, 94, 0.90); }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <!-- Speaker / Narration lower caption -->
+  <div class="layer" id="layer-speaker">
+    <div class="speaker-caption-wrap">
+      <div class="speaker-pill" id="speaker-pill"></div>
+    </div>
+  </div>
+
+  <!-- Green Cutting Mat + Craft Cards (100% populated from plan.cuttingMat) -->
+  <div class="layer cutting-mat" id="layer-mat">
+    <div class="mat-ruler" id="mat-ruler"></div>
+    <div class="mat-heading" id="mat-heading"></div>
+    <div class="clip-row" id="mat-clip-row"></div>
+    <div class="cut-guide">
+      <div class="cut-blade" id="cut-blade"></div>
+    </div>
+  </div>
+
+  <!-- Tactile Craft Paper Prompt Cards -->
+  <div class="layer paper-card-scene" id="layer-card">
+    <div class="paper-frame" id="paper-frame">
+      <div class="paper-kicker" id="card-kicker"></div>
+      <div class="paper-headline" id="card-headline"></div>
+    </div>
+  </div>
+
+  <!-- Honest A/B or Status Corner Tag -->
+  <div class="layer" id="layer-ab-tag" style="z-index: 15;">
+    <div class="ab-corner" id="ab-corner">
+      <div class="ab-dot" id="ab-dot"></div>
+      <span id="ab-text"></span>
+    </div>
+  </div>
+
+  <!-- Live NLE Stereo Waveform Pill -->
+  <div class="layer" id="layer-wave-badge">
+    <div class="nle-badge-anchor" id="wave-anchor">
+      <div class="nle-wave-pill" id="wave-pill"></div>
+      <div class="nle-label" id="wave-label"></div>
+    </div>
+  </div>
+
+  <!-- Genuine NLE Music Volume Dip Overlay -->
+  <div class="layer" id="layer-nle-dip">
+    <div class="nle-strip-anchor">
+      <div class="nle-track-box" id="nle-track-box">
+        <div class="nle-track-head">
+          <span id="nle-head-left"></span>
+          <span id="nle-head-right" style="color:#FDE68A;"></span>
+        </div>
+        <svg class="nle-svg" viewBox="0 0 680 112" id="nle-dip-svg"></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Closing Ivory Resolution -->
+  <div class="layer" id="layer-closing">
+    <div class="closing-wrap">
+      <div class="closing-title" id="closing-title"></div>
+    </div>
+  </div>
+
+  <!-- Luda Cinema Letterbox + Bare Crimson Micro Captions -->
+  <div class="layer luda-letterbox-wrap" id="layer-luda-letterbox">
+    <div class="luda-bar-top"></div>
+    <div class="luda-act-tag" id="luda-act-tag"></div>
+    <div class="luda-bar-bot">
+      <div class="luda-micro-cap" id="luda-micro-cap"></div>
+    </div>
+  </div>
+
+  <!-- marksoy Mixed-Media Collage Cards -->
+  <div class="layer collage-scene" id="layer-collage-card">
+    <div class="collage-word-main" id="collage-word-main"></div>
+  </div>
+
+  <!-- Maciek Sulima Split-S-Curve Asymmetric 3-Tier Captions -->
+  <div class="layer" id="layer-maciek-caption">
+    <div class="maciek-anchor" id="maciek-anchor">
+      <div class="maciek-lead" id="maciek-lead"></div>
+      <div class="maciek-hero" id="maciek-hero"></div>
+      <div class="maciek-tail" id="maciek-tail"></div>
+    </div>
+  </div>
+
+  <!-- Gaku Lange Social Commentary Bubble -->
+  <div class="layer" id="layer-social-bubble">
+    <div class="social-anchor" id="social-anchor"></div>
+  </div>
+
+  <!-- Engine 1: Editor Keling (RhVB8WPLJAI) Narrative Highlight Cluster -->
+  <div class="layer" id="layer-narrative-cluster">
+    <div class="cluster-anchor" id="cluster-anchor">
+      <div class="cluster-box" id="narrative-cluster-box"></div>
+    </div>
+  </div>
+
+  <!-- Engine 2: PeeJ ENT (G-DHQAzulyU) 2D Spatial Camera Typography -->
+  <div class="layer cam2d-backdrop" id="layer-camera-2d">
+    <div class="cam2d-world" id="cam2d-world"></div>
+  </div>
+
+  <!-- Engine 3: aayusucks (BWRdNeNkph4) Long-Form Visual Explainer -->
+  <div class="layer explainer-wrap" id="layer-explainer-diagram">
+    <div class="exp-box" id="explainer-content-box"></div>
+  </div>
+
+  <!-- Optional Debug Safe-Zone HUD -->
+  <div class="layer" id="layer-debug-safezone"></div>
+</div>
+
+<script>
+window.__OVERLAY_PLAN = window.__OVERLAY_PLAN || {
+  aspect: "16x9",
+  speakerCaptions: [],
+  cuttingMat: null,
+  promptCards: [],
+  abTags: [],
+  waveBadges: [],
+  musicDipUi: null,
+  closingTitle: null,
+  ludaLetterbox: null,
+  collageCards: [],
+  maciekCaptions: [],
+  socialBubbles: [],
+  narrativeClusters: [],
+  camera2dCanvas: null,
+  explainerDiagrams: [],
+  debugSafeZone: false
+};
+
+function clamp01(v) { return Math.max(0, Math.min(1, v)); }
+function easeOutBack(x) {
+  const c1 = 1.70158, c3 = c1 + 1;
+  return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2);
+}
+function easeOutExpo(x) { return x >= 1 ? 1 : 1 - Math.pow(2, -10 * x); }
+
+let __dipBuilt = false;
+let __matBuilt = false;
+
+function ensureMatDom(mat) {
+  if (__matBuilt || !mat) return;
+  __matBuilt = true;
+  document.getElementById("mat-ruler").innerHTML = (mat.rulerTicks || ["00.00s", "01.20s", "02.40s", "03.60s"])
+    .map((t) => `<span>${t}</span>`).join("");
+  document.getElementById("mat-heading").innerHTML = mat.headingHtml || "";
+  document.getElementById("mat-clip-row").innerHTML = (mat.cards || []).map((c, idx) => `
+    <div class="paper-clip" id="clip-card-${idx}">
+      <div class="clip-code">${c.code || ""}</div>
+      <div class="clip-title">${c.title || ""}</div>
+      <div class="clip-meta">${c.meta || ""}</div>
+    </div>
+  `).join("");
+}
+
+function ensureDipSvg(dipUi) {
+  if (__dipBuilt || !dipUi) return;
+  __dipBuilt = true;
+  document.getElementById("nle-head-left").textContent = dipUi.headerLeft || "STEM_MUSIC.WAV";
+  document.getElementById("nle-head-right").textContent = dipUi.headerRight || "MUSIC DIPS FOR THE CUT";
+  const svg = document.getElementById("nle-dip-svg");
+  const bars = (dipUi.bars && dipUi.bars.length)
+    ? dipUi.bars
+    : Array.from({ length: 48 }, (_, i) => i < 24 ? 0.65 - (i % 3) * 0.1 : Math.max(0.08, 0.62 - (i - 24) * 0.03));
+
+  const w = 680, mid = 64, n = bars.length, step = w / n;
+  let html = `<line x1="0" y1="${mid}" x2="${w}" y2="${mid}" stroke="rgba(250,247,240,0.16)" stroke-width="1"/>`;
+  bars.forEach((v, i) => {
+    const bh = Math.max(4, v * 38);
+    const x = i * step + 2;
+    const col = i >= Math.floor(n / 2) ? "#86EFAC" : "#22C55E";
+    html += `<rect x="${x.toFixed(1)}" y="${(mid - bh).toFixed(1)}" width="${(step - 4).toFixed(1)}" height="${(bh * 2).toFixed(1)}" rx="1.5" fill="${col}" opacity="0.88"/>`;
+  });
+  html += `<path d="M 10 34 L 310 34 C 365 34, 415 58, 495 72 L 670 76" fill="none" stroke="#FDE68A" stroke-width="2.6"/>`;
+  html += `<circle cx="310" cy="34" r="4.5" fill="#FDE68A"/>`;
+  html += `<circle cx="495" cy="72" r="4.5" fill="#FDE68A"/>`;
+  html += `<path d="M 472 10 C 446 14, 434 26, 424 44" fill="none" stroke="#FAF7F0" stroke-width="3" stroke-linecap="round"/>`;
+  html += `<path d="M 417 37 L 424 46 L 434 40" fill="none" stroke="#FAF7F0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`;
+  svg.innerHTML = html;
+}
+
+window.__setPlan = function(plan) {
+  window.__OVERLAY_PLAN = plan;
+  __dipBuilt = false;
+  __matBuilt = false;
+  const st = document.getElementById("stage");
+  st.classList.toggle("is-portrait", plan.aspect === "9x16");
+};
+
+window.__seek = function(t) {
+  const plan = window.__OVERLAY_PLAN;
+  const st = document.getElementById("stage");
+  st.classList.toggle("is-portrait", plan.aspect === "9x16");
+
+  const ids = [
+    "layer-speaker", "layer-mat", "layer-card", "layer-ab-tag",
+    "layer-wave-badge", "layer-nle-dip", "layer-closing",
+    "layer-luda-letterbox", "layer-collage-card", "layer-maciek-caption", "layer-social-bubble",
+    "layer-narrative-cluster", "layer-camera-2d", "layer-explainer-diagram", "layer-debug-safezone"
+  ];
+  ids.forEach((id) => { document.getElementById(id).style.opacity = "0"; });
+
+  // 1. Dynamic Word-Timed Speaker Captions
+  const spk = (plan.speakerCaptions || []).find((c) => t >= c.t0 && t < c.t1);
+  if (spk) {
+    document.getElementById("layer-speaker").style.opacity = "1";
+    const pill = document.getElementById("speaker-pill");
+    const enter = easeOutExpo(clamp01((t - spk.t0) / 0.22));
+    pill.style.transform = `translateY(${(1 - enter) * 18}px)`;
+    pill.innerHTML = (spk.words || []).map((item) => {
+      const lit = t >= item.t0;
+      return `<span class="${lit ? "lit" : "dim"}">${item.w}</span>`;
+    }).join(" ");
+  }
+
+  // 2. Dynamic Cutting Mat Diagram
+  const mat = plan.cuttingMat;
+  if (mat && t >= mat.t0 && t < mat.t1) {
+    ensureMatDom(mat);
+    document.getElementById("layer-mat").style.opacity = "0.992";
+    const dt = t - mat.t0;
+    const dur = Math.max(0.5, mat.t1 - mat.t0);
+    (mat.cards || []).forEach((card, idx) => {
+      const el = document.getElementById(`clip-card-${idx}`);
+      if (!el) return;
+      const start = card.reveal_s != null ? card.reveal_s : (0.06 + idx * 0.44);
+      const p = clamp01((dt - start) / 0.30);
+      const s = 0.88 + 0.12 * easeOutBack(p);
+      const y = (1 - easeOutExpo(p)) * 34;
+      const tilt = (idx - 1) * 1.1;
+      el.style.opacity = clamp01(p * 1.8);
+      el.style.transform = `translateY(${y.toFixed(2)}px) scale(${s.toFixed(3)}) rotate(${tilt}deg)`;
+    });
+    document.getElementById("cut-blade").style.left = `${(clamp01(dt / (dur * 0.92)) * 96).toFixed(2)}%`;
+  }
+
+  // 3. Dynamic Tactile Prompt Cards
+  const pCard = (plan.promptCards || []).find((c) => t >= c.t0 && t < c.t1);
+  if (pCard) {
+    document.getElementById("layer-card").style.opacity = "0.992";
+    const p = easeOutExpo(clamp01((t - pCard.t0) / 0.20));
+    document.getElementById("paper-frame").style.transform = `translateY(${((1 - p) * 20).toFixed(2)}px)`;
+    document.getElementById("card-kicker").textContent = pCard.kicker || "";
+    document.getElementById("card-headline").innerHTML = pCard.headlineHtml || "";
+  }
+
+  // 4. Dynamic Status / AB Corner Tag
+  const ab = (plan.abTags || []).find((c) => t >= c.t0 && t < c.t1);
+  if (ab) {
+    document.getElementById("layer-ab-tag").style.opacity = "1";
+    document.getElementById("ab-dot").style.background = ab.color || "#22C55E";
+    document.getElementById("ab-text").textContent = ab.label || "";
+  }
+
+  // 5. Dynamic Live NLE Stereo Waveform Pills
+  const wb = (plan.waveBadges || []).find((b) => t >= b.t0 && t < b.t1);
+  if (wb) {
+    document.getElementById("layer-wave-badge").style.opacity = "1";
+    const anchor = document.getElementById("wave-anchor");
+    const p = clamp01((t - wb.t0) / 0.16);
+    const pop = 0.86 + 0.14 * easeOutBack(p);
+    anchor.style.transform = `translateY(${((1 - p) * 14).toFixed(2)}px) scale(${pop.toFixed(3)})`;
+    document.getElementById("wave-label").textContent = wb.label || "";
+    const bars = (wb.bars && wb.bars.length) ? wb.bars : Array(28).fill(0.3);
+    const prog = clamp01((t - wb.t0) / Math.max(0.2, wb.t1 - wb.t0));
+    const curIdx = Math.floor(prog * bars.length);
+    document.getElementById("wave-pill").innerHTML = bars.map((v, i) => {
+      const h = Math.max(6, Math.round(v * 38));
+      const op = i <= curIdx ? 1.0 : 0.36;
+      return `<div class="wave-bar" style="height:${h}px;opacity:${op};"></div>`;
+    }).join("");
+  }
+
+  // 6. Dynamic NLE Music Dip Strip
+  const dipUi = plan.musicDipUi;
+  if (dipUi && t >= dipUi.t0 && t < dipUi.t1) {
+    ensureDipSvg(dipUi);
+    const lyr = document.getElementById("layer-nle-dip");
+    const pIn = easeOutExpo(clamp01((t - dipUi.t0) / 0.25));
+    const pOut = t > (dipUi.t1 - 0.30) ? clamp01((dipUi.t1 - t) / 0.30) : 1.0;
+    lyr.style.opacity = (pIn * pOut).toFixed(3);
+    document.getElementById("nle-track-box").style.transform = `translateY(${((1 - pIn) * 26).toFixed(2)}px)`;
+  }
+
+  // 7. Dynamic Closing Resolution
+  const close = plan.closingTitle;
+  if (close && t >= close.t0 && t <= close.t1) {
+    const lyr = document.getElementById("layer-closing");
+    const p = easeOutExpo(clamp01((t - close.t0) / 0.55));
+    const fadeOut = t > (close.t1 - 0.45) ? clamp01((close.t1 - t) / 0.45) : 1.0;
+    lyr.style.opacity = (p * fadeOut).toFixed(3);
+    const el = document.getElementById("closing-title");
+    el.innerHTML = close.html || "";
+    el.style.transform = `translateY(${((1 - p) * 14).toFixed(2)}px)`;
+  }
+
+  // 8. Luda Vertical Rounded Letterbox + Bare Crimson Micro Captions
+  const luda = plan.ludaLetterbox;
+  if (luda && t >= luda.t0 && t < luda.t1) {
+    document.getElementById("layer-luda-letterbox").style.opacity = "0.992";
+    const actEl = document.getElementById("luda-act-tag");
+    actEl.innerHTML = luda.actHtml || "";
+    const cap = (luda.captions || []).find((c) => t >= c.t0 && t < c.t1);
+    document.getElementById("luda-micro-cap").innerHTML = cap ? (cap.html || "") : "";
+  }
+
+  // 9. marksoy Mixed-Media Collage Cards
+  const col = (plan.collageCards || []).find((c) => t >= c.t0 && t < c.t1);
+  if (col) {
+    const lyr = document.getElementById("layer-collage-card");
+    const themeCls = {
+      cream_serif: "collage-cream",
+      cobalt_grid: "collage-cobalt",
+      newspaper_circle: "collage-newspaper",
+      dark_highlighter: "collage-dark"
+    }[col.theme || "cream_serif"] || "collage-cream";
+    lyr.className = `layer collage-scene ${themeCls}`;
+    lyr.style.opacity = "0.992";
+    const p = easeOutExpo(clamp01((t - col.t0) / 0.16));
+    const txt = document.getElementById("collage-word-main");
+    txt.innerHTML = col.html || "";
+    txt.style.transform = `translateY(${((1 - p) * 28).toFixed(2)}px) scale(${(0.94 + 0.06 * p).toFixed(3)})`;
+  }
+
+  // 10. Maciek Sulima Split-S-Curve + 3-Tier Asymmetric Captions
+  const mk = (plan.maciekCaptions || []).find((c) => t >= c.t0 && t < c.t1);
+  if (mk) {
+    const lyr = document.getElementById("layer-maciek-caption");
+    const anchor = document.getElementById("maciek-anchor");
+    const durIn = 0.28, durOut = 0.20, dist = 48;
+    const uIn = clamp01((t - mk.t0) / durIn);
+    const eIn = 1 - Math.pow(1 - uIn, 3.6);
+    const uOut = clamp01((t - (mk.t1 - durOut)) / durOut);
+    const eOut = Math.pow(uOut, 3.2);
+    const yOff = (1 - eIn) * dist - eOut * dist;
+    const op = Math.min(clamp01(uIn * 4.5), 1 - clamp01((uOut - 0.55) / 0.45));
+    lyr.style.opacity = op.toFixed(3);
+    anchor.style.transform = `translateY(${yOff.toFixed(2)}px)`;
+    document.getElementById("maciek-lead").textContent = mk.lead || "";
+    document.getElementById("maciek-hero").textContent = mk.hero || "";
+    document.getElementById("maciek-tail").textContent = mk.tail || "";
+  }
+
+  // 11. Gaku Lange Social Commentary Bubble
+  const sb = (plan.socialBubbles || []).find((c) => t >= c.t0 && t < c.t1);
+  if (sb) {
+    const lyr = document.getElementById("layer-social-bubble");
+    const p = easeOutExpo(clamp01((t - sb.t0) / 0.22));
+    lyr.style.opacity = p.toFixed(3);
+    const anchor = document.getElementById("social-anchor");
+    anchor.style.transform = `translateY(${((1 - p) * 20).toFixed(2)}px)`;
+    if (sb.style === "ig_note") {
+      anchor.innerHTML = `<div class="ig-note-bubble"><div class="ig-note-user">${sb.user || "editor"} · now</div><div class="ig-note-body">${sb.text || ""}</div></div>`;
+    } else {
+      anchor.innerHTML = `<div class="imessage-bubble">${sb.text || ""}</div>`;
+    }
+  }
+
+  // 12. Engine 1: Editor Keling (RhVB8WPLJAI) Narrative Highlight Cluster
+  const nc = (plan.narrativeClusters || []).find((c) => t >= c.t0 && t < c.t1);
+  if (nc) {
+    const lyr = document.getElementById("layer-narrative-cluster");
+    lyr.style.opacity = "1";
+    const anchor = document.getElementById("cluster-anchor");
+    if (nc.topPct != null) anchor.style.top = `${nc.topPct}%`;
+    const box = document.getElementById("narrative-cluster-box");
+    const roleCls = {
+      connector: "cl-connector",
+      bold: "cl-bold",
+      cobalt: "cl-cobalt",
+      serif: "cl-serif",
+      brush_red: "cl-brush-red",
+      oval_red: "cl-oval-red"
+    };
+    box.innerHTML = (nc.words || []).map((wObj) => {
+      const wt0 = wObj.t0 != null ? wObj.t0 : nc.t0;
+      if (t < wt0) return "";
+      const u = clamp01((t - wt0) / 0.20);
+      const e = easeOutExpo(u);
+      const cls = roleCls[wObj.role || "bold"] || "cl-bold";
+      const y = ((1 - e) * 18).toFixed(1);
+      const sc = (0.90 + 0.10 * e).toFixed(3);
+      return `<span class="cl-word ${cls}" style="opacity:${clamp01(u * 3).toFixed(2)};transform:translateY(${y}px) scale(${sc});">${wObj.w}</span>`;
+    }).join(" ");
+  }
+
+  // 13. Engine 2: PeeJ ENT (G-DHQAzulyU) 2D Spatial Camera Typography (pre-beat lead -83ms)
+  const c2d = plan.camera2dCanvas;
+  if (c2d && t >= c2d.t0 && t < c2d.t1) {
+    const lyr = document.getElementById("layer-camera-2d");
+    lyr.style.opacity = "0.992";
+    const stops = c2d.stops || [];
+    const leadS = c2d.preBeatLeadS != null ? c2d.preBeatLeadS : 0.083;
+    const transS = Math.max(0.08, c2d.transitionS != null ? c2d.transitionS : 0.28);
+    const tAdj = t + leadS;
+    let idx = 0;
+    for (let i = 0; i < stops.length; i++) {
+      if (tAdj >= stops[i].t) idx = i;
+    }
+    const curr = stops[idx] || { x: 0, y: 0, zoom: 1, rotateDeg: 0 };
+    const prev = idx > 0 ? stops[idx - 1] : curr;
+    const u = idx > 0 ? clamp01((tAdj - curr.t) / transS) : 1;
+    const sm = u * u * (3 - 2 * u);
+    const camX = (prev.x || 0) + ((curr.x || 0) - (prev.x || 0)) * sm;
+    const camY = (prev.y || 0) + ((curr.y || 0) - (prev.y || 0)) * sm;
+    const camZ = (prev.zoom || 1) + ((curr.zoom || 1) - (prev.zoom || 1)) * sm;
+    const camR = (prev.rotateDeg || 0) + ((curr.rotateDeg || 0) - (prev.rotateDeg || 0)) * sm;
+    const blur = (idx > 0 && u > 0 && u < 1) ? (Math.sin(u * Math.PI) * 4.5).toFixed(1) : "0";
+
+    const world = document.getElementById("cam2d-world");
+    world.style.transform = `scale(${camZ.toFixed(3)}) rotate(${(-camR).toFixed(2)}deg) translate(${(-camX).toFixed(1)}px, ${(-camY).toFixed(1)}px)`;
+    world.style.filter = blur !== "0" ? `blur(${blur}px)` : "none";
+
+    // Build SVG connector path + spatial word nodes
+    let pathD = "";
+    stops.forEach((stItem, si) => {
+      pathD += (si === 0 ? "M " : "L ") + `${stItem.x || 0} ${stItem.y || 0} `;
+    });
+    const svgPath = stops.length >= 2
+      ? `<svg style="position:absolute;left:-2000px;top:-2000px;width:4000px;height:4000px;overflow:visible;pointer-events:none;" viewBox="-2000 -2000 4000 4000"><path d="${pathD}" fill="none" stroke="rgba(245,158,11,0.55)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="14 10"/></svg>`
+      : "";
+    const nodesHtml = (c2d.nodes || []).map((nd) => {
+      const sz = nd.sizePx || 72;
+      const cls = nd.accent ? "cam2d-node is-accent" : "cam2d-node";
+      return `<div class="${cls}" style="left:${nd.x || 0}px;top:${nd.y || 0}px;font-size:${sz}px;transform:translate(-50%,-50%) rotate(${nd.rotateDeg || 0}deg);">${nd.text || ""}</div>`;
+    }).join("");
+    world.innerHTML = svgPath + nodesHtml;
+  }
+
+  // 14. Engine 3: aayusucks (BWRdNeNkph4) Long-Form Visual Narrative Explainers
+  const exp = (plan.explainerDiagrams || []).find((e) => t >= e.t0 && t < e.t1);
+  if (exp) {
+    const lyr = document.getElementById("layer-explainer-diagram");
+    const box = document.getElementById("explainer-content-box");
+    const mode = exp.mode || "anatomy_ruler";
+    const p = easeOutExpo(clamp01((t - exp.t0) / 0.26));
+
+    if (mode === "flanking_word_field") {
+      lyr.className = "layer explainer-wrap";
+      lyr.style.opacity = "1";
+      box.style.width = "86%";
+      box.style.height = "74%";
+      box.style.transform = "none";
+      const leftHtml = (exp.leftWords || []).map((w, i) => {
+        const lit = t >= (w.t0 != null ? w.t0 : exp.t0 + i * 0.25);
+        return `<div class="exp-flank-word ${w.accent ? "accent" : ""}" style="opacity:${lit ? 1 : 0.08};transform:translateX(${lit ? 0 : -16}px);">${w.text}</div>`;
+      }).join("");
+      const rightHtml = (exp.rightWords || []).map((w, i) => {
+        const lit = t >= (w.t0 != null ? w.t0 : exp.t0 + 0.15 + i * 0.25);
+        return `<div class="exp-flank-word ${w.accent ? "accent" : ""}" style="opacity:${lit ? 1 : 0.08};transform:translateX(${lit ? 0 : 16}px);">${w.text}</div>`;
+      }).join("");
+      box.innerHTML = `<div class="exp-flank-grid"><div class="exp-flank-col">${leftHtml}</div><div class="exp-flank-col right">${rightHtml}</div></div>`;
+    } else if (mode === "chapter_slam") {
+      const bgCls = exp.theme === "obsidian" ? "exp-obsidian-bg" : (exp.theme === "craft" ? "exp-light-bg" : "exp-crimson-bg");
+      lyr.className = `layer explainer-wrap ${bgCls}`;
+      lyr.style.opacity = "0.992";
+      box.style.width = "82%";
+      box.style.height = "auto";
+      box.style.transform = `translateY(${((1 - p) * 28).toFixed(1)}px)`;
+      box.innerHTML = `<div class="exp-slam-kicker">${exp.kicker || ""}</div><div class="exp-slam-title">${exp.headlineHtml || ""}</div>`;
+    } else {
+      // anatomy_ruler (1.618x golden scale + 8pt ruler tags)
+      lyr.className = "layer explainer-wrap exp-light-bg";
+      lyr.style.opacity = "0.992";
+      box.style.width = "82%";
+      box.style.height = "auto";
+      box.style.transform = `translateY(${((1 - p) * 20).toFixed(1)}px)`;
+      box.innerHTML = `
+        <div class="exp-ruler-stage">
+          <div class="exp-ruler-tag" style="top:-16px;left:0;">${exp.topTag || "1.618x GOLDEN SCALE // 8PT GRID"}</div>
+          <div class="exp-ruler-tag" style="bottom:-16px;right:0;">${exp.bottomTag || "LEADING 1.2x // MEASURE 65ch"}</div>
+          <div class="exp-ratio-head">${exp.headlineHtml || ""}</div>
+          <div class="exp-ratio-body">${exp.bodyText || ""}</div>
+        </div>`;
+    }
+  }
+
+  // 15. Optional Debug Safe-Zone HUD Overlay
+  if (plan.debugSafeZone) {
+    const dbg = document.getElementById("layer-debug-safezone");
+    dbg.style.opacity = "1";
+    if (plan.aspect === "9x16") {
+      dbg.innerHTML = `
+        <div class="debug-sz-band" style="left:0;top:0;width:100%;height:13.5%;"></div>
+        <div class="debug-sz-band" style="left:83%;top:40.5%;width:17%;height:48%;"></div>
+        <div class="debug-sz-band" style="left:0;top:70.2%;width:100%;height:29.8%;"></div>
+        <div class="debug-sz-safe" style="left:5.5%;top:13.5%;width:77.5%;height:56.7%;"></div>`;
+    } else {
+      dbg.innerHTML = `
+        <div class="debug-sz-band" style="left:0;top:0;width:100%;height:8%;"></div>
+        <div class="debug-sz-band" style="left:0;top:88.5%;width:100%;height:11.5%;"></div>
+        <div class="debug-sz-safe" style="left:6%;top:8%;width:88%;height:80.5%;"></div>`;
+    }
+  }
+};
+</script>
+</body>
+</html>

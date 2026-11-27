@@ -1,0 +1,431 @@
+{
+  "title": "Why Sound Follows Picture",
+  "profile": "narrative-film",
+  "sound_palette": "organic-cinema",
+  "audio_audit_profile": "narrative_voice_film",
+  "bpm": 100.0,
+  "duration_s": 22.8,
+  "beats": [
+    {
+      "id": "shot_01_city_hook",
+      "t_start": 0.0,
+      "t_end": 1.2,
+      "shot_type": "visual_proof",
+      "visual_subject": "Twilight waterfront skyline footage (real_city.mp4 0.5-1.7s)",
+      "narrative_purpose": "Show real moving footage first without clutter so the viewer feels rhythm immediately.",
+      "clip_source": ".agents/skills/ffmpeg-skill/demos/footage/real_city.mp4",
+      "clip_in_s": 0.5,
+      "crop_x": 0.5,
+      "on_screen_copy": "",
+      "audio_intent": {
+        "strategy": "Real city waterfront ambience layered over soft apartment room-tone bedrock."
+      }
+    },
+    {
+      "id": "shot_02_rain_hook",
+      "t_start": 1.2,
+      "t_end": 2.4,
+      "shot_type": "b_roll",
+      "visual_subject": "Rainy city street at night with pedestrian umbrella (veo_rain.mp4 0.6-1.8s)",
+      "broll_justification": "Advances visual momentum cleanly onto the beat while introducing natural falling rain texture.",
+      "narrative_purpose": "Cut on the 1.20s bar beat from harbor air into wet nocturnal rain motion.",
+      "clip_source": ".agents/skills/ffmpeg-skill/demos/footage/veo_rain.mp4",
+      "clip_in_s": 0.6,
+      "crop_x": 0.5,
+      "on_screen_copy": "",
+      "audio_intent": {
+        "strategy": "Genuine rain clip audio J-cut 80ms early with soft air carry into rain."
+      }
+    },
+    {
+      "id": "shot_03_hands_hook",
+      "t_start": 2.4,
+      "t_end": 3.6,
+      "shot_type": "b_roll",
+      "visual_subject": "Close-up hands typing rapidly on warm desk laptop (veo_hands.mp4 0.5-1.7s)",
+      "broll_justification": "Completes the three-shot opening sequence with close mechanical motion.",
+      "narrative_purpose": "Anchor close mechanical keystrokes directly onto fingers moving across keys.",
+      "clip_source": ".agents/skills/ffmpeg-skill/demos/footage/veo_hands.mp4",
+      "clip_in_s": 0.5,
+      "crop_x": 0.52,
+      "on_screen_copy": "",
+      "audio_intent": {
+        "strategy": "Real desk ambience plus tactile CC0 keystrokes locked directly to finger taps."
+      }
+    },
+    {
+      "id": "shot_04_speaker_anchor",
+      "t_start": 3.6,
+      "t_end": 7.5,
+      "shot_type": "a_roll",
+      "visual_subject": "Speaker in living room explaining footage awareness (veo_pause_en.mp4 jump-cut tightened)",
+      "narrative_purpose": "State the thesis directly in human voice once the viewer has watched three honest shots.",
+      "clip_segments": [
+        {
+          "src": ".agents/skills/ffmpeg-skill/demos/footage/veo_pause_en.mp4",
+          "in_s": 0.02,
+          "dur_s": 1.24,
+          "zoom": 1.0,
+          "crop_x": 0.44
+        },
+        {
+          "src": ".agents/skills/ffmpeg-skill/demos/footage/veo_pause_en.mp4",
+          "in_s": 2.34,
+          "dur_s": 0.56,
+          "zoom": 1.05,
+          "crop_x": 0.44
+        },
+        {
+          "src": ".agents/skills/ffmpeg-skill/demos/footage/veo_pause_en.mp4",
+          "in_s": 4.88,
+          "dur_s": 2.1,
+          "zoom": 1.09,
+          "crop_x": 0.44
+        }
+      ],
+      "on_screen_copy": "The first thing that matters is looking closely at your footage.",
+      "audio_intent": {
+        "strategy": "Natural actor voice centered with adaptive 9-band carving on the entering warm underscore."
+      }
+    },
+    {
+      "id": "shot_05_cutting_mat",
+      "t_start": 7.5,
+      "t_end": 11.1,
+      "shot_type": "tactile_diagram",
+      "matte_color": "#1B3B2B",
+      "visual_subject": "Green calibrated cutting mat (#1B3B2B) with three craft-paper clip strips (CLIP 1, CLIP 2, CLIP 3) sliced cleanly on beat marks",
+      "narrative_purpose": "Break down why the opening sequence felt tight using physical craft cards instead of glowing shapes.",
+      "on_screen_copy": "Three matching shots. Cut to rhythm.",
+      "audio_intent": {
+        "strategy": "Physical craft-paper flips and crisp slice clicks matched as each card lands on the cutting mat."
+      }
+    },
+    {
+      "id": "shot_06_silent_prompt",
+      "t_start": 11.1,
+      "t_end": 11.8,
+      "shot_type": "kinetic_card",
+      "visual_subject": "Warm craft paper card (#F4EFE6) prompting the silent A/B comparison",
+      "narrative_purpose": "Set up the A/B comparison explicitly before stripping the sound away.",
+      "on_screen_copy": "Watch the same cut silent.",
+      "audio_intent": {
+        "strategy": "Clean soft wood tap marking card arrival right before the silence pocket engages."
+      }
+    },
+    {
+      "id": "shot_07_silent_ab",
+      "t_start": 11.8,
+      "t_end": 14.3,
+      "shot_type": "silence_contrast",
+      "visual_subject": "Replay of city, rain, and hands clips muted inside an AUDIO OFF frame marker",
+      "narrative_purpose": "Prove visually and acoustically how flat identical footage feels without motivated foley.",
+      "clip_segments": [
+        {
+          "src": ".agents/skills/ffmpeg-skill/demos/footage/real_city.mp4",
+          "in_s": 1.7,
+          "dur_s": 0.83,
+          "zoom": 1.0,
+          "crop_x": 0.5
+        },
+        {
+          "src": ".agents/skills/ffmpeg-skill/demos/footage/veo_rain.mp4",
+          "in_s": 1.8,
+          "dur_s": 0.83,
+          "zoom": 1.0,
+          "crop_x": 0.5
+        },
+        {
+          "src": ".agents/skills/ffmpeg-skill/demos/footage/veo_hands.mp4",
+          "in_s": 1.7,
+          "dur_s": 0.84,
+          "zoom": 1.0,
+          "crop_x": 0.52
+        }
+      ],
+      "on_screen_copy": "AUDIO: OFF",
+      "audio_intent": {
+        "strategy": "Intentional -52 dB music silence pocket keeping only hushed ambient room floor."
+      }
+    },
+    {
+      "id": "shot_08_causal_prompt",
+      "t_start": 14.3,
+      "t_end": 14.9,
+      "shot_type": "kinetic_card",
+      "visual_subject": "Warm craft paper cue card introducing literal cause-and-effect audio",
+      "narrative_purpose": "State the zero-waste rule plainly before bringing real foley back in.",
+      "on_screen_copy": "Add only what moves on screen.",
+      "audio_intent": {
+        "strategy": "Reversed musical swell leading gently out of silence pocket into tactile paper card."
+      }
+    },
+    {
+      "id": "shot_09_causal_city",
+      "t_start": 14.9,
+      "t_end": 16.1,
+      "shot_type": "visual_proof",
+      "visual_subject": "City dusk bay footage (real_city.mp4) with live green Harbor wind stereo waveform pill",
+      "narrative_purpose": "Show the waveform pill popping up ONLY while harbor ambience fills the shot.",
+      "clip_source": ".agents/skills/ffmpeg-skill/demos/footage/real_city.mp4",
+      "clip_in_s": 2.4,
+      "crop_x": 0.5,
+      "on_screen_copy": "AUDIO: ON | Harbor wind",
+      "audio_intent": {
+        "strategy": "Real harbor clip wind texture foregrounded cleanly alongside green stereo waveform bar display."
+      }
+    },
+    {
+      "id": "shot_10_causal_rain",
+      "t_start": 16.1,
+      "t_end": 17.3,
+      "shot_type": "b_roll",
+      "visual_subject": "Rainy crosswalk footage (veo_rain.mp4) with live Street rain stereo waveform pill",
+      "broll_justification": "Shows how literal rain audio replaces arbitrary swooshes on cut arrival.",
+      "narrative_purpose": "Pair wet crosswalk visuals directly with real falling rainfall and J-cut cloth pass.",
+      "clip_source": ".agents/skills/ffmpeg-skill/demos/footage/veo_rain.mp4",
+      "clip_in_s": 3.0,
+      "crop_x": 0.5,
+      "on_screen_copy": "Street rain",
+      "audio_intent": {
+        "strategy": "Real rain audio boosted cleanly in mid-high detail synced to live rain waveform pill."
+      }
+    },
+    {
+      "id": "shot_11_causal_hands",
+      "t_start": 17.3,
+      "t_end": 18.5,
+      "shot_type": "b_roll",
+      "visual_subject": "Desk hands typing (veo_hands.mp4) with live Laptop keys stereo waveform pill",
+      "broll_justification": "Closes the three-example proof showing crisp mechanical sound anchored to keys.",
+      "narrative_purpose": "Match physical keystrokes strictly to finger motion while displaying real foley waveform.",
+      "clip_source": ".agents/skills/ffmpeg-skill/demos/footage/veo_hands.mp4",
+      "clip_in_s": 2.6,
+      "crop_x": 0.52,
+      "on_screen_copy": "Laptop keys",
+      "audio_intent": {
+        "strategy": "Clean key presses and desk presence matching live waveform pill peaks."
+      }
+    },
+    {
+      "id": "shot_12_nle_dip_ui",
+      "t_start": 18.5,
+      "t_end": 20.4,
+      "shot_type": "ui_demo",
+      "visual_subject": "Typing workspace footage overlaid with genuine NLE music waveform strip and pointer arrow on volume dip",
+      "narrative_purpose": "Reveal visibly how music dips softly into the final coastal transition instead of slamming into silence.",
+      "clip_source": ".agents/skills/ffmpeg-skill/demos/footage/veo_hands.mp4",
+      "clip_in_s": 4.2,
+      "crop_x": 0.52,
+      "on_screen_copy": "Music dips for the cut",
+      "audio_intent": {
+        "strategy": "Music bed enters a controlled gain dip feeding a Great Hall T60=2.6s tail into coastal bay."
+      }
+    },
+    {
+      "id": "shot_13_sea_resolve",
+      "t_start": 20.4,
+      "t_end": 22.8,
+      "shot_type": "visual_proof",
+      "visual_subject": "Calm coastal harbor at dusk (real_sea.mp4 1.0-3.4s) with restrained ivory title closing",
+      "narrative_purpose": "End gently on real horizon motion and natural ocean room wash with zero noise clutter.",
+      "clip_source": ".agents/skills/ffmpeg-skill/demos/footage/real_sea.mp4",
+      "clip_in_s": 1.0,
+      "crop_x": 0.5,
+      "on_screen_copy": "Look first. Cut to purpose.",
+      "audio_intent": {
+        "strategy": "Great Hall tail blooms gently over real harbor waves before clean 12ms fade out."
+      }
+    }
+  ],
+  "silence_pockets": [
+    {
+      "t0": 11.8,
+      "t1": 14.28,
+      "fade_ms": 24.0,
+      "duck_music_db": -52.0,
+      "duck_ambience_db": -16.0,
+      "duck_transitions_db": -48.0,
+      "reason": "Silent half of A/B demonstration (AUDIO: OFF) letting viewer hear bare quiet room tone."
+    }
+  ],
+  "sound_cues": [
+    {
+      "id": "cue_room_bed",
+      "t_s": 0.0,
+      "bus": "ambience",
+      "palette": "universal-room",
+      "contrast_rule": "room_tone_bed",
+      "layers": [
+        { "asset": "se/ambience__fs-426767-apartment-room-tone-wav", "spectrum_role": "room_bed" }
+      ]
+    },
+    {
+      "id": "cue_rain_jcut",
+      "t_s": 1.2,
+      "bus": "transitions",
+      "palette": "organic-cinema",
+      "intensity": "hero",
+      "visual_cause": "Camera cuts across harbor sky into pouring night street with umbrella pedestrian.",
+      "pre_lap_ms": 85.0,
+      "layers": [
+        { "asset": "se/whoosh__fs-264777-swoosh", "spectrum_role": "mid_body" },
+        { "asset": "se/transition__fs-786514-swoosh-v2", "spectrum_role": "high_air" }
+      ]
+    },
+    {
+      "id": "cue_keys_hook",
+      "t_s": 2.42,
+      "bus": "foley",
+      "palette": "organic-cinema",
+      "visual_cause": "Fingers strike laptop keyboard keys at 2.42s, 2.74s, 3.08s.",
+      "layers": [
+        { "asset": "se/typing__fs-447909-keyboard-typing", "spectrum_role": "full_spectrum" }
+      ]
+    },
+    {
+      "id": "cue_mat_paper_flips",
+      "t_s": 7.65,
+      "bus": "foley",
+      "palette": "organic-cinema",
+      "visual_cause": "Three physical craft-paper clip strips slide onto the green cutting mat and slice sequentially.",
+      "layers": [
+        { "asset": "ge/paper-flip", "spectrum_role": "mid_body" },
+        { "asset": "ge/paper-riffle", "spectrum_role": "high_air" }
+      ]
+    },
+    {
+      "id": "cue_silent_card_tap",
+      "t_s": 11.12,
+      "bus": "foley",
+      "palette": "organic-cinema",
+      "visual_cause": "Cream instruction paper card flips into frame announcing the silent A/B cut.",
+      "layers": [
+        { "asset": "se/click__kenney-interface-tick-001", "spectrum_role": "high_air" }
+      ]
+    },
+    {
+      "id": "cue_causal_rain_jcut",
+      "t_s": 16.1,
+      "bus": "transitions",
+      "palette": "organic-cinema",
+      "intensity": "hero",
+      "visual_cause": "Rain waveform badge pops at bottom edge as umbrella pedestrian walks through downpour.",
+      "pre_lap_ms": 75.0,
+      "layers": [
+        { "asset": "se/whoosh__fs-264777-swoosh", "spectrum_role": "mid_body" },
+        { "asset": "se/transition__fs-786514-swoosh-v2", "spectrum_role": "high_air" }
+      ]
+    },
+    {
+      "id": "cue_causal_keys",
+      "t_s": 17.32,
+      "bus": "foley",
+      "palette": "organic-cinema",
+      "visual_cause": "Hands tap keys right as Laptop keys waveform badge rises on screen.",
+      "layers": [
+        { "asset": "se/typing__fs-447909-keyboard-typing", "spectrum_role": "full_spectrum" }
+      ]
+    },
+    {
+      "id": "cue_music_dip_hall",
+      "t_s": 20.4,
+      "bus": "transitions",
+      "palette": "organic-cinema",
+      "contrast_rule": "music_dip_transition",
+      "intensity": "hero",
+      "visual_cause": "NLE volume dip arrow points to fade into calm coastal bay horizon.",
+      "layers": [
+        { "asset": "se/impact__kenney-impact-impactsoft-heavy-000", "spectrum_role": "sub_low" },
+        { "asset": "se/transition__fs-816262-broomstick-whoosh-3-quiet-okm1", "spectrum_role": "high_air" }
+      ]
+    }
+  ],
+  "audio_clips": [
+    { "src": ".agents/skills/ffmpeg-skill/demos/footage/real_city.mp4", "src_start_s": 0.5, "dur_s": 1.22, "t_s": 0.0, "bus": "ambience", "target_rms_db": -24.5, "hp_hz": 185.0, "fade_ms": 35.0 },
+    { "src": ".agents/skills/ffmpeg-skill/demos/footage/veo_rain.mp4", "src_start_s": 0.6, "dur_s": 1.24, "t_s": 1.20, "pre_lap_ms": 75.0, "bus": "ambience", "target_rms_db": -20.5, "hp_hz": 240.0, "fade_ms": 40.0 },
+    { "src": ".agents/skills/ffmpeg-skill/demos/footage/veo_hands.mp4", "src_start_s": 0.5, "dur_s": 1.20, "t_s": 2.40, "pre_lap_ms": 40.0, "bus": "ambience", "target_rms_db": -28.0, "hp_hz": 240.0, "fade_ms": 30.0 },
+    { "src": ".agents/skills/ffmpeg-skill/demos/footage/veo_pause_en.mp4", "src_start_s": 0.02, "dur_s": 1.24, "t_s": 3.60, "bus": "voice", "target_rms_db": -16.0, "hp_hz": 135.0, "fade_ms": 14.0, "send": 0.05 },
+    { "src": ".agents/skills/ffmpeg-skill/demos/footage/veo_pause_en.mp4", "src_start_s": 2.34, "dur_s": 0.56, "t_s": 4.84, "bus": "voice", "target_rms_db": -16.0, "hp_hz": 135.0, "fade_ms": 14.0, "send": 0.05 },
+    { "src": ".agents/skills/ffmpeg-skill/demos/footage/veo_pause_en.mp4", "src_start_s": 4.88, "dur_s": 2.10, "t_s": 5.40, "bus": "voice", "target_rms_db": -16.0, "hp_hz": 135.0, "fade_ms": 14.0, "send": 0.05 },
+    { "src": ".agents/skills/ffmpeg-skill/demos/footage/real_city.mp4", "src_start_s": 2.4, "dur_s": 1.20, "t_s": 14.90, "bus": "ambience", "target_rms_db": -21.5, "hp_hz": 190.0, "fade_ms": 30.0 },
+    { "src": ".agents/skills/ffmpeg-skill/demos/footage/veo_rain.mp4", "src_start_s": 3.0, "dur_s": 1.20, "t_s": 16.10, "pre_lap_ms": 65.0, "bus": "ambience", "target_rms_db": -18.5, "hp_hz": 250.0, "fade_ms": 30.0 },
+    { "src": ".agents/skills/ffmpeg-skill/demos/footage/veo_hands.mp4", "src_start_s": 2.6, "dur_s": 1.20, "t_s": 17.30, "bus": "ambience", "target_rms_db": -24.5, "hp_hz": 220.0, "fade_ms": 25.0 },
+    { "src": ".agents/skills/ffmpeg-skill/demos/footage/veo_hands.mp4", "src_start_s": 4.2, "dur_s": 1.90, "t_s": 18.50, "bus": "ambience", "target_rms_db": -26.5, "hp_hz": 220.0, "fade_ms": 30.0 },
+    { "src": ".agents/skills/ffmpeg-skill/demos/footage/real_sea.mp4", "src_start_s": 1.0, "dur_s": 2.40, "t_s": 20.40, "pre_lap_ms": 90.0, "bus": "ambience", "target_rms_db": -23.5, "hp_hz": 185.0, "fade_ms": 45.0 }
+  ],
+  "music_plan": {
+    "enabled": true,
+    "gain_db": -21.0,
+    "root_hz": 146.83,
+    "bpm": 100.0,
+    "target_lufs": -16.0,
+    "target_peak_db": -5.4,
+    "segments": [
+      { "start_s": 3.55, "end_s": 11.78, "src_offset_s": 0.0, "lead_in_reverse": false },
+      { "start_s": 14.32, "end_s": 20.45, "src_offset_s": 3.0, "lead_in_reverse": true, "lead_in_dur_s": 0.72, "hall_tail": true }
+    ],
+    "dips": [
+      { "t0": 19.40, "t1": 20.45, "db": -8.5, "fade_ms": 220.0 }
+    ]
+  },
+  "contact_sheet_times": [0.60, 1.80, 3.00, 4.40, 6.20, 8.80, 10.40, 11.45, 13.00, 14.60, 15.50, 16.70, 17.90, 19.35, 21.30, 22.10],
+  "overlays": {
+    "speaker_captions": [
+      {
+        "t0": 3.60,
+        "t1": 7.50,
+        "words": [
+          { "w": "The", "t0": 3.60, "t1": 3.80 },
+          { "w": "first", "t0": 3.80, "t1": 4.10 },
+          { "w": "thing", "t0": 4.10, "t1": 4.38 },
+          { "w": "that", "t0": 4.38, "t1": 4.56 },
+          { "w": "matters", "t0": 4.56, "t1": 4.86 },
+          { "w": "is", "t0": 4.86, "t1": 5.40 },
+          { "w": "looking", "t0": 5.42, "t1": 5.90 },
+          { "w": "closely", "t0": 5.90, "t1": 6.38 },
+          { "w": "at", "t0": 6.38, "t1": 6.58 },
+          { "w": "your", "t0": 6.58, "t1": 6.82 },
+          { "w": "footage.", "t0": 6.82, "t1": 7.48 }
+        ]
+      }
+    ],
+    "cutting_mat": {
+      "t0": 7.50,
+      "t1": 11.10,
+      "rulerTicks": ["00.00s", "01.20s", "02.40s", "03.60s"],
+      "headingHtml": "Three honest shots. <em>Cut to rhythm.</em>",
+      "cards": [
+        { "code": "CLIP 01 // 1.20S", "title": "Harbor Dusk", "meta": "Establish scale with quiet coastal air.", "reveal_s": 0.06 },
+        { "code": "CLIP 02 // 1.20S", "title": "Street Rain", "meta": "Lead cut 85ms early with umbrella texture.", "reveal_s": 0.50 },
+        { "code": "CLIP 03 // 1.20S", "title": "Desk Keys", "meta": "Lock crisp clicks onto fingers pressing keys.", "reveal_s": 0.96 }
+      ]
+    },
+    "prompt_cards": [
+      { "t0": 11.10, "t1": 11.80, "kicker": "A/B TEST // STEP 01", "headlineHtml": "Watch the same cut <em>silent.</em>" },
+      { "t0": 14.30, "t1": 14.90, "kicker": "A/B TEST // STEP 02", "headlineHtml": "Add only what <em>moves on screen.</em>" }
+    ],
+    "ab_tags": [
+      { "t0": 11.80, "t1": 14.30, "label": "AUDIO: OFF", "color": "#DC2626" },
+      { "t0": 14.90, "t1": 18.50, "label": "AUDIO: ON", "color": "#22C55E" }
+    ],
+    "wave_badges": [
+      { "t0": 14.90, "t1": 16.08, "label": "Harbor wind", "bus": "ambience" },
+      { "t0": 16.10, "t1": 17.28, "label": "Street rain", "bus": "ambience", "mix_transitions": true },
+      { "t0": 17.30, "t1": 18.48, "label": "Laptop keys", "bus": "foley" }
+    ],
+    "music_dip_ui": {
+      "t0": 18.50,
+      "t1": 20.40,
+      "sample_t0": 17.80,
+      "sample_t1": 22.80,
+      "header_left": "STEM_MUSIC.WAV (17.8s - 22.8s)",
+      "header_right": "MUSIC DIPS FOR THE CUT"
+    },
+    "closing_title": {
+      "t0": 20.40,
+      "t1": 22.80,
+      "html": "Look first. <em>Cut to purpose.</em>"
+    }
+  }
+}

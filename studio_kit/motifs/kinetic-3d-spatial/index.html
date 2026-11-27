@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Kinetic 3D Spatial Motif</title>
+<title>Kinetic 3D Spatial Motif v2</title>
 <style>
   @font-face {
     font-family: "Inter Tight";
@@ -35,152 +35,219 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    perspective: 1100px;
   }
   .stage.ambient-dark {
     background:
-      radial-gradient(64% 48% at 50% 42%, rgba(14, 165, 233, 0.14), transparent 72%),
+      radial-gradient(64% 48% at 50% 42%, rgba(14, 165, 233, 0.16), transparent 72%),
       radial-gradient(88% 72% at 24% 78%, rgba(248, 250, 252, 0.05), transparent 64%),
       #0B0F17;
   }
-  .plane {
+  .node-3d {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform-origin: center center;
+    left: 0;
+    top: 0;
     white-space: nowrap;
+    transform-origin: center center;
     will-change: transform, opacity, filter;
   }
-  .lead {
-    font-family: "Inter Tight", sans-serif;
-    font-weight: 300;
-    font-size: 46px;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-  }
-  .mixed-hero {
-    display: flex;
-    align-items: baseline;
-    gap: 24px;
-    font-family: "Inter Tight", sans-serif;
-    font-size-adjust: from-font;
-  }
-  @supports not (font-size-adjust: from-font) {
-    .mixed-hero {
-      line-height: 1.04;
-    }
-  }
-  .hero-sans {
+  .voice-hero {
     font-family: "Inter Tight", sans-serif;
     font-weight: 800;
-    font-size: 122px;
+    font-size: 98px;
     letter-spacing: -0.04em;
     line-height: 0.94;
-    text-shadow: 0 22px 48px rgba(0, 0, 0, 0.56);
+    text-shadow: 0 22px 48px rgba(0, 0, 0, 0.58);
   }
-  .hero-serif {
+  .voice-accent {
     font-family: "Instrument Serif", serif;
     font-weight: 400;
     font-style: italic;
-    font-size: 132px;
+    font-size: 116px;
     letter-spacing: -0.015em;
-    line-height: 0.96;
-    text-shadow: 0 22px 48px rgba(0, 0, 0, 0.48);
+    line-height: 0.94;
+    font-size-adjust: from-font;
+    text-shadow: 0 22px 48px rgba(14, 165, 233, 0.25);
+  }
+  @supports not (font-size-adjust: from-font) {
+    .voice-accent { line-height: 1.02; }
+  }
+  .voice-connector {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
   }
   .telemetry {
+    position: absolute;
+    left: 50%;
+    bottom: 240px;
+    transform: translateX(-50%);
     font-family: "JetBrains Mono", monospace;
     font-weight: 500;
-    font-size: 24px;
-    letter-spacing: 0.12em;
+    font-size: 21px;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
+    white-space: nowrap;
   }
 </style>
 <script src="./motion_primitives.js"></script>
+<script src="./keyframe_rig.js"></script>
 </head>
 <body>
 <div id="stage" class="stage"></div>
 <script>
 (function () {
-  var planes = {};
+  var wordNodes = [];
+  var telemetryEl = null;
   var cfg = null;
 
-  function placePlane(el, camZ, wordZ, focalZ, xOffsetPx, yOffsetPx, enterAlpha) {
-    var cam = AGYMotion.spatial3DCameraWord(camZ, wordZ, {
-      focalZ: focalZ,
-      dofRange: 410,
-      maxDofBlurPx: 9.5,
-      baseFocalDist: 920
-    });
-    var op = Math.max(0, Math.min(1, cam.opacity * enterAlpha));
-    el.style.opacity = op.toFixed(4);
-    el.style.transform =
-      "translate3d(-50%,-50%,0) " +
-      "translate3d(" + (xOffsetPx * cam.perspectiveScale).toFixed(2) + "px," +
-      (yOffsetPx * cam.perspectiveScale).toFixed(2) + "px,0) " +
-      "scale(" + cam.perspectiveScale.toFixed(4) + ")";
-    el.style.filter = cam.dofBlurPx > 0.1 ? "blur(" + cam.dofBlurPx.toFixed(2) + "px)" : "none";
-  }
-
-  function renderFrame(t) {
+  function renderFrame(t, ctx) {
     if (!cfg) return;
-    var pushCue = Number(cfg.cue_push_s) || 1.15;
-    var uIntro = AGYMotion.CURVES.appleOut(AGYMotion.clamp01(t / 0.52));
-    var uPush = AGYMotion.CURVES.fusionEase85(AGYMotion.clamp01((t - pushCue) / 0.92));
+    var dur = (ctx && ctx.duration) || 4.0;
+    var w = (ctx && ctx.width) || 1080;
+    var h = (ctx && ctx.height) || 1920;
+    var pushCue = Math.min(dur - 0.5, Math.max(0.25, Number(cfg.cue_push_s) || 1.15));
+    var cueU = pushCue / dur;
 
-    var camZ = AGYMotion.lerp(-640, -120, uIntro) + AGYMotion.lerp(0, 340, uPush);
-    var focalZ = AGYMotion.lerp(240, -40, uIntro) + AGYMotion.lerp(0, -140, uPush);
+    var camSpec = {
+      focalLengthMm: Number(cfg.focal_mm) || 35,
+      positionTrack: [
+        { u: 0.0, v: [-0.22, 0.18, 3.3], ease: "aeWhipOut" },
+        { u: cueU, v: [0.06, 0.02, 6.2], ease: "smoothStop" },
+        { u: 1.0, v: [0.0, -0.04, 7.1] }
+      ],
+      targetTrack: [
+        { u: 0.0, v: [0.0, 0.02, 0.1], ease: "aeWhipOut" },
+        { u: 1.0, v: [0.0, 0.0, -0.35] }
+      ],
+      focusDistanceTrack: [
+        { u: 0.0, v: 2.8, ease: "aeWhipOut" },
+        { u: cueU, v: 6.2, ease: "smoothStop" },
+        { u: 1.0, v: 7.4 }
+      ],
+      apertureTrack: [
+        { u: 0.0, v: Number(cfg.aperture_px) || 64, ease: "easyEase" },
+        { u: 1.0, v: (Number(cfg.aperture_px) || 64) * 0.72 }
+      ],
+      rollTrack: [
+        { u: 0.0, v: -4.5, ease: "aeWhipOut" },
+        { u: 0.6, v: 0.0 }
+      ]
+    };
 
-    var aLead = AGYMotion.smoothstep(0.0, 0.25, t);
-    var aHero = AGYMotion.smoothstep(0.12, 0.42, t);
-    var aSub = AGYMotion.smoothstep(0.32, 0.68, t);
+    var camState = AGYRig.resolveCameraState(camSpec, t, dur, w / h);
+    var motionStretchBlur = Math.min(4.0, camState.speedMag * 0.45);
 
-    placePlane(planes.lead, camZ, 260, focalZ, 0, -155, aLead);
-    placePlane(planes.hero, camZ, 0, focalZ, 0, -8, aHero);
-    placePlane(planes.sub, camZ, -260, focalZ, 0, 148, aSub);
+    for (var i = 0; i < wordNodes.length; i++) {
+      var item = wordNodes[i];
+      var trimAlpha = AGYMotion.smoothstep(item.appearAt, item.appearAt + 0.08, t);
+      var proj = AGYRig.projectWorldToScreen(item.pos, camState, w, h);
+      var op = proj.visible ? Math.max(0, Math.min(1, proj.nearFade * trimAlpha)) : 0;
+      var totalBlur = proj.dofBlurPx + motionStretchBlur;
+      var el = item.el;
+      el.style.opacity = op.toFixed(4);
+      el.style.transform =
+        "translate3d(" + proj.x.toFixed(2) + "px," + proj.y.toFixed(2) + "px,0) " +
+        "translate3d(-50%,-50%,0) " +
+        "rotateY(" + item.rotYDeg.toFixed(2) + "deg) " +
+        "rotateZ(" + item.rotZDeg.toFixed(2) + "deg) " +
+        "scale(" + Math.min(2.6, Math.max(0.28, proj.scale * 0.42)).toFixed(4) + ")";
+      el.style.filter = totalBlur > 0.1 ? "blur(" + totalBlur.toFixed(2) + "px)" : "none";
+    }
+
+    if (telemetryEl) {
+      telemetryEl.style.opacity = AGYMotion.smoothstep(0.32, 0.65, t).toFixed(4);
+    }
   }
 
   motif.define({
     async setup(props, ctx) {
       cfg = props;
-      await document.fonts.load('800 122px "Inter Tight"');
-      await document.fonts.load('300 46px "Inter Tight"');
-      await document.fonts.load('italic 400 132px "Instrument Serif"');
-      await document.fonts.load('500 24px "JetBrains Mono"');
+      await document.fonts.load('800 98px "Inter Tight"');
+      await document.fonts.load('300 56px "Inter Tight"');
+      await document.fonts.load('italic 400 116px "Instrument Serif"');
+      await document.fonts.load('500 21px "JetBrains Mono"');
 
       var stage = document.getElementById("stage");
       stage.replaceChildren();
+      wordNodes = [];
       stage.className = "stage" + (props.ground_mode === "ambient_dark" ? " ambient-dark" : "");
 
       var ink = props.ink || "#F8FAFC";
       var accent = props.accent || "#0EA5E9";
+      var tokens = [];
 
-      var leadEl = document.createElement("div");
-      leadEl.className = "plane lead";
-      leadEl.style.color = ink;
-      leadEl.textContent = String(props.lead_text || "BUILT FOR");
+      var leadWords = String(props.lead_text || "BUILT FOR").trim().split(/\s+/);
+      for (var a = 0; a < leadWords.length; a++) {
+        if (leadWords[a]) tokens.push({ text: leadWords[a], role: "connector" });
+      }
+      var heroWords = String(props.hero_text || "OPTICAL DEPTH").trim().split(/\s+/);
+      for (var b = 0; b < heroWords.length; b++) {
+        if (heroWords[b]) tokens.push({ text: heroWords[b], role: "hero" });
+      }
+      if (props.accent_serif && String(props.accent_serif).trim() !== "") {
+        tokens.push({ text: String(props.accent_serif).trim(), role: "accent" });
+      }
 
-      var heroEl = document.createElement("div");
-      heroEl.className = "plane mixed-hero";
-      var heroSans = document.createElement("span");
-      heroSans.className = "hero-sans";
-      heroSans.style.color = ink;
-      heroSans.textContent = String(props.hero_text || "CINEMA");
-      var heroSerif = document.createElement("span");
-      heroSerif.className = "hero-serif";
-      heroSerif.style.color = accent;
-      heroSerif.textContent = String(props.accent_serif || "precision");
-      heroEl.appendChild(heroSans);
-      heroEl.appendChild(heroSerif);
+      var layoutMode = props.layout_mode || "spiral";
+      var placed;
+      if (layoutMode === "planes") {
+        placed = tokens.map(function (tk, idx) {
+          return {
+            text: tk.text,
+            role: tk.role,
+            pos: [0, (idx - (tokens.length - 1) * 0.5) * -0.58, 1.0 - idx * 0.72],
+            rotYDeg: 0,
+            rotZDeg: 0,
+            appearAt: idx * 0.1
+          };
+        });
+      } else {
+        placed = AGYRig.buildSpiralWordLayout(tokens, {
+          radiusX: 0.46,
+          radiusY: 1.48,
+          startZ: 1.15,
+          stepZ: -0.62,
+          angleStepRad: 0.96
+        });
+      }
 
-      var subEl = document.createElement("div");
-      subEl.className = "plane telemetry";
-      subEl.style.color = "#94A3B8";
-      subEl.textContent = String(props.sub_label || "1080P / 60FPS LOCAL PIPELINE");
+      for (var i = 0; i < placed.length; i++) {
+        var p = placed[i];
+        var el = document.createElement("div");
+        if (p.role === "accent") {
+          el.className = "node-3d voice-accent";
+          el.style.color = accent;
+        } else if (p.role === "connector") {
+          el.className = "node-3d voice-connector";
+          el.style.color = "#94A3B8";
+        } else {
+          el.className = "node-3d voice-hero";
+          el.style.color = ink;
+        }
+        el.textContent = p.text;
+        stage.appendChild(el);
+        wordNodes.push({
+          el: el,
+          pos: p.pos,
+          rotYDeg: p.rotYDeg,
+          rotZDeg: p.rotZDeg,
+          appearAt: p.appearAt
+        });
+      }
 
-      stage.appendChild(leadEl);
-      stage.appendChild(heroEl);
-      stage.appendChild(subEl);
+      if (props.sub_label && String(props.sub_label).trim() !== "") {
+        telemetryEl = document.createElement("div");
+        telemetryEl.className = "telemetry";
+        telemetryEl.style.color = "#94A3B8";
+        telemetryEl.textContent = String(props.sub_label);
+        stage.appendChild(telemetryEl);
+      } else {
+        telemetryEl = null;
+      }
 
-      planes = { lead: leadEl, hero: heroEl, sub: subEl };
       renderFrame(0, ctx);
     },
     frame(t, ctx) {

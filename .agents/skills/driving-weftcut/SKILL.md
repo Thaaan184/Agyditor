@@ -25,8 +25,14 @@ description: >-
 - See [references/bundled-skill/SKILL.md](references/bundled-skill/SKILL.md) for the official skill shipped inside WeftCut v0.8.1 (including `craft/rules.md`, `craft/editing.md`, and `recipes/teaching-explainer.md`).
 - See [references/mcp.md](references/mcp.md) for MCP transport, tool lifecycle, Tacks, and Timeline Diff conventions.
 - See [references/motif-authoring.md](references/motif-authoring.md) for the exact `motif.define({ async setup(props, ctx), frame(t, ctx) })` authoring contract (one purpose per Motif layer, pure function of time `t`, cue props `cue_<name>_s`, bundled relative `./fonts/` loaded via `document.fonts.load(...)`, zero web app navigation bars).
-- Ready-to-use self-contained Starter Motifs live under `studio_kit/motifs/` (sharing `studio_kit/motion_primitives.js`):
+- Ready-to-use self-contained Starter Motifs live under `studio_kit/motifs/` (sharing `studio_kit/motion_primitives.js`, `keyframe_rig.js`, and `optical_stage.js`):
   - `studio_kit/motifs/apple-follower-reveal` (2-frame per-character stagger with blur resolve and tight per-glyph shadow).
   - `studio_kit/motifs/ghost-echo-kinetic` (20% trailing ghost expansion + `[0.38, 0, 0, 1]` kinetic swap).
   - `studio_kit/motifs/rolling-cylinder-slot` (clipped vertical reel columns with SVG directional Y blur at mid-velocity + split color accent).
-  - `studio_kit/motifs/kinetic-3d-spatial` (Mixed-Voice sans + italic serif across Z depth planes with Focal-Plane DoF blur).
+  - `studio_kit/motifs/kinetic-3d-spatial` (true 3D spiral/planar layout with `35mm` camera Z pull/push + keyframed DoF blur + Mixed-Voice contrast).
+  - `studio_kit/motifs/cylinder-3d-orbit` (Three.js `r186.1` extruded beveled typography + curved `CylinderGeometry` orbital ribbon + `SpotLight` + `Cast Shadow` ready for WeftCut subject sandwiching).
+  - `studio_kit/motifs/signature-glow-trim` (per-glyph vector Trim-Path stroke reveal + glowing bloom nib emitter).
+
+## 5-Stem Role Mixing & Zero-Waste Sound Hygiene
+- Export or import pre-rendered audio via `studio_kit/sound_engine.py` (`stems/stem_voice.wav`, `stem_ambience.wav`, `stem_foley.wav`, `stem_transitions.wav`, `stem_music.wav` + `weftcut_stem_plan.json`) mapped cleanly to WeftCut `dialogue`, `ambience`, `sfx`, and `bgm` tracks.
+- Enforce continuous room-tone ambience across visual cuts (`J/L-cut`), `50-240 ms` pre-lap on hero transitions, BGM micro-silence drop-outs before reveals/punchlines, and final validation through `studio_kit/acoustic_audit.py`.

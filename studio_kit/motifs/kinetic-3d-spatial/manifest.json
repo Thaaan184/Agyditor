@@ -2,7 +2,7 @@
   "name": "Kinetic 3D Spatial",
   "size": [1080, 1920],
   "default_duration_s": 4.0,
-  "content_duration_s": 2.4,
+  "content_duration_s": 2.6,
   "graphic_role": "title",
   "fonts": [
     "./fonts/InterTight-Latin.woff2",
@@ -11,9 +11,12 @@
   ],
   "props_schema": {
     "lead_text": { "type": "string", "default": "BUILT FOR", "max_length": 24 },
-    "hero_text": { "type": "string", "default": "CINEMA", "max_length": 20 },
+    "hero_text": { "type": "string", "default": "OPTICAL DEPTH", "max_length": 24 },
     "accent_serif": { "type": "string", "default": "precision", "max_length": 24 },
-    "sub_label": { "type": "string", "default": "1080P / 60FPS LOCAL PIPELINE", "max_length": 44 },
+    "sub_label": { "type": "string", "default": "35MM CAMERA / KEYFRAMED DOF", "max_length": 44 },
+    "layout_mode": { "type": "enum", "options": ["spiral", "planes"], "default": "spiral" },
+    "focal_mm": { "type": "number", "default": 35, "min": 16, "max": 120 },
+    "aperture_px": { "type": "number", "default": 64, "min": 8, "max": 140 },
     "ink": { "type": "color", "default": "#F8FAFC" },
     "accent": { "type": "color", "default": "#0EA5E9" },
     "ground_mode": { "type": "enum", "options": ["transparent", "ambient_dark"], "default": "transparent" },

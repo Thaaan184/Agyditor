@@ -4,6 +4,8 @@ __pycache__/
 node_modules/
 tools/
 projects/*/frames_tmp/
+projects/*/recon/
+projects/*/refs/
 bin/*.exe
 bin/*.zip
 *.tmp.mp4
@@ -16,11 +18,19 @@ docs/superpowers/
 
 # Raw downloaded study clips, audio stems, and extracted verification bursts
 references/**/*.mp4
+references/**/*.webm
+references/**/*.mkv
+references/**/*.m4a
 references/**/*.wav
 references/**/*.jsonl
+references/**/*.info.json
 references/**/*.jpg
 references/**/*.jpeg
 references/**/*.png
 references/**/frames_*/
 references/**/burst_*/
+references/**/*.vtt
+references/**/*.txt
 studio_kit/renders/_*
+studio_kit/renders/narrative_audio/
+studio_kit/sfx/tonal_pack/
