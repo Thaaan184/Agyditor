@@ -203,6 +203,73 @@ def build_index() -> dict[str, Any]:
                 **feats,
             })
 
+    # 5. studio_kit/sfx/meme_pack (Creator gaming & comedic meme SFX from R2v8AcMg7j8 / XFEjqrIwgIg)
+    meme_dir = ROOT / "studio_kit" / "sfx" / "meme_pack"
+    if meme_dir.exists():
+        import re as _re
+
+        audio_exts = {".mp3", ".wav", ".ogg", ".m4a", ".flac"}
+        seen_ids: set[str] = set()
+        for p in sorted(meme_dir.rglob("*")):
+            if not p.is_file() or p.suffix.lower() not in audio_exts:
+                continue
+            try:
+                feats = _measure_audio_features(p)
+            except Exception:
+                continue
+            stem = p.stem
+            clean_stem = _re.sub(r"\s*\(\d+\)\s*$", "", stem)
+            clean_stem = _re.sub(r"^y2mate\.com\s*-\s*", "", clean_stem, flags=_re.I)
+            clean_stem = _re.sub(r"\s*[-_]?\s*sound\s*effect.*$", "", clean_stem, flags=_re.I)
+            slug = _re.sub(r"[^a-z0-9]+", "-", clean_stem.lower()).strip("-") or _re.sub(r"[^a-z0-9]+", "-", stem.lower()).strip("-")
+            if slug in seen_ids:
+                slug = f"{slug}-{len(seen_ids)}"
+            seen_ids.add(slug)
+
+            low = stem.lower()
+            tags = ["meme", "gaming-comedic"]
+            for kw, tg in (
+                ("awkward", "awkward"), ("bonk", "bonk"), ("bruh", "bruh"), ("bo-womp", "fail"),
+                ("spongebob", "fail"), ("sad", "sad"), ("naruto", "sad"), ("disappointed", "fail"),
+                ("hitmarker", "hit"), ("punch", "impact"), ("nuke", "impact"), ("boom", "impact"),
+                ("discord", "discord"), ("iphone", "notification"), ("samsung", "notification"),
+                ("minecraft", "minecraft"), ("valorant", "valorant"), ("one-piece", "anime"),
+                ("one_piece", "anime"), ("anime", "anime"), ("sukuna", "anime"), ("dragon_ball", "anime"),
+                ("whoosh", "transition"), ("whip", "transition"), ("shutter", "transition"), ("tele", "transition"),
+                ("huh", "reaction"), ("what", "reaction"), ("wtf", "reaction"), ("nope", "reaction"),
+                ("emotional", "roast"), ("laugh", "laughter"), ("rizz", "rizz"), ("taco", "stinger"),
+                ("warkop", "indo-meme"), ("acumalaka", "indo-meme"), ("chuaks", "indo-meme"),
+                ("kerja-bagus", "indo-meme"), ("kobo", "indo-meme"), ("upin", "indo-meme"),
+            ):
+                if kw in low and tg not in tags:
+                    tags.append(tg)
+
+            if any(k in low for k in ("whoosh", "whip", "shutter", "tele", "flashback")):
+                cat = "transition"
+            elif any(k in low for k in ("hitmarker", "punch", "bonk", "nuke", "don-onepiece", "taco", "crack")):
+                cat = "impact"
+            elif any(k in low for k in ("sad-song", "sad-music", "theme", "ost", "song", "remix", "abertura")):
+                cat = "meme_music"
+            else:
+                cat = "meme_stinger"
+
+            profs = ["comedic-dry", "gaming-comedic"]
+            if cat in ("transition", "impact") or "valorant" in low or "hitmarker" in low:
+                profs.append("gaming-montage")
+
+            assets.append({
+                "id": f"meme/{slug}",
+                "pack": "creator-meme-pack",
+                "rel_path": str(p.relative_to(ROOT)).replace("\\", "/"),
+                "category": cat,
+                "length_tag": "short" if feats["duration_s"] < 1.5 else ("medium" if feats["duration_s"] < 5.0 else "long"),
+                "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+                "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+                "tags": tags,
+                "profiles": profs,
+                **feats,
+            })
+
     by_role: dict[str, int] = {}
     by_pack: dict[str, int] = {}
     for a in assets:

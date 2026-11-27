@@ -1,17 +1,18 @@
 {
   "version": 1,
-  "total_assets": 173,
+  "total_assets": 293,
   "by_pack": {
     "sound-effects-cc0": 103,
     "media-use-pixabay": 19,
     "ghost-editor-cc0": 27,
-    "multiply-sound-tonal": 24
+    "multiply-sound-tonal": 24,
+    "creator-meme-pack": 120
   },
   "by_spectrum_role": {
-    "sub_low": 44,
-    "full_spectrum": 18,
-    "mid_body": 69,
-    "high_air": 38,
+    "sub_low": 67,
+    "full_spectrum": 34,
+    "mid_body": 138,
+    "high_air": 50,
     "room_bed": 4
   },
   "palette_rules": {
@@ -4927,6 +4928,3560 @@
         "air_8000_18000": 0.0
       },
       "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/000000000000000000-ooo-maga",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/000000000000000000 ooo maga.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 10.356,
+      "peak_dbfs": -5.16,
+      "rms_dbfs": -18.34,
+      "spectral_centroid_hz": 1491.5,
+      "band_pct": {
+        "sub_20_90": 5.47,
+        "mud_100_350": 6.07,
+        "voice_350_2500": 72.71,
+        "detail_2500_8000": 14.67,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/1-108",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/1-108.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 2.116,
+      "peak_dbfs": -0.83,
+      "rms_dbfs": -15.92,
+      "spectral_centroid_hz": 670.4,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 56.65,
+        "voice_350_2500": 39.5,
+        "detail_2500_8000": 3.84,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/all-my-fellaz",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/all-my-fellaz.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 17.736,
+      "peak_dbfs": 0.02,
+      "rms_dbfs": -11.11,
+      "spectral_centroid_hz": 216.4,
+      "band_pct": {
+        "sub_20_90": 55.86,
+        "mud_100_350": 27.55,
+        "voice_350_2500": 10.14,
+        "detail_2500_8000": 0.6,
+        "air_8000_18000": 0.24
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/among-us-trap-remix-bass-boosted-leonz-8455886905626474145-mp3cut",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/among_us_trap_remix_bass_boosted_leonz_8455886905626474145-mp3cut.mp3",
+      "category": "meme_music",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 10.502,
+      "peak_dbfs": 0.39,
+      "rms_dbfs": -7.73,
+      "spectral_centroid_hz": 69.1,
+      "band_pct": {
+        "sub_20_90": 87.68,
+        "mud_100_350": 5.3,
+        "voice_350_2500": 3.1,
+        "detail_2500_8000": 0.07,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/angels-singing",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/angels-singing.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 5.376,
+      "peak_dbfs": -12.09,
+      "rms_dbfs": -24.85,
+      "spectral_centroid_hz": 798.4,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 1.13,
+        "voice_350_2500": 98.72,
+        "detail_2500_8000": 0.06,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/anime-wow-sound-effect-hd-getmp3-pro",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Anime_WOW_-_Sound_Effect_HD_(getmp3.pro).mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "anime"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 4.005,
+      "peak_dbfs": -14.95,
+      "rms_dbfs": -32.1,
+      "spectral_centroid_hz": 1349.7,
+      "band_pct": {
+        "sub_20_90": 0.03,
+        "mud_100_350": 0.31,
+        "voice_350_2500": 95.83,
+        "detail_2500_8000": 3.63,
+        "air_8000_18000": 0.19
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/ara-ara-sound-effect-cq0slxi",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/ara-ara_-sound-effect_cq0SlXI.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.184,
+      "peak_dbfs": -6.16,
+      "rms_dbfs": -19.8,
+      "spectral_centroid_hz": 865.5,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 41.0,
+        "voice_350_2500": 55.11,
+        "detail_2500_8000": 3.76,
+        "air_8000_18000": 0.12
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/aw-hell-nah-man",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/aw-hell-nah-man.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 10.403,
+      "peak_dbfs": 0.14,
+      "rms_dbfs": -11.79,
+      "spectral_centroid_hz": 580.1,
+      "band_pct": {
+        "sub_20_90": 39.33,
+        "mud_100_350": 13.19,
+        "voice_350_2500": 36.49,
+        "detail_2500_8000": 4.49,
+        "air_8000_18000": 0.55
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/awkward-moment",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Awkward Moment.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "awkward"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.765,
+      "peak_dbfs": -8.62,
+      "rms_dbfs": -31.9,
+      "spectral_centroid_hz": 1567.6,
+      "band_pct": {
+        "sub_20_90": 0.09,
+        "mud_100_350": 0.16,
+        "voice_350_2500": 87.75,
+        "detail_2500_8000": 11.76,
+        "air_8000_18000": 0.2
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/bad-to-the-bone-meme",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/bad-to-the-bone-meme (1).mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 2.529,
+      "peak_dbfs": -6.04,
+      "rms_dbfs": -20.85,
+      "spectral_centroid_hz": 1524.7,
+      "band_pct": {
+        "sub_20_90": 0.27,
+        "mud_100_350": 5.55,
+        "voice_350_2500": 80.48,
+        "detail_2500_8000": 13.46,
+        "air_8000_18000": 0.05
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/basicbeam-fire",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/basicbeam_fire.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 5.702,
+      "peak_dbfs": -3.32,
+      "rms_dbfs": -15.84,
+      "spectral_centroid_hz": 1094.0,
+      "band_pct": {
+        "sub_20_90": 10.25,
+        "mud_100_350": 18.7,
+        "voice_350_2500": 55.52,
+        "detail_2500_8000": 11.21,
+        "air_8000_18000": 0.11
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/bernyanyi-bernyayi-original",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/bernyanyi-bernyayi-original.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 20.155,
+      "peak_dbfs": -0.25,
+      "rms_dbfs": -12.78,
+      "spectral_centroid_hz": 434.1,
+      "band_pct": {
+        "sub_20_90": 33.06,
+        "mud_100_350": 36.85,
+        "voice_350_2500": 25.16,
+        "detail_2500_8000": 2.62,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/bo-womp",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/bo-womp.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "fail"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.165,
+      "peak_dbfs": -1.41,
+      "rms_dbfs": -19.66,
+      "spectral_centroid_hz": 368.8,
+      "band_pct": {
+        "sub_20_90": 0.39,
+        "mud_100_350": 56.84,
+        "voice_350_2500": 42.68,
+        "detail_2500_8000": 0.05,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/bonk",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Bonk - Sound Effect (HD) (320 kbps).mp3",
+      "category": "impact",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "bonk"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 2.064,
+      "peak_dbfs": -3.12,
+      "rms_dbfs": -24.94,
+      "spectral_centroid_hz": 375.2,
+      "band_pct": {
+        "sub_20_90": 0.02,
+        "mud_100_350": 90.75,
+        "voice_350_2500": 8.74,
+        "detail_2500_8000": 0.48,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/brain-aneurysm",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/brain-aneurysm.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.855,
+      "peak_dbfs": -0.36,
+      "rms_dbfs": -14.01,
+      "spectral_centroid_hz": 726.3,
+      "band_pct": {
+        "sub_20_90": 1.0,
+        "mud_100_350": 11.94,
+        "voice_350_2500": 84.97,
+        "detail_2500_8000": 1.42,
+        "air_8000_18000": 0.08
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/bruh",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Bruh - Sound Effect (HD) (320 kbps).mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "bruh"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 2.04,
+      "peak_dbfs": -6.1,
+      "rms_dbfs": -24.57,
+      "spectral_centroid_hz": 679.0,
+      "band_pct": {
+        "sub_20_90": 0.03,
+        "mud_100_350": 11.91,
+        "voice_350_2500": 86.61,
+        "detail_2500_8000": 1.43,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/buy-1",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/buy_1.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.202,
+      "peak_dbfs": -2.18,
+      "rms_dbfs": -24.62,
+      "spectral_centroid_hz": 4519.8,
+      "band_pct": {
+        "sub_20_90": 0.08,
+        "mud_100_350": 2.82,
+        "voice_350_2500": 19.71,
+        "detail_2500_8000": 73.19,
+        "air_8000_18000": 4.16
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "meme/camera-shutter",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Camera Shutter.mp3",
+      "category": "transition",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "transition"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 0.813,
+      "peak_dbfs": -0.34,
+      "rms_dbfs": -27.75,
+      "spectral_centroid_hz": 5670.6,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 0.21,
+        "voice_350_2500": 10.8,
+        "detail_2500_8000": 66.64,
+        "air_8000_18000": 22.34
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "meme/candyland-cat-meme",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/candyland-cat-meme (1).mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 9.195,
+      "peak_dbfs": -1.82,
+      "rms_dbfs": -12.15,
+      "spectral_centroid_hz": 1045.9,
+      "band_pct": {
+        "sub_20_90": 0.63,
+        "mud_100_350": 6.96,
+        "voice_350_2500": 90.95,
+        "detail_2500_8000": 1.26,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/cave1-gqb8cwt",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/cave1_gqB8CwT.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 6.008,
+      "peak_dbfs": -10.36,
+      "rms_dbfs": -31.25,
+      "spectral_centroid_hz": 1037.1,
+      "band_pct": {
+        "sub_20_90": 0.03,
+        "mud_100_350": 0.86,
+        "voice_350_2500": 95.97,
+        "detail_2500_8000": 3.12,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/ceeday-huh-sound-effect",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/ceeday-huh-sound-effect.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "reaction"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.161,
+      "peak_dbfs": -12.28,
+      "rms_dbfs": -25.67,
+      "spectral_centroid_hz": 687.9,
+      "band_pct": {
+        "sub_20_90": 0.11,
+        "mud_100_350": 26.55,
+        "voice_350_2500": 72.34,
+        "detail_2500_8000": 0.91,
+        "air_8000_18000": 0.03
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/chinese-rap-song",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/chinese-rap-song.mp3",
+      "category": "meme_music",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 19.977,
+      "peak_dbfs": 1.78,
+      "rms_dbfs": -13.64,
+      "spectral_centroid_hz": 568.4,
+      "band_pct": {
+        "sub_20_90": 57.48,
+        "mud_100_350": 8.26,
+        "voice_350_2500": 28.61,
+        "detail_2500_8000": 3.96,
+        "air_8000_18000": 0.62
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/chuaks",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/chuaks.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "indo-meme"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.104,
+      "peak_dbfs": -1.48,
+      "rms_dbfs": -12.03,
+      "spectral_centroid_hz": 1901.3,
+      "band_pct": {
+        "sub_20_90": 0.11,
+        "mud_100_350": 0.48,
+        "voice_350_2500": 86.42,
+        "detail_2500_8000": 11.34,
+        "air_8000_18000": 1.59
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/crack-the-whip",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/crack_the_whip.mp3",
+      "category": "transition",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "transition"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 1.121,
+      "peak_dbfs": -0.96,
+      "rms_dbfs": -18.97,
+      "spectral_centroid_hz": 3491.1,
+      "band_pct": {
+        "sub_20_90": 0.92,
+        "mud_100_350": 2.31,
+        "voice_350_2500": 34.15,
+        "detail_2500_8000": 59.16,
+        "air_8000_18000": 3.34
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "meme/deja-vu",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/deja-vu.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 6.233,
+      "peak_dbfs": -0.05,
+      "rms_dbfs": -12.56,
+      "spectral_centroid_hz": 1168.4,
+      "band_pct": {
+        "sub_20_90": 15.92,
+        "mud_100_350": 25.99,
+        "voice_350_2500": 45.67,
+        "detail_2500_8000": 7.42,
+        "air_8000_18000": 3.61
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/discord-join",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Discord Join.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "discord"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.248,
+      "peak_dbfs": -2.35,
+      "rms_dbfs": -19.12,
+      "spectral_centroid_hz": 450.3,
+      "band_pct": {
+        "sub_20_90": 0.03,
+        "mud_100_350": 32.9,
+        "voice_350_2500": 67.06,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/discord-notification",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Discord notification.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "discord"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.824,
+      "peak_dbfs": -0.8,
+      "rms_dbfs": -22.1,
+      "spectral_centroid_hz": 620.0,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.01,
+        "voice_350_2500": 99.99,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/distortion",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Distortion.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 4.342,
+      "peak_dbfs": -9.6,
+      "rms_dbfs": -16.53,
+      "spectral_centroid_hz": 254.4,
+      "band_pct": {
+        "sub_20_90": 42.37,
+        "mud_100_350": 16.65,
+        "voice_350_2500": 10.94,
+        "detail_2500_8000": 1.87,
+        "air_8000_18000": 0.22
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/don-onepiece",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/don-onepiece.mp3",
+      "category": "impact",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 2.717,
+      "peak_dbfs": -6.62,
+      "rms_dbfs": -22.71,
+      "spectral_centroid_hz": 189.3,
+      "band_pct": {
+        "sub_20_90": 29.25,
+        "mud_100_350": 50.55,
+        "voice_350_2500": 7.36,
+        "detail_2500_8000": 0.36,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/dragon-ball-z-tele",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/dragon_ball_z_tele.mp3",
+      "category": "transition",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "anime",
+        "transition"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 1.515,
+      "peak_dbfs": -4.05,
+      "rms_dbfs": -17.5,
+      "spectral_centroid_hz": 2274.7,
+      "band_pct": {
+        "sub_20_90": 0.12,
+        "mud_100_350": 3.62,
+        "voice_350_2500": 61.92,
+        "detail_2500_8000": 33.89,
+        "air_8000_18000": 0.19
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/dream-sound",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/dream-sound.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 11.568,
+      "peak_dbfs": -12.03,
+      "rms_dbfs": -28.21,
+      "spectral_centroid_hz": 824.0,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 12.97,
+        "voice_350_2500": 87.03,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/eagle-rahhh",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/eagle-rahhh.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 3.216,
+      "peak_dbfs": -0.62,
+      "rms_dbfs": -13.58,
+      "spectral_centroid_hz": 2491.2,
+      "band_pct": {
+        "sub_20_90": 0.08,
+        "mud_100_350": 0.26,
+        "voice_350_2500": 55.87,
+        "detail_2500_8000": 43.69,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "meme/emotional-damage-meme",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/emotional-damage-meme.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "roast"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 3.32,
+      "peak_dbfs": -0.68,
+      "rms_dbfs": -12.71,
+      "spectral_centroid_hz": 1014.6,
+      "band_pct": {
+        "sub_20_90": 0.16,
+        "mud_100_350": 16.28,
+        "voice_350_2500": 75.8,
+        "detail_2500_8000": 7.3,
+        "air_8000_18000": 0.43
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/enemy-introduction-one-piece",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/enemy-introduction-one-piece.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "anime"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 2.159,
+      "peak_dbfs": -7.7,
+      "rms_dbfs": -24.54,
+      "spectral_centroid_hz": 978.1,
+      "band_pct": {
+        "sub_20_90": 24.99,
+        "mud_100_350": 41.89,
+        "voice_350_2500": 17.62,
+        "detail_2500_8000": 14.88,
+        "air_8000_18000": 0.06
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/espada-som",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/espada-som.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.15,
+      "peak_dbfs": -2.47,
+      "rms_dbfs": -16.26,
+      "spectral_centroid_hz": 4740.9,
+      "band_pct": {
+        "sub_20_90": 0.07,
+        "mud_100_350": 0.19,
+        "voice_350_2500": 12.32,
+        "detail_2500_8000": 80.31,
+        "air_8000_18000": 7.09
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "meme/exploding-toilet-meme-funny",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/exploding-toilet-meme-funny.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 2.038,
+      "peak_dbfs": 2.08,
+      "rms_dbfs": -9.75,
+      "spectral_centroid_hz": 803.0,
+      "band_pct": {
+        "sub_20_90": 27.25,
+        "mud_100_350": 33.31,
+        "voice_350_2500": 28.49,
+        "detail_2500_8000": 8.59,
+        "air_8000_18000": 0.65
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/fart-with-reverb",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/fart-with-reverb.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 3.2,
+      "peak_dbfs": -0.66,
+      "rms_dbfs": -20.04,
+      "spectral_centroid_hz": 300.7,
+      "band_pct": {
+        "sub_20_90": 0.2,
+        "mud_100_350": 85.46,
+        "voice_350_2500": 13.82,
+        "detail_2500_8000": 0.45,
+        "air_8000_18000": 0.05
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/flashback-one-piece",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/flashback-one-piece.mp3",
+      "category": "transition",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "anime"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 4.331,
+      "peak_dbfs": -16.01,
+      "rms_dbfs": -32.58,
+      "spectral_centroid_hz": 655.8,
+      "band_pct": {
+        "sub_20_90": 45.97,
+        "mud_100_350": 7.69,
+        "voice_350_2500": 44.55,
+        "detail_2500_8000": 0.21,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/gta-san-andreas-abertura-oficial",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/gta-san-andreas-abertura-oficial.mp3",
+      "category": "meme_music",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 10.031,
+      "peak_dbfs": -4.14,
+      "rms_dbfs": -18.36,
+      "spectral_centroid_hz": 308.2,
+      "band_pct": {
+        "sub_20_90": 60.97,
+        "mud_100_350": 18.31,
+        "voice_350_2500": 4.66,
+        "detail_2500_8000": 2.38,
+        "air_8000_18000": 0.73
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/hd-epic-sax-gandalf-10-sec-f1uqkhm",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/hd-epic-sax-gandalf-10-sec_f1uqKhm.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 10.217,
+      "peak_dbfs": -1.58,
+      "rms_dbfs": -15.87,
+      "spectral_centroid_hz": 353.8,
+      "band_pct": {
+        "sub_20_90": 60.56,
+        "mud_100_350": 19.3,
+        "voice_350_2500": 12.43,
+        "detail_2500_8000": 2.98,
+        "air_8000_18000": 0.16
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/helicopter-meme",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/helicopter-meme.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 7.848,
+      "peak_dbfs": -0.18,
+      "rms_dbfs": -13.26,
+      "spectral_centroid_hz": 1032.2,
+      "band_pct": {
+        "sub_20_90": 12.75,
+        "mud_100_350": 15.17,
+        "voice_350_2500": 61.77,
+        "detail_2500_8000": 8.45,
+        "air_8000_18000": 0.18
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/hitmarker-2",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/hitmarker_2.mp3",
+      "category": "impact",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "hit"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 0.066,
+      "peak_dbfs": 2.16,
+      "rms_dbfs": -10.35,
+      "spectral_centroid_hz": 3680.3,
+      "band_pct": {
+        "sub_20_90": 0.25,
+        "mud_100_350": 18.13,
+        "voice_350_2500": 40.56,
+        "detail_2500_8000": 21.46,
+        "air_8000_18000": 19.38
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "meme/hiyakkk",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/hiyakkk.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.071,
+      "peak_dbfs": -8.77,
+      "rms_dbfs": -17.17,
+      "spectral_centroid_hz": 1388.5,
+      "band_pct": {
+        "sub_20_90": 0.05,
+        "mud_100_350": 3.25,
+        "voice_350_2500": 89.31,
+        "detail_2500_8000": 7.14,
+        "air_8000_18000": 0.22
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/honkai-herta-hudurin-kuru-kuru",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/honkai-herta-hudurin-kuru-kuru.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.386,
+      "peak_dbfs": -1.98,
+      "rms_dbfs": -15.5,
+      "spectral_centroid_hz": 1094.3,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 2.13,
+        "voice_350_2500": 84.87,
+        "detail_2500_8000": 12.92,
+        "air_8000_18000": 0.06
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/hyper-distorted-illuminati-confirmed-mlg",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Hyper Distorted Illuminati Confirmed - MLG Sound Effect (HD) (320 kbps).mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 15.0,
+      "peak_dbfs": 2.86,
+      "rms_dbfs": -2.6,
+      "spectral_centroid_hz": 964.4,
+      "band_pct": {
+        "sub_20_90": 4.38,
+        "mud_100_350": 18.22,
+        "voice_350_2500": 72.37,
+        "detail_2500_8000": 4.41,
+        "air_8000_18000": 0.31
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/japan-oppai-sound",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/japan-oppai-sound.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 0.604,
+      "peak_dbfs": -17.69,
+      "rms_dbfs": -31.76,
+      "spectral_centroid_hz": 2311.3,
+      "band_pct": {
+        "sub_20_90": 0.13,
+        "mud_100_350": 0.05,
+        "voice_350_2500": 63.61,
+        "detail_2500_8000": 36.18,
+        "air_8000_18000": 0.03
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "meme/katon",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/katon.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 2.194,
+      "peak_dbfs": -10.7,
+      "rms_dbfs": -28.54,
+      "spectral_centroid_hz": 1418.8,
+      "band_pct": {
+        "sub_20_90": 0.05,
+        "mud_100_350": 11.89,
+        "voice_350_2500": 74.1,
+        "detail_2500_8000": 13.4,
+        "air_8000_18000": 0.51
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/kentut-fart",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Kentut Fart.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.896,
+      "peak_dbfs": -8.68,
+      "rms_dbfs": -29.77,
+      "spectral_centroid_hz": 510.0,
+      "band_pct": {
+        "sub_20_90": 0.03,
+        "mud_100_350": 52.3,
+        "voice_350_2500": 46.28,
+        "detail_2500_8000": 1.28,
+        "air_8000_18000": 0.11
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/kerja-bagus-ff",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/kerja-bagus-ff.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "indo-meme"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.0,
+      "peak_dbfs": -6.72,
+      "rms_dbfs": -21.04,
+      "spectral_centroid_hz": 799.2,
+      "band_pct": {
+        "sub_20_90": 0.11,
+        "mud_100_350": 57.92,
+        "voice_350_2500": 34.18,
+        "detail_2500_8000": 6.56,
+        "air_8000_18000": 0.99
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/kids-cheering-gaming",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Kids Cheering - Gaming Sound Effect (HD) (320 kbps).mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 5.088,
+      "peak_dbfs": -5.22,
+      "rms_dbfs": -20.7,
+      "spectral_centroid_hz": 1661.6,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.01,
+        "voice_350_2500": 82.39,
+        "detail_2500_8000": 17.54,
+        "air_8000_18000": 0.05
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/kobo-chamber-kontol",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/kobo-chamber-kontol.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "indo-meme"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 41.88,
+      "peak_dbfs": -1.01,
+      "rms_dbfs": -16.65,
+      "spectral_centroid_hz": 1005.0,
+      "band_pct": {
+        "sub_20_90": 11.99,
+        "mud_100_350": 14.03,
+        "voice_350_2500": 63.84,
+        "detail_2500_8000": 8.89,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/laughter-short",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/laughter-short.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "laughter"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 4.028,
+      "peak_dbfs": -3.42,
+      "rms_dbfs": -20.02,
+      "spectral_centroid_hz": 1383.4,
+      "band_pct": {
+        "sub_20_90": 0.05,
+        "mud_100_350": 1.62,
+        "voice_350_2500": 89.64,
+        "detail_2500_8000": 8.67,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/mail-naik-sepeda",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Mail Naik Sepeda - Sound Effect Upin & Ipin (192).mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "indo-meme"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 10.008,
+      "peak_dbfs": -2.31,
+      "rms_dbfs": -20.8,
+      "spectral_centroid_hz": 1176.9,
+      "band_pct": {
+        "sub_20_90": 12.15,
+        "mud_100_350": 23.57,
+        "voice_350_2500": 54.2,
+        "detail_2500_8000": 7.09,
+        "air_8000_18000": 2.24
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/maju3",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/maju3.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.986,
+      "peak_dbfs": -4.45,
+      "rms_dbfs": -19.4,
+      "spectral_centroid_hz": 1781.3,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 10.74,
+        "voice_350_2500": 54.25,
+        "detail_2500_8000": 34.96,
+        "air_8000_18000": 0.05
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "meme/minecraft-eating",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Minecraft Eating - Sound Effect (HD) (320 kbps).mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "minecraft"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.68,
+      "peak_dbfs": -3.24,
+      "rms_dbfs": -26.51,
+      "spectral_centroid_hz": 1876.9,
+      "band_pct": {
+        "sub_20_90": 1.13,
+        "mud_100_350": 22.93,
+        "voice_350_2500": 50.38,
+        "detail_2500_8000": 23.06,
+        "air_8000_18000": 1.56
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/minecraft-fall-damage-crack",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Minecraft Fall Damage (Crack) - Sound Effect (HD) (320 kbps).mp3",
+      "category": "impact",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "minecraft"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 2.04,
+      "peak_dbfs": -1.21,
+      "rms_dbfs": -30.0,
+      "spectral_centroid_hz": 2731.3,
+      "band_pct": {
+        "sub_20_90": 9.59,
+        "mud_100_350": 10.35,
+        "voice_350_2500": 24.32,
+        "detail_2500_8000": 49.44,
+        "air_8000_18000": 3.73
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "meme/minecraft-click",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/minecraft_click.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "minecraft"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 0.837,
+      "peak_dbfs": -14.51,
+      "rms_dbfs": -44.79,
+      "spectral_centroid_hz": 2175.0,
+      "band_pct": {
+        "sub_20_90": 0.05,
+        "mud_100_350": 0.84,
+        "voice_350_2500": 78.09,
+        "detail_2500_8000": 17.33,
+        "air_8000_18000": 3.62
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/mongraal-shing-shing-sound-for-twitch",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/mongraal-shing-shing-sound-for-twitch.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 5.826,
+      "peak_dbfs": -27.55,
+      "rms_dbfs": -39.96,
+      "spectral_centroid_hz": 1927.8,
+      "band_pct": {
+        "sub_20_90": 0.42,
+        "mud_100_350": 4.2,
+        "voice_350_2500": 65.13,
+        "detail_2500_8000": 22.69,
+        "air_8000_18000": 4.82
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/munch-sound-effect",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/munch-sound-effect.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 0.955,
+      "peak_dbfs": -4.45,
+      "rms_dbfs": -22.26,
+      "spectral_centroid_hz": 1376.9,
+      "band_pct": {
+        "sub_20_90": 0.13,
+        "mud_100_350": 39.72,
+        "voice_350_2500": 36.94,
+        "detail_2500_8000": 22.59,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/music2",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/music2.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 15.7,
+      "peak_dbfs": 1.86,
+      "rms_dbfs": -8.25,
+      "spectral_centroid_hz": 1043.4,
+      "band_pct": {
+        "sub_20_90": 46.38,
+        "mud_100_350": 14.14,
+        "voice_350_2500": 21.53,
+        "detail_2500_8000": 9.3,
+        "air_8000_18000": 2.74
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/naruto-sad-music-instant",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/naruto-sad-music-instant.mp3",
+      "category": "meme_music",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "sad"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 16.588,
+      "peak_dbfs": -6.32,
+      "rms_dbfs": -19.5,
+      "spectral_centroid_hz": 828.0,
+      "band_pct": {
+        "sub_20_90": 0.04,
+        "mud_100_350": 8.65,
+        "voice_350_2500": 90.01,
+        "detail_2500_8000": 0.58,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/nope-construction-worker-tf2-gaming",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Nope (Construction Worker TF2) - Gaming Sound Effect (HD) (320 kbps).mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "reaction"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.08,
+      "peak_dbfs": 0.39,
+      "rms_dbfs": -17.55,
+      "spectral_centroid_hz": 883.6,
+      "band_pct": {
+        "sub_20_90": 0.09,
+        "mud_100_350": 15.48,
+        "voice_350_2500": 76.13,
+        "detail_2500_8000": 8.14,
+        "air_8000_18000": 0.1
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/notifikasi-iphone",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Notifikasi iphone.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "notification"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.022,
+      "peak_dbfs": -9.41,
+      "rms_dbfs": -21.75,
+      "spectral_centroid_hz": 443.8,
+      "band_pct": {
+        "sub_20_90": 0.03,
+        "mud_100_350": 59.91,
+        "voice_350_2500": 39.35,
+        "detail_2500_8000": 0.7,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/nuke-bomb",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/nuke-bomb.mp3",
+      "category": "impact",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "impact"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 5.921,
+      "peak_dbfs": 0.5,
+      "rms_dbfs": -4.61,
+      "spectral_centroid_hz": 109.8,
+      "band_pct": {
+        "sub_20_90": 68.17,
+        "mud_100_350": 21.92,
+        "voice_350_2500": 3.45,
+        "detail_2500_8000": 0.12,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/o-bom-o-mal-e-o-feio-velho-oeste-desafio-dont-talk-duelo-desafio-armas",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/o-bom-o-mal-e-o-feio-velho-oeste-desafio-dont-talk-duelo-desafio-armas.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 6.44,
+      "peak_dbfs": -5.25,
+      "rms_dbfs": -24.05,
+      "spectral_centroid_hz": 1136.3,
+      "band_pct": {
+        "sub_20_90": 0.02,
+        "mud_100_350": 0.48,
+        "voice_350_2500": 96.52,
+        "detail_2500_8000": 2.97,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/oh-shit-4",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/oh-shit_4.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 2.589,
+      "peak_dbfs": -0.17,
+      "rms_dbfs": -18.02,
+      "spectral_centroid_hz": 852.3,
+      "band_pct": {
+        "sub_20_90": 0.2,
+        "mud_100_350": 1.01,
+        "voice_350_2500": 55.79,
+        "detail_2500_8000": 6.18,
+        "air_8000_18000": 0.88
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/one-piece-angry",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/one-piece-angry.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "anime"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 9.875,
+      "peak_dbfs": -1.79,
+      "rms_dbfs": -20.09,
+      "spectral_centroid_hz": 533.2,
+      "band_pct": {
+        "sub_20_90": 42.67,
+        "mud_100_350": 34.93,
+        "voice_350_2500": 13.63,
+        "detail_2500_8000": 5.96,
+        "air_8000_18000": 0.41
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/one-piece-brooks-laugh-15-minutes",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/one-piece-brooks-laugh-15-minutes.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "anime",
+        "laughter"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 3.005,
+      "peak_dbfs": -8.72,
+      "rms_dbfs": -22.68,
+      "spectral_centroid_hz": 1353.3,
+      "band_pct": {
+        "sub_20_90": 0.07,
+        "mud_100_350": 0.95,
+        "voice_350_2500": 75.75,
+        "detail_2500_8000": 23.05,
+        "air_8000_18000": 0.13
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/one-piece-gulp",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/one-piece-gulp.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "anime"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.126,
+      "peak_dbfs": -8.29,
+      "rms_dbfs": -27.36,
+      "spectral_centroid_hz": 1191.3,
+      "band_pct": {
+        "sub_20_90": 0.1,
+        "mud_100_350": 9.35,
+        "voice_350_2500": 77.88,
+        "detail_2500_8000": 12.32,
+        "air_8000_18000": 0.32
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/one-piece-ost-cornered-raid-host",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/one-piece-ost-cornered-raid-host.mp3",
+      "category": "meme_music",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "anime"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 12.375,
+      "peak_dbfs": -1.52,
+      "rms_dbfs": -18.46,
+      "spectral_centroid_hz": 600.5,
+      "band_pct": {
+        "sub_20_90": 17.33,
+        "mud_100_350": 40.96,
+        "voice_350_2500": 35.63,
+        "detail_2500_8000": 3.98,
+        "air_8000_18000": 0.23
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/one-piece-ringtone-free-ringtones-for-cell-phones",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/one_piece_ringtone_free_ringtones_for_cell_phones.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "anime"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 5.773,
+      "peak_dbfs": -0.85,
+      "rms_dbfs": -17.09,
+      "spectral_centroid_hz": 791.0,
+      "band_pct": {
+        "sub_20_90": 21.1,
+        "mud_100_350": 25.48,
+        "voice_350_2500": 45.04,
+        "detail_2500_8000": 7.91,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/optimum-prides",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/optimum-prides.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 5.445,
+      "peak_dbfs": -1.24,
+      "rms_dbfs": -19.51,
+      "spectral_centroid_hz": 1087.5,
+      "band_pct": {
+        "sub_20_90": 5.95,
+        "mud_100_350": 5.0,
+        "voice_350_2500": 79.36,
+        "detail_2500_8000": 9.55,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/outro-pumpme-kick",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Outro PUmpme KICK.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 17.659,
+      "peak_dbfs": -9.83,
+      "rms_dbfs": -20.7,
+      "spectral_centroid_hz": 370.5,
+      "band_pct": {
+        "sub_20_90": 51.25,
+        "mud_100_350": 22.62,
+        "voice_350_2500": 20.28,
+        "detail_2500_8000": 2.26,
+        "air_8000_18000": 0.22
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/poco-x3-phone",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/poco-x3-phone.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 22.285,
+      "peak_dbfs": -0.31,
+      "rms_dbfs": -18.44,
+      "spectral_centroid_hz": 425.2,
+      "band_pct": {
+        "sub_20_90": 4.2,
+        "mud_100_350": 33.9,
+        "voice_350_2500": 36.61,
+        "detail_2500_8000": 0.55,
+        "air_8000_18000": 0.1
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/punch-gaming",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Punch - Gaming Sound Effect (HD) (320 kbps).mp3",
+      "category": "impact",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "impact"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 1.512,
+      "peak_dbfs": 1.11,
+      "rms_dbfs": -12.5,
+      "spectral_centroid_hz": 987.9,
+      "band_pct": {
+        "sub_20_90": 41.97,
+        "mud_100_350": 18.8,
+        "voice_350_2500": 23.35,
+        "detail_2500_8000": 14.47,
+        "air_8000_18000": 0.49
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/raul-drtkdmv",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/raul_drTKdMV.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.068,
+      "peak_dbfs": -1.22,
+      "rms_dbfs": -8.1,
+      "spectral_centroid_hz": 519.0,
+      "band_pct": {
+        "sub_20_90": 1.21,
+        "mud_100_350": 35.98,
+        "voice_350_2500": 48.45,
+        "detail_2500_8000": 2.12,
+        "air_8000_18000": 0.04
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/ringtone-warkop-dki",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/ringtone-warkop-dki.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "indo-meme"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 8.451,
+      "peak_dbfs": -0.7,
+      "rms_dbfs": -12.83,
+      "spectral_centroid_hz": 288.4,
+      "band_pct": {
+        "sub_20_90": 5.61,
+        "mud_100_350": 72.91,
+        "voice_350_2500": 20.37,
+        "detail_2500_8000": 0.31,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/rizz-sounds",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/rizz-sounds.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "rizz"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.933,
+      "peak_dbfs": -1.86,
+      "rms_dbfs": -14.84,
+      "spectral_centroid_hz": 78.4,
+      "band_pct": {
+        "sub_20_90": 88.63,
+        "mud_100_350": 6.97,
+        "voice_350_2500": 2.03,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/samsung-estourado",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/samsung-estourado.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "notification"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 14.086,
+      "peak_dbfs": -1.54,
+      "rms_dbfs": -14.44,
+      "spectral_centroid_hz": 3016.4,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.05,
+        "voice_350_2500": 42.49,
+        "detail_2500_8000": 57.42,
+        "air_8000_18000": 0.03
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "meme/samsung-spaceline-notification",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/samsung-spaceline-notification.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "notification"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 2.368,
+      "peak_dbfs": -5.14,
+      "rms_dbfs": -15.9,
+      "spectral_centroid_hz": 750.9,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.0,
+        "voice_350_2500": 100.0,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/sheesh",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/SHEESH SOUND EFFECT.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 8.772,
+      "peak_dbfs": -1.23,
+      "rms_dbfs": -14.22,
+      "spectral_centroid_hz": 627.2,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 0.36,
+        "voice_350_2500": 99.38,
+        "detail_2500_8000": 0.23,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/shocked-sound-effect",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/shocked-sound-effect.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.416,
+      "peak_dbfs": -0.9,
+      "rms_dbfs": -9.72,
+      "spectral_centroid_hz": 79.9,
+      "band_pct": {
+        "sub_20_90": 69.46,
+        "mud_100_350": 12.19,
+        "voice_350_2500": 2.21,
+        "detail_2500_8000": 0.13,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/sigma",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/sigma.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 18.541,
+      "peak_dbfs": 0.39,
+      "rms_dbfs": -10.02,
+      "spectral_centroid_hz": 361.8,
+      "band_pct": {
+        "sub_20_90": 52.59,
+        "mud_100_350": 19.73,
+        "voice_350_2500": 16.32,
+        "detail_2500_8000": 2.33,
+        "air_8000_18000": 0.29
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/slot-machine-jackpot-sound-effect",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/slot-machine-jackpot-sound-effect.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 7.08,
+      "peak_dbfs": -1.61,
+      "rms_dbfs": -16.01,
+      "spectral_centroid_hz": 1198.7,
+      "band_pct": {
+        "sub_20_90": 0.05,
+        "mud_100_350": 0.87,
+        "voice_350_2500": 93.27,
+        "detail_2500_8000": 5.77,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/snore-mimimimimimi",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/snore-mimimimimimi.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 5.666,
+      "peak_dbfs": -4.22,
+      "rms_dbfs": -20.78,
+      "spectral_centroid_hz": 2658.6,
+      "band_pct": {
+        "sub_20_90": 0.84,
+        "mud_100_350": 10.75,
+        "voice_350_2500": 38.81,
+        "detail_2500_8000": 46.22,
+        "air_8000_18000": 0.9
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "meme/sonic-spring",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/sonic-spring.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 0.991,
+      "peak_dbfs": -6.06,
+      "rms_dbfs": -19.32,
+      "spectral_centroid_hz": 927.1,
+      "band_pct": {
+        "sub_20_90": 0.09,
+        "mud_100_350": 36.18,
+        "voice_350_2500": 55.38,
+        "detail_2500_8000": 7.91,
+        "air_8000_18000": 0.38
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/spiderman-meme-song",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/spiderman-meme-song.mp3",
+      "category": "meme_music",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 12.4,
+      "peak_dbfs": -3.14,
+      "rms_dbfs": -17.85,
+      "spectral_centroid_hz": 635.2,
+      "band_pct": {
+        "sub_20_90": 20.84,
+        "mud_100_350": 12.44,
+        "voice_350_2500": 63.64,
+        "detail_2500_8000": 2.06,
+        "air_8000_18000": 0.03
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/spongebob-disappointed-sound-effect",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/spongebob-disappointed-sound-effect.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "fail"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 3.971,
+      "peak_dbfs": -4.03,
+      "rms_dbfs": -20.47,
+      "spectral_centroid_hz": 600.7,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 11.01,
+        "voice_350_2500": 88.46,
+        "detail_2500_8000": 0.51,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/spongebob-sad-song",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/spongebob-sad-song.mp3",
+      "category": "meme_music",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "fail",
+        "sad"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 16.945,
+      "peak_dbfs": -15.35,
+      "rms_dbfs": -29.52,
+      "spectral_centroid_hz": 927.2,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 28.64,
+        "voice_350_2500": 70.75,
+        "detail_2500_8000": 0.59,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/sukunas-ryoiki-tenkai",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/sukunas-ryoiki-tenkai.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "anime"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.649,
+      "peak_dbfs": -11.53,
+      "rms_dbfs": -27.62,
+      "spectral_centroid_hz": 1835.1,
+      "band_pct": {
+        "sub_20_90": 3.82,
+        "mud_100_350": 29.31,
+        "voice_350_2500": 37.66,
+        "detail_2500_8000": 19.89,
+        "air_8000_18000": 4.32
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/talking-bennnn-noo",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/talking-bennnn-noo.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.202,
+      "peak_dbfs": -14.61,
+      "rms_dbfs": -30.44,
+      "spectral_centroid_hz": 248.8,
+      "band_pct": {
+        "sub_20_90": 0.33,
+        "mud_100_350": 93.15,
+        "voice_350_2500": 4.08,
+        "detail_2500_8000": 0.07,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/tf2-bonk",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/tf2-bonk.mp3",
+      "category": "impact",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "bonk"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 0.604,
+      "peak_dbfs": 2.63,
+      "rms_dbfs": -5.85,
+      "spectral_centroid_hz": 914.5,
+      "band_pct": {
+        "sub_20_90": 8.0,
+        "mud_100_350": 11.74,
+        "voice_350_2500": 68.72,
+        "detail_2500_8000": 5.16,
+        "air_8000_18000": 1.22
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/throwing-sound-effect-davemadson",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/throwing-sound-effect-davemadson.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.068,
+      "peak_dbfs": -8.58,
+      "rms_dbfs": -24.06,
+      "spectral_centroid_hz": 1844.4,
+      "band_pct": {
+        "sub_20_90": 0.08,
+        "mud_100_350": 5.85,
+        "voice_350_2500": 68.92,
+        "detail_2500_8000": 25.12,
+        "air_8000_18000": 0.03
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/tmpq7mpzzl9",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/tmpq7mpzzl9 (1).mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 29.597,
+      "peak_dbfs": 1.38,
+      "rms_dbfs": -9.77,
+      "spectral_centroid_hz": 117.7,
+      "band_pct": {
+        "sub_20_90": 88.91,
+        "mud_100_350": 6.76,
+        "voice_350_2500": 1.9,
+        "detail_2500_8000": 0.72,
+        "air_8000_18000": 0.1
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/transponder-snail",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/transponder_snail.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 17.903,
+      "peak_dbfs": -1.79,
+      "rms_dbfs": -19.65,
+      "spectral_centroid_hz": 1205.0,
+      "band_pct": {
+        "sub_20_90": 0.09,
+        "mud_100_350": 9.08,
+        "voice_350_2500": 81.6,
+        "detail_2500_8000": 9.11,
+        "air_8000_18000": 0.03
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/uh",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/uh.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.474,
+      "peak_dbfs": -10.3,
+      "rms_dbfs": -25.87,
+      "spectral_centroid_hz": 536.0,
+      "band_pct": {
+        "sub_20_90": 0.05,
+        "mud_100_350": 1.38,
+        "voice_350_2500": 98.3,
+        "detail_2500_8000": 0.26,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/untitled-bmejzi2",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/untitled_bmEjZi2.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 6.12,
+      "peak_dbfs": 0.03,
+      "rms_dbfs": -7.3,
+      "spectral_centroid_hz": 1272.2,
+      "band_pct": {
+        "sub_20_90": 0.1,
+        "mud_100_350": 0.53,
+        "voice_350_2500": 90.74,
+        "detail_2500_8000": 8.5,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/valorant-loading-screen",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Valorant Loading Screen.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "valorant"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 5.016,
+      "peak_dbfs": -2.78,
+      "rms_dbfs": -18.44,
+      "spectral_centroid_hz": 75.1,
+      "band_pct": {
+        "sub_20_90": 67.62,
+        "mud_100_350": 29.76,
+        "voice_350_2500": 0.39,
+        "detail_2500_8000": 0.0,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/valorant-theme-extended-mp3cut-te5pflz",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/valorant-theme-extended-mp3cut_TE5PFlz.mp3",
+      "category": "meme_music",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "valorant"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 8.1,
+      "peak_dbfs": -6.62,
+      "rms_dbfs": -17.74,
+      "spectral_centroid_hz": 118.8,
+      "band_pct": {
+        "sub_20_90": 72.01,
+        "mud_100_350": 24.02,
+        "voice_350_2500": 2.02,
+        "detail_2500_8000": 0.46,
+        "air_8000_18000": 0.07
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/videoplayback-y6ezg5z",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/videoplayback_y6EZG5Z.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.091,
+      "peak_dbfs": -7.31,
+      "rms_dbfs": -20.28,
+      "spectral_centroid_hz": 685.7,
+      "band_pct": {
+        "sub_20_90": 0.02,
+        "mud_100_350": 26.84,
+        "voice_350_2500": 72.21,
+        "detail_2500_8000": 0.91,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/voando-em-velocidade-one-piece",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/voando-em-velocidade-one-piece.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "anime"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 2.728,
+      "peak_dbfs": -8.72,
+      "rms_dbfs": -25.95,
+      "spectral_centroid_hz": 3387.5,
+      "band_pct": {
+        "sub_20_90": 0.04,
+        "mud_100_350": 8.76,
+        "voice_350_2500": 21.1,
+        "detail_2500_8000": 68.19,
+        "air_8000_18000": 1.9
+      },
+      "spectrum_role": "high_air"
+    },
+    {
+      "id": "meme/wait-wait-wait-what-the-hell-legend-sound",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/wait-wait-wait-what-the-hell-legend-sound.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "reaction"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 41.866,
+      "peak_dbfs": 1.19,
+      "rms_dbfs": -8.11,
+      "spectral_centroid_hz": 674.0,
+      "band_pct": {
+        "sub_20_90": 24.17,
+        "mud_100_350": 16.12,
+        "voice_350_2500": 51.45,
+        "detail_2500_8000": 3.41,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/warning-siren-meme",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Warning Siren meme.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 9.776,
+      "peak_dbfs": -6.67,
+      "rms_dbfs": -15.59,
+      "spectral_centroid_hz": 1131.4,
+      "band_pct": {
+        "sub_20_90": 0.06,
+        "mud_100_350": 0.57,
+        "voice_350_2500": 90.88,
+        "detail_2500_8000": 7.86,
+        "air_8000_18000": 0.09
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/water-droplet-drip",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/water-droplet-drip.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 0.496,
+      "peak_dbfs": -1.05,
+      "rms_dbfs": -16.77,
+      "spectral_centroid_hz": 725.0,
+      "band_pct": {
+        "sub_20_90": 0.56,
+        "mud_100_350": 0.02,
+        "voice_350_2500": 99.24,
+        "detail_2500_8000": 0.01,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/wet-fart-meme-sound-effect-hd-getmp3-pro",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Wet_Fart_Meme_-_Sound_Effect_HD_(getmp3.pro).mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.324,
+      "peak_dbfs": -2.58,
+      "rms_dbfs": -22.13,
+      "spectral_centroid_hz": 1089.5,
+      "band_pct": {
+        "sub_20_90": 0.0,
+        "mud_100_350": 9.35,
+        "voice_350_2500": 86.06,
+        "detail_2500_8000": 3.85,
+        "air_8000_18000": 0.74
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/what-bottom-text-meme-sanctuary-guardian-sound-effect-hd-tddiutg",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/what-bottom-text-meme-sanctuary-guardian-sound-effect-hd_tdDIUTg.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "reaction"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 9.009,
+      "peak_dbfs": -0.84,
+      "rms_dbfs": -18.31,
+      "spectral_centroid_hz": 159.4,
+      "band_pct": {
+        "sub_20_90": 80.02,
+        "mud_100_350": 5.4,
+        "voice_350_2500": 6.63,
+        "detail_2500_8000": 0.32,
+        "air_8000_18000": 0.36
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/what-the-hellllllllllll",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/what-the-hellllllllllll.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "reaction"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 7.706,
+      "peak_dbfs": -0.71,
+      "rms_dbfs": -16.36,
+      "spectral_centroid_hz": 1463.5,
+      "band_pct": {
+        "sub_20_90": 0.29,
+        "mud_100_350": 5.21,
+        "voice_350_2500": 82.01,
+        "detail_2500_8000": 12.07,
+        "air_8000_18000": 0.32
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/white-tees-rizz",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/white-tees-rizz.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "rizz"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 8.056,
+      "peak_dbfs": 0.27,
+      "rms_dbfs": -5.11,
+      "spectral_centroid_hz": 144.2,
+      "band_pct": {
+        "sub_20_90": 65.97,
+        "mud_100_350": 22.84,
+        "voice_350_2500": 10.21,
+        "detail_2500_8000": 0.34,
+        "air_8000_18000": 0.01
+      },
+      "spectrum_role": "sub_low"
+    },
+    {
+      "id": "meme/whoosh",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/whoosh.mp3",
+      "category": "transition",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "transition"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 1.022,
+      "peak_dbfs": -9.71,
+      "rms_dbfs": -31.59,
+      "spectral_centroid_hz": 563.9,
+      "band_pct": {
+        "sub_20_90": 0.76,
+        "mud_100_350": 1.09,
+        "voice_350_2500": 96.6,
+        "detail_2500_8000": 0.13,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/wtf-sound-auxidnl",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/wtf-sound_AUXiDNl.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "reaction"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 4.296,
+      "peak_dbfs": -0.62,
+      "rms_dbfs": -18.89,
+      "spectral_centroid_hz": 1484.7,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 16.61,
+        "voice_350_2500": 65.91,
+        "detail_2500_8000": 15.75,
+        "air_8000_18000": 1.71
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/acumalaka",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/y2mate.com - Acumalaka  sound effect.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "indo-meme"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 8.893,
+      "peak_dbfs": 3.96,
+      "rms_dbfs": -9.4,
+      "spectral_centroid_hz": 2244.0,
+      "band_pct": {
+        "sub_20_90": 0.08,
+        "mud_100_350": 1.18,
+        "voice_350_2500": 68.51,
+        "detail_2500_8000": 28.57,
+        "air_8000_18000": 1.38
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/boy-what-the-hell-boy-talking-tom-meme",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/y2mate.com - Boy what the hell boy talking Tom meme.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "reaction"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.068,
+      "peak_dbfs": -0.54,
+      "rms_dbfs": -16.87,
+      "spectral_centroid_hz": 1186.7,
+      "band_pct": {
+        "sub_20_90": 0.04,
+        "mud_100_350": 4.22,
+        "voice_350_2500": 90.26,
+        "detail_2500_8000": 4.9,
+        "air_8000_18000": 0.56
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/gah-dayum-extended-sound",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/y2mate.com - gah dayum Extended sound.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 12.098,
+      "peak_dbfs": -0.83,
+      "rms_dbfs": -19.03,
+      "spectral_centroid_hz": 538.2,
+      "band_pct": {
+        "sub_20_90": 27.02,
+        "mud_100_350": 17.12,
+        "voice_350_2500": 43.1,
+        "detail_2500_8000": 1.43,
+        "air_8000_18000": 0.08
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/he-walk",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/y2mate.com - he walk.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 16.718,
+      "peak_dbfs": -0.51,
+      "rms_dbfs": -12.64,
+      "spectral_centroid_hz": 444.7,
+      "band_pct": {
+        "sub_20_90": 33.03,
+        "mud_100_350": 13.85,
+        "voice_350_2500": 50.53,
+        "detail_2500_8000": 0.45,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/spongebob-sad-face",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/y2mate.com - Spongebob sad face sound effect.mp3",
+      "category": "meme_stinger",
+      "length_tag": "short",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "fail",
+        "sad"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 0.511,
+      "peak_dbfs": -3.89,
+      "rms_dbfs": -18.2,
+      "spectral_centroid_hz": 361.9,
+      "band_pct": {
+        "sub_20_90": 0.37,
+        "mud_100_350": 57.67,
+        "voice_350_2500": 41.89,
+        "detail_2500_8000": 0.04,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "full_spectrum"
+    },
+    {
+      "id": "meme/taco-bell",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/y2mate.com - Taco Bell  Sound Effect Free No Copyright Sounds.mp3",
+      "category": "impact",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "stinger"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic",
+        "gaming-montage"
+      ],
+      "duration_s": 1.834,
+      "peak_dbfs": -5.52,
+      "rms_dbfs": -18.9,
+      "spectral_centroid_hz": 856.8,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 13.25,
+        "voice_350_2500": 86.71,
+        "detail_2500_8000": 0.03,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/what-a-dog-doing-original-meme",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/y2mate.com - What a dog doing Original meme Sound Effect MEME.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic",
+        "reaction"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 2.183,
+      "peak_dbfs": -1.76,
+      "rms_dbfs": -17.7,
+      "spectral_centroid_hz": 699.3,
+      "band_pct": {
+        "sub_20_90": 0.21,
+        "mud_100_350": 17.11,
+        "voice_350_2500": 81.13,
+        "detail_2500_8000": 1.4,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/yessir",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Yessir Sound Effect HD.mp3",
+      "category": "meme_stinger",
+      "length_tag": "long",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 6.705,
+      "peak_dbfs": 0.75,
+      "rms_dbfs": -9.15,
+      "spectral_centroid_hz": 688.0,
+      "band_pct": {
+        "sub_20_90": 0.75,
+        "mud_100_350": 10.39,
+        "voice_350_2500": 86.59,
+        "detail_2500_8000": 1.72,
+        "air_8000_18000": 0.47
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/yoshi-mlem-sound-effect-hd-getmp3-pro",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/Yoshi_Mlem_-_Sound_Effect_HD_(getmp3.pro).mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 2.009,
+      "peak_dbfs": -3.72,
+      "rms_dbfs": -28.33,
+      "spectral_centroid_hz": 1120.5,
+      "band_pct": {
+        "sub_20_90": 0.01,
+        "mud_100_350": 20.16,
+        "voice_350_2500": 77.28,
+        "detail_2500_8000": 2.54,
+        "air_8000_18000": 0.0
+      },
+      "spectrum_role": "mid_body"
+    },
+    {
+      "id": "meme/yowai-mo",
+      "pack": "creator-meme-pack",
+      "rel_path": "studio_kit/sfx/meme_pack/creator_game_memes/yowai-mo.mp3",
+      "category": "meme_stinger",
+      "length_tag": "medium",
+      "license": "Creator Meme Pack (YouTube Fair-Use / Free Download)",
+      "attribution": "Reregy (R2v8AcMg7j8) / SUFIS (XFEjqrIwgIg)",
+      "tags": [
+        "meme",
+        "gaming-comedic"
+      ],
+      "profiles": [
+        "comedic-dry",
+        "gaming-comedic"
+      ],
+      "duration_s": 1.677,
+      "peak_dbfs": -1.32,
+      "rms_dbfs": -12.43,
+      "spectral_centroid_hz": 691.9,
+      "band_pct": {
+        "sub_20_90": 3.06,
+        "mud_100_350": 16.25,
+        "voice_350_2500": 75.15,
+        "detail_2500_8000": 5.47,
+        "air_8000_18000": 0.02
+      },
+      "spectrum_role": "mid_body"
     }
   ]
 }

@@ -680,10 +680,11 @@ def test_v4_editorial_classup_router_luts_tonal_sfx_and_flow(tmp_path):
     assert (ROOT / "studio_kit" / "renders" / "color_grade_proof_sheet.jpg").exists()
     assert (ROOT / "studio_kit" / "renders" / "editorial_styles_proof_sheet.jpg").exists()
 
-    # 3. 24 Free Multiply Sound Tonal SFX indexed + automatic librosa musical key matching + EQ filter sweep
+    # 3. 24 Free Multiply Sound Tonal SFX + 122 Creator Meme SFX indexed + automatic librosa musical key matching + EQ filter sweep
     idx = json.loads((ROOT / "studio_kit" / "sound_palette_index.json").read_text(encoding="utf-8"))
-    assert idx["total_assets"] >= 173
+    assert idx["total_assets"] >= 290
     assert idx["by_pack"]["multiply-sound-tonal"] == 24
+    assert idx["by_pack"]["creator-meme-pack"] >= 115
 
     eng = sound_engine.SoundEngine5Stem(dur_s=4.5, profile="organic-cinema")
     eng.add_music_bed(None, gain_db=-18.0, root_hz=146.83, bpm=100.0)

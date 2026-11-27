@@ -13,7 +13,7 @@ description: >-
 - **Mode A (Video Production / Editing):** Whenever the user asks to edit raw footage, build a short/reel, produce a long-form explainer or cinematic essay, add captions/motion graphics, or mix sound/color.
 - **Mode B (Reference Study / Insight Ingestion):** Whenever the user shares reference links (YouTube, Shorts, Reels, breakdowns) and asks to learn their pacing, transitions, typography, grading, or sound design for future edits.
 
-For the full file index of `studio_kit/` modules, 6 starter Motifs, 5 `.cube` LUTs, 173 indexed SFX assets, and v1-v5 study guides, read [references/studio-catalog.md](./references/studio-catalog.md).
+For the full file index of `studio_kit/` modules, 6 starter Motifs, 5 `.cube` LUTs, 293 indexed SFX assets (CC0, Pixabay, 24 Multiply Sound tonal WAVs, and 120 creator gaming/meme SFX), and v1-v5 study guides, read [references/studio-catalog.md](./references/studio-catalog.md).
 
 ---
 
@@ -30,11 +30,12 @@ Execute steps strictly in order. Do not skip directly to pixel rendering.
    - Draft declarative `beat_sheet.json` with concrete `visual_subject`, `narrative_purpose`, `broll_justification`, `motion_vector`, `transition_in`, `target_platform`, `emphasis_words`/`typography_mode`, `silence_pockets`, and `sound_cues` with explicit `visual_cause` or `contrast_rule`.
    - Validate via `validate_beat_sheet(...)`. Resolve all hard errors and inspect context warnings (Flow-of-Motion clash, Transition Restraint `>55%`, flat text streak on explanatory profiles, or `>60%` highlight overuse).
 4. **Audio-First 5-Stem Mix (`studio_kit/sound_engine.py`):**
-   - Select BGM matching context/request; auto-detect musical key (`detect_musical_key`) before placing tonal drones/hits (`add_tonal_sfx` from `studio_kit/sfx/tonal_pack/`).
+   - Select real BGM matching context/request (or let clean native game/dialogue audio breathe); NEVER synthesize fake BGM from raw `np.sin` or white-noise loops.
+   - Auto-detect musical key (`detect_musical_key`) before placing tonal hits (`add_tonal_sfx`), and strictly avoid tonal/drone overuse that causes buzzing ear fatigue (limit tonal accents to 1-2 brief climax beats). For comedic gaming beats, pick restrained, context-matched accents from `studio_kit/sfx/meme_pack/` (`meme/*`) and `add_filter_sweep` (LPF muffle) instead of clichéd spam.
    - Anchor scenes with filtered `ambience` room-tone bedrock, layer transitions across Sub/Mid/Air (`50-240 ms` pre-lap), carve speech frequencies under voice, use `Great Hall` reverb tails (`T60 = 2.6s`) instead of abrupt music chops, and honor `silence_pockets`.
-5. **Clean-Plate Color Grade & Narrative Typography (`color_grade.py`, `tactile_scene_kit.html`, `safe_zones.py`):**
+5. **Clean-Plate Color Grade & Spatial Narrative Typography (`color_grade.py`, `tactile_scene_kit.html`, `safe_zones.py`):**
    - Grade raw footage FIRST via `color_grade.py` (`HSV Ch-2 Density` `.cube` LUT + planar `gbrp` halation when fitting) BEFORE compositing crisp text/UI overlays.
-   - Choose typography depth strictly by context: `narrative_cluster` (chest-safe staggered Mixed-Voice), `camera_2d_canvas` (`-83ms` pre-beat camera lead), `explainer_visual_diagram` (`anatomy_ruler`, face-clearing `flanking_word_field`, `chapter_slam`), `ludaLetterbox`, `collageCards`, `maciekCaptions`, or WeftCut Motifs.
+   - Apply **Spatial Typography Topology** rather than parking every line at one static bottom Y coordinate: vary anchors across upper-left (`@wirilett`), directional spatial shifts (`camera_2d_canvas` `-83ms` pre-beat lead), chest-safe `narrative_cluster`, `explainer_visual_diagram`, or raw cropped HUD callouts to mirror emotional pacing.
    - Run live Playwright `safe_zones.audit_html_safe_zones(...)` (`0` collisions required).
 6. **Assemble & Render:**
    - Render via `studio_kit/narrative_composer.py`, `WeftCut MCP` (`driving-weftcut`), `OneTake`, or `HyperFrames` using Windows Chrome GPU flags (`--use-gl=angle --use-angle=d3d11 --enable-webgl --ignore-gpu-blocklist`) on drive `D:`.
